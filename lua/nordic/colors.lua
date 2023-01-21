@@ -85,6 +85,9 @@ palette.bg_highlight = palette.black
 palette.bg_dark = palette.black
 palette.bg_sidebar = palette.bg
 palette.bg_float = palette.bg
+palette.bg_popup = palette.bg
+palette.bg_search = palette.gray1
+palette.bg_statusline = palette.black
 
 -- Foregrounds.
 palette.fg = palette.white0
