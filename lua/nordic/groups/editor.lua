@@ -77,7 +77,7 @@ return {
 
     WinSeparator = {
         fg = c.border,
-        style = { 'bold' }
+        bold = true
     }, -- the column separating vertically split windows
 
     Folded = {
@@ -111,7 +111,7 @@ return {
 
     CursorLineNr = {
         fg = c.gray5,
-        style = { 'bold' }
+        bold = true
     }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
     MatchParen = {
@@ -121,7 +121,7 @@ return {
 
     ModeMsg = {
         fg = c.fg_dark,
-        style = { 'bold' }
+        bold = true
     }, -- 'showmode' message (e.g., "-- INSERT -- ")
 
     MsgArea = {
@@ -186,7 +186,7 @@ return {
 
     QuickFixLine = {
         bg = c.bg_visual,
-        style = { 'bold' }
+        bold = true
     }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 
     Search = {
@@ -209,22 +209,22 @@ return {
 
     SpellBad = {
         sp = c.error,
-        style = { 'undercurl' }
+        undercurl = true
     }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
 
     SpellCap = {
         sp = c.warning,
-        style = { 'undercurl' }
+        undercurl = true
     }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 
     SpellLocal = {
         sp = c.info,
-        style = { 'undercurl' }
+        undercurl = true
     }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 
     SpellRare = {
         sp = c.hint,
-        style = { 'undercurl' }
+        undercurl = true
     }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
 
     StatusLine = {
@@ -253,7 +253,7 @@ return {
 
     Title = {
         fg = c.white1,
-        style = { 'bold' }
+        bold = true
     }, -- titles for output from ":set all", ":autocmd" etc.
 
     Visual = {
