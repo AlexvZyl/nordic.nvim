@@ -116,7 +116,7 @@ return {
 
     MatchParen = {
         fg = c.yellow.bright,
-        style = { 'bold' }
+        bold = true
     }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 
     ModeMsg = {
@@ -258,7 +258,7 @@ return {
 
     Visual = {
         bg = c.bg_visual,
-        style = { 'black' }
+        bold = true
     }, -- Visual mode selection
 
     VisualNOS = {
