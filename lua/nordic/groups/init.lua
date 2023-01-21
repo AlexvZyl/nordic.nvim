@@ -1,4 +1,4 @@
-local merge = require 'nordic.utils'.merge
+local merge = require 'nordic.utils' .merge
 
 local M = {}
 
@@ -22,13 +22,13 @@ M.core = {
 
 function M.get_groups()
     local groups = {}
-    for integration in M.integrations do
+    for _, integration in ipairs(M.integrations) do
         groups = merge(
             groups,
             require("nordic.groups.integrations." .. integration)
         )
     end
-    for core in M.core do
+    for _, core in ipairs(M.core) do
         groups = merge(
             groups,
             require("nordic.groups." .. core)
