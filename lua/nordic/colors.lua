@@ -83,6 +83,7 @@ local palette = {
 palette.bg = palette.gray0
 palette.bg_highlight = palette.black
 palette.bg_dark = palette.black
+palette.bg_visual = palette.black
 palette.bg_sidebar = palette.bg
 palette.bg_float = palette.bg
 palette.bg_popup = palette.bg
