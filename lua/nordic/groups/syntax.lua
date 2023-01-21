@@ -12,15 +12,15 @@ return {
     Float       = { fg = c.magenta.bright  }, --    a floating point constant: 2.3e10
 
     Identifier    = { fg = c.fg }, -- (preferred) any variable name
-    Function      = { fg = c.orange.base }, -- function name (also: methods for classes)
+    Function      = { fg = c.blue2 }, -- function name (also: methods for classes)
 
-    Statement     = { fg = c.orange.base }, -- (preferred) any statement
-    Conditional   = { fg = c.orange.base  }, --  if, then, else, endif, switch, etc.
-    Repeat        = { fg = c.orange.base  }, --   for, do, while, etc.
-    Label         = { fg = c.orange.base  }, --    case, default, etc.
-    Operator      = { fg = c.orange.bright }, -- "sizeof", "+", "*", etc.
-    Keyword       = { fg = c.orange.base }, --  any other keyword
-    Exception     = { fg = c.orange.bright  }, --  try, catch, throw
+    Statement     = { fg = c.orange.base, bold = true }, -- (preferred) any statement
+    Conditional   = { fg = c.orange.base, bold = true  }, --  if, then, else, endif, switch, etc.
+    Repeat        = { fg = c.orange.base, bold = true  }, --   for, do, while, etc.
+    Label         = { fg = c.orange.base, bold = true  }, --    case, default, etc.
+    Operator      = { fg = c.orange.bright, bold = true }, -- "sizeof", "+", "*", etc.
+    Keyword       = { fg = c.orange.base, bold = true }, --  any other keyword
+    Exception     = { fg = c.orange.bright, bold = true  }, --  try, catch, throw
 
     PreProc       = { fg = c.red.base, bold = true }, -- (preferred) generic Preprocessor
     Include       = { fg = c.red.base, bold = true }, --  preprocessor #include
@@ -100,10 +100,10 @@ return {
     DiagnosticVirtualTextInfo = { bg = c.gray3, fg = c.info }, -- Used for "Information" diagnostic virtual text
     DiagnosticVirtualTextHint = { bg = c.gray3, fg = c.hint }, -- Used for "Hint" diagnostic virtual text
 
-    DiagnosticUnderlineError = { undercurl = true, sp = c.error }, -- Used to underline "Error" diagnostics
-    DiagnosticUnderlineWarn = { undercurl = true, sp = c.warning }, -- Used to underline "Warning" diagnostics
-    DiagnosticUnderlineInfo = { undercurl = true, sp = c.info }, -- Used to underline "Information" diagnostics
-    DiagnosticUnderlineHint = { undercurl = true, sp = c.hint }, -- Used to underline "Hint" diagnostics
+    DiagnosticUnderlineError = { underline = true, sp = c.error, bold = true }, -- Used to underline "Error" diagnostics
+    DiagnosticUnderlineWarn = { underline = true, sp = c.warning, bold = true }, -- Used to underline "Warning" diagnostics
+    DiagnosticUnderlineInfo = { underline = true, sp = c.info, bold = true }, -- Used to underline "Information" diagnostics
+    DiagnosticUnderlineHint = { underline = true, sp = c.hint, bold = true }, -- Used to underline "Hint" diagnostics
 
     LspSignatureActiveParameter = { bg = c.gray3, bold = true },
     LspCodeLens = { fg = c.comment },

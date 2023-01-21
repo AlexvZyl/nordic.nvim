@@ -17,33 +17,33 @@ return {
     TSNote = { fg = c.bg, bg = c.info },
     ["@text.warning"] = { fg = c.bg, bg = c.warning },
     ["@text.danger"] = { fg = c.bg, bg = c.error },
-    ["@constructor"] = { fg = c.magenta.base }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    ["@constructor"] = { fg = c.white0 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     -- TSConditional       = { };    -- For keywords related to conditionnals.
     -- TSConstant          = { };    -- For constants
     -- TSConstBuiltin      = { };    -- For constant that are built in the language: `nil` in Lua.
     -- TSConstMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
     -- TSError             = { };    -- For syntax/parser errors.
     -- TSException         = { };    -- For exception related keywords.
-    ["@field"] = { fg = c.green.base }, -- For fields.
+    -- ["@field"] = { fg = c.green.base }, -- For fields.
     -- TSFloat             = { };    -- For floats.
     -- TSFunction          = { };    -- For function (calls and definitions).
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-    ["@keyword"] = { fg = c.orange.base }, -- For keywords that don't fall in previous categories.
-    ["@keyword.function"] = { fg = c.orange.base }, -- For keywords used to define a fuction.
+    -- ["@keyword"] = { fg = c.orange.base }, -- For keywords that don't fall in previous categories.
+    -- ["@keyword.function"] = { fg = c.orange.base }, -- For keywords used to define a fuction.
     ["@label"] = { fg = c.blue1 }, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
     -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
-    ["@operator"] = { fg = c.orange.bright }, -- For any operator: `+`, but also `->` and `*` in C.
+    -- ["@operator"] = { fg = c.orange.bright }, -- For any operator: `+`, but also `->` and `*` in C.
     ["@parameter"] = { fg = c.white0 }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
-    ["@property"] = { fg = c.cyan.base }, -- Same as `TSField`.
-    ["@punctuation.delimiter"] = { fg = c.orange.bright }, -- For delimiters ie: `.`
+    -- ["@property"] = { fg = c.cyan.base }, -- Same as `TSField`.
+    ["@punctuation.delimiter"] = { fg = c.white0 }, -- For delimiters ie: `.`
     ["@punctuation.bracket"] = { fg = c.white0 }, -- For brackets and parens.
-    ["@punctuation.special"] = { fg = c.orange.bright }, -- For special punctutation that does not fall in the catagories before.
+    -- ["@punctuation.special"] = { fg = c.white0 }, -- For special punctutation that does not fall in the catagories before.
     -- TSRepeat            = { };    -- For keywords related to loops.
     -- TSString            = { };    -- For strings.
     ["@string.regex"] = { fg = c.green.dim }, -- For regexes.
@@ -52,7 +52,7 @@ return {
     -- TSType              = { };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
     ["@variable"] = { fg = c.white0 }, -- Any variable name that does not have another highlight.
-    ["@variable.builtin"] = { fg = c.blue1 }, -- Variable names that are defined by the languages, like `this` or `self`.
+    -- ["@variable.builtin"] = { fg = c.blue1 }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     -- TSTag               = { };    -- Tags like html tag names.
     -- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
@@ -80,14 +80,14 @@ return {
     ["@boolean"] = { fg = c.magenta.bright },
     ["@constant.macro"] = { fg = c.magenta.bright },
     -- Oranges (Keywords).
-    -- ["@keyword"] = { fg = c.orange, style = { 'bold' } },
+    ["@keyword"] = { fg = c.orange.base, bold = true },
     ["@keyword.return"] = { fg = c.orange.base, bold = true },
-    -- ["@keyword.function"] = { fg = c.orange.base, bold = true },
+    ["@keyword.function"] = { fg = c.orange.base, bold = true },
     ["@keyword.export"] = { fg = c.orange.base, bold = true },
     ["@keyword.operator"] = { fg = c.orange.base, bold = true },
     ["@repeat"] = { fg = c.orange.base, bold = true },
     ["@conditional"] = { fg = c.orange.base, bold = true },
-    -- ["@operator"] = { fg = c.orange.bright, bold = true },
+    ["@operator"] = { fg = c.orange.bright, bold = true },
     ["@class"] = { fg = c.orange.base, bold = true },
     ["@type.qualifier"] = { fg = c.orange.base, bold = true },
     ["@storageclass"] = { fg = c.orange.base, bold = true },
@@ -99,17 +99,17 @@ return {
     ["@function.macro"] = { fg = c.red.base, bold = true },
     ["@define"] = { fg = c.red.base, bold = true },
     ["@exception"] = { fg = c.red.base, bold = true },
-    -- ["@punctuation.special"] = { fg = c.red, style = { 'bold' } },
+    ["@punctuation.special"] = { fg = c.red.base, bold = true },
     -- Blues.
     ["@function"] = { fg = c.blue2 },
     ["@method"] = { fg = c.blue2 },
     ["@method.call"] = { fg = c.blue2 },
     ["@function.call"] = { fg = c.blue2 },
     ["@function.builtin"] = { fg = c.blue2 },
-    -- ["@variable.builtin"] = { fg = c.blue0, italic = true },
+    ["@variable.builtin"] = { fg = c.blue0, italic = true },
     -- Cyan.
-    -- ["@field"] = { fg = c.cyan.base },
-    -- ["@property"] = { fg = c.cyan.base },
+    ["@field"] = { fg = c.cyan.base },
+    ["@property"] = { fg = c.cyan.base },
     ["@property.cpp"] = { fg = c.cyan.base },
     -- Yellows.
     ["@namespace"] = { fg = c.yellow.dim, italic = true },
