@@ -70,7 +70,7 @@ local palette = {
     -- From @nightfox.nvim.
     blue = {
         base = "#81A1C1",
-        bright = "8CAFD2",
+        bright = "#8CAFD2",
         dim = "#668AAB",
     }
 
