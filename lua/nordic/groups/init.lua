@@ -17,7 +17,6 @@ M.integrations = {
 M.core = {
     "editor",
     "syntax",
-    "terminal"
 }
 
 function M.get_groups()
@@ -35,6 +34,13 @@ function M.get_groups()
         )
     end
     return groups
+end
+
+function M.set_term_colors()
+    local colors = require 'nordic.groups.terminal'
+    for term, col in pairs(colors) do
+        vim.g[term] = col
+    end
 end
 
 return M

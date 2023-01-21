@@ -5,9 +5,9 @@ function M.load()
 
     vim.api.nvim_command("hi clear")
 
-    require 'nordic.utils'.highlight(
-        require 'nordic.groups'.get_groups()
-    )
+    local groups = require 'nordic.groups'
+    require 'nordic.utils'.highlight(groups.get_groups())
+    groups.set_term_colors()
 
 end
 
