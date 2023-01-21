@@ -78,7 +78,7 @@ return {
     ["@text.todo.checked"] = { fg = c.green.base }, -- For brackets and parens.
     ["@text.literal.markdown_inline"] = { bg = c.black, fg = c.blue1 },
     ["@text.literal.markdown"] = { link = "Normal" },
-    ["helpCommand"] = { bg = c.black, fg = c.blue },
+    ["helpCommand"] = { bg = c.black, fg = c.blue1 },
 
     debugPC = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
     debugBreakpoint = { bg = c.black, fg = c.info }, -- used for breakpoint colors in terminal-debug

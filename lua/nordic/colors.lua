@@ -112,6 +112,7 @@ palette.diff.delete = palette.red.bright
 -- Diagnostics.
 palette.error = palette.red.bright
 palette.warn = palette.yellow.base
+palette.warning = palette.warn
 palette.hint = palette.green.bright
 palette.info = palette.blue.bright
 
