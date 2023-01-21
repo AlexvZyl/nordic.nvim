@@ -2,9 +2,11 @@
 
 A Neovim colorscheme based on Nord, but Aurora > Frost.
 
+> _ℹ️ &nbsp; There is a chance that I missed a highlight here and there, so please do not hesitate to let me know!_
+
 # Status
 
-I am *very* specific when it comes to what I want for a colorscheme.  I started editing existing ones, but I ended up deciding to just make a proper colorscheme.  This is a WIP, will try to get it done ASAP.
+Vanilla Neovim is supported, but I want to add a few plugins.  
 
 # Showcase
 
