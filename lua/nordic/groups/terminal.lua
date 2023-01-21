@@ -2,7 +2,7 @@ local c = require 'nordic.colors'
 
 return {
         terminal_color_0 = c.black,
-		terminal_color_8 = c.gray0,
+		terminal_color_8 = c.gray2,
 
 		terminal_color_1 = c.red.base,
 		terminal_color_9 = c.red.bright,
