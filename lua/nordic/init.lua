@@ -3,6 +3,8 @@ local M = {}
 -- Load Nordic!
 function M.load()
 
+    vim.api.nvim_command("hi clear")
+
     require 'nordic.utils'.highlight(
         require 'nordic.groups'.get_groups()
     )
