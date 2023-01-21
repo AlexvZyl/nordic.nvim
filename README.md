@@ -1,6 +1,6 @@
 # nordic.nvim
 
-A Neovim colorscheme based on Nord, but warmer.
+A Neovim colorscheme based on Nord, but Aurora > Frost.
 
 # Status
 
