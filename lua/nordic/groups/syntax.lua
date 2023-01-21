@@ -56,17 +56,17 @@ return {
     qfFileName = { fg = c.blue1 },
 
     -- What are these? TODO.
-    htmlH1 = { fg = c.magenta, bold = true },
+    htmlH1 = { fg = c.magenta.base, bold = true },
     htmlH2 = { fg = c.blue1, bold = true },
 
-    -- mkdHeading = { fg = c.orange, bold = true },
+    -- mkdHeading = { fg = c.orange.base, bold = true },
     -- mkdCode = { bg = c.terminal_black, fg = c.fg },
     mkdCodeDelimiter = { bg = c.black, fg = c.fg },
     mkdCodeStart = { fg = c.cyan.base, bold = true },
     mkdCodeEnd = { fg = c.cyan.base, bold = true },
     -- mkdLink = { fg = c.blue, underline = true },
 
-    markdownHeadingDelimiter = { fg = c.orange, bold = true },
+    markdownHeadingDelimiter = { fg = c.orange.base, bold = true },
     markdownCode = { fg = c.cyan.base },
     markdownCodeBlock = { fg = c.cyan.base },
     markdownH1 = { fg = c.magenta.base, bold = true },

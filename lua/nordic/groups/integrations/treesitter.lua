@@ -42,7 +42,7 @@ return {
     -- TSParameterReference= { };    -- For references to parameters of a function.
     ["@property"] = { fg = c.cyan.base }, -- Same as `TSField`.
     ["@punctuation.delimiter"] = { fg = c.orange.bright }, -- For delimiters ie: `.`
-    ["@punctuation.bracket"] = { fg = c.white0}, -- For brackets and parens.
+    ["@punctuation.bracket"] = { fg = c.white0 }, -- For brackets and parens.
     ["@punctuation.special"] = { fg = c.orange.bright }, -- For special punctutation that does not fall in the catagories before.
     -- TSRepeat            = { };    -- For keywords related to loops.
     -- TSString            = { };    -- For strings.
