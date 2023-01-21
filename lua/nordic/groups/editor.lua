@@ -6,7 +6,7 @@ return {
 
     Comment = {
         fg = c.comment,
-        style = 'italic'
+        italic = true
     }, -- any comment
 
     ColorColumn = {
