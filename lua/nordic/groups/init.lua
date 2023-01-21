@@ -11,7 +11,9 @@ M.integrations = {
     "lspsaga",
     "lualine",
     "nvim-tree",
-    "treesitter"
+    "treesitter",
+    "trouble",
+    "which-key",
 }
 
 M.core = {
