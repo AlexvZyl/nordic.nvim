@@ -1,6 +1,6 @@
 -- The Nord palette: https://www.nordtheme.com/.
 
-return {
+local palette = {
 
     -- Darker colors.
     -- Not in base Nord.
@@ -51,12 +51,12 @@ return {
         bright = "#D89079",
         dim = "#B46950",
     },
-    yellow  = {
+    yellow = {
         base = "#EBCB8B",
         bright = "#F0D399",
         dim = "#D9B263",
     },
-    green   = {
+    green = {
         base = "#A3BE8C",
         bright = "#B1D196",
         dim = "#8AA872",
@@ -68,3 +68,15 @@ return {
     }
 
 }
+
+-- Now define some use cases.
+palette.bg = palette.gray0
+palette.bg_alt = palette.black
+palette.fg = palette.white0
+palette.fg_alt = palette.white1
+palette.comment = palette.gray5
+palette.border = palette.white1
+palette.border_alt = palette.gray4
+palette.border_nb = palette.cyan
+
+return palette
