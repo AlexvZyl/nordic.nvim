@@ -46,7 +46,7 @@ return {
     },
 
     DapUIType = {
-        fg = c.yellow
+        fg = c.yellow.bright
     },
 
     DapUIFloatBorder = {
