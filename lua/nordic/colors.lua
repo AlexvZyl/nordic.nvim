@@ -2,6 +2,8 @@
 
 local palette = {
 
+    none = "NONE",
+
     -- Darker colors.
     -- Not in base Nord.
     black = "#191C24",
@@ -108,6 +110,12 @@ palette.diff.add = palette.green.bright
 palette.diff.change = palette.blue.bright
 palette.diff.text = palette.fg
 palette.diff.delete = palette.red.bright
+
+-- Git.
+palette.git = {}
+palette.git.add = palette.diff.add
+palette.git.delete = palette.diff.delete
+palette.git.change = palette.diff.change
 
 -- Diagnostics.
 palette.error = palette.red.bright
