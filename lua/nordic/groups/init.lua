@@ -14,6 +14,7 @@ M.integrations = {
     "treesitter",
     "trouble",
     "which-key",
+    "gitsigns",
 }
 
 M.core = {
