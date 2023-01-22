@@ -1,6 +1,6 @@
-local c = require 'nordic.colors'
-
 -- Notes and format from @folke/tokyonight.nvim.
+
+local c = require 'nordic.colors'
 
 return {
 
@@ -10,7 +10,7 @@ return {
     }, -- any comment
 
     ColorColumn = {
-        bg = c.black
+        bg = c.bg_visual
     }, -- used for the columns set with 'colorcolumn'
 
     Conceal = {
@@ -80,11 +80,13 @@ return {
         bold = true
     }, -- the column separating vertically split windows
 
+    -- TODO: Note sure if this will look good.
     Folded = {
         fg = c.gray5,
         bg = c.fg_gutter
     }, -- line used for closed folds
 
+    -- TODO: Note sure if this will look good.
     FoldColumn = {
         bg = c.bg,
         fg = c.comment
@@ -102,7 +104,7 @@ return {
 
     Substitute = {
         bg = c.red.base,
-        fg = c.black
+        fg = c.bg_dark
     }, -- |:substitute| replacement text highlighting
 
     LineNr = {
@@ -110,7 +112,7 @@ return {
     }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 
     CursorLineNr = {
-        fg = c.gray5,
+        fg = c.blue2,
         bold = true
     }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
@@ -120,12 +122,12 @@ return {
     }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 
     ModeMsg = {
-        fg = c.fg_dark,
+        fg = c.fg,
         bold = true
     }, -- 'showmode' message (e.g., "-- INSERT -- ")
 
     MsgArea = {
-        fg = c.fg_dark
+        fg = c.fg
     }, -- Area for messages and cmdline
 
     -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
@@ -169,7 +171,9 @@ return {
     }, -- Popup menu: normal item.
 
     PmenuSel = {
-        bg = c.fg_gutter
+        bg = c.bg_selected,
+        fg = c.fg_selected,
+        bold = true,
     }, -- Popup menu: selected item.
 
     PmenuSbar = {
@@ -247,12 +251,12 @@ return {
     }, -- tab pages line, where there are no labels
 
     TabLineSel = {
-        fg = c.white1,
+        fg = c.fg_bright,
         bg = c.gray0
     }, -- tab pages line, active tab page label
 
     Title = {
-        fg = c.white1,
+        fg = c.fg_bright,
         bold = true
     }, -- titles for output from ":set all", ":autocmd" etc.
 
@@ -276,11 +280,5 @@ return {
     WildMenu = {
         bg = c.bg_visual
     }, -- current match in 'wildmenu' completion
-
-    -- These groups are not listed as default vim groups,
-    -- but they are defacto standard group names for syntax highlighting.
-    -- commented out groups should chain up to their "preferred" group by
-    -- default,
-    -- Uncomment and edit if you want more specific syntax highlighting.
 
 }
