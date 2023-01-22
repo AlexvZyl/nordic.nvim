@@ -7,6 +7,7 @@ return {
     },
 
     TelescopePromptBorder = {
+        fg = c.gray1,
         bg = c.gray1
     },
 
@@ -15,6 +16,7 @@ return {
     },
 
     TelescopeResultsBorder = {
+        fg = c.black,
         bg = c.black
     },
 
@@ -23,6 +25,7 @@ return {
     },
 
     TelescopePreviewBorder = {
+        fg = c.black,
         bg = c.black
     },
 
