@@ -7,7 +7,7 @@ return {
     },
 
 	IndentBlanklineContextChar = {
-        fg = c.gray3
+        fg = c.gray4
     },
 
 	IndentBlanklineContextStart = {},
