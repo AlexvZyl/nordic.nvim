@@ -1,6 +1,8 @@
 # nordic.nvim
 
-A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > Frost.
+A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but `Aurora` > `Frost`.  
+
+The idea behind this colorscheme is to use Nord, but add some darker colors and use `Aurora` more prominently than Nord themes usually do.
 
 # ℹ️ Status
 
@@ -10,7 +12,7 @@ This colorscheme is still early in development, so please do not hesitate if the
 
 TODO
 
-# ⚙️ Supported Plugins
+# 🗒️ Supported Plugins
 
 This is the list of currently supported plugins.  I use these myself, if you want other plugins to be supported either open an issue or submit a PR!
 
@@ -39,3 +41,11 @@ This is the list of currently supported plugins.  I use these myself, if you wan
 
 *Dashboard:*
 ![image](https://user-images.githubusercontent.com/81622310/213918304-eab43101-f027-4a87-a934-8f23b583e937.png)
+
+# ⚙️ Installation
+
+With [packer.nvim](https://github.com/wbthomason/packer.nvim):
+
+```lua
+use 'AlexvZyl/nordic.nvim'
+```
