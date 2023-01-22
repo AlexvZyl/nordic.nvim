@@ -2,16 +2,15 @@ local c = require 'nordic.colors'
 
 return {
 
-    -- LSP Saga.
-    ["SagaBorder"] = {
+    SagaBorder = {
         fg = c.white0
     },
 
-    ["DefinitionBorder"] = {
+    DefinitionBorder = {
         fg = c.white0
     },
 
-    ["DefinitionNormal"] = {
+    DefinitionNormal = {
         fg = c.gray0
     },
 
