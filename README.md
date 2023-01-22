@@ -1,12 +1,14 @@
 # nordic.nvim
 
-A Neovim colorscheme based on Nord, but Aurora > Frost.
+A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > Frost.
 
-> _ℹ️ &nbsp; There is a chance that I missed a highlight here and there, so please do not hesitate to let me know!_
+# ℹ️ Status
 
-# Status
+This colorscheme is still early in development, so please do not hesitate if there is anything wrong or if you have any suggestions!  Currently am I [dogfooding](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) it to make sure I did not miss anything.
 
-Vanilla Neovim is supported, but I want to add a few plugins.  
+# 🎨 Palette
+
+TODO
 
 # ⚙️ Supported Plugins
 
@@ -29,6 +31,11 @@ This is the list of currently supported plugins.  I use these myself, if you wan
 
 # Showcase
 
-![image](https://user-images.githubusercontent.com/81622310/213875268-7e959a09-e33d-4d04-842f-318cfb388be5.png)
+*Nvim-tree, lualine and treesitter:*
+![image](https://user-images.githubusercontent.com/81622310/213918910-7e9e4068-3eef-4d68-b192-4b0200cc1631.png)
 
-![image](https://user-images.githubusercontent.com/81622310/213875285-a7856550-4d24-4629-adbe-f7912e969d08.png)
+*Telescope:*
+![image](https://user-images.githubusercontent.com/81622310/213918343-a4daac04-9e98-4ba1-89f8-0e8eb4b73c10.png)
+
+*Dashboard:*
+![image](https://user-images.githubusercontent.com/81622310/213918304-eab43101-f027-4a87-a934-8f23b583e937.png)
