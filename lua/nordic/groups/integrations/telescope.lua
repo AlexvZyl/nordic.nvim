@@ -48,9 +48,9 @@ return {
         bg = c.bg_float
     },
 
-    -- TODO: Not sure what this is.
 	TelescopeMatching = {
-        fg = c.yellow.base
+        fg = c.yellow.bright,
+        bold = true
     },
 
 	TelescopePromptPrefix = {
