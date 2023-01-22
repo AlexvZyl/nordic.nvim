@@ -116,9 +116,9 @@ palette.diff.text = palette.fg
 
 -- Git.
 palette.git = {}
-palette.git.add = palette.diff.add
-palette.git.delete = palette.diff.delete
-palette.git.change = palette.diff.change
+palette.git.add = palette.green.bright
+palette.git.delete = palette.red.bright
+palette.git.change = palette.yellow.base
 
 -- Diagnostics.
 palette.error = palette.red.bright
