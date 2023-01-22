@@ -55,7 +55,7 @@ return {
     }, -- diff mode: Changed line |diff.txt|
 
     DiffDelete = {
-        fg = c.gray0,
+        fg = c.fg_bright,
         bg = c.diff.delete
     }, -- diff mode: Deleted line |diff.txt|
 
