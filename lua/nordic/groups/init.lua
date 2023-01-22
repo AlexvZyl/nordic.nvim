@@ -9,12 +9,12 @@ M.integrations = {
     "dashboard",
     "indent-blankline",
     "lspsaga",
-    "lualine",
     "nvim-tree",
     "treesitter",
     "trouble",
     "which-key",
     "gitsigns",
+    "telescope",
 }
 
 M.core = {
