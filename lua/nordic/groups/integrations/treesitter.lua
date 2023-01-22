@@ -38,7 +38,10 @@ return {
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
     -- ["@operator"] = { fg = c.orange.bright }, -- For any operator: `+`, but also `->` and `*` in C.
-    ["@parameter"] = { fg = c.white0 }, -- For parameters of a function.
+    ["@parameter"] = {
+        fg = c.white0,
+        italic = true
+    }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
     -- ["@property"] = { fg = c.cyan.base }, -- Same as `TSField`.
     ["@punctuation.delimiter"] = { fg = c.white0 }, -- For delimiters ie: `.`
@@ -79,6 +82,7 @@ return {
     ["@float"] = { fg = c.magenta.bright },
     ["@boolean"] = { fg = c.magenta.bright },
     ["@constant.macro"] = { fg = c.magenta.bright },
+    ["@constant.builtin"] = { fg = c.magenta.bright },
     -- Oranges (Keywords).
     ["@keyword"] = { fg = c.orange.base, bold = true },
     ["@keyword.return"] = { fg = c.orange.base, bold = true },
