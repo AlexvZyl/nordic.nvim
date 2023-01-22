@@ -19,6 +19,7 @@ M.integrations = {
 M.core = {
     "editor",
     "syntax",
+    "lsp",
 }
 
 function M.get_groups()
@@ -32,14 +33,14 @@ function M.get_groups()
     for _, core in ipairs(M.core) do
         groups = merge(
             groups,
-            require("nordic.groups." .. core)
+            require("nordic.groups..native." .. core)
         )
     end
     return groups
 end
 
 function M.set_term_colors()
-    local colors = require 'nordic.groups.terminal'
+    local colors = require 'nordic.groups.native.terminal'
     for term, col in pairs(colors) do
         vim.g[term] = col
     end
