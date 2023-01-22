@@ -4,6 +4,12 @@ local c = require 'nordic.colors'
 
 return {
 
+    -- These groups are not listed as default vim groups,
+    -- but they are defacto standard group names for syntax highlighting.
+    -- commented out groups should chain up to their "preferred" group by
+    -- default,
+    -- Uncomment and edit if you want more specific syntax highlighting.
+
     Constant    = { fg = c.magenta.bright }, -- (preferred) any constant
     String      = { fg = c.green.base }, --   a string constant: "this is a string"
     Character   = { fg = c.green.bright }, --  a character constant: 'c', '\n'
