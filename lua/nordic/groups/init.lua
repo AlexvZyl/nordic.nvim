@@ -35,7 +35,7 @@ function M.get_groups()
     for _, core in ipairs(M.core) do
         groups = merge(
             groups,
-            require("nordic.groups..native." .. core)
+            require("nordic.groups.native." .. core)
         )
     end
     return groups
