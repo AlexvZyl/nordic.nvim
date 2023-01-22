@@ -83,21 +83,24 @@ local palette = {
 
 -- Backgrounds.
 palette.bg = palette.gray0
-palette.bg_highlight = palette.black
 palette.bg_dark = palette.black
-palette.bg_visual = palette.black
+palette.bg_highlight = palette.black
+palette.bg_visual = palette.bg_highlight
 palette.bg_sidebar = palette.bg
 palette.bg_float = palette.bg
 palette.bg_popup = palette.bg
 palette.bg_search = palette.gray1
-palette.bg_statusline = palette.black
+palette.bg_statusline = palette.bg_dark
+palette.bg_selected = palette.gray1
 
 -- Foregrounds.
 palette.fg = palette.white0
+palette.fg_bright = palette.white1
 palette.fg_dark = palette.white0
 palette.fg_sidebar = palette.fg
 palette.fg_gutter = palette.gray2
-palette.fg_float = palette.white1
+palette.fg_float = palette.fg_bright
+palette.fg_selected = palette.fg_bright
 
 -- Borders.
 palette.border = palette.black
