@@ -107,9 +107,9 @@ palette.border_nb = palette.orange.base
 -- Diffs.
 palette.diff = {}
 palette.diff.add = palette.green.bright
-palette.diff.change = palette.blue.bright
-palette.diff.text = palette.fg
+palette.diff.change = palette.yellow.base
 palette.diff.delete = palette.red.bright
+palette.diff.text = palette.fg
 
 -- Git.
 palette.git = {}

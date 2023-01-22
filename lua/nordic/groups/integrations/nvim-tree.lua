@@ -10,7 +10,7 @@ return {
     NvimTreeRootFolder = { fg = c.yellow.base, bold = true },
     NvimTreeNormal = { fg = c.white0, bg = c.black },
     NvimTreeNormalNC = { fg = c.white0, bg = c.black },
-    NvimTreeIndentMarker = { fg = c.gray3 },
+    NvimTreeIndentMarker = { fg = c.gray2 },
 
     NvimTreeWinSeparator = { fg = c.bg_sidebar, bg = c.bg_sidebar },
     NvimTreeGitDirty = { fg = c.git.change },
