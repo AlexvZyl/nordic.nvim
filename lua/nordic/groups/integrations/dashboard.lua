@@ -11,8 +11,13 @@ return {
         fg = c.cyan.base,
         bold = true,
     },
+
     DashboardCenter = {
         fg = c.green.base
     },
+
+    DashboardShortCut = {
+        fg = c.red.base
+    }
 
 }
