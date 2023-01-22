@@ -49,7 +49,7 @@ return {
     },
 
 	TelescopeMatching = {
-        fg = c.yellow.bright,
+        fg = c.green.bright,
         bold = true
     },
 
