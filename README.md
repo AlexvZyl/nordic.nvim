@@ -41,8 +41,8 @@ This is the list of currently supported plugins.  I use these myself, if you wan
 *Flat:*
 ![image](https://user-images.githubusercontent.com/81622310/213918343-a4daac04-9e98-4ba1-89f8-0e8eb4b73c10.png)
 
-*Classic*
-![image](https://user-images.githubusercontent.com/81622310/213969601-fe2157c2-3feb-4b91-9e52-5b5a18d5fe99.png)
+*Classic:*
+![image](https://user-images.githubusercontent.com/81622310/213974295-c9381a16-6f02-49dd-88b3-64f03ef9d5c7.png)
 
 # ⚙️ Configuration
 
