@@ -22,11 +22,13 @@ end
 
 function M.hex_to_rgb(str)
     str = string.lower(str)
-    return {
-        r = tonumber(str:sub(2, 3), 16),
-        g = tonumber(str:sub(4, 5), 16),
-        b = tonumber(str:sub(6, 7), 16)
-    }
+    return tonumber(str:sub(2, 3), 16),
+           tonumber(str:sub(4, 5), 16),
+           tonumber(str:sub(6, 7), 16)
+end
+
+function M.rgb_to_hex(r, g, b)
+    return "#" .. string.format("%x", r) .. string.format("%x", g) .. string.format("%x", b)
 end
 
 function M.rgb_to_hsv(r, g, b)
@@ -59,7 +61,7 @@ function M.rgb_to_hsv(r, g, b)
         h = h / 6
     end
 
-    return { h, s, v }
+    return h, s, v
 end
 
 function M.hsv_to_rbg(h, s, v)
@@ -73,7 +75,7 @@ function M.hsv_to_rbg(h, s, v)
 
     i = i % 6
 
-    if i == 0     then r, g, b = v, t, p
+    if     i == 0 then r, g, b = v, t, p
     elseif i == 1 then r, g, b = q, v, p
     elseif i == 2 then r, g, b = p, v, t
     elseif i == 3 then r, g, b = p, q, v
@@ -82,6 +84,39 @@ function M.hsv_to_rbg(h, s, v)
     end
 
     return r * 255, g * 255, b * 255
+end
+
+function M.darken(hex, amount)
+    local r, g, b = M.hex_to_rgb(hex)
+    local h, s, v = M.rgb_to_hsv(r, g, b)
+    v = v * ((1 - amount) / 1)
+    r, g, b = M.hsv_to_rbg(h, s, v)
+    return M.rgb_to_hex(r, g, b)
+end
+
+function M.lighten(hex, amount)
+    local r, g, b = M.hex_to_rgb(hex)
+    local h, s, v = M.rgb_to_hsv(r, g, b)
+    v = v * (1 + amount)
+    r, g, b = M.hsv_to_rbg(h, s, v)
+    return M.rgb_to_hex(r, g, b)
+end
+
+-- Adapted from @folke/tokyonight.nvim.
+function M.blend(foreground, background, alpha)
+    local fg = { M.hex_to_rgb(foreground) }
+    local bg = { M.hex_to_rgb(background) }
+
+    local blend_channel = function(c_fg, c_bg)
+        local ret = (alpha * c_fg + ((1 - alpha) * c_bg))
+        return math.floor(math.min(math.max(0, ret), 255) + 0.5)
+    end
+
+    return M.rgb_to_hex(
+        blend_channel(fg[1], bg[1]),
+        blend_channel(fg[2], bg[2]),
+        blend_channel(fg[3], bg[3])
+    )
 end
 
 return M
