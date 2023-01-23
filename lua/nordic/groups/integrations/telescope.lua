@@ -17,13 +17,13 @@ local groups = {
 
     -- Selection.
     TelescopeSelection = {
-        bg = c.black,
-        fg = c.fg_bright,
+        bg = c.bg_selected,
+        fg = c.fg_selected,
         bold = true
     },
     TelescopeSelectionCaret = {
-        fg = c.yellow.bright,
-        bg = c.black,
+        fg = c.fg_selected,
+        bg = c.bg_selected,
         bold = true,
     },
 
