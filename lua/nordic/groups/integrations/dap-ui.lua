@@ -50,12 +50,12 @@ return {
     },
 
     DapUIFloatBorder = {
-        fg = c.orange.base,
-        bg = c.black
+        fg = c.border_nb,
+        bg = c.bg
     },
 
     DapUIFloatNormal = {
-        bg = c.gray0
+        bg = c.bg
     },
 
     DapUILineNumber = {

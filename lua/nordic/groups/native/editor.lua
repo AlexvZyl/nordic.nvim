@@ -42,27 +42,7 @@ return {
 
     Directory = {
         fg = c.blue1
-    }, -- directory names (and other special names in listings)
-
-    DiffAdd = {
-        fg = c.gray0,
-        bg = c.diff.add
-    }, -- diff mode: Added line |diff.txt|
-
-    DiffChange = {
-        fg = c.gray0,
-        bg = c.diff.change
-    }, -- diff mode: Changed line |diff.txt|
-
-    DiffDelete = {
-        fg = c.fg_bright,
-        bg = c.diff.delete
-    }, -- diff mode: Deleted line |diff.txt|
-
-    DiffText = {
-        fg = c.gray0,
-        bg = c.diff.text
-    }, -- diff mode: Changed text within a changed line |diff.txt|
+    }, -- directory names (and other special names in listings) 
 
     EndOfBuffer = {
         fg = c.gray1,
