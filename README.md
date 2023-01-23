@@ -43,7 +43,7 @@ Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
 
 # 🚀 Usage
 
-Using a Neovim command:
+Using vim:
 
 ```vim
 colorscheme nordic
@@ -57,7 +57,7 @@ require 'nordic' .load()
 vim.cmd [[colorscheme nordic]]
 ```
 
-Using `Nordic` with `Lualine`:
+Using with `lualine`:
 
 ```lua
 require 'lualine' .setup {
