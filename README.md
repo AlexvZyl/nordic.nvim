@@ -100,6 +100,7 @@ This is the list of currently supported plugins.  I use these myself, if you wan
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [trouble.nvim](https://github.com/folke/trouble.nvim)
 - [which-key.nvim](https://github.com/folke/which-key.nvim)
+- [diffview.nvim](https://github.com/sindrets/diffview.nvim)
 
 # 🎙️ Acknowledgements
 

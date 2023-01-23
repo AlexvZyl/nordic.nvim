@@ -15,12 +15,14 @@ M.integrations = {
     "which-key",
     "gitsigns",
     "telescope",
-    "leap"
+    "leap",
+    "diffview"
 }
 
 M.core = {
     "editor",
     "syntax",
+    "diff",
     "lsp",
 }
 
