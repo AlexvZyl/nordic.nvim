@@ -49,3 +49,9 @@ With [packer.nvim](https://github.com/wbthomason/packer.nvim):
 ```lua
 use 'AlexvZyl/nordic.nvim'
 ```
+
+With [vim-plug](https://github.com/junegunn/vim-plug):
+
+```lua
+Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
+```
