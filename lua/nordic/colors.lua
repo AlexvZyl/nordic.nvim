@@ -109,9 +109,9 @@ palette.border_nb = palette.orange.base
 
 -- Diffs.
 palette.diff = {}
-palette.diff.add = palette.green.dim
-palette.diff.change = palette.yellow.dim
-palette.diff.delete = palette.red.dim
+palette.diff.add = palette.green.bright
+palette.diff.change = palette.yellow.base
+palette.diff.delete = palette.red.bright
 palette.diff.text = palette.fg
 
 -- Git.
@@ -125,7 +125,7 @@ palette.error = palette.red.bright
 palette.warn = palette.yellow.base
 palette.warning = palette.warn
 palette.hint = palette.green.bright
-palette.info = palette.blue.bright
+palette.info = palette.blue2
 
 -- Misc.
 palette.comment = palette.gray4
