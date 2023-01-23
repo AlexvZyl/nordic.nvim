@@ -29,20 +29,20 @@ local groups = {
 
     -- Titles.
 	TelescopePreviewTitle = {
-        fg = c.black,
-        bg = c.orange.base
+        fg = c.border_float,
+        bg = c.bg
     },
     TelescopeResultsTitle = {
-        fg = c.black,
-        bg = c.orange.base
+        fg = c.border_float,
+        bg = c.bg,
     },
     TelescopePromptTitle = {
-        fg = c.black,
-        bg = c.orange.base
+        fg = c.border_float,
+        bg = c.bg,
     },
     TelescopeTitle = {
-        bg = c.orange.base,
-        fg = c.black,
+        fg = c.border_float,
+        bg = c.bg,
         bold = true
     },
 
