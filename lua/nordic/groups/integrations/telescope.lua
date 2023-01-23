@@ -17,32 +17,32 @@ local groups = {
 
     -- Selection.
     TelescopeSelection = {
-        bg = c.black,
-        fg = c.fg_bright,
+        bg = c.bg_selected,
+        fg = c.fg_selected,
         bold = true
     },
     TelescopeSelectionCaret = {
-        fg = c.yellow.bright,
-        bg = c.black,
+        fg = c.fg_selected,
+        bg = c.bg_selected,
         bold = true,
     },
 
     -- Titles.
 	TelescopePreviewTitle = {
-        fg = c.black,
-        bg = c.orange.base
+        fg = c.border_float,
+        bg = c.bg
     },
     TelescopeResultsTitle = {
-        fg = c.black,
-        bg = c.orange.base
+        fg = c.border_float,
+        bg = c.bg,
     },
     TelescopePromptTitle = {
-        fg = c.black,
-        bg = c.orange.base
+        fg = c.border_float,
+        bg = c.bg,
     },
     TelescopeTitle = {
-        bg = c.orange.base,
-        fg = c.black,
+        fg = c.border_float,
+        bg = c.bg,
         bold = true
     },
 
@@ -84,16 +84,16 @@ if opts.telescope.style == 'flat' then
         bg = c.gray1
     }
     groups.TelescopeResultsNormal = {
-        bg = c.black
+        bg = c.bg_dark
     }
     groups.TelescopePreviewNormal = {
-        bg = c.black,
+        bg = c.bg_dark,
     }
 
     -- Selection.
     groups.TelescopeSelection = {
-        bg = c.bg_selected,
-        fg = c.fg_selected,
+        bg = c.gray1,
+        fg = c.fg_bright,
         bold = true
     }
     groups.TelescopeSelectionCaret = {
