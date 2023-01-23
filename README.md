@@ -6,12 +6,12 @@ The idea behind this colorscheme is to use Nord, but add some darker colors and 
 
 # ⚠️ Status
 
-This colorscheme is still early in development, so please do not hesitate if there is anything wrong or if you have any suggestions!  Currently I am [dogfooding](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) it to make sure I did not miss anything.
+This colorscheme is still in early development, so please do not hesitate if there is anything wrong or if you have any suggestions!  Currently I am [dogfooding](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) it to make sure I did not miss anything.
 
 # 📷 Showcase
 
-*Nvim-tree, bar-bar, lualine and treesitter:*
-![image](https://user-images.githubusercontent.com/81622310/213918910-7e9e4068-3eef-4d68-b192-4b0200cc1631.png)
+*Nvim-tree, lsp, bar-bar, lualine and treesitter:*
+![image](https://user-images.githubusercontent.com/81622310/214097506-82207204-6622-4af7-832a-f35c42a067d9.png)
 
 <details>
 <summary>Telescope</summary>
@@ -22,6 +22,14 @@ This colorscheme is still early in development, so please do not hesitate if the
 ![image](https://user-images.githubusercontent.com/81622310/213974295-c9381a16-6f02-49dd-88b3-64f03ef9d5c7.png)
 
 </details>
+
+<details>
+<summary>Dashboard & which-key</summary>
+
+![image](https://user-images.githubusercontent.com/81622310/214096444-7b1c3b7c-59cc-4e71-be6d-8c30522cfe68.png)
+
+</details>
+
 
 # 🎨 Palette
 
@@ -65,6 +73,12 @@ require 'lualine' .setup {
     theme = 'nordic'
   }
 }
+```
+
+To get the palette in lua:
+
+```lua
+local palette = require 'nordic.colors' 
 ```
 
 # ⚙️ Configuration
