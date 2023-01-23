@@ -1,12 +1,18 @@
+local config = require 'nordic.config'
+
 local M = {}
 
 -- Load Nordic!
-function M.load()
+function M.load(opts)
 
     vim.api.nvim_command("hi clear")
 
+    if opts then
+        require 'nordic.config' .extend(opts)
+    end
+
     local groups = require 'nordic.groups'
-    require 'nordic.utils'.highlight(groups.get_groups())
+    require 'nordic.utils' .highlight(groups.get_groups())
     groups.set_term_colors()
 
 end
@@ -19,5 +25,7 @@ vim.api.nvim_create_user_command(
 		nargs = 1,
 	}
 )
+
+M.setup = config.setup
 
 return M
