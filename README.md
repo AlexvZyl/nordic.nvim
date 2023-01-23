@@ -52,6 +52,6 @@ use 'AlexvZyl/nordic.nvim'
 
 With [vim-plug](https://github.com/junegunn/vim-plug):
 
-```lua
+```vim
 Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
 ```
