@@ -9,15 +9,16 @@ return {
     -- documentation.
 
     LspReferenceText = { bg = c.fg_gutter }, -- used for highlighting "text" references
+
     LspReferenceRead = { bg = c.fg_gutter }, -- used for highlighting "read" references
     LspReferenceWrite = { bg = c.fg_gutter }, -- used for highlighting "write" references
 
-    DiagnosticError = { fg = c.error }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticError = { fg = c.error, bold = true }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticWarn = { fg = c.warning }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticInfo = { fg = c.info }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticHint = { fg = c.hint }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
 
-    DiagnosticVirtualTextError = { bg = c.gray3, fg = c.error }, -- Used for "Error" diagnostic virtual text
+    DiagnosticVirtualTextError = { bg = c.gray3, fg = c.error, bold = true }, -- Used for "Error" diagnostic virtual text
     DiagnosticVirtualTextWarn = { bg = c.gray3, fg = c.warning }, -- Used for "Warning" diagnostic virtual text
     DiagnosticVirtualTextInfo = { bg = c.gray3, fg = c.info }, -- Used for "Information" diagnostic virtual text
     DiagnosticVirtualTextHint = { bg = c.gray3, fg = c.hint }, -- Used for "Hint" diagnostic virtual text
