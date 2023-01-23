@@ -22,10 +22,10 @@ return {
     DiagnosticVirtualTextInfo = { bg = c.gray3, fg = c.info }, -- Used for "Information" diagnostic virtual text
     DiagnosticVirtualTextHint = { bg = c.gray3, fg = c.hint }, -- Used for "Hint" diagnostic virtual text
 
-    DiagnosticUnderlineError = { underline = true, sp = c.error, bold = true }, -- Used to underline "Error" diagnostics
-    DiagnosticUnderlineWarn = { underline = true, sp = c.warning, bold = true }, -- Used to underline "Warning" diagnostics
-    DiagnosticUnderlineInfo = { underline = true, sp = c.info, bold = true }, -- Used to underline "Information" diagnostics
-    DiagnosticUnderlineHint = { underline = true, sp = c.hint, bold = true }, -- Used to underline "Hint" diagnostics
+    DiagnosticUnderlineError = { underline = true, sp = c.error }, -- Used to underline "Error" diagnostics
+    DiagnosticUnderlineWarn = { underline = true, sp = c.warning }, -- Used to underline "Warning" diagnostics
+    DiagnosticUnderlineInfo = { underline = true, sp = c.info }, -- Used to underline "Information" diagnostics
+    DiagnosticUnderlineHint = { underline = true, sp = c.hint }, -- Used to underline "Hint" diagnostics
 
     LspSignatureActiveParameter = { bg = c.gray3, bold = true },
     LspCodeLens = { fg = c.comment },
