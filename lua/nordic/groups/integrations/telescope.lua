@@ -30,15 +30,18 @@ local groups = {
     -- Titles.
 	TelescopePreviewTitle = {
         fg = c.border_float,
-        bg = c.bg
+        bg = c.bg,
+        bold = true,
     },
     TelescopeResultsTitle = {
         fg = c.border_float,
         bg = c.bg,
+        bold = true,
     },
     TelescopePromptTitle = {
         fg = c.border_float,
         bg = c.bg,
+        bold = true,
     },
     TelescopeTitle = {
         fg = c.border_float,
@@ -100,6 +103,28 @@ if opts.telescope.style == 'flat' then
         fg = c.yellow.bright,
         bg = c.gray1,
         bold = true,
+    }
+
+    -- Titles.
+	groups.TelescopePreviewTitle = {
+        bg = c.orange.base,
+        fg = c.black,
+        bold = true
+    }
+    groups.TelescopeResultsTitle = {
+        bg = c.orange.base,
+        fg = c.black,
+        bold = true
+    }
+    groups.TelescopePromptTitle = {
+        bg = c.orange.base,
+        fg = c.black,
+        bold = true
+    }
+    groups.TelescopeTitle = {
+        bg = c.orange.base,
+        fg = c.black,
+        bold = true
     }
 
     -- Borders.
