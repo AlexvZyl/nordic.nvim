@@ -84,16 +84,16 @@ if opts.telescope.style == 'flat' then
         bg = c.gray1
     }
     groups.TelescopeResultsNormal = {
-        bg = c.black
+        bg = c.bg_dark
     }
     groups.TelescopePreviewNormal = {
-        bg = c.black,
+        bg = c.bg_dark,
     }
 
     -- Selection.
     groups.TelescopeSelection = {
-        bg = c.bg_selected,
-        fg = c.fg_selected,
+        bg = c.gray1,
+        fg = c.fg_bright,
         bold = true
     }
     groups.TelescopeSelectionCaret = {
