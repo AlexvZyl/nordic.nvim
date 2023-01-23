@@ -31,18 +31,30 @@ This is the list of currently supported plugins.  I use these myself, if you wan
 - [trouble.nvim](https://github.com/folke/trouble.nvim)
 - [which-key.nvim](https://github.com/folke/which-key.nvim)
 
-# Showcase
+# 📷 Showcase
 
-*Nvim-tree, lualine and treesitter:*
+*Nvim-tree, bar-bar, lualine and treesitter:*
 ![image](https://user-images.githubusercontent.com/81622310/213918910-7e9e4068-3eef-4d68-b192-4b0200cc1631.png)
 
-*Telescope:*
+### Telescope
+
+*Flat:*
 ![image](https://user-images.githubusercontent.com/81622310/213918343-a4daac04-9e98-4ba1-89f8-0e8eb4b73c10.png)
 
-*Dashboard:*
-![image](https://user-images.githubusercontent.com/81622310/213918304-eab43101-f027-4a87-a934-8f23b583e937.png)
+*Classic*
+![image](https://user-images.githubusercontent.com/81622310/213969601-fe2157c2-3feb-4b91-9e52-5b5a18d5fe99.png)
 
-# ⚙️ Installation
+# ⚙️ Configuration
+
+```lua
+require 'nordic' .setup {
+  telescope = {
+    style = 'flat'
+  }
+}
+```
+
+# 📦 Installation
 
 With [packer.nvim](https://github.com/wbthomason/packer.nvim):
 
