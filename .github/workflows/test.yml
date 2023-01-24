@@ -25,4 +25,4 @@ jobs:
               cat init.lua;
       - name: Run tests
         run:  nvim --version;
-              nvim --headless -u init.lua -c 'PackerSync' -c 'colorscheme nordic';
+              nvim --headless -u init.lua -c 'autocmd User PackerComplete quitall' -c 'PackerSync' -c 'colorscheme nordic';
