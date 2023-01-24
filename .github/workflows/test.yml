@@ -21,6 +21,7 @@ jobs:
       - name: Get testing config
         run:  wget -q  https://raw.githubusercontent.com/AlexvZyl/nordic.nvim/main/test/init.lua;
       - name: Get current branch name
+        id:   branch-name
         uses: tj-actions/branch-names@v6 
       - name: Set to current branch 
         run:  sudo sed -i "s/-- branch = ''/branch = '${{ steps.branch-name.outputs.current_branch }}'/g" init.lua;
