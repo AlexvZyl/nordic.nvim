@@ -60,9 +60,9 @@ colorscheme nordic
 Using lua:
 
 ```lua
-require 'nordic' .load()
+vim.cmd.colorscheme 'nordic'
 -- or
-vim.cmd [[colorscheme nordic]]
+require 'nordic' .load()
 ```
 
 Using with `lualine`:
