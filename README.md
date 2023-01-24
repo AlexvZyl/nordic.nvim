@@ -11,7 +11,7 @@ This colorscheme is still in early development, so please do not hesitate if the
 # 📷 Showcase
 
 *Nvim-tree, lsp, bar-bar, lualine and treesitter:*
-![image](https://user-images.githubusercontent.com/81622310/214097506-82207204-6622-4af7-832a-f35c42a067d9.png)
+![image](https://user-images.githubusercontent.com/81622310/214236416-5cfe1638-e3f9-4f24-a330-489c341ce0fc.png)
 
 <details>
 <summary>Telescope</summary>
