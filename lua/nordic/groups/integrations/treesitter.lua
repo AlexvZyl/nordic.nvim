@@ -1,6 +1,8 @@
 -- Notes and format from @folke/tokyonight.nvim.
 
 local c = require 'nordic.colors'
+local o = require 'nordic.config' .options
+local m = require 'nordic.utils' .merge
 
 return {
     -- These groups are for the neovim tree-sitter highlights.
@@ -84,17 +86,17 @@ return {
     ["@constant.macro"] = { fg = c.magenta.bright },
     ["@constant.builtin"] = { fg = c.magenta.bright },
     -- Oranges (Keywords).
-    ["@keyword"] = { fg = c.orange.base, bold = true },
-    ["@keyword.return"] = { fg = c.orange.base, bold = true },
-    ["@keyword.function"] = { fg = c.orange.base, bold = true },
-    ["@keyword.export"] = { fg = c.orange.base, bold = true },
-    ["@keyword.operator"] = { fg = c.orange.base, bold = true },
-    ["@repeat"] = { fg = c.orange.base, bold = true },
-    ["@conditional"] = { fg = c.orange.base, bold = true },
-    ["@operator"] = { fg = c.orange.bright, bold = true },
-    ["@class"] = { fg = c.orange.base, bold = true },
-    ["@type.qualifier"] = { fg = c.orange.base, bold = true },
-    ["@storageclass"] = { fg = c.orange.base, bold = true },
+    ["@keyword"] = m({ fg = c.orange.base }, o.syntax.keywords),
+    ["@keyword.return"] = m({ fg = c.orange.base }, o.syntax.keywords),
+    ["@keyword.function"] = m({ fg = c.orange.base }, o.syntax.keywords),
+    ["@keyword.export"] = m({ fg = c.orange.base }, o.syntax.keywords),
+    ["@keyword.operator"] = m({ fg = c.orange.bright }, o.syntax.operators),
+    ["@repeat"] = m({ fg = c.orange.base }, o.syntax.keywords),
+    ["@conditional"] = m({ fg = c.orange.base }, o.syntax.keywords),
+    ["@operator"] = m({ fg = c.orange.bright }, o.syntax.operators),
+    ["@class"] = m({ fg = c.orange.base }, o.syntax.keywords),
+    ["@type.qualifier"] = m({ fg = c.orange.base }, o.syntax.keywords),
+    ["@storageclass"] = m({ fg = c.orange.base }, o.syntax.keywords),
     -- Reds.
     ["@preproc"] = { fg = c.red.base, bold = true },
     ["@attribute"] = { fg = c.red.base, bold = true },
