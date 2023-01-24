@@ -83,15 +83,24 @@ local palette = require 'nordic.colors'
 
 # ⚙️ Configuration
 
-Below is the default configuration.
-
-> 
+Nordic will use the default values, unless `setup` is called.  Below is the default configuration.
 
 ```lua
 require 'nordic' .setup {
   telescope = {
     -- Available styles: `classic`, `flat`.
     style = 'flat'
+  },
+  syntax = {
+    comments = {
+      italic = true
+    },
+    operators = {
+      bold = true
+    },
+    keywords = {
+      bold = true
+    }
   }
 }
 ```

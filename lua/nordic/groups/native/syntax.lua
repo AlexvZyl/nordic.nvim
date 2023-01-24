@@ -1,6 +1,8 @@
 -- Notes and format from @folke/tokyonight.nvim.
 
 local c = require 'nordic.colors'
+local o = require 'nordic.config' .options
+local m = require 'nordic.utils' .merge
 
 return {
 
@@ -12,7 +14,7 @@ return {
 
     Constant    = { fg = c.magenta.bright }, -- (preferred) any constant
     String      = { fg = c.green.base }, --   a string constant: "this is a string"
-    Character   = { fg = c.green.bright }, --  a character constant: 'c', '\n'
+    Character   = { fg = c.green.base }, --  a character constant: 'c', '\n'
     Number      = { fg = c.magenta.bright  }, --   a number constant: 234, 0xff
     Boolean     = { fg = c.magenta.bright  }, --  a boolean constant: TRUE, false
     Float       = { fg = c.magenta.bright  }, --    a floating point constant: 2.3e10
@@ -20,13 +22,15 @@ return {
     Identifier    = { fg = c.fg }, -- (preferred) any variable name
     Function      = { fg = c.blue2 }, -- function name (also: methods for classes)
 
-    Statement     = { fg = c.orange.base, bold = true }, -- (preferred) any statement
-    Conditional   = { fg = c.orange.base, bold = true  }, --  if, then, else, endif, switch, etc.
-    Repeat        = { fg = c.orange.base, bold = true  }, --   for, do, while, etc.
-    Label         = { fg = c.orange.base, bold = true  }, --    case, default, etc.
-    Operator      = { fg = c.orange.bright, bold = true }, -- "sizeof", "+", "*", etc.
-    Keyword       = { fg = c.orange.base, bold = true }, --  any other keyword
-    Exception     = { fg = c.orange.bright, bold = true  }, --  try, catch, throw
+    Statement     = m({ fg = c.orange.base }, o.syntax.keywords), -- (preferred) any statement
+    Conditional   = m({ fg = c.orange.base }, o.syntax.keywords), --  if, then, else, endif, switch, etc.
+    Repeat        = m({ fg = c.orange.base }, o.syntax.keywords), --   for, do, while, etc.
+    Label         = m({ fg = c.orange.base }, o.syntax.keywords), --    case, default, etc.
+    Operator      = m({ fg = c.orange.bright}, o.syntax.operators), -- "sizeof", "+", "*", etc.
+    Keyword       = m({ fg = c.orange.base }, o.syntax.keywords), --  any other keyword
+    Exception     = m({ fg = c.red.base }, o.syntax.keywords), --  try, catch, throw
+
+    Comment       = m( { fg = c.comment }, o.syntax.comments),
 
     PreProc       = { fg = c.red.base, bold = true }, -- (preferred) generic Preprocessor
     Include       = { fg = c.red.base, bold = true }, --  preprocessor #include
@@ -34,7 +38,7 @@ return {
     Macro         = { fg = c.red.base, bold = true }, --    same as Define
     PreCondit     = { fg = c.red.base, bold = true }, --  preprocessor #if, #else, #endif, etc.
 
-    Type = { fg = c.yellow.base }, -- (preferred) int, long, char, etc.
+    Type          = { fg = c.yellow.base }, -- (preferred) int, long, char, etc.
     StorageClass  = { fg = c.orange.base }, -- static, register, volatile, etc.
     Structure     = { fg = c.orange.base }, --  struct, union, enum, etc.
     Typedef       = { fg = c.yellow.base }, --  A typedef
@@ -55,7 +59,7 @@ return {
     -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
     Error = { fg = c.error }, -- (preferred) any erroneous construct
-    Todo = { bg = c.yellow.dim, fg = c.bg }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Todo = { bg = c.yellow.dim, fg = c.bg_dark }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
     -- What are these? TODO.
     qfLineNr = { fg = c.gray4 },
