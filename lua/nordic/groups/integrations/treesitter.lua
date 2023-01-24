@@ -60,10 +60,10 @@ return {
 	['@variable'] = { fg = c.white0 }, -- Any variable name that does not have another highlight.
 	-- ["@variable.builtin"] = { fg = c.blue1 }, -- Variable names that are defined by the languages, like `this` or `self`.
 
-	['@tag'] = { fg = c.blue1 },                         -- Tags like html tag names.
-	['@tag.delimiter'] = { fg = c.white0 },              -- Tag delimiter like `<` `>` `/`
-	['@tag.attribute'] = { c.yellow.base, bold = true }, -- Tag attribute like `id` `class`
-	['@text'] = { link = 'Normal' },                     -- For strings considered text in a markup language.
+	['@tag'] = { fg = c.blue1 },                      -- Tags like html tag names.
+	['@tag.delimiter'] = { fg = c.white0 },           -- Tag delimiter like `<` `>` `/`
+	['@tag.attribute'] = { c.yellow.base },           -- Tag attribute like `id` `class`
+	['@text'] = { link = 'Normal' },                  -- For strings considered text in a markup language.
 	['@text.reference'] = { fg = c.green.base },
 	['@text.strong'] = { bold = true },
 	['@text.emphasis'] = { italic = true },           -- For text to be represented with emphasis.
