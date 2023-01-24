@@ -16,6 +16,7 @@ jobs:
       - name: Run StyLua
         uses: JohnnyMorganz/stylua-action@v2
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           args: --config-path=stylua.toml .
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
