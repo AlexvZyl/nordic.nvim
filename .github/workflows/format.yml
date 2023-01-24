@@ -2,7 +2,7 @@ name: Auto format
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ "main" ]
 
 jobs:
   docs:
