@@ -18,8 +18,9 @@ jobs:
               sudo dpkg -i /tmp/nvim.deb;
       - name: Get testing config
         run:  wget -q  https://github.com/AlexvZyl/nordic.nvim/tree/main/test/init.lua;
-      - name: Set to current branch 
+      - name: Get current branch name
         uses: tj-actions/branch-names@v6 
+      - name: Set to current branch 
         run:  sudo sed -i "s/-- branch = ''/branch = '${current_branch}'/g" init.lua;
               cat init.lua;
       - name: Run tests
