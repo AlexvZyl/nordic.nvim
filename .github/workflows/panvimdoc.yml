@@ -18,7 +18,7 @@ jobs:
       - name: Panvimdoc generate 
         uses: kdheepak/panvimdoc@main
         with:
-          vimdoc: ${VIMDOC_PROJECT_NAME}
+          vimdoc: nordic.nvim
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
