@@ -16,7 +16,8 @@ return {
 	-- TSBoolean           = { };    -- For booleans.
 	-- TSCharacter         = { };    -- For characters.
 	-- TSComment           = { };    -- For comment blocks.
-	TSNote = { fg = c.bg, bg = c.info },
+	['@text.todo'] = { link = 'Todo' },
+	['@text.note'] = { fg = c.bg, bg = c.info },
 	['@text.warning'] = { fg = c.bg, bg = c.warning },
 	['@text.danger'] = { fg = c.bg, bg = c.error },
 	['@constructor'] = { fg = c.white0 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
@@ -59,16 +60,18 @@ return {
 	['@variable'] = { fg = c.white0 }, -- Any variable name that does not have another highlight.
 	-- ["@variable.builtin"] = { fg = c.blue1 }, -- Variable names that are defined by the languages, like `this` or `self`.
 
-	-- TSTag               = { };    -- Tags like html tag names.
-	-- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
-	-- TSText              = { };    -- For strings considered text in a markup language.
+	['@tag'] = { fg = c.blue1 },                      -- Tags like html tag names.
+	['@tag.delimiter'] = { fg = c.white0 },           -- Tag delimiter like `<` `>` `/`
+	['@tag.attribute'] = { c.yellow.base },           -- Tag attribute like `id` `class`
+	['@text'] = { link = 'Normal' },                  -- For strings considered text in a markup language.
 	['@text.reference'] = { fg = c.green.base },
-	-- TSEmphasis          = { };    -- For text to be represented with emphasis.
-	-- TSUnderline         = { };    -- For text to be represented with an underline.
-	-- TSStrike            = { };    -- For strikethrough text.
-	-- TSTitle             = { };    -- Text that is part of a title.
+	['@text.strong'] = { bold = true },
+	['@text.emphasis'] = { italic = true },           -- For text to be represented with emphasis.
+	['@text.underline'] = { underline = true },       -- For text to be represented with an underline.
+	['@text.strike'] = { strikethrough = true },      -- For strikethrough text.
+	['@text.title'] = { link = 'Title' },             -- Text that is part of a title.
 	-- TSLiteral           = { };    -- Literal text.
-	-- TSURI               = { };    -- Any URI like a link or email.
+	['@text.uri'] = { underline = true };             -- Any URI like a link or email.
 	['@text.diff.add'] = { link = 'DiffAdd' },
 	['@text.diff.delete'] = { link = 'DiffDelete' },
 
