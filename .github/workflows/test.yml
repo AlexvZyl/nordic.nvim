@@ -14,14 +14,13 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install Neovim
         shell: bash
-        run: |
-            wget -q https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.deb -O /tmp/nvim.deb
-            sudo dpkg -i /tmp/nvim.deb
+        run:  wget -q https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.deb -O /tmp/nvim.deb;
+              sudo dpkg -i /tmp/nvim.deb;
       - name: Get testing config
-        run: wget -q  https://github.com/AlexvZyl/nordic.nvim/tree/main/test/init.lua
+        run:  wget -q  https://github.com/AlexvZyl/nordic.nvim/tree/main/test/init.lua;
       - name: Set to current branch 
-        run: sudo sed -i "s/-- branch = ''/branch = '${GITHUB_REF#refs/heads/}'/g" init.lua
-      - name: Run Tests
-        run: |
-          nvim --version
-          nvim --headless -c 'PackerSync' -c 'colorscheme nordic'
+        run:  sudo sed -i "s/-- branch = ''/branch = '${GITHUB_REF#refs/heads/}'/g" init.lua;
+              cat init.lua;
+      - name: Run tests
+        run:  nvim --version;
+              nvim --headless -u init.lua -c 'PackerSync' -c 'colorscheme nordic';
