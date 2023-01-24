@@ -62,7 +62,7 @@ return {
 
 	['@tag'] = { fg = c.blue1 }, -- Tags like html tag names.
 	['@tag.delimiter'] = { fg = c.white0 }, -- Tag delimiter like `<` `>` `/`
-	['@tag.attribute'] = { c.yellow.base }, -- Tag attribute like `id` `class`
+	['@tag.attribute'] = { fg = c.yellow.base }, -- Tag attribute like `id` `class`
 	['@text'] = { link = 'Normal' }, -- For strings considered text in a markup language.
 	['@text.reference'] = { fg = c.green.base },
 	['@text.strong'] = { bold = true },
