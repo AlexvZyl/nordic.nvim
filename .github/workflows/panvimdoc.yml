@@ -1,0 +1,25 @@
+name: Generate Docs
+
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    name: pandoc to vimdoc
+    steps:
+      - uses: actions/checkout@v2
+      - name: panvimdoc
+        uses: kdheepak/panvimdoc@main
+        with:
+          vimdoc: ${VIMDOC_PROJECT_NAME}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Auto generate docs"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+          branch: ${{ github.head_ref }}
