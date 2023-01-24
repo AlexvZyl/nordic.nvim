@@ -119,9 +119,9 @@ palette.diff.bg = palette.gray1
 
 -- Git.
 palette.git = {}
-palette.git.add = palette.green.bright
-palette.git.delete = palette.red.bright
-palette.git.change = palette.yellow.base
+palette.git.add = palette.green.base
+palette.git.delete = palette.red.base
+palette.git.change = palette.blue1
 
 -- Diagnostics.
 palette.error = palette.red.bright
