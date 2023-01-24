@@ -16,7 +16,8 @@ M.integrations = {
     "gitsigns",
     "telescope",
     "leap",
-    "diffview"
+    "diffview",
+    "nvim-cmp"
 }
 
 M.core = {

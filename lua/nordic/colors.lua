@@ -1,7 +1,5 @@
 -- The Nord palette: https://www.nordtheme.com/.
 
-local u = require 'nordic.utils'
-
 local palette = {
 
     none = "NONE",
