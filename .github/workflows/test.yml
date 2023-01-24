@@ -1,4 +1,4 @@
-name: Generate docs
+name: Test
 
 on:
   push:
@@ -17,8 +17,11 @@ jobs:
         run: |
             wget -q https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.deb -O /tmp/nvim.deb
             sudo dpkg -i /tmp/nvim.deb
+      - name: Get testing config
+        run: wget -q  https://github.com/AlexvZyl/nordic.nvim/tree/main/test/init.lua
+      - name: Set to current branch 
+        run: sudo sed -i "s/-- branch = ''/branch = '${GITHUB_REF#refs/heads/}'/g" init.lua
       - name: Run Tests
         run: |
           nvim --version
-          [ ! -d tests ] && exit 0
-          nvim --headless -u tests/init.lua -c "PlenaryBustedDirectory tests/ {minimal_init = 'tests/init.lua', sequential = true}"
+          nvim --headless -c 'PackerSync' -c 'colorscheme nordic'
