@@ -2,7 +2,7 @@ name: Generate docs
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ "main" ]
 
 jobs:
   tests:
