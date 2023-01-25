@@ -18,6 +18,10 @@ jobs:
         shell: bash
         run:  wget -q https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.deb -O /tmp/nvim.deb;
               sudo dpkg -i /tmp/nvim.deb;
+      - name: Nvim version
+        run:  nvim --version
+      - name: Install packer.nvim
+        run:  git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
       - name: Get testing config
         run:  wget -q  https://raw.githubusercontent.com/AlexvZyl/nordic.nvim/dev/test/init.lua;
       - name: Get current branch name
@@ -26,8 +30,6 @@ jobs:
       - name: Set to current branch 
         run:  sudo sed -i "s/-- branch = ''/branch = '${{ steps.branch-name.outputs.current_branch }}'/g" init.lua;
               cat init.lua;
-      - name: Nvim version
-        run:  nvim --version
-      - name: Bootstrap packer & test nordic
+      - name: Test nordic.nvim
         run:  |
               [ $(nvim --headless -u init.lua -c 'autocmd User PackerComplete q' -c 'PackerSync' -c 'colorscheme nordic' -c 'q') ] && exit 1;
