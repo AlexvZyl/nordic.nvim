@@ -30,5 +30,4 @@ jobs:
         run:  nvim --version
       - name: Bootstrap packer & test nordic
         run:  |
-              nvim --headless -u init.lua -c 'autocmd User PackerComplete quitall' -c 'PackerSync';
-              [ $(nvim --headless -u init.lua -c 'colorscheme nordic' -c 'q') ] && exit 1;
+              [ $(nvim --headless -u init.lua -c 'autocmd User PackerComplete q' -c 'PackerSync' -c 'colorscheme nordic' -c 'q') ] && exit 1;
