@@ -2,7 +2,7 @@
 
 [![Test](https://github.com/AlexvZyl/nordic.nvim/workflows/Test/badge.svg)](https://github.com/AlexvZyl/nordic.nvim/actions?workflow=Test) 
 
-A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but `Aurora` > `Frost`.  
+A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but `Aurora` > `Frost`.
 
 The idea behind this colorscheme is to use Nord, but add some darker colors and use `Aurora` more prominently than Nord themes usually do.
 
@@ -32,7 +32,6 @@ This colorscheme is still in early development, so please do not hesitate if the
 
 </details>
 
-
 # 🎨 Palette
 
 TODO
@@ -43,6 +42,19 @@ With [packer.nvim](https://github.com/wbthomason/packer.nvim):
 
 ```lua
 use 'AlexvZyl/nordic.nvim'
+```
+
+With [lazy.nvim](https://github.com/folke/lazy.nvim):
+
+```lua
+{
+  'AlexvZyl/nordic.nvim',
+  lazy = false,
+  priority = 1000,
+  config = function()
+    require 'nordic' .load()
+  end
+}
 ```
 
 With [vim-plug](https://github.com/junegunn/vim-plug):
@@ -80,7 +92,7 @@ require 'lualine' .setup {
 To get the palette in lua:
 
 ```lua
-local palette = require 'nordic.colors' 
+local palette = require 'nordic.colors'
 ```
 
 # ⚙️ Configuration
@@ -136,4 +148,3 @@ This is the list of currently supported plugins.  I use these myself, if you wan
 
 - [folke/tokyonight](https://github.com/folke/tokyonight.nvim) served as an excellent example for a Neovim theme.
 - [EdenEast/nightfox.nvim](https://github.com/EdenEast/nightfox.nvim) for bright & dim versions of the Nord palette.
-
