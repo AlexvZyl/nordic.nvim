@@ -2,7 +2,7 @@ name: Test
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ "main" ]
   pull_request:
     bracnhes: [ "main" ]
 
@@ -23,7 +23,7 @@ jobs:
       - name: Install packer.nvim
         run:  git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
       - name: Get testing config
-        run:  wget -q  https://raw.githubusercontent.com/AlexvZyl/nordic.nvim/dev/test/init.lua;
+        run:  wget -q  https://raw.githubusercontent.com/AlexvZyl/nordic.nvim/main/test/init.lua;
       - name: Get current branch name
         id:   branch-name
         uses: tj-actions/branch-names@v6 
