@@ -38,6 +38,10 @@ jobs:
         run:  ls -a ~/.local/share/nvim/site/pack/packer/start/
       - name: Test nordic.nvim
         run:  |
-              if [[ -n $(nvim --headless -u init.lua -c 'colorscheme nordic' -c 'q') ]]; then
+              output = $(nvim --headless -u init.lua -c 'colorscheme nordic' -c 'q')
+              if [ -z "$output" ]
+              then
+                exit 0
+              else
                 exit 1
               fi
