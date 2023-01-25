@@ -32,4 +32,4 @@ jobs:
         run:  nvim --headless -u init.lua -c 'autocmd User PackerComplete quitall' -c 'PackerSync';
       - name: Test nordic.nvim 
         run:  | 
-              [ $(nvim --headless -u init.lua -c 'colorscheme nordic' -c 'q') ] && exit 1
+              [ $(nvim --headless -u init.lua -c 'PackerSync' -c 'colorscheme nordic' -c 'q') ] && exit 1
