@@ -3,7 +3,7 @@ local c = require 'nordic.colors'
 return {
 
 	DapUIStop = {
-		gg = c.red.bright,
+		fg = c.red.bright,
 		bold = true,
 	},
 
