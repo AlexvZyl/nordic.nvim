@@ -3,7 +3,7 @@ local c = require 'nordic.colors'
 return {
 
 	BufferCurrent = {
-		fg = c.white0,
+		gg = c.white0,
 		bg = c.gray0,
 		bold = true,
 	},
