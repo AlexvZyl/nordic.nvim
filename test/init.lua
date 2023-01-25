@@ -9,8 +9,7 @@ local ensure_packer = function()
 	end
 	return false
 end
-
-local packer_bootstrap = ensure_packer()
+ensure_packer()
 
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
@@ -22,7 +21,5 @@ return require('packer').startup(function(use)
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
-	if packer_bootstrap then
-		require('packer').sync()
-	end
+	require('packer').sync()
 end)
