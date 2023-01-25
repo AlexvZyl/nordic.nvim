@@ -1,4 +1,4 @@
-*nordic.nvim.txt*         For NVIM v0.8.0         Last change: 2023 January 24
+*nordic.nvim.txt*         For NVIM v0.8.0         Last change: 2023 January 25
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -16,6 +16,9 @@ Table of Contents                              *nordic.nvim-table-of-contents*
 ==============================================================================
 1. nordic.nvim                                       *nordic.nvim-nordic.nvim*
 
+<img src='https://github.com/AlexvZyl/nordic.nvim/workflows/Test/badge.svg'
+title=''/> <https://github.com/AlexvZyl/nordic.nvim/actions?workflow=Test>
+
 A Neovim colorscheme based on Nord <https://www.nordtheme.com/>, but `Aurora` >
 `Frost`.
 
@@ -28,7 +31,7 @@ use `Aurora` more prominently than Nord themes usually do.
 This colorscheme is still in early development, so please do not hesitate if
 there is anything wrong or if you have any suggestions! Currently I am
 dogfooding <https://en.wikipedia.org/wiki/Eating_your_own_dog_food> it to make
-sure I did not miss anything.
+sure I do not miss anything.
 
 ==============================================================================
 3. 📷 Showcase                                   *nordic.nvim-📷-showcase*
