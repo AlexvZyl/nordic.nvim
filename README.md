@@ -44,16 +44,16 @@ With [packer.nvim](https://github.com/wbthomason/packer.nvim):
 use 'AlexvZyl/nordic.nvim'
 ```
 
-With [lazy.nvim](https://github.com/folke/lazy.nvim)
+With [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-  "AlexvZyl/nordic.nvim",
+  'AlexvZyl/nordic.nvim',
   lazy = false,
   priority = 1000,
   config = function()
-    require("nordic").load()
-  end,
+    require 'nordic' .load()
+  end
 }
 ```
 
