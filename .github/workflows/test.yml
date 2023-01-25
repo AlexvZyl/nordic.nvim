@@ -37,5 +37,9 @@ jobs:
       - name: List installed plugins
         run:  ls -a ~/.local/share/nvim/site/pack/packer/start/
       - name: Test nordic.nvim
+        shell: bash
         run:  |
-              $(nvim --headless -u init.lua -c 'colorscheme nordic' -c 'q')
+              if [[ $(nvim --headless -u init.lua -c 'colorscheme nordic' -c 'q') ]];
+              then
+                exit 1
+              fi
