@@ -30,7 +30,6 @@ This colorscheme is still in early development, so please do not hesitate if the
 
 </details>
 
-
 # 🎨 Palette
 
 TODO
@@ -48,9 +47,11 @@ With [lazy.nvim](https://github.com/folke/lazy.nvim)
 ```lua
 {
   "AlexvZyl/nordic.nvim",
-    config = function()
-      require("nordic").load()
-    end,
+  lazy = false,
+  priority = 1000,
+  config = function()
+    require("nordic").load()
+  end,
 }
 ```
 
