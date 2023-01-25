@@ -39,7 +39,8 @@ jobs:
       - name: Test nordic.nvim
         shell: bash
         run:  |
-              if [[ $(nvim --headless -u init.lua -c 'colorscheme nordic' -c 'q') ]];
+              OUTPUT=$(nvim --headless -u init.lua -c 'colorscheme nordic' -c 'q' 2>&1);
+              if [[ -n "$OUTPUT" ]]
               then
                 exit 1
               fi
