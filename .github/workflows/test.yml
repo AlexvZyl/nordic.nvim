@@ -36,4 +36,4 @@ jobs:
         run:  ls -a ~/.local/share/nvim/site/pack/packer/start/
       - name: Test nordic.nvim
         run:  |
-              [ $(nvim --headless -u init.lua -c 'colorscheme nordic' -c 'q') ] && exit 1;
+              [[ -n $(nvim --headless -u init.lua -c 'colorscheme nordic' -c 'q') ]] && exit 1;
