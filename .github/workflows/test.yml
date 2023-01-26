@@ -29,7 +29,7 @@ jobs:
         uses: tj-actions/branch-names@v6 
       - name: Set to current repo (PR)
         if:   github.event_name == 'pull_request'
-        run:  sudo sed -i "s!-- repo!'${{ github.pull_request.head.label }}',!g" init.lua;
+        run:  sudo sed -i "s!-- repo!'${{ github.event.pull_request.head.repo.owner.login }}',!g" init.lua;
       - name: Set to current repo (Push)
         if:   github.event_name == 'push'
         run:  sudo sed -i "s!-- repo!'${GITHUB_REPOSITORY}',!g" init.lua;
@@ -38,7 +38,7 @@ jobs:
               cat init.lua;
       - name: Install nordic.nvim (PR)
         if:   github.event_name == 'pull_request'
-        run:  git clone --branch ${{ steps.branch-name.outputs.current_branch }} https://github.com/${{ github.pull_request.head.label }} ~/.local/share/nvim/site/pack/packer/start/nordic.nvim
+        run:  git clone --branch ${{ steps.branch-name.outputs.current_branch }} https://github.com/${{ github.event.pull_request.head.repo.owner.login }} ~/.local/share/nvim/site/pack/packer/start/nordic.nvim
       - name: Install nordic.nvim (Push)
         if:   github.event_name == 'push'
         run:  git clone --branch ${{ steps.branch-name.outputs.current_branch }} https://github.com/${GITHUB_REPOSITORY} ~/.local/share/nvim/site/pack/packer/start/nordic.nvim
