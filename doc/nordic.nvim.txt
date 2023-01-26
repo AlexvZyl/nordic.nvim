@@ -140,22 +140,16 @@ default configuration.
         -- Available styles: `classic`, `flat`.
         style = 'flat'
       },
+      -- Enable bold keywords and operators
+      bold = true,
+      -- Enable italicized comments
+      italic = true,
+      -- Enable editor background transparency
+      transparent = false,
+      -- Override styling of any highlight group
       -- These can contain anything that neovim understands.
       -- (fg, bg, italic, bold, etc.)
-      syntax = {
-        comments = {
-          italic = true,
-          bold = false
-        },
-        operators = {
-          italic = false,
-          bold = true
-        },
-        keywords = {
-          italic = false,
-          bold = true
-        }
-      }
+      override = {},
     }
 <
 

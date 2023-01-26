@@ -1,6 +1,7 @@
 -- Notes and format from @folke/tokyonight.nvim.
 
 local c = require 'nordic.colors'
+local opts = require 'nordic.config'.options
 
 return {
 
@@ -77,7 +78,7 @@ return {
 	}, -- 'foldcolumn'
 
 	SignColumn = {
-		bg = c.bg,
+		bg = opts.transparent and c.none or c.bg,
 		fg = c.fg_gutter,
 	}, -- column where |signs| are displayed
 
@@ -126,17 +127,17 @@ return {
 
 	Normal = {
 		fg = c.fg,
-		bg = c.bg,
+		bg = opts.transparent and c.none or c.bg,
 	}, -- normal text
 
 	NormalNC = {
 		fg = c.fg,
-		bg = c.bg,
+		bg = opts.transparent and c.none or c.bg,
 	}, -- normal text in non-current windows
 
 	NormalSB = {
 		fg = c.fg_sidebar,
-		bg = c.bg_sidebar,
+		bg = opts.transparent and c.none or c.bg_sidebar,
 	}, -- normal text in sidebar
 
 	NormalFloat = {
