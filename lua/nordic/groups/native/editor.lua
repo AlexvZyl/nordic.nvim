@@ -1,7 +1,7 @@
 -- Notes and format from @folke/tokyonight.nvim.
 
 local c = require 'nordic.colors'
-local opts = require 'nordic.config'.options
+local opts = require('nordic.config').options
 
 return {
 

@@ -5,90 +5,90 @@ local opts = require('nordic.config').options
 
 return {
 
-  -- These groups are not listed as default vim groups,
-  -- but they are defacto standard group names for syntax highlighting.
-  -- commented out groups should chain up to their "preferred" group by
-  -- default,
-  -- Uncomment and edit if you want more specific syntax highlighting.
+	-- These groups are not listed as default vim groups,
+	-- but they are defacto standard group names for syntax highlighting.
+	-- commented out groups should chain up to their "preferred" group by
+	-- default,
+	-- Uncomment and edit if you want more specific syntax highlighting.
 
-  Constant = { fg = c.magenta.bright }, -- (preferred) any constant
-  String = { fg = c.green.base }, --   a string constant: "this is a string"
-  Character = { fg = c.green.base }, --  a character constant: 'c', '\n'
-  Number = { fg = c.magenta.bright }, --   a number constant: 234, 0xff
-  Boolean = { fg = c.magenta.bright }, --  a boolean constant: TRUE, false
-  Float = { fg = c.magenta.bright }, --    a floating point constant: 2.3e10
+	Constant = { fg = c.magenta.bright }, -- (preferred) any constant
+	String = { fg = c.green.base }, --   a string constant: "this is a string"
+	Character = { fg = c.green.base }, --  a character constant: 'c', '\n'
+	Number = { fg = c.magenta.bright }, --   a number constant: 234, 0xff
+	Boolean = { fg = c.magenta.bright }, --  a boolean constant: TRUE, false
+	Float = { fg = c.magenta.bright }, --    a floating point constant: 2.3e10
 
-  Identifier = { fg = c.fg }, -- (preferred) any variable name
-  Function = { fg = c.blue2 }, -- function name (also: methods for classes)
+	Identifier = { fg = c.fg }, -- (preferred) any variable name
+	Function = { fg = c.blue2 }, -- function name (also: methods for classes)
 
-  Statement = { fg = c.orange.base, bold = opts.bold }, -- (preferred) any statement
-  Conditional = { fg = c.orange.base, bold = opts.bold }, --  if, then, else, endif, switch, etc.
-  Repeat = { fg = c.orange.base, bold = opts.bold }, --   for, do, while, etc.
-  Label = { fg = c.orange.base, bold = opts.bold }, --    case, default, etc.
-  Operator = { fg = c.orange.bright, bold = opts.bold }, -- "sizeof", "+", "*", etc.
-  Keyword = { fg = c.orange.base, bold = opts.bold }, --  any other keyword
-  Exception = { fg = c.red.base, bold = opts.bold }, --  try, catch, throw
+	Statement = { fg = c.orange.base, bold = opts.bold }, -- (preferred) any statement
+	Conditional = { fg = c.orange.base, bold = opts.bold }, --  if, then, else, endif, switch, etc.
+	Repeat = { fg = c.orange.base, bold = opts.bold }, --   for, do, while, etc.
+	Label = { fg = c.orange.base, bold = opts.bold }, --    case, default, etc.
+	Operator = { fg = c.orange.bright, bold = opts.bold }, -- "sizeof", "+", "*", etc.
+	Keyword = { fg = c.orange.base, bold = opts.bold }, --  any other keyword
+	Exception = { fg = c.red.base, bold = opts.bold }, --  try, catch, throw
 
-  Comment = { fg = c.comment, italic = opts.italic },
+	Comment = { fg = c.comment, italic = opts.italic },
 
-  PreProc = { fg = c.red.base, bold = true }, -- (preferred) generic Preprocessor
-  Include = { fg = c.red.base, bold = true }, --  preprocessor #include
-  Define = { fg = c.red.base, bold = true }, --   preprocessor #define
-  Macro = { fg = c.red.base, bold = true }, --    same as Define
-  PreCondit = { fg = c.red.base, bold = true }, --  preprocessor #if, #else, #endif, etc.
+	PreProc = { fg = c.red.base, bold = true }, -- (preferred) generic Preprocessor
+	Include = { fg = c.red.base, bold = true }, --  preprocessor #include
+	Define = { fg = c.red.base, bold = true }, --   preprocessor #define
+	Macro = { fg = c.red.base, bold = true }, --    same as Define
+	PreCondit = { fg = c.red.base, bold = true }, --  preprocessor #if, #else, #endif, etc.
 
-  Type = { fg = c.yellow.base }, -- (preferred) int, long, char, etc.
-  StorageClass = { fg = c.orange.base }, -- static, register, volatile, etc.
-  Structure = { fg = c.orange.base }, --  struct, union, enum, etc.
-  Typedef = { fg = c.yellow.base }, --  A typedef
+	Type = { fg = c.yellow.base }, -- (preferred) int, long, char, etc.
+	StorageClass = { fg = c.orange.base }, -- static, register, volatile, etc.
+	Structure = { fg = c.orange.base }, --  struct, union, enum, etc.
+	Typedef = { fg = c.yellow.base }, --  A typedef
 
-  -- What are these? TODopts.
-  Special = { fg = c.blue1 }, -- (preferred) any special symbol
-  -- SpecialChar   = { }, --  special character in a constant
-  -- Tag           = { }, --    you can use CTRL-] on this
-  -- Delimiter     = { }, --  character that needs attention
-  -- SpecialComment= { }, -- special things inside a comment
-  -- Debug         = { }, --    debugging statements
+	-- What are these? TODopts.
+	Special = { fg = c.blue1 }, -- (preferred) any special symbol
+	-- SpecialChar   = { }, --  special character in a constant
+	-- Tag           = { }, --    you can use CTRL-] on this
+	-- Delimiter     = { }, --  character that needs attention
+	-- SpecialComment= { }, -- special things inside a comment
+	-- Debug         = { }, --    debugging statements
 
-  Underlined = { underline = true }, -- (preferred) text that stands out, HTML links
-  Bold = { bold = true },
-  Italic = { italic = true },
+	Underlined = { underline = true }, -- (preferred) text that stands out, HTML links
+	Bold = { bold = true },
+	Italic = { italic = true },
 
-  -- ("Ignore", below, may be invisible...)
-  -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
+	-- ("Ignore", below, may be invisible...)
+	-- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
-  Error = { fg = c.error }, -- (preferred) any erroneous construct
-  Todo = { bg = c.yellow.dim, fg = c.bg_dark }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+	Error = { fg = c.error }, -- (preferred) any erroneous construct
+	Todo = { bg = c.yellow.dim, fg = c.bg_dark }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
-  -- What are these? TODopts.
-  qfLineNr = { fg = c.gray4 },
-  qfFileName = { fg = c.blue1 },
+	-- What are these? TODopts.
+	qfLineNr = { fg = c.gray4 },
+	qfFileName = { fg = c.blue1 },
 
-  -- What are these? TODopts.
-  htmlH1 = { fg = c.magenta.base, bold = true },
-  htmlH2 = { fg = c.blue1, bold = true },
+	-- What are these? TODopts.
+	htmlH1 = { fg = c.magenta.base, bold = true },
+	htmlH2 = { fg = c.blue1, bold = true },
 
-  -- mkdHeading = { fg = c.orange.base, bold = true },
-  -- mkdCode = { bg = c.terminal_black, fg = c.fg },
-  mkdCodeDelimiter = { bg = c.black, fg = c.fg },
-  mkdCodeStart = { fg = c.cyan.base, bold = true },
-  mkdCodeEnd = { fg = c.cyan.base, bold = true },
-  -- mkdLink = { fg = c.blue, underline = true },
+	-- mkdHeading = { fg = c.orange.base, bold = true },
+	-- mkdCode = { bg = c.terminal_black, fg = c.fg },
+	mkdCodeDelimiter = { bg = c.black, fg = c.fg },
+	mkdCodeStart = { fg = c.cyan.base, bold = true },
+	mkdCodeEnd = { fg = c.cyan.base, bold = true },
+	-- mkdLink = { fg = c.blue, underline = true },
 
-  markdownHeadingDelimiter = { fg = c.orange.base, bold = true },
-  markdownCode = { fg = c.cyan.base },
-  markdownCodeBlock = { fg = c.cyan.base },
-  markdownH1 = { fg = c.magenta.base, bold = true },
-  markdownH2 = { fg = c.blue1, bold = true },
-  markdownLinkText = { fg = c.blue1, underline = true },
+	markdownHeadingDelimiter = { fg = c.orange.base, bold = true },
+	markdownCode = { fg = c.cyan.base },
+	markdownCodeBlock = { fg = c.cyan.base },
+	markdownH1 = { fg = c.magenta.base, bold = true },
+	markdownH2 = { fg = c.blue1, bold = true },
+	markdownLinkText = { fg = c.blue1, underline = true },
 
-  ['@punctuation.special.markdown'] = { fg = c.orange.base, bold = true },
-  ['@text.todopts.unchecked'] = { fg = c.blue1 }, -- For brackets and parens.
-  ['@text.todopts.checked'] = { fg = c.green.base }, -- For brackets and parens.
-  ['@text.literal.markdown_inline'] = { bg = c.black, fg = c.blue1 },
-  ['@text.literal.markdown'] = { link = 'Normal' },
-  ['helpCommand'] = { bg = c.black, fg = c.blue1 },
+	['@punctuation.special.markdown'] = { fg = c.orange.base, bold = true },
+	['@text.todopts.unchecked'] = { fg = c.blue1 }, -- For brackets and parens.
+	['@text.todopts.checked'] = { fg = c.green.base }, -- For brackets and parens.
+	['@text.literal.markdown_inline'] = { bg = c.black, fg = c.blue1 },
+	['@text.literal.markdown'] = { link = 'Normal' },
+	['helpCommand'] = { bg = c.black, fg = c.blue1 },
 
-  debugPC = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
-  debugBreakpoint = { bg = c.black, fg = c.info }, -- used for breakpoint colors in terminal-debug
+	debugPC = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
+	debugBreakpoint = { bg = c.black, fg = c.info }, -- used for breakpoint colors in terminal-debug
 }
