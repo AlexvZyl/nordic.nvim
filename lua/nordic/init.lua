@@ -1,5 +1,5 @@
 local config = require 'nordic.config'
-local merge = require 'nordic.utils' .merge
+local merge = require('nordic.utils').merge
 
 local M = {}
 
