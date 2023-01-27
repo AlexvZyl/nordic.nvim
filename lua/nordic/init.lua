@@ -1,9 +1,11 @@
 local config = require 'nordic.config'
+local merge = require 'nordic.utils' .merge
 
 local M = {}
 
 -- Load Nordic!
 function M.load(opts)
+
 	-- Clear if there is an existing theme.
 	if vim.g.colors_name then
 		vim.api.nvim_command 'hi clear'
@@ -16,7 +18,7 @@ function M.load(opts)
 	end
 
 	local g = require 'nordic.groups'
-	local groups = vim.tbl_deep_extend('force', g.get_groups(), config.options.override)
+	local groups = merge(g.get_groups(), config.options.override)
 	require('nordic.utils').highlight(groups)
 	g.set_term_colors()
 end

@@ -1,6 +1,6 @@
 # 🌒 Nordic
 
-[![Test](https://github.com/AlexvZyl/nordic.nvim/workflows/Test/badge.svg)](https://github.com/AlexvZyl/nordic.nvim/actions?workflow=Test) 
+[![Tests](https://github.com/AlexvZyl/nordic.nvim/workflows/Tests/badge.svg)](https://github.com/AlexvZyl/nordic.nvim/actions?workflow=Tests) 
 
 A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > Frost.  The idea behind this colorscheme is to use Nord, but add some darker colors and use Aurora more prominently than Nord themes usually do.  This ends up creating a colorscheme that is soft on the eyes.
 
@@ -101,23 +101,22 @@ require 'nordic' .setup {
     -- Available styles: `classic`, `flat`.
     style = 'flat'
   },
-  -- Enable bold keywords and operators
+  -- Enable bold keywords and operators.
   bold_keywords = true,
-  -- Enable italicized comments
+  -- Enable italicized comments.
   italic_comments = true,
-  -- Enable editor background transparency
+  -- Enable editor background transparency.
   transparent_bg = false,
-  -- These can contain anything that neovim understands.
-  -- (fg, bg, italic, bold, etc.)
+  -- See below for an example.
   override = {},
 }
 ```
 
-An example of overriding the Telescope Prompt Title colors:
+An example of overriding the `TelescopePromptTitle` colors:
 
 ```lua
-local palette = require 'nordic.colors'.palette
-require 'nordic'.setup {
+local palette = require 'nordic.colors' .palette
+require 'nordic' .setup {
   override = {
     TelescopePromptTitle = {
       fg = palette.red.bright,
