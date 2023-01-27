@@ -113,7 +113,7 @@ require 'nordic' .setup {
     override = {},
     cursorline = {
         bold = false,
-        -- Avialable styles: 'dark', 'light'.
+        -- Avialable themes: 'dark', 'light'.
         theme = 'light'
     }
 }
