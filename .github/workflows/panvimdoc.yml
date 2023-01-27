@@ -6,6 +6,7 @@ on:
 
 jobs:
   docs:
+    if: github.event != 'pull_request'
     name: Pandoc to vimdoc
     runs-on: ubuntu-latest
     permissions:

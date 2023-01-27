@@ -1,11 +1,12 @@
-name: Auto format 
+name: Formatting
 
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  docs:
+  fmt:
+    if: github.event != 'pull_request'
     name: Format with StyLua
     runs-on: ubuntu-latest
     permissions:
