@@ -1,7 +1,7 @@
 -- Notes and format from @folke/tokyonight.nvim.
 
 local c = require 'nordic.colors'
-local opts = require('nordic.config').options
+local o = require('nordic.config').options
 
 return {
 
@@ -21,15 +21,15 @@ return {
 	Identifier = { fg = c.fg }, -- (preferred) any variable name
 	Function = { fg = c.blue2 }, -- function name (also: methods for classes)
 
-	Statement = { fg = c.orange.base, bold = opts.bold }, -- (preferred) any statement
-	Conditional = { fg = c.orange.base, bold = opts.bold }, --  if, then, else, endif, switch, etc.
-	Repeat = { fg = c.orange.base, bold = opts.bold }, --   for, do, while, etc.
-	Label = { fg = c.orange.base, bold = opts.bold }, --    case, default, etc.
-	Operator = { fg = c.orange.bright, bold = opts.bold }, -- "sizeof", "+", "*", etc.
-	Keyword = { fg = c.orange.base, bold = opts.bold }, --  any other keyword
-	Exception = { fg = c.red.base, bold = opts.bold }, --  try, catch, throw
+	Statement = { fg = c.orange.base, bold = o.bold_keywords }, -- (preferred) any statement
+	Conditional = { fg = c.orange.base, bold = o.bold_keywords }, --  if, then, else, endif, switch, etc.
+	Repeat = { fg = c.orange.base, bold = o.bold_keywords }, --   for, do, while, etc.
+	Label = { fg = c.orange.base, bold = o.bold_keywords }, --    case, default, etc.
+	Operator = { fg = c.orange.bright, bold = o.bold_keywords }, -- "sizeof", "+", "*", etc.
+	Keyword = { fg = c.orange.base, bold = o.bold_keywords }, --  any other keyword
+	Exception = { fg = c.red.base, bold = o.bold_keywords }, --  try, catch, throw
 
-	Comment = { fg = c.comment, italic = opts.italic },
+	Comment = { fg = c.comment, italic = o.italic_comments },
 
 	PreProc = { fg = c.red.base, bold = true }, -- (preferred) generic Preprocessor
 	Include = { fg = c.red.base, bold = true }, --  preprocessor #include
@@ -42,7 +42,7 @@ return {
 	Structure = { fg = c.orange.base }, --  struct, union, enum, etc.
 	Typedef = { fg = c.yellow.base }, --  A typedef
 
-	-- What are these? TODopts.
+	-- What are these? TODO.
 	Special = { fg = c.blue1 }, -- (preferred) any special symbol
 	-- SpecialChar   = { }, --  special character in a constant
 	-- Tag           = { }, --    you can use CTRL-] on this
@@ -60,11 +60,11 @@ return {
 	Error = { fg = c.error }, -- (preferred) any erroneous construct
 	Todo = { bg = c.yellow.dim, fg = c.bg_dark }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
-	-- What are these? TODopts.
+	-- What are these? TODO.
 	qfLineNr = { fg = c.gray4 },
 	qfFileName = { fg = c.blue1 },
 
-	-- What are these? TODopts.
+	-- What are these? TODO.
 	htmlH1 = { fg = c.magenta.base, bold = true },
 	htmlH2 = { fg = c.blue1, bold = true },
 
@@ -83,8 +83,8 @@ return {
 	markdownLinkText = { fg = c.blue1, underline = true },
 
 	['@punctuation.special.markdown'] = { fg = c.orange.base, bold = true },
-	['@text.todopts.unchecked'] = { fg = c.blue1 }, -- For brackets and parens.
-	['@text.todopts.checked'] = { fg = c.green.base }, -- For brackets and parens.
+	['@text.todo.unchecked'] = { fg = c.blue1 }, -- For brackets and parens.
+	['@text.todo.checked'] = { fg = c.green.base }, -- For brackets and parens.
 	['@text.literal.markdown_inline'] = { bg = c.black, fg = c.blue1 },
 	['@text.literal.markdown'] = { link = 'Normal' },
 	['helpCommand'] = { bg = c.black, fg = c.blue1 },

@@ -6,11 +6,11 @@ local defaults = {
 		style = 'flat',
 	},
 	-- Enable bold keywords and operators
-	bold = true,
+	bold_keywords = true,
 	-- Enable italicized comments
-	italic = true,
+	italic_comments = true,
 	-- Enable general editor background transparency
-	transparent = false,
+	transparent_bg = false,
 	-- Override styling of any highlight group
 	override = {},
 }

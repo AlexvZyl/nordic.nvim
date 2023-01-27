@@ -1,13 +1,13 @@
 -- Notes and format from @folke/tokyonight.nvim.
 
 local c = require 'nordic.colors'
-local opts = require('nordic.config').options
+local o = require('nordic.config').options
 
 return {
 
 	Comment = {
 		fg = c.comment,
-		italic = true,
+		italic = o.italic_comments,
 	}, -- any comment
 
 	ColorColumn = {
@@ -78,7 +78,7 @@ return {
 	}, -- 'foldcolumn'
 
 	SignColumn = {
-		bg = opts.transparent and c.none or c.bg,
+		bg = o.transparent_bg and c.none or c.bg,
 		fg = c.fg_gutter,
 	}, -- column where |signs| are displayed
 
@@ -127,17 +127,17 @@ return {
 
 	Normal = {
 		fg = c.fg,
-		bg = opts.transparent and c.none or c.bg,
+		bg = o.transparent_bg and c.none or c.bg,
 	}, -- normal text
 
 	NormalNC = {
 		fg = c.fg,
-		bg = opts.transparent and c.none or c.bg,
+		bg = o.transparent_bg and c.none or c.bg,
 	}, -- normal text in non-current windows
 
 	NormalSB = {
 		fg = c.fg_sidebar,
-		bg = opts.transparent and c.none or c.bg_sidebar,
+		bg = o.transparent_bg and c.none or c.bg_sidebar,
 	}, -- normal text in sidebar
 
 	NormalFloat = {

@@ -1,5 +1,5 @@
 local c = require 'nordic.colors'
-local opts = require('nordic.config').options
+local o = require('nordic.config').options
 
 -- Classic.
 local groups = {
@@ -79,7 +79,7 @@ local groups = {
 }
 
 -- Apply the flat style.
-if opts.telescope.style == 'flat' then
+if o.telescope.style == 'flat' then
 	-- Normals.
 	groups.TelescopePromptNormal = {
 		bg = c.gray1,
