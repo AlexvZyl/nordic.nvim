@@ -9,5 +9,7 @@ config.telescope.style = 'classic'
 config.bold_keywords = false
 config.italic_comments = false
 config.transparent_bg = true
+config.cursorline.theme = 'light'
+config.cursorline.bold = true
 
 load(config)

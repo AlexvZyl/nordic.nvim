@@ -44,12 +44,12 @@ With [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-  'AlexvZyl/nordic.nvim',
-  lazy = false,
-  priority = 1000,
-  config = function()
-    require 'nordic' .load()
-  end
+    'AlexvZyl/nordic.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+        require 'nordic' .load()
+    end
 }
 ```
 
@@ -79,9 +79,9 @@ Using with lualine:
 
 ```lua
 require 'lualine' .setup {
-  options = {
-    theme = 'nordic'
-  }
+    options = {
+        theme = 'nordic'
+    }
 }
 ```
 
@@ -97,18 +97,25 @@ Nordic will use the default values, unless `setup` is called.  Below is the defa
 
 ```lua
 require 'nordic' .setup {
-  telescope = {
-    -- Available styles: `classic`, `flat`.
-    style = 'flat'
-  },
-  -- Enable bold keywords and operators.
-  bold_keywords = true,
-  -- Enable italicized comments.
-  italic_comments = true,
-  -- Enable editor background transparency.
-  transparent_bg = false,
-  -- See below for an example.
-  override = {},
+    -- Telesccope custom configs.
+    telescope = {
+        -- Available styles: `classic`, `flat`.
+        style = 'flat',
+    },
+    -- Enable bold keywords and operators.
+    bold_keywords = true,
+    -- Enable italicized comments.
+    italic_comments = true,
+    -- Enable general editor background transparency.
+    transparent_bg = false,
+    -- Override styling of any highlight group.
+    -- (see next section for an example)
+    override = {},
+    cursorline = {
+        bold = false,
+        -- Avialable styles: 'dark', 'light'.
+        theme = 'light'
+    }
 }
 ```
 
@@ -117,13 +124,13 @@ An example of overriding the `TelescopePromptTitle` colors:
 ```lua
 local palette = require 'nordic.colors' .palette
 require 'nordic' .setup {
-  override = {
-    TelescopePromptTitle = {
-      fg = palette.red.bright,
-      bg = palette.green.base,
-      italic = true,
-    },
-  }
+    override = {
+        TelescopePromptTitle = {
+	    fg = palette.red.bright,
+            bg = palette.green.base,
+            italic = true,
+        },
+    }
 }
 ```
 
@@ -151,5 +158,4 @@ This is the list of currently supported plugins.  I use these myself, if you wan
 
 - [folke/tokyonight](https://github.com/folke/tokyonight.nvim) served as an excellent example and template to create a Neovim theme.
 - [EdenEast/nightfox.nvim](https://github.com/EdenEast/nightfox.nvim) for bright & dim versions of the Nord palette.
-
 - [Dotfiles](https://github.com/AlexvZyl/.dotfiles) used in the screenshots.
