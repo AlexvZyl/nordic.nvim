@@ -4,8 +4,8 @@ local c = require 'nordic.colors'
 local o = require('nordic.config').options
 
 if o.cursorline.theme == 'light' then
-    c.bg_highlight = c.gray1
-    c.bg_visual = c.gray1
+	c.bg_highlight = c.gray1
+	c.bg_visual = c.gray1
 end
 
 return {
@@ -40,12 +40,12 @@ return {
 
 	CursorColumn = {
 		bg = c.bg_highlight,
-        bold = o.cursorline.bold
+		bold = o.cursorline.bold,
 	}, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 
 	CursorLine = {
 		bg = c.bg_highlight,
-        bold = o.cursorline.bold
+		bold = o.cursorline.bold,
 	}, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 
 	Directory = {

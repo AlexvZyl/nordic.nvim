@@ -13,11 +13,11 @@ M.defaults = {
 	transparent_bg = false,
 	-- Override styling of any highlight group
 	override = {},
-    cursorline = {
-        bold = false,
-        -- Avialable styles: 'dark', 'light'.
-        theme = 'dark'
-    }
+	cursorline = {
+		bold = false,
+		-- Avialable styles: 'dark', 'light'.
+		theme = 'dark',
+	},
 }
 
 M.options = {}
