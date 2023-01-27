@@ -97,7 +97,7 @@ Nordic will use the default values, unless `setup` is called.  Below is the defa
 
 ```lua
 require 'nordic' .setup {
-    -- Telesccope custom configs.
+    	-- Telesccope custom configs.
 	telescope = {
 		-- Available styles: `classic`, `flat`.
 		style = 'flat',
@@ -109,9 +109,9 @@ require 'nordic' .setup {
 	-- Enable general editor background transparency.
 	transparent_bg = false,
 	-- Override styling of any highlight group.
-    -- (see next section for an example)
+    	-- (see next section for an example)
 	override = {},
-    cursorline = {
+    	cursorline = {
         bold = false,
         -- Avialable styles: 'dark', 'light'.
         theme = 'light'
