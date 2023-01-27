@@ -102,11 +102,11 @@ require 'nordic' .setup {
     style = 'flat'
   },
   -- Enable bold keywords and operators
-  bold = true,
+  bold_keywords = true,
   -- Enable italicized comments
-  italic = true,
+  italic_comments = true,
   -- Enable editor background transparency
-  transparent = false,
+  transparent_bg = false,
   -- These can contain anything that neovim understands.
   -- (fg, bg, italic, bold, etc.)
   override = {},
