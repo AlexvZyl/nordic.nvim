@@ -153,6 +153,7 @@ This is the list of currently supported plugins.  I use these myself, if you wan
 - [trouble.nvim](https://github.com/folke/trouble.nvim)
 - [which-key.nvim](https://github.com/folke/which-key.nvim)
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim)
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [nvim-notify](https://github.com/rcarriga/nvim-notify)
 
 # 🎙️ Acknowledgements
