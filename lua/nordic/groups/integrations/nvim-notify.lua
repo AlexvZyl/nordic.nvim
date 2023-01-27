@@ -23,6 +23,6 @@ return {
 
 	NotifyTRACEBorder = { fg = c.gray5 },
 	NotifyTRACEIcon = { fg = c.gray5 },
-	NotifyTRACETitle = { fg = c.gray5 , bold = true },
+	NotifyTRACETitle = { fg = c.gray5, bold = true },
 	NotifyTRACEBody = { fg = c.fg },
 }
