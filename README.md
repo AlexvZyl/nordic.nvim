@@ -101,21 +101,29 @@ require 'nordic' .setup {
     -- Available styles: `classic`, `flat`.
     style = 'flat'
   },
+  -- Enable bold keywords and operators
+  bold_keywords = true,
+  -- Enable italicized comments
+  italic_comments = true,
+  -- Enable editor background transparency
+  transparent_bg = false,
   -- These can contain anything that neovim understands.
   -- (fg, bg, italic, bold, etc.)
-  syntax = {
-    comments = {
+  override = {},
+}
+```
+
+An example of overriding the Telescope Prompt Title colors:
+
+```lua
+local palette = require 'nordic.colors'.palette
+require 'nordic'.setup {
+  override = {
+    TelescopePromptTitle = {
+      fg = palette.red.bright,
+      bg = palette.green.base,
       italic = true,
-      bold = false
     },
-    operators = {
-      italic = false,
-      bold = true
-    },
-    keywords = {
-      italic = false,
-      bold = true
-    }
   }
 }
 ```
@@ -144,4 +152,5 @@ This is the list of currently supported plugins.  I use these myself, if you wan
 
 - [folke/tokyonight](https://github.com/folke/tokyonight.nvim) served as an excellent example and template to create a Neovim theme.
 - [EdenEast/nightfox.nvim](https://github.com/EdenEast/nightfox.nvim) for bright & dim versions of the Nord palette.
+
 - [Dotfiles](https://github.com/AlexvZyl/.dotfiles) used in the screenshots.

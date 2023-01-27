@@ -2,7 +2,6 @@
 
 local c = require 'nordic.colors'
 local o = require('nordic.config').options
-local m = require('nordic.utils').merge
 
 return {
 
@@ -22,15 +21,15 @@ return {
 	Identifier = { fg = c.fg }, -- (preferred) any variable name
 	Function = { fg = c.blue2 }, -- function name (also: methods for classes)
 
-	Statement = m({ fg = c.orange.base }, o.syntax.keywords), -- (preferred) any statement
-	Conditional = m({ fg = c.orange.base }, o.syntax.keywords), --  if, then, else, endif, switch, etc.
-	Repeat = m({ fg = c.orange.base }, o.syntax.keywords), --   for, do, while, etc.
-	Label = m({ fg = c.orange.base }, o.syntax.keywords), --    case, default, etc.
-	Operator = m({ fg = c.orange.bright }, o.syntax.operators), -- "sizeof", "+", "*", etc.
-	Keyword = m({ fg = c.orange.base }, o.syntax.keywords), --  any other keyword
-	Exception = m({ fg = c.red.base }, o.syntax.keywords), --  try, catch, throw
+	Statement = { fg = c.orange.base, bold = o.bold_keywords }, -- (preferred) any statement
+	Conditional = { fg = c.orange.base, bold = o.bold_keywords }, --  if, then, else, endif, switch, etc.
+	Repeat = { fg = c.orange.base, bold = o.bold_keywords }, --   for, do, while, etc.
+	Label = { fg = c.orange.base, bold = o.bold_keywords }, --    case, default, etc.
+	Operator = { fg = c.orange.bright, bold = o.bold_keywords }, -- "sizeof", "+", "*", etc.
+	Keyword = { fg = c.orange.base, bold = o.bold_keywords }, --  any other keyword
+	Exception = { fg = c.red.base, bold = o.bold_keywords }, --  try, catch, throw
 
-	Comment = m({ fg = c.comment }, o.syntax.comments),
+	Comment = { fg = c.comment, italic = o.italic_comments },
 
 	PreProc = { fg = c.red.base, bold = true }, -- (preferred) generic Preprocessor
 	Include = { fg = c.red.base, bold = true }, --  preprocessor #include

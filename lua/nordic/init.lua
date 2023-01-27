@@ -15,9 +15,10 @@ function M.load(opts)
 		require('nordic.config').extend(opts)
 	end
 
-	local groups = require 'nordic.groups'
-	require('nordic.utils').highlight(groups.get_groups())
-	groups.set_term_colors()
+	local g = require 'nordic.groups'
+	local groups = vim.tbl_deep_extend('force', g.get_groups(), config.options.override)
+	require('nordic.utils').highlight(groups)
+	g.set_term_colors()
 end
 
 -- Expose the colorsceheme to vim.

@@ -5,18 +5,14 @@ local defaults = {
 		-- Available styles: `classic`, `flat`.
 		style = 'flat',
 	},
-	-- These values will be used to override the default.
-	syntax = {
-		comments = {
-			italic = true,
-		},
-		operators = {
-			bold = true,
-		},
-		keywords = {
-			bold = true,
-		},
-	},
+	-- Enable bold keywords and operators
+	bold_keywords = true,
+	-- Enable italicized comments
+	italic_comments = true,
+	-- Enable general editor background transparency
+	transparent_bg = false,
+	-- Override styling of any highlight group
+	override = {},
 }
 
 M.options = {}
