@@ -1,6 +1,6 @@
 local M = {}
 
-local defaults = {
+M.defaults = {
 	telescope = {
 		-- Available styles: `classic`, `flat`.
 		style = 'flat',
@@ -18,11 +18,11 @@ local defaults = {
 M.options = {}
 
 function M.setup(options)
-	M.options = vim.tbl_deep_extend('force', {}, defaults, options or {})
+	M.options = vim.tbl_deep_extend('force', {}, M.defaults, options or {})
 end
 
 function M.extend(options)
-	M.options = vim.tbl_deep_extend('force', {}, M.options or defaults, options or {})
+	M.options = vim.tbl_deep_extend('force', {}, M.options or M.defaults, options or {})
 end
 
 -- Init the config.
