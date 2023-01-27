@@ -48,7 +48,7 @@ With [lazy.nvim](https://github.com/folke/lazy.nvim):
     lazy = false,
     priority = 1000,
     config = function()
-      require 'nordic' .load()
+        require 'nordic' .load()
     end
 }
 ```
@@ -97,21 +97,21 @@ Nordic will use the default values, unless `setup` is called.  Below is the defa
 
 ```lua
 require 'nordic' .setup {
-    	-- Telesccope custom configs.
-	telescope = {
-		-- Available styles: `classic`, `flat`.
-		style = 'flat',
-	},
-	-- Enable bold keywords and operators.
-	bold_keywords = true,
-	-- Enable italicized comments.
-	italic_comments = true,
-	-- Enable general editor background transparency.
-	transparent_bg = false,
-	-- Override styling of any highlight group.
-    	-- (see next section for an example)
-	override = {},
-    	cursorline = {
+    -- Telesccope custom configs.
+    telescope = {
+        -- Available styles: `classic`, `flat`.
+        style = 'flat',
+    },
+    -- Enable bold keywords and operators.
+    bold_keywords = true,
+    -- Enable italicized comments.
+    italic_comments = true,
+    -- Enable general editor background transparency.
+    transparent_bg = false,
+    -- Override styling of any highlight group.
+    -- (see next section for an example)
+    override = {},
+    cursorline = {
         bold = false,
         -- Avialable styles: 'dark', 'light'.
         theme = 'light'
@@ -126,7 +126,7 @@ local palette = require 'nordic.colors' .palette
 require 'nordic' .setup {
     override = {
         TelescopePromptTitle = {
-            fg = palette.red.bright,
+	    fg = palette.red.bright,
             bg = palette.green.base,
             italic = true,
         },
