@@ -18,6 +18,7 @@ M.integrations = {
 	'leap',
 	'diffview',
 	'nvim-cmp',
+	'nvim-notify',
 }
 
 M.core = {
