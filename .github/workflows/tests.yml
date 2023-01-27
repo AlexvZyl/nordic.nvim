@@ -47,7 +47,7 @@ jobs:
       - name: Test nordic.nvim
         shell: bash
         run:  |
-              OUTPUT=$(nvim --headless -u init.lua -c "lua require('nordic.tests.options)'" -c 'q' 2>&1);
+              OUTPUT=$(nvim --headless -u init.lua -c "lua require 'nordic.tests.options'" -c 'q' 2>&1);
               if [[ -n "$OUTPUT" ]]
               then
                 exit 1
