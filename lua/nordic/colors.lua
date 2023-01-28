@@ -77,6 +77,14 @@ local palette = {
 	},
 }
 
+-- Add these for international convenience :)
+palette.grey0 = palette.gray0
+palette.grey1 = palette.gray1
+palette.grey2 = palette.gray2
+palette.grey3 = palette.gray3
+palette.grey4 = palette.gray4
+palette.grey5 = palette.gray5
+
 -- Now define some use cases.
 -- Some of the format is from @folke/tokyonight.nvim.
 

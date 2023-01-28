@@ -147,6 +147,7 @@ This is the list of currently supported plugins.  I use these myself, if you wan
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [leap.nvim](https://github.com/ggandor/leap.nvim)
 - [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
+- [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
