@@ -18,7 +18,7 @@ return {
     NvimTreeGitNew = { fg = c.git.add },
     NvimTreeGitDeleted = { fg = c.git.delete },
     NvimTreeOpenedFile = { bg = c.black },
-    NvimTreeSpecialFile = { fg = c.magenta.brigt, underline = true },
+    NvimTreeSpecialFile = { fg = c.magenta.bright, underline = true },
     NvimTreeImageFile = { fg = c.fg_sidebar },
     NvimTreeSymlink = { fg = c.blue1 },
     NeoTreeNormal = { fg = c.white0, bg = c.black },
