@@ -2,21 +2,21 @@ local c = require 'nordic.colors'
 
 return {
 
-	DashboardHeader = {
-		fg = c.yellow.base,
-		bold = true,
-	},
+    DashboardHeader = {
+        fg = c.yellow.base,
+        bold = true,
+    },
 
-	DashboardFooter = {
-		fg = c.cyan.base,
-		bold = true,
-	},
+    DashboardFooter = {
+        fg = c.cyan.base,
+        bold = true,
+    },
 
-	DashboardCenter = {
-		fg = c.green.base,
-	},
+    DashboardCenter = {
+        fg = c.green.base,
+    },
 
-	DashboardShortCut = {
-		fg = c.red.base,
-	},
+    DashboardShortCut = {
+        fg = c.red.base,
+    },
 }

@@ -1,8 +1,8 @@
 return require('packer').startup(function(use)
-	use 'wbthomason/packer.nvim'
+    use 'wbthomason/packer.nvim'
 
-	use({
-		-- repo
-		-- branch
-	})
+    use({
+        -- repo
+        -- branch
+    })
 end)
