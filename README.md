@@ -162,3 +162,9 @@ This is the list of currently supported plugins.  I use these myself, if you wan
 - [folke/tokyonight](https://github.com/folke/tokyonight.nvim) served as an excellent example and template to create a Neovim theme.
 - [EdenEast/nightfox.nvim](https://github.com/EdenEast/nightfox.nvim) for bright & dim versions of the Nord palette.
 - [Dotfiles](https://github.com/AlexvZyl/.dotfiles) used in the screenshots.
+
+</br>
+
+<p align="center">
+    <img src="https://contrib.rocks/image?repo=AlexvZyl/nordic.nvim" />
+</p>
