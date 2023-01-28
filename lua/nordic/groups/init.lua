@@ -9,6 +9,7 @@ M.integrations = {
 	'dashboard',
 	'indent-blankline',
 	'lspsaga',
+	'neo-tree',
 	'nvim-tree',
 	'treesitter',
 	'trouble',
