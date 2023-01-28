@@ -23,7 +23,9 @@ function M.hex_to_rgb(str)
     return tonumber(str:sub(2, 3), 16), tonumber(str:sub(4, 5), 16), tonumber(str:sub(6, 7), 16)
 end
 
-function M.rgb_to_hex(r, g, b) return '#' .. string.format('%x', r) .. string.format('%x', g) .. string.format('%x', b) end
+function M.rgb_to_hex(r, g, b)
+    return '#' .. string.format('%x', r) .. string.format('%x', g) .. string.format('%x', b)
+end
 
 function M.rgb_to_hsv(r, g, b)
     r, g, b = r / 255, g / 255, b / 255

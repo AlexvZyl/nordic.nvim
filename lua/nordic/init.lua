@@ -19,7 +19,9 @@ function M.load(opts)
 end
 
 -- Expose the colorsceheme to vim.
-vim.api.nvim_create_user_command('Nordic', function(_) vim.api.nvim_command 'colorscheme nordic' end, {
+vim.api.nvim_create_user_command('Nordic', function(_)
+    vim.api.nvim_command 'colorscheme nordic'
+end, {
     nargs = 1,
 })
 
