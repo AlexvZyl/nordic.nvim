@@ -1,43 +1,42 @@
 -- Notes and format from @folke/tokyonight.nvim.
 
 local c = require 'nordic.colors'
-local u = require 'nordic.utils'
 
 return {
 
     DiffAdd = {
-        bg = c.diff.bg,
-        fg = c.diff.add,
+        bg = c.diff.add,
+        bold = true
     }, -- diff mode: Added line |diff.txt|
 
     DiffChange = {
-        bg = u.blend(c.diff.bg, c.bg, 0.35),
+        bg = c.diff.change0,
     }, -- diff mode: Changed line |diff.txt|
 
     DiffDelete = {
-        bg = c.diff.bg,
-        fg = c.diff.delete,
+        bg = c.diff.delete,
+        bold = true
     }, -- diff mode: Deleted line |diff.txt|
 
     DiffText = {
-        bg = c.diff.bg,
-        fg = c.diff.change,
+        bg = c.diff.change1,
+        bold = true
     }, -- diff mode: Changed text within a changed line |diff.txt|
 
     diffAdded = {
-        fg = c.green.bright,
+        fg = c.git.add
     },
 
     diffRemoved = {
-        fg = c.red.bright,
+        fg = c.git.delete
     },
 
     diffChanged = {
-        fg = c.yellow.base,
+        fg = c.git.change
     },
 
     diffOldFile = {
-        fg = c.yellow.dim,
+        fg = c.fg,
     },
 
     diffNewFile = {
@@ -45,14 +44,11 @@ return {
     },
 
     diffFile = {
-        fg = c.white0,
+        fg = c.fg,
     },
 
-    diffLine = {
-        fg = c.white0,
-    },
+    diffLine = {},
 
-    diffIndexLine = {
-        fg = c.orange.base,
-    },
+    diffIndexLine = {},
+
 }

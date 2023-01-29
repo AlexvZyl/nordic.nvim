@@ -1,5 +1,7 @@
 -- The Nord palette: https://www.nordtheme.com/.
 
+local u = require 'nordic.utils'
+
 local palette = {
 
     none = 'NONE',
@@ -73,6 +75,7 @@ local palette = {
         bright = '#C895BF',
         dim = '#9D7495',
     },
+
 }
 
 -- Add these for international convenience :)
@@ -113,12 +116,12 @@ palette.border_float = palette.white1
 palette.border_nb = palette.orange.base
 
 -- Diffs.
+local diff_blend = 0.15
 palette.diff = {}
-palette.diff.add = palette.green.bright
-palette.diff.change = palette.yellow.base
-palette.diff.delete = palette.red.base
-palette.diff.text = palette.diff.add
-palette.diff.bg = palette.gray1
+palette.diff.add = u.blend(palette.green.base, palette.bg, diff_blend)
+palette.diff.change0 = u.blend(palette.blue2, palette.bg, diff_blend * 0.2)
+palette.diff.change1 = u.blend(palette.blue2, palette.bg, diff_blend)
+palette.diff.delete = u.blend(palette.red.base, palette.bg, diff_blend)
 
 -- Git.
 palette.git = {}
