@@ -21,23 +21,25 @@ return {
     }, -- diff mode: Deleted line |diff.txt|
 
     DiffText = {
-        link = 'DiffAdd'
+        fg = c.diff.change,
+        bg = c.diff.bg0,
+        bold = true
     }, -- diff mode: Changed text within a changed line |diff.txt|
 
     diffAdded = {
-        link = 'DiffAdd'
+        fg = c.diff.add
     },
 
     diffRemoved = {
-        link = 'DiffDelete'
+        fg = c.diff.delete
     },
 
     diffChanged = {
-        link = 'DiffChange'
+        fg = c.diff.change
     },
 
     diffOldFile = {
-        fg = c.yellow.dim,
+        fg = c.fg,
     },
 
     diffNewFile = {
@@ -45,14 +47,11 @@ return {
     },
 
     diffFile = {
-        fg = c.white0,
+        fg = c.fg,
     },
 
-    diffLine = {
-        fg = c.white0,
-    },
+    diffLine = {},
 
-    diffIndexLine = {
-        fg = c.orange.base,
-    },
+    diffIndexLine = {},
+
 }

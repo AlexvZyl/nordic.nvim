@@ -118,7 +118,7 @@ palette.border_nb = palette.orange.base
 -- Diffs.
 palette.diff = {}
 palette.diff.add = palette.green.bright
-palette.diff.change = palette.diff.add
+palette.diff.change = palette.blue2
 palette.diff.delete = palette.red.bright
 palette.diff.bg0 = u.blend(palette.bg_dark, palette.bg, 0.6)
 palette.diff.bg1 = u.blend(palette.gray1, palette.bg, 0.6)
