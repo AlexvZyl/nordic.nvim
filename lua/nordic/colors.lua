@@ -73,7 +73,6 @@ local palette = {
         bright = '#C895BF',
         dim = '#9D7495',
     },
-
 }
 
 -- Add these for international convenience :)
