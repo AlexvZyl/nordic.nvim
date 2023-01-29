@@ -1,4 +1,4 @@
-*nordic.nvim.txt*         For NVIM v0.8.0         Last change: 2023 January 28
+*nordic.nvim.txt*         For NVIM v0.8.0         Last change: 2023 January 29
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -35,6 +35,11 @@ up creating a colorscheme that is soft on the eyes.
 
 _Nvim-tree, lsp, bar-bar, lualine and treesitter:_ <img
 src='https://user-images.githubusercontent.com/81622310/214236416-5cfe1638-e3f9-4f24-a330-489c341ce0fc.png'
+title=''/>
+
+_Alongside BTop++ <https://github.com/aristocratos/btop> and a Nord wallpaper:_
+<img
+src='https://user-images.githubusercontent.com/81622310/215334958-cba79eba-bd86-4ca9-bdf1-32937ce86828.png'
 title=''/>
 
 Telescope
