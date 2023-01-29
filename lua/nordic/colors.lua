@@ -116,12 +116,12 @@ palette.border_float = palette.white1
 palette.border_nb = palette.orange.base
 
 -- Diffs.
+local diff_blend = 0.15
 palette.diff = {}
-palette.diff.add = palette.green.bright
-palette.diff.change = palette.blue2
-palette.diff.delete = palette.red.bright
-palette.diff.bg0 = u.blend(palette.bg_dark, palette.bg, 0.6)
-palette.diff.bg1 = u.blend(palette.gray1, palette.bg, 0.6)
+palette.diff.add = u.blend(palette.green.base, palette.bg, diff_blend)
+palette.diff.change0 = u.blend(palette.blue2, palette.bg, diff_blend * 0.2)
+palette.diff.change1 = u.blend(palette.blue2, palette.bg, diff_blend)
+palette.diff.delete = u.blend(palette.red.base, palette.bg, diff_blend)
 
 -- Git.
 palette.git = {}

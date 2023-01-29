@@ -5,37 +5,34 @@ local c = require 'nordic.colors'
 return {
 
     DiffAdd = {
-        bg = c.diff.bg0,
-        fg = c.diff.add,
+        bg = c.diff.add,
         bold = true
     }, -- diff mode: Added line |diff.txt|
 
     DiffChange = {
-        bg = c.diff.bg1,
+        bg = c.diff.change0,
     }, -- diff mode: Changed line |diff.txt|
 
     DiffDelete = {
-        bg = c.diff.bg0,
-        fg = c.diff.delete,
+        bg = c.diff.delete,
         bold = true
     }, -- diff mode: Deleted line |diff.txt|
 
     DiffText = {
-        fg = c.diff.change,
-        bg = c.diff.bg0,
+        bg = c.diff.change1,
         bold = true
     }, -- diff mode: Changed text within a changed line |diff.txt|
 
     diffAdded = {
-        fg = c.diff.add
+        fg = c.git.add
     },
 
     diffRemoved = {
-        fg = c.diff.delete
+        fg = c.git.delete
     },
 
     diffChanged = {
-        fg = c.diff.change
+        fg = c.git.change
     },
 
     diffOldFile = {
