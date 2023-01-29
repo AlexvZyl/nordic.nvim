@@ -34,6 +34,10 @@ local palette = {
     blue0 = '#5E81AC',
     blue1 = '#81A1C1',
     blue2 = '#88C0D0',
+    blue = {
+        bright = '#8CAFD2',
+        dim = '#668AAB',
+    },
     cyan = {
         base = '#8FBCBB',
         bright = '#93CCDC',
@@ -69,12 +73,7 @@ local palette = {
         bright = '#C895BF',
         dim = '#9D7495',
     },
-    -- From @nightfox.nvim.
-    blue = {
-        base = '#81A1C1',
-        bright = '#8CAFD2',
-        dim = '#668AAB',
-    },
+
 }
 
 -- Add these for international convenience :)

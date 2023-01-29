@@ -2,7 +2,6 @@
 
 local c = require 'nordic.colors'
 local o = require('nordic.config').options
-local m = require('nordic.utils').merge
 
 return {
     -- These groups are for the neovim tree-sitter highlights.
@@ -20,36 +19,30 @@ return {
     ['@text.note'] = { fg = c.bg, bg = c.info },
     ['@text.warning'] = { fg = c.bg, bg = c.warning },
     ['@text.danger'] = { fg = c.bg, bg = c.error },
-    ['@constructor'] = { fg = c.white0 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    ['@constructor'] = { link = '@function' }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     -- TSConditional       = { };    -- For keywords related to conditionnals.
     -- TSConstant          = { };    -- For constants
     -- TSConstBuiltin      = { };    -- For constant that are built in the language: `nil` in Lua.
     -- TSConstMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
     -- TSError             = { };    -- For syntax/parser errors.
     -- TSException         = { };    -- For exception related keywords.
-    -- ["@field"] = { fg = c.green.base }, -- For fields.
     -- TSFloat             = { };    -- For floats.
     -- TSFunction          = { };    -- For function (calls and definitions).
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-    -- ["@keyword"] = { fg = c.orange.base }, -- For keywords that don't fall in previous categories.
-    -- ["@keyword.function"] = { fg = c.orange.base }, -- For keywords used to define a fuction.
     ['@label'] = { fg = c.blue1 }, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
     -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
-    -- ["@operator"] = { fg = c.orange.bright }, -- For any operator: `+`, but also `->` and `*` in C.
     ['@parameter'] = {
         fg = c.white0,
         italic = true,
     }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
-    -- ["@property"] = { fg = c.cyan.base }, -- Same as `TSField`.
     ['@punctuation.delimiter'] = { fg = c.white0 }, -- For delimiters ie: `.`
     ['@punctuation.bracket'] = { fg = c.white0 }, -- For brackets and parens.
-    -- ["@punctuation.special"] = { fg = c.white0 }, -- For special punctutation that does not fall in the catagories before.
     -- TSRepeat            = { };    -- For keywords related to loops.
     -- TSString            = { };    -- For strings.
     ['@string.regex'] = { fg = c.green.dim }, -- For regexes.
@@ -58,7 +51,6 @@ return {
     -- TSType              = { };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
     ['@variable'] = { fg = c.white0 }, -- Any variable name that does not have another highlight.
-    -- ["@variable.builtin"] = { fg = c.blue1 }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     ['@tag'] = { fg = c.blue1 }, -- Tags like html tag names.
     ['@tag.delimiter'] = { fg = c.white0 }, -- Tag delimiter like `<` `>` `/`
@@ -78,8 +70,6 @@ return {
     -- Lua
     -- luaTSProperty = { fg = c.red }, -- Same as `TSField`.
 
-    -- FROM LEGACY CODEBASE.
-    -----------------------
     -- Magentas.
     ['@constant'] = { fg = c.magenta.bright },
     ['Number'] = { fg = c.magenta.bright },
@@ -93,10 +83,10 @@ return {
     ['@keyword.return'] = { fg = c.orange.base, bold = o.bold_keywords },
     ['@keyword.function'] = { fg = c.orange.base, bold = o.bold_keywords },
     ['@keyword.export'] = { fg = c.orange.base, bold = o.bold_keywords },
-    ['@keyword.operator'] = { fg = c.orange.bright, bold = o.bold_keywords },
     ['@repeat'] = { fg = c.orange.base, bold = o.bold_keywords },
     ['@conditional'] = { fg = c.orange.base, bold = o.bold_keywords },
-    ['@operator'] = { fg = c.orange.bright, bold = o.bold_keywords },
+    ['@operator'] = { link = 'Operator' },
+    ['@keyword.operator'] = { link = 'Operator' },
     ['@class'] = { fg = c.orange.base, bold = o.bold_keywords },
     ['@type.qualifier'] = { fg = c.orange.base, bold = o.bold_keywords },
     ['@storageclass'] = { fg = c.orange.base, bold = o.bold_keywords },
@@ -115,7 +105,7 @@ return {
     ['@method.call'] = { fg = c.blue2 },
     ['@function.call'] = { fg = c.blue2 },
     ['@function.builtin'] = { fg = c.blue2 },
-    ['@variable.builtin'] = { fg = c.blue0, italic = true },
+    ['@variable.builtin'] = { fg = c.blue.dim, italic = true },
     -- Cyan.
     ['@field'] = { fg = c.cyan.base },
     ['@property'] = { fg = c.cyan.base },

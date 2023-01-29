@@ -25,7 +25,7 @@ return {
     Conditional = { fg = c.orange.base, bold = o.bold_keywords }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = c.orange.base, bold = o.bold_keywords }, --   for, do, while, etc.
     Label = { fg = c.orange.base, bold = o.bold_keywords }, --    case, default, etc.
-    Operator = { fg = c.orange.bright, bold = o.bold_keywords }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = c.orange.bright, bold = true }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = c.orange.base, bold = o.bold_keywords }, --  any other keyword
     Exception = { fg = c.red.base, bold = o.bold_keywords }, --  try, catch, throw
 

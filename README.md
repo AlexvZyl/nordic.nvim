@@ -105,7 +105,7 @@ require 'nordic' .setup {
         -- Available styles: `classic`, `flat`.
         style = 'flat',
     },
-    -- Enable bold keywords and operators.
+    -- Enable bold keywords.
     bold_keywords = true,
     -- Enable italicized comments.
     italic_comments = true,
