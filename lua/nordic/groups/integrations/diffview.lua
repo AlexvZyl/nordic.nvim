@@ -17,10 +17,12 @@ return {
     },
 
     DiffviewFolderName = {
+        bg = c.bg_dark,
         fg = c.blue1,
     },
 
     DiffviewStatusLine = {
         bg = c.black,
     },
+
 }
