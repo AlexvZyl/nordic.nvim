@@ -19,7 +19,7 @@ return {
     ['@text.note'] = { fg = c.bg, bg = c.info },
     ['@text.warning'] = { fg = c.bg, bg = c.warning },
     ['@text.danger'] = { fg = c.bg, bg = c.error },
-    ['@constructor'] = { fg = c.white0 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    ['@constructor'] = { link = '@function' }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     -- TSConditional       = { };    -- For keywords related to conditionnals.
     -- TSConstant          = { };    -- For constants
     -- TSConstBuiltin      = { };    -- For constant that are built in the language: `nil` in Lua.
