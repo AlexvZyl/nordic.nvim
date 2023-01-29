@@ -16,7 +16,7 @@ M.defaults = {
     cursorline = {
         bold = false,
         -- Avialable styles: 'dark', 'light'.
-        theme = 'dark',
+        theme = 'light',
     },
 }
 
