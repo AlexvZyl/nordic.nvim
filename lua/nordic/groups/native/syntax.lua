@@ -39,7 +39,7 @@ return {
 
     Type = { fg = c.yellow.base }, -- (preferred) int, long, char, etc.
     StorageClass = { fg = c.orange.base }, -- static, register, volatile, etc.
-    Structure = { fg = c.orange.base }, --  struct, union, enum, etc.
+    Structure = { fg = c.yellow.base }, --  struct, union, enum, etc.
     Typedef = { fg = c.yellow.base }, --  A typedef
 
     -- What are these? TODO.
