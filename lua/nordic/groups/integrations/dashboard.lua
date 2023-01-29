@@ -20,45 +20,44 @@ return {
 
     DashboardShortCut = {
         fg = c.red.base,
-        bold = true
+        bold = true,
     },
 
     -- Hyper.
 
     DashboardProjectTitle = {
         fg = c.orange.base,
-        bold = true
+        bold = true,
     },
 
     DashboardProjectTitleIcon = {
-        link = 'DashboardProjectTitle'
+        link = 'DashboardProjectTitle',
     },
 
     DashboardProjectIcon = {
-        fg = c.magenta.base
+        fg = c.magenta.base,
     },
 
     DashboardMruTitle = {
-        link = 'DashboardProjectTitle'
+        link = 'DashboardProjectTitle',
     },
 
     DashboardMruIcon = {},
 
     DashboardFiles = {
-        fg = c.fg
+        fg = c.fg,
     },
 
     -- Doom.
 
     DashboardDesc = {
-        fg = c.green.base
+        fg = c.green.base,
     },
 
     DashboardKey = {
         fg = c.red.base,
-        bold = true
+        bold = true,
     },
 
     DashboardIcon = {},
-
 }

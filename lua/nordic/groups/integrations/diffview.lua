@@ -24,5 +24,4 @@ return {
     DiffviewStatusLine = {
         bg = c.black,
     },
-
 }

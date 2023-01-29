@@ -6,7 +6,7 @@ return {
 
     DiffAdd = {
         bg = c.diff.add,
-        bold = true
+        bold = true,
     }, -- diff mode: Added line |diff.txt|
 
     DiffChange = {
@@ -15,24 +15,24 @@ return {
 
     DiffDelete = {
         bg = c.diff.delete,
-        bold = true
+        bold = true,
     }, -- diff mode: Deleted line |diff.txt|
 
     DiffText = {
         bg = c.diff.change1,
-        bold = true
+        bold = true,
     }, -- diff mode: Changed text within a changed line |diff.txt|
 
     diffAdded = {
-        fg = c.git.add
+        fg = c.git.add,
     },
 
     diffRemoved = {
-        fg = c.git.delete
+        fg = c.git.delete,
     },
 
     diffChanged = {
-        fg = c.git.change
+        fg = c.git.change,
     },
 
     diffOldFile = {
@@ -50,5 +50,4 @@ return {
     diffLine = {},
 
     diffIndexLine = {},
-
 }
