@@ -40,7 +40,6 @@ return {
     -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
-    -- ["@operator"] = { fg = c.orange.bright }, -- For any operator: `+`, but also `->` and `*` in C.
     ['@parameter'] = {
         fg = c.white0,
         italic = true,
@@ -93,10 +92,10 @@ return {
     ['@keyword.return'] = { fg = c.orange.base, bold = o.bold_keywords },
     ['@keyword.function'] = { fg = c.orange.base, bold = o.bold_keywords },
     ['@keyword.export'] = { fg = c.orange.base, bold = o.bold_keywords },
-    ['@keyword.operator'] = { fg = c.orange.bright, bold = o.bold_keywords },
     ['@repeat'] = { fg = c.orange.base, bold = o.bold_keywords },
     ['@conditional'] = { fg = c.orange.base, bold = o.bold_keywords },
-    ['@operator'] = { fg = c.orange.bright, bold = o.bold_keywords },
+    ['@operator'] = { link = 'Operator' },
+    ['@keyword.operator'] = { link = 'Operator' },
     ['@class'] = { fg = c.orange.base, bold = o.bold_keywords },
     ['@type.qualifier'] = { fg = c.orange.base, bold = o.bold_keywords },
     ['@storageclass'] = { fg = c.orange.base, bold = o.bold_keywords },
