@@ -11,6 +11,9 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 *Nvim-tree, lsp, bar-bar, lualine and treesitter:*
 ![image](https://user-images.githubusercontent.com/81622310/214236416-5cfe1638-e3f9-4f24-a330-489c341ce0fc.png)
 
+*Alongside [BTop++](https://github.com/aristocratos/btop) and a Nord wallpaper:*
+![image](https://user-images.githubusercontent.com/81622310/215334958-cba79eba-bd86-4ca9-bdf1-32937ce86828.png)
+
 <details>
 <summary>Telescope</summary>
 
