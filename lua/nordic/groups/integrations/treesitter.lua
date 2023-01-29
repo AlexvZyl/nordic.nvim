@@ -105,7 +105,7 @@ return {
     ['@method.call'] = { fg = c.blue2 },
     ['@function.call'] = { fg = c.blue2 },
     ['@function.builtin'] = { fg = c.blue2 },
-    ['@variable.builtin'] = { fg = c.blue0, italic = true },
+    ['@variable.builtin'] = { fg = c.blue.dim, italic = true },
     -- Cyan.
     ['@field'] = { fg = c.cyan.base },
     ['@property'] = { fg = c.cyan.base },
