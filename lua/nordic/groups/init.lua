@@ -20,7 +20,7 @@ M.integrations = {
     'diffview',
     'nvim-cmp',
     'nvim-notify',
-    'vimtex'
+    'vimtex',
 }
 
 M.core = {

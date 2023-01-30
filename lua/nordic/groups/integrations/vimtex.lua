@@ -12,5 +12,5 @@ return {
     texMathZoneTI = { fg = c.fg },
     texMathSuper = { fg = c.fg },
     texFileArg = { fg = c.green.base },
-    texRefArg = { fg = c.magenta.bright }
+    texRefArg = { fg = c.magenta.bright },
 }
