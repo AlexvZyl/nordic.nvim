@@ -25,11 +25,19 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 </details>
 
 <details>
-<summary>Dashboard & which-key</summary>
+<summary>Dashboard</summary>
 
-![image](https://user-images.githubusercontent.com/81622310/214096444-7b1c3b7c-59cc-4e71-be6d-8c30522cfe68.png)
+![image](https://user-images.githubusercontent.com/81622310/215493953-5d9979cc-acd2-4f1b-8ab8-59892dc1dcc2.png)
 
 </details>
+
+<details>
+<summary>Diffview</summary>
+
+![image](https://user-images.githubusercontent.com/81622310/215494492-eb02ce7a-03a3-47e9-84b2-09505acc4d5f.png)
+
+</details>
+
 
 # 🎨 Palette
 
