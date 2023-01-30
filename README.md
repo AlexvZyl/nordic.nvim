@@ -147,7 +147,7 @@ require 'nordic' .setup {
 
 # 🗒️ Supported Plugins
 
-This is the list of currently supported plugins.  I use these myself, if you want other plugins to be supported either open an issue or submit a PR!
+This is the list of currently supported plugins.  If you want other plugins to be supported either open an issue or submit a PR!
 
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [barbar.nvim](https://github.com/romgrk/barbar.nvim)
@@ -167,6 +167,7 @@ This is the list of currently supported plugins.  I use these myself, if you wan
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [nvim-notify](https://github.com/rcarriga/nvim-notify)
+- [vimtex](https://github.com/lervag/vimtex)
 
 # 🎙️ Acknowledgements
 
