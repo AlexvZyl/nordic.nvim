@@ -187,8 +187,8 @@ An example of overriding the `TelescopePromptTitle` colors:
 ==============================================================================
 7. 🗒️ Supported Plugins           *nordic.nvim-🗒️-supported-plugins*
 
-This is the list of currently supported plugins. I use these myself, if you
-want other plugins to be supported either open an issue or submit a PR!
+This is the list of currently supported plugins. If you want other plugins to
+be supported either open an issue or submit a PR!
 
 
 - lualine.nvim <https://github.com/nvim-lualine/lualine.nvim>
@@ -209,6 +209,7 @@ want other plugins to be supported either open an issue or submit a PR!
 - diffview.nvim <https://github.com/sindrets/diffview.nvim>
 - nvim-cmp <https://github.com/hrsh7th/nvim-cmp>
 - nvim-notify <https://github.com/rcarriga/nvim-notify>
+- vimtex <https://github.com/lervag/vimtex>
 
 
 ==============================================================================
