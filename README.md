@@ -168,6 +168,8 @@ This is the list of currently supported plugins.  I use these myself, if you wan
 
 </br>
 
-<a href="https://github.com/AlexvZyl/nordic.nvim/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=AlexvZyl/nordic.nvim" />
-</a>
+<p align="center">
+    <a href="https://github.com/AlexvZyl/nordic.nvim/graphs/contributors">
+        <img src="https://contrib.rocks/image?repo=AlexvZyl/nordic.nvim" />
+    </a>
+</p>
