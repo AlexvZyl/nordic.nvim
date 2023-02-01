@@ -1,4 +1,4 @@
-*nordic.nvim.txt*         For NVIM v0.8.0         Last change: 2023 January 30
+*nordic.nvim.txt*         For NVIM v0.8.0        Last change: 2023 February 01
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -10,7 +10,8 @@ Table of Contents                              *nordic.nvim-table-of-contents*
 5. 🚀 Usage                                         |nordic.nvim-🚀-usage|
 6. ⚙️ Configuration                     |nordic.nvim-⚙️-configuration|
 7. 🗒️ Supported Plugins           |nordic.nvim-🗒️-supported-plugins|
-8. 🎙️ Acknowledgements             |nordic.nvim-🎙️-acknowledgements|
+8. Supported Platforms                       |nordic.nvim-supported-platforms|
+9. 🎙️ Acknowledgements             |nordic.nvim-🎙️-acknowledgements|
 
 ==============================================================================
 1. 🌒 Nordic                                       *nordic.nvim-🌒-nordic*
@@ -210,10 +211,22 @@ be supported either open an issue or submit a PR!
 - nvim-cmp <https://github.com/hrsh7th/nvim-cmp>
 - nvim-notify <https://github.com/rcarriga/nvim-notify>
 - vimtex <https://github.com/lervag/vimtex>
+- noice.nvim <https://github.com/folke/noice.nvim>
 
 
 ==============================================================================
-8. 🎙️ Acknowledgements             *nordic.nvim-🎙️-acknowledgements*
+8. Supported Platforms                       *nordic.nvim-supported-platforms*
+
+The list of currently supported platforms.
+
+
+- kitty <https://github.com/kovidgoyal/kitty>
+- iTerm2 <https://github.com/gnachman/iTerm2>
+- Windows Terminal <https://github.com/microsoft/terminal>
+
+
+==============================================================================
+9. 🎙️ Acknowledgements             *nordic.nvim-🎙️-acknowledgements*
 
 
 - folke/tokyonight <https://github.com/folke/tokyonight.nvim> served as an excellent example and template to create a Neovim theme.
