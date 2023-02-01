@@ -13,4 +13,5 @@ return {
     texMathSuper = { fg = c.fg },
     texFileArg = { fg = c.green.base },
     texRefArg = { fg = c.magenta.bright },
+    texGroupError = { link = 'DiagnosticError' }
 }

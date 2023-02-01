@@ -12,7 +12,8 @@ return {
     NvimTreeNormal = { fg = c.white0, bg = o.transparent_bg and c.none or c.black },
     NvimTreeNormalNC = { fg = c.white0, bg = o.transparent_bg and c.none or c.black },
     NvimTreeIndentMarker = { fg = c.gray2 },
-
+    NvimTreeCursorLine = { bg = c.gray1 },
+    NvimTreeCursor = { bg = c.none, fg = c.none },
     NvimTreeWinSeparator = { fg = c.bg_sidebar, bg = o.transparent_bg and c.none or c.bg_sidebar },
     NvimTreeGitDirty = { fg = c.git.change },
     NvimTreeGitNew = { fg = c.git.add },
@@ -23,4 +24,5 @@ return {
     NvimTreeSymlink = { fg = c.blue1 },
     NeoTreeNormal = { fg = c.white0, bg = c.black },
     NeoTreeNormalNC = { fg = c.white0, bg = c.black },
+
 }

@@ -168,6 +168,15 @@ This is the list of currently supported plugins.  If you want other plugins to b
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [nvim-notify](https://github.com/rcarriga/nvim-notify)
 - [vimtex](https://github.com/lervag/vimtex)
+- [noice.nvim](https://github.com/folke/noice.nvim)
+
+# Supported Platforms
+
+The list of currently supported platforms.
+
+- [kitty](https://github.com/kovidgoyal/kitty)
+- [iTerm2](https://github.com/gnachman/iTerm2)
+- [Windows Terminal](https://github.com/microsoft/terminal)
 
 # 🎙️ Acknowledgements
 

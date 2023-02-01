@@ -21,6 +21,7 @@ M.integrations = {
     'nvim-cmp',
     'nvim-notify',
     'vimtex',
+    'noice',
 }
 
 M.core = {
