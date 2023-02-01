@@ -35,7 +35,7 @@ return {
     },
 
     DashboardProjectIcon = {
-        fg = c.magenta.base,
+        fg = c.magenta.bright,
     },
 
     DashboardMruTitle = {
