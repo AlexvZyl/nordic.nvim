@@ -21,26 +21,26 @@ return {
     Identifier = { fg = c.fg }, -- (preferred) any variable name
     Function = { fg = c.blue2 }, -- function name (also: methods for classes)
 
-    Statement = { fg = c.orange.base, bold = o.bold_keywords }, -- (preferred) any statement
-    Conditional = { fg = c.orange.base, bold = o.bold_keywords }, --  if, then, else, endif, switch, etc.
-    Repeat = { fg = c.orange.base, bold = o.bold_keywords }, --   for, do, while, etc.
-    Label = { fg = c.orange.base, bold = o.bold_keywords }, --    case, default, etc.
+    Keyword = { fg = c.orange.bright, bold = o.bold_keywords }, --  any other keyword
+    Statement = { link = 'Keyword' }, -- (preferred) any statement
+    Conditional = { link = 'Keyword' }, --  if, then, else, endif, switch, etc.
+    Repeat = { link = 'Keyword' }, --   for, do, while, etc.
+    Label = { link = 'Keyword' }, --    case, default, etc.
+    Exception = { link = 'Keyword' }, --  try, catch, throw
+    StorageClass = { link = 'Keyword' }, -- static, register, volatile, etc.
     Operator = { fg = c.orange.bright, bold = true }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = c.orange.base, bold = o.bold_keywords }, --  any other keyword
-    Exception = { fg = c.red.base, bold = o.bold_keywords }, --  try, catch, throw
 
     Comment = { fg = c.comment, italic = o.italic_comments },
 
-    PreProc = { fg = c.red.base, bold = true }, -- (preferred) generic Preprocessor
-    Include = { fg = c.red.base, bold = true }, --  preprocessor #include
-    Define = { fg = c.red.base, bold = true }, --   preprocessor #define
     Macro = { fg = c.red.base, bold = true }, --    same as Define
-    PreCondit = { fg = c.red.base, bold = true }, --  preprocessor #if, #else, #endif, etc.
+    PreProc = { link = 'Macro' }, -- (preferred) generic Preprocessor
+    Include = { link = 'Macro' }, --  preprocessor #include
+    Define = { link = 'Macro' }, --   preprocessor #define
+    PreCondit = { link = 'Macro' }, --  preprocessor #if, #else, #endif, etc.
 
-    Type = { fg = c.yellow.base }, -- (preferred) int, long, char, etc.
-    StorageClass = { fg = c.orange.base }, -- static, register, volatile, etc.
-    Structure = { fg = c.yellow.base }, --  struct, union, enum, etc.
-    Typedef = { fg = c.yellow.base }, --  A typedef
+    Type = { fg = c.yellow.base, bold = false }, -- (preferred) int, long, char, etc.
+    Structure = { link = 'Type' }, --  struct, union, enum, etc.
+    Typedef = { link = 'Type' }, --  A typedef
 
     -- What are these? TODO.
     Special = { fg = c.blue1 }, -- (preferred) any special symbol
@@ -59,6 +59,7 @@ return {
 
     Error = { fg = c.error }, -- (preferred) any erroneous construct
     Todo = { bg = c.yellow.dim, fg = c.bg_dark }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Note = { fg = c.bg, bg = c.info },
 
     -- What are these? TODO.
     qfLineNr = { fg = c.gray4 },
