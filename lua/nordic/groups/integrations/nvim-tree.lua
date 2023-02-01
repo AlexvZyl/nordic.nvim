@@ -24,5 +24,4 @@ return {
     NvimTreeSymlink = { fg = c.blue1 },
     NeoTreeNormal = { fg = c.white0, bg = c.black },
     NeoTreeNormalNC = { fg = c.white0, bg = c.black },
-
 }
