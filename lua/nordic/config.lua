@@ -5,15 +5,16 @@ M.defaults = {
         -- Available styles: `classic`, `flat`.
         style = 'flat',
     },
-    -- Enable bold keywords and operators
-    bold_keywords = true,
-    -- Enable italicized comments
+    -- Enable bold keywords.
+    bold_keywords = false,
+    -- Enable italic comments.
     italic_comments = true,
-    -- Enable general editor background transparency
+    -- Enable general editor background transparency.
     transparent_bg = false,
-    -- Override styling of any highlight group
+    -- Override styling of any highlight group.
     override = {},
     cursorline = {
+        -- Enable bold font in cursorline.
         bold = false,
         -- Avialable styles: 'dark', 'light'.
         theme = 'light',

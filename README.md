@@ -128,25 +128,24 @@ Nordic will use the default values, unless `setup` is called.  Below is the defa
 
 ```lua
 require 'nordic' .setup {
-    -- Telesccope custom configs.
     telescope = {
         -- Available styles: `classic`, `flat`.
         style = 'flat',
     },
     -- Enable bold keywords.
-    bold_keywords = true,
-    -- Enable italicized comments.
+    bold_keywords = false,
+    -- Enable italic comments.
     italic_comments = true,
     -- Enable general editor background transparency.
     transparent_bg = false,
     -- Override styling of any highlight group.
-    -- (see next section for an example)
     override = {},
     cursorline = {
+        -- Enable bold font in cursorline.
         bold = false,
-        -- Avialable themes: 'dark', 'light'.
-        theme = 'light'
-    }
+        -- Avialable styles: 'dark', 'light'.
+        theme = 'light',
+    },
 }
 ```
 
