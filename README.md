@@ -43,6 +43,26 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 
 TODO
 
+# 📟 Terminal Emulators
+
+Properly rendering fonts can be a complex problem and, as expected, different terminal emulators (TE) have different results.  I personally use [Kitty](https://github.com/kovidgoyal/kitty) due to it having the best font rendering (imo).  So if you use a different TE and the colors seem slightly inconsistent, that might be why.
+
+<details>
+<summary>Comparison</summary>
+
+</br>
+
+*[Kitty](https://github.com/kovidgoyal/kitty):*  
+![image](https://user-images.githubusercontent.com/81622310/216267238-6ce23751-df00-4ed6-87c7-81dc345df0e9.png)
+
+*[Alacritty](https://github.com/alacritty/alacritty):*  
+![image](https://user-images.githubusercontent.com/81622310/216267437-665ba1ca-02df-46c3-a84b-5ef76736164a.png)
+
+*[Neovide](https://github.com/neovide/neovide):*  
+![image](https://user-images.githubusercontent.com/81622310/216267855-14502471-c761-4875-be34-3e43968aa39b.png)
+
+</details>
+
 # 📦 Installation
 
 With [packer.nvim](https://github.com/wbthomason/packer.nvim):
@@ -108,25 +128,24 @@ Nordic will use the default values, unless `setup` is called.  Below is the defa
 
 ```lua
 require 'nordic' .setup {
-    -- Telesccope custom configs.
     telescope = {
         -- Available styles: `classic`, `flat`.
         style = 'flat',
     },
     -- Enable bold keywords.
-    bold_keywords = true,
-    -- Enable italicized comments.
+    bold_keywords = false,
+    -- Enable italic comments.
     italic_comments = true,
     -- Enable general editor background transparency.
     transparent_bg = false,
     -- Override styling of any highlight group.
-    -- (see next section for an example)
     override = {},
     cursorline = {
+        -- Enable bold font in cursorline.
         bold = false,
-        -- Avialable themes: 'dark', 'light'.
-        theme = 'light'
-    }
+        -- Avialable styles: 'dark', 'light'.
+        theme = 'light',
+    },
 }
 ```
 
@@ -170,7 +189,7 @@ This is the list of currently supported plugins.  If you want other plugins to b
 - [vimtex](https://github.com/lervag/vimtex)
 - [noice.nvim](https://github.com/folke/noice.nvim)
 
-# Supported Platforms
+# 💻 Supported Platforms
 
 The list of currently supported platforms.
 
