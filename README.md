@@ -43,6 +43,10 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 
 TODO
 
+# 📟 A Comment on Terminal Emulators
+
+
+
 # 📦 Installation
 
 With [packer.nvim](https://github.com/wbthomason/packer.nvim):
@@ -170,7 +174,7 @@ This is the list of currently supported plugins.  If you want other plugins to b
 - [vimtex](https://github.com/lervag/vimtex)
 - [noice.nvim](https://github.com/folke/noice.nvim)
 
-# Supported Platforms
+# 💻 Supported Platforms
 
 The list of currently supported platforms.
 
