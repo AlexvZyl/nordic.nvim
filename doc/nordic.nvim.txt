@@ -1,4 +1,4 @@
-*nordic.nvim.txt*         For NVIM v0.8.0        Last change: 2023 February 01
+*nordic.nvim.txt*         For NVIM v0.8.0        Last change: 2023 February 02
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -6,12 +6,13 @@ Table of Contents                              *nordic.nvim-table-of-contents*
 1. 🌒 Nordic                                       |nordic.nvim-🌒-nordic|
 2. 📷 Showcase                                   |nordic.nvim-📷-showcase|
 3. 🎨 Palette                                     |nordic.nvim-🎨-palette|
-4. 📦 Installation                           |nordic.nvim-📦-installation|
-5. 🚀 Usage                                         |nordic.nvim-🚀-usage|
-6. ⚙️ Configuration                     |nordic.nvim-⚙️-configuration|
-7. 🗒️ Supported Plugins           |nordic.nvim-🗒️-supported-plugins|
-8. Supported Platforms                       |nordic.nvim-supported-platforms|
-9. 🎙️ Acknowledgements             |nordic.nvim-🎙️-acknowledgements|
+4. 📟 Terminal Emulators               |nordic.nvim-📟-terminal-emulators|
+5. 📦 Installation                           |nordic.nvim-📦-installation|
+6. 🚀 Usage                                         |nordic.nvim-🚀-usage|
+7. ⚙️ Configuration                     |nordic.nvim-⚙️-configuration|
+8. 🗒️ Supported Plugins           |nordic.nvim-🗒️-supported-plugins|
+9. 💻 Supported Platforms             |nordic.nvim-💻-supported-platforms|
+10. 🎙️ Acknowledgements            |nordic.nvim-🎙️-acknowledgements|
 
 ==============================================================================
 1. 🌒 Nordic                                       *nordic.nvim-🌒-nordic*
@@ -71,7 +72,32 @@ Diffview
 TODO
 
 ==============================================================================
-4. 📦 Installation                           *nordic.nvim-📦-installation*
+4. 📟 Terminal Emulators               *nordic.nvim-📟-terminal-emulators*
+
+Properly rendering fonts can be a complex problem and, as expected, different
+terminal emulators (TE) have different results. I personally use Kitty
+<https://github.com/kovidgoyal/kitty> due to it having the best font rendering
+(imo). So if you use a different TE and the colors seem slightly inconsistent,
+that might be why.
+
+Comparison
+
+</br>
+
+_Kitty <https://github.com/kovidgoyal/kitty>:_ <img
+src='https://user-images.githubusercontent.com/81622310/216267238-6ce23751-df00-4ed6-87c7-81dc345df0e9.png'
+title=''/>
+
+_Alacritty <https://github.com/alacritty/alacritty>:_ <img
+src='https://user-images.githubusercontent.com/81622310/216267437-665ba1ca-02df-46c3-a84b-5ef76736164a.png'
+title=''/>
+
+_Neovide <https://github.com/neovide/neovide>:_ <img
+src='https://user-images.githubusercontent.com/81622310/216267855-14502471-c761-4875-be34-3e43968aa39b.png'
+title=''/>
+
+==============================================================================
+5. 📦 Installation                           *nordic.nvim-📦-installation*
 
 With packer.nvim <https://github.com/wbthomason/packer.nvim>:
 
@@ -102,7 +128,7 @@ With vim-plug <https://github.com/junegunn/vim-plug>:
 
 
 ==============================================================================
-5. 🚀 Usage                                         *nordic.nvim-🚀-usage*
+6. 🚀 Usage                                         *nordic.nvim-🚀-usage*
 
 Using vim:
 
@@ -139,32 +165,31 @@ To get the palette in lua:
 
 
 ==============================================================================
-6. ⚙️ Configuration                     *nordic.nvim-⚙️-configuration*
+7. ⚙️ Configuration                     *nordic.nvim-⚙️-configuration*
 
 Nordic will use the default values, unless `setup` is called. Below is the
 default configuration.
 
 >
     require 'nordic' .setup {
-        -- Telesccope custom configs.
         telescope = {
             -- Available styles: `classic`, `flat`.
             style = 'flat',
         },
         -- Enable bold keywords.
-        bold_keywords = true,
-        -- Enable italicized comments.
+        bold_keywords = false,
+        -- Enable italic comments.
         italic_comments = true,
         -- Enable general editor background transparency.
         transparent_bg = false,
         -- Override styling of any highlight group.
-        -- (see next section for an example)
         override = {},
         cursorline = {
+            -- Enable bold font in cursorline.
             bold = false,
-            -- Avialable themes: 'dark', 'light'.
-            theme = 'light'
-        }
+            -- Avialable styles: 'dark', 'light'.
+            theme = 'light',
+        },
     }
 <
 
@@ -186,7 +211,7 @@ An example of overriding the `TelescopePromptTitle` colors:
 
 
 ==============================================================================
-7. 🗒️ Supported Plugins           *nordic.nvim-🗒️-supported-plugins*
+8. 🗒️ Supported Plugins           *nordic.nvim-🗒️-supported-plugins*
 
 This is the list of currently supported plugins. If you want other plugins to
 be supported either open an issue or submit a PR!
@@ -215,7 +240,7 @@ be supported either open an issue or submit a PR!
 
 
 ==============================================================================
-8. Supported Platforms                       *nordic.nvim-supported-platforms*
+9. 💻 Supported Platforms             *nordic.nvim-💻-supported-platforms*
 
 The list of currently supported platforms.
 
@@ -226,7 +251,7 @@ The list of currently supported platforms.
 
 
 ==============================================================================
-9. 🎙️ Acknowledgements             *nordic.nvim-🎙️-acknowledgements*
+10. 🎙️ Acknowledgements            *nordic.nvim-🎙️-acknowledgements*
 
 
 - folke/tokyonight <https://github.com/folke/tokyonight.nvim> served as an excellent example and template to create a Neovim theme.
