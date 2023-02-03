@@ -98,7 +98,6 @@ return {
     ['@function.macro'] = { link = 'Macro' },
     ['@define'] = { link = 'Macro' },
     ['@exception'] = { link = 'Macro' },
-    ['@punctuation.special'] = { link = 'Macro' },
     -- Blues.
     ['@function'] = { fg = c.blue2 },
     ['@method'] = { fg = c.blue2 },
@@ -115,5 +114,6 @@ return {
     ['@type'] = { link = 'Type' },
     ['@type.builtin'] = { link = 'Type' },
     ['@type.definition'] = { link = 'Type' },
+    ['@punctuation.special'] = { link = 'Type' },
     -----------------------
 }

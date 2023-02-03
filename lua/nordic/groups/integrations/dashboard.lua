@@ -19,7 +19,7 @@ return {
     },
 
     DashboardShortCut = {
-        fg = c.red.base,
+        fg = c.gray4,
         bold = true,
     },
 
