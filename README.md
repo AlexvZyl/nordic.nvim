@@ -192,6 +192,7 @@ This is the list of currently supported plugins.  If you want other plugins to b
 - [nvim-notify](https://github.com/rcarriga/nvim-notify)
 - [vimtex](https://github.com/lervag/vimtex)
 - [noice.nvim](https://github.com/folke/noice.nvim)
+- [fidget.nvim](https://github.com/j-hui/fidget.nvim)
 
 # 💻 Supported Platforms
 
