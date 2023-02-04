@@ -11,7 +11,6 @@ return {
 
     DashboardFooter = {
         fg = c.cyan.base,
-        bold = true,
     },
 
     DashboardCenter = {
