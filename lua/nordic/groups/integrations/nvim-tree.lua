@@ -2,26 +2,38 @@ local c = require 'nordic.colors'
 local o = require('nordic.config').options
 
 return {
+    -- Normals.
+    NvimTreeNormal = { fg = c.fg, bg = o.transparent_bg and c.none or c.black },
+    NvimTreeNormalNC = { fg = c.fg, bg = o.transparent_bg and c.none or c.black },
 
-    NvimTreeFolderIcon = { fg = c.yellow.dim },
+    -- Folders.
     NvimTreeFolderName = { fg = c.blue1 },
+    NvimTreeOpenedFolderName = { fg = c.blue1 },
     NvimTreeEmptyFolderName = { fg = c.blue1 },
-    NvimTreeOpenedFolderName = { fg = c.blue2 },
+    NvimTreeFolderIcon = { fg = c.yellow.dim },
+
+    -- Files.
+    NvimTreeOpenedFile = { bg = c.black },
     NvimTreeOpenedName = { fg = c.blue1 },
+    NvimTreeSpecialFile = { fg = c.fg, underline = true },
+    NvimTreeImageFile = { fg = c.fg_sidebar },
+
+    -- Root.
     NvimTreeRootFolder = { fg = c.yellow.base, bold = true },
-    NvimTreeNormal = { fg = c.white0, bg = o.transparent_bg and c.none or c.black },
-    NvimTreeNormalNC = { fg = c.white0, bg = o.transparent_bg and c.none or c.black },
+
+    -- Git.
+    NvimTreeGitDirty = { fg = c.gray2 },
+    NvimTreeGitNew = { fg = c.gray2 },
+    NvimTreeGitDeleted = { fg = c.gray2 },
+
+    -- UI.
     NvimTreeIndentMarker = { fg = c.gray2 },
+    NvimTreeWinSeparator = { fg = c.bg_sidebar, bg = o.transparent_bg and c.none or c.bg_sidebar },
+
+    -- Cursor.
     NvimTreeCursorLine = { bg = c.gray1 },
     NvimTreeCursor = { bg = c.none, fg = c.none },
-    NvimTreeWinSeparator = { fg = c.bg_sidebar, bg = o.transparent_bg and c.none or c.bg_sidebar },
-    NvimTreeGitDirty = { fg = c.git.change },
-    NvimTreeGitNew = { fg = c.git.add },
-    NvimTreeGitDeleted = { fg = c.git.delete },
-    NvimTreeOpenedFile = { bg = c.black },
-    NvimTreeSpecialFile = { fg = c.magenta.bright, underline = true },
-    NvimTreeImageFile = { fg = c.fg_sidebar },
+
+    -- Misc.
     NvimTreeSymlink = { fg = c.blue1 },
-    NeoTreeNormal = { fg = c.white0, bg = c.black },
-    NeoTreeNormalNC = { fg = c.white0, bg = c.black },
 }
