@@ -1,17 +1,15 @@
 local M = {}
 
 M.defaults = {
-    telescope = {
-        -- Available styles: `classic`, `flat`.
-        style = 'flat',
-    },
     -- Enable bold keywords.
     bold_keywords = false,
     -- Enable italic comments.
     italic_comments = true,
     -- Enable general editor background transparency.
     transparent_bg = false,
-    -- Override styling of any highlight group.
+    -- Reduce the overall amount of blue in the theme (diverges from base Nord).
+    reduced_blue = false,
+    -- Override the styling of any highlight group.
     override = {},
     cursorline = {
         -- Enable bold font in cursorline.
@@ -22,7 +20,11 @@ M.defaults = {
     noice = {
         -- Available styles: `classic`, `flat`.
         style = 'flat'
-    }
+    },
+    telescope = {
+        -- Available styles: `classic`, `flat`.
+        style = 'flat',
+    },
 }
 
 M.options = {}

@@ -1,6 +1,7 @@
 -- The Nord palette: https://www.nordtheme.com/.
 
 local u = require 'nordic.utils'
+local o = require 'nordic.config'.options
 
 local palette = {
 
@@ -18,7 +19,7 @@ local palette = {
     gray3 = '#434C5E',
     gray4 = '#4C566A',
 
-    -- A light blue/gray (nice for comments).
+    -- A light blue/gray.
     -- From @nightfox.nvim.
     gray5 = '#60728A',
 
@@ -77,6 +78,11 @@ local palette = {
     },
 }
 
+-- Reduced blue theme.
+if o.reduced_blue then
+    palette.white0 = '#CfD5E1'
+end
+
 -- Add these for international convenience :)
 palette.grey0 = palette.gray0
 palette.grey1 = palette.gray1
@@ -115,7 +121,7 @@ palette.border_float = palette.white1
 palette.border_nb = palette.orange.base
 
 -- Diffs.
-local diff_blend = 0.15
+local diff_blend = 0.25
 palette.diff = {}
 palette.diff.add = u.blend(palette.green.base, palette.bg, diff_blend)
 palette.diff.change0 = u.blend(palette.blue2, palette.bg, diff_blend * 0.2)
