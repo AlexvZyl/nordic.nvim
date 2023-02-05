@@ -2,6 +2,7 @@ local c = require 'nordic.colors'
 local o = require 'nordic.config'.options
 
 local groups = {
+
     NoiceCmdlinePopupBorder = {
         bg = c.none,
         fg = c.cyan.base
@@ -19,6 +20,7 @@ local groups = {
         bg = c.bg,
         fg = c.cyan.base
     }
+
 }
 
 if o.noice.style == 'flat' then
@@ -37,6 +39,7 @@ if o.noice.style == 'flat' then
     groups.NoiceCmdlinePrompt = {
         -- bg = c.bg_dark
     }
+
 end
 
 return groups

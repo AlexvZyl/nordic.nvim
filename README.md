@@ -146,6 +146,7 @@ require 'nordic' .setup {
         -- Avialable styles: 'dark', 'light'.
         theme = 'light',
     },
+    -- WIP.
     noice = {
         -- Available styles: `classic`, `flat`.
         style = 'flat'
