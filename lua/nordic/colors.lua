@@ -80,7 +80,7 @@ local palette = {
 
 -- Reduced blue theme.
 if o.reduced_blue then
-    palette.white0 = '#CfD5E1'
+    palette.white0 = '#CFD5E1'
 end
 
 -- Add these for international convenience :)
