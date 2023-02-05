@@ -18,6 +18,8 @@ return {
     Boolean = { fg = c.magenta.bright }, --  a boolean constant: TRUE, false
     Float = { fg = c.magenta.bright }, --    a floating point constant: 2.3e10
 
+    Title = { fg = c.yellow.base },
+
     Identifier = { fg = c.fg }, -- (preferred) any variable name
     Function = { fg = c.blue2 }, -- function name (also: methods for classes)
 
