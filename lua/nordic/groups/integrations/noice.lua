@@ -1,37 +1,35 @@
 local c = require 'nordic.colors'
-local o = require 'nordic.config'.options
+local o = require('nordic.config').options
 
 local groups = {
 
     NoiceCmdlinePopupBorder = {
         bg = c.none,
-        fg = c.cyan.base
+        fg = c.cyan.base,
     },
     NoiceCmdlineIcon = {
         bg = c.bg,
-        fg = c.yellow.bright
+        fg = c.yellow.bright,
     },
     NoiceCmdlinePopup = {
         bg = c.bg,
         fg = c.white0,
-        bold = true
+        bold = true,
     },
     NoiceCmdline = {
         bg = c.bg,
-        fg = c.cyan.base
-    }
-
+        fg = c.cyan.base,
+    },
 }
 
 if o.noice.style == 'flat' then
-
     groups.NoiceCmdlinePopupBorder = {
         bg = c.bg_dark,
         fg = c.bg_dark,
     }
     groups.NoiceCmdlineIcon = {
         bg = c.bg_dark,
-        fg = c.yellow.base
+        fg = c.yellow.base,
     }
     groups.NoiceCmdlinePopup = {
         bg = c.black,
@@ -39,7 +37,6 @@ if o.noice.style == 'flat' then
     groups.NoiceCmdlinePrompt = {
         -- bg = c.bg_dark
     }
-
 end
 
 return groups

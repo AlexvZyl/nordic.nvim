@@ -1,7 +1,7 @@
 -- The Nord palette: https://www.nordtheme.com/.
 
 local u = require 'nordic.utils'
-local o = require 'nordic.config'.options
+local o = require('nordic.config').options
 
 local palette = {
 
@@ -79,9 +79,7 @@ local palette = {
 }
 
 -- Reduced blue theme.
-if o.reduced_blue then
-    palette.white0 = '#CFD5E1'
-end
+if o.reduced_blue then palette.white0 = '#CFD5E1' end
 
 -- Add these for international convenience :)
 palette.grey0 = palette.gray0

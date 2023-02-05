@@ -59,6 +59,6 @@ return {
     },
 
     DashboardIcon = {
-        fg = c.green.base
+        fg = c.green.base,
     },
 }

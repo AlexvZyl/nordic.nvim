@@ -2,7 +2,7 @@
 
 local c = require 'nordic.colors'
 local o = require('nordic.config').options
-local u = require('nordic.utils')
+local u = require 'nordic.utils'
 
 if o.cursorline.theme == 'light' then
     c.bg_highlight = c.gray1

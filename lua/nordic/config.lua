@@ -21,7 +21,7 @@ M.defaults = {
     },
     noice = {
         -- Available styles: `classic`, `flat`.
-        style = 'flat'
+        style = 'flat',
     },
     telescope = {
         -- Available styles: `classic`, `flat`.
