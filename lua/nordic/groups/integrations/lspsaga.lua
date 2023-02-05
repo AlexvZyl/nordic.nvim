@@ -6,6 +6,10 @@ return {
         fg = c.white0,
     },
 
+    SagaNormal = {
+        link = 'Normal'
+    },
+
     DefinitionBorder = {
         fg = c.white0,
     },
@@ -13,4 +17,21 @@ return {
     DefinitionNormal = {
         fg = c.gray0,
     },
+
+    DiagnosticPos = {
+        fg = c.fg
+    },
+
+    DiagnosticWord = {
+        fg = c.fg
+    },
+
+    DiagnosticSource = {
+        fg = c.fg
+    },
+
+    DiagnosticNormal = {
+        link = 'Normal'
+    }
+
 }

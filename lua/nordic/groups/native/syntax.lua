@@ -18,6 +18,8 @@ return {
     Boolean = { fg = c.magenta.bright }, --  a boolean constant: TRUE, false
     Float = { fg = c.magenta.bright }, --    a floating point constant: 2.3e10
 
+    Title = { fg = c.yellow.base },
+
     Identifier = { fg = c.fg }, -- (preferred) any variable name
     Function = { fg = c.blue2 }, -- function name (also: methods for classes)
 
@@ -28,11 +30,11 @@ return {
     Label = { link = 'Keyword' }, --    case, default, etc.
     Exception = { link = 'Keyword' }, --  try, catch, throw
     StorageClass = { link = 'Keyword' }, -- static, register, volatile, etc.
-    Operator = { fg = c.orange.bright, bold = true }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = c.orange.bright }, -- "sizeof", "+", "*", etc.
 
     Comment = { fg = c.comment, italic = o.italic_comments },
 
-    Macro = { fg = c.red.base, bold = true }, --    same as Define
+    Macro = { fg = c.red.base, bold = false }, --    same as Define
     PreProc = { link = 'Macro' }, -- (preferred) generic Preprocessor
     Include = { link = 'Macro' }, --  preprocessor #include
     Define = { link = 'Macro' }, --   preprocessor #define

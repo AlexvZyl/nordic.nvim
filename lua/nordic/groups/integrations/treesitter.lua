@@ -37,12 +37,12 @@ return {
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
     ['@parameter'] = {
-        fg = c.white0,
+        fg = c.fg,
         italic = true,
     }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
-    ['@punctuation.delimiter'] = { fg = c.white0 }, -- For delimiters ie: `.`
-    ['@punctuation.bracket'] = { fg = c.white0 }, -- For brackets and parens.
+    ['@punctuation.delimiter'] = { fg = c.fg }, -- For delimiters ie: `.`
+    ['@punctuation.bracket'] = { fg = c.fg }, -- For brackets and parens.
     -- TSRepeat            = { };    -- For keywords related to loops.
     -- TSString            = { };    -- For strings.
     ['@string.regex'] = { fg = c.green.dim }, -- For regexes.
@@ -50,10 +50,10 @@ return {
     -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
     -- TSType              = { };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
-    ['@variable'] = { fg = c.white0 }, -- Any variable name that does not have another highlight.
+    ['@variable'] = { fg = c.fg }, -- Any variable name that does not have another highlight.
 
     ['@tag'] = { fg = c.blue1 }, -- Tags like html tag names.
-    ['@tag.delimiter'] = { fg = c.white0 }, -- Tag delimiter like `<` `>` `/`
+    ['@tag.delimiter'] = { fg = c.fg }, -- Tag delimiter like `<` `>` `/`
     ['@tag.attribute'] = { fg = c.yellow.base }, -- Tag attribute like `id` `class`
     ['@text'] = { link = 'Normal' }, -- For strings considered text in a markup language.
     ['@text.reference'] = { fg = c.green.base },
@@ -66,6 +66,7 @@ return {
     ['@text.uri'] = { underline = true }, -- Any URI like a link or email.
     ['@text.diff.add'] = { link = 'DiffAdd' },
     ['@text.diff.delete'] = { link = 'DiffDelete' },
+    ['@text.literal'] = { link = 'String' },
 
     -- Lua
     -- luaTSProperty = { fg = c.red }, -- Same as `TSField`.
@@ -86,8 +87,6 @@ return {
     ['@repeat'] = { link = 'Keyword' },
     ['@conditional'] = { link = 'Keyword' },
     ['@class'] = { link = 'Keyword' },
-    ['@type.qualifier'] = { link = 'Keyword' },
-    ['@storageclass'] = { link = 'Keyword' },
     ['@operator'] = { link = 'Operator' },
     ['@keyword.operator'] = { link = 'Operator' },
     -- Reds.
@@ -98,7 +97,6 @@ return {
     ['@function.macro'] = { link = 'Macro' },
     ['@define'] = { link = 'Macro' },
     ['@exception'] = { link = 'Macro' },
-    ['@punctuation.special'] = { link = 'Macro' },
     -- Blues.
     ['@function'] = { fg = c.blue2 },
     ['@method'] = { fg = c.blue2 },
@@ -115,5 +113,8 @@ return {
     ['@type'] = { link = 'Type' },
     ['@type.builtin'] = { link = 'Type' },
     ['@type.definition'] = { link = 'Type' },
+    ['@punctuation.special'] = { link = 'Type' },
+    ['@type.qualifier'] = { link = 'Type' },
+    ['@storageclass'] = { link = 'Type' },
     -----------------------
 }

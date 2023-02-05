@@ -1,4 +1,4 @@
-local m = require('nordic.utils').merge
+local merge = require('nordic.utils').merge
 
 local M = {}
 
@@ -22,6 +22,7 @@ M.integrations = {
     'nvim-notify',
     'vimtex',
     'noice',
+    'fidget'
 }
 
 M.core = {
@@ -34,10 +35,10 @@ M.core = {
 function M.get_groups()
     local groups = {}
     for _, integration in ipairs(M.integrations) do
-        groups = m(groups, require('nordic.groups.integrations.' .. integration))
+        groups = merge(groups, require('nordic.groups.integrations.' .. integration))
     end
     for _, core in ipairs(M.core) do
-        groups = m(groups, require('nordic.groups.native.' .. core))
+        groups = merge(groups, require('nordic.groups.native.' .. core))
     end
     return groups
 end
