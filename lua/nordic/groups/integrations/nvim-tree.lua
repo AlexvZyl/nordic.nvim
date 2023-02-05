@@ -25,9 +25,10 @@ return {
     NvimTreeGitDirty = { fg = c.gray2 },
     NvimTreeGitNew = { fg = c.gray2 },
     NvimTreeGitDeleted = { fg = c.gray2 },
+    NvimTreeGitStaged = { fg = c.gray2 },
 
     -- UI.
-    NvimTreeIndentMarker = { fg = c.gray2 },
+    NvimTreeIndentMarker = { fg = c.gray1 },
     NvimTreeWinSeparator = { fg = c.bg_sidebar, bg = o.transparent_bg and c.none or c.bg_sidebar },
 
     -- Cursor.

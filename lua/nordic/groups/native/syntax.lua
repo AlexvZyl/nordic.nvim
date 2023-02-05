@@ -32,7 +32,7 @@ return {
 
     Comment = { fg = c.comment, italic = o.italic_comments },
 
-    Macro = { fg = c.red.base, bold = true }, --    same as Define
+    Macro = { fg = c.red.base, bold = false }, --    same as Define
     PreProc = { link = 'Macro' }, -- (preferred) generic Preprocessor
     Include = { link = 'Macro' }, --  preprocessor #include
     Define = { link = 'Macro' }, --   preprocessor #define

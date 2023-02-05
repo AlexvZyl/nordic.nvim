@@ -105,7 +105,7 @@ if o.telescope.style == 'flat' then
 
     -- Titles.
     groups.TelescopePreviewTitle = {
-        bg = c.orange.base,
+        bg = c.blue2,
         fg = c.black,
         bold = true,
     }

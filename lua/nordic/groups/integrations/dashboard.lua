@@ -58,5 +58,7 @@ return {
         bold = true,
     },
 
-    DashboardIcon = {},
+    DashboardIcon = {
+        fg = c.green.base
+    },
 }

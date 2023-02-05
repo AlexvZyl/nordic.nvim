@@ -86,8 +86,6 @@ return {
     ['@repeat'] = { link = 'Keyword' },
     ['@conditional'] = { link = 'Keyword' },
     ['@class'] = { link = 'Keyword' },
-    ['@type.qualifier'] = { link = 'Keyword' },
-    ['@storageclass'] = { link = 'Keyword' },
     ['@operator'] = { link = 'Operator' },
     ['@keyword.operator'] = { link = 'Operator' },
     -- Reds.
@@ -115,5 +113,7 @@ return {
     ['@type.builtin'] = { link = 'Type' },
     ['@type.definition'] = { link = 'Type' },
     ['@punctuation.special'] = { link = 'Type' },
+    ['@type.qualifier'] = { link = 'Type' },
+    ['@storageclass'] = { link = 'Type' },
     -----------------------
 }

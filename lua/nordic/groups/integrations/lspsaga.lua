@@ -19,18 +19,19 @@ return {
     },
 
     DiagnosticPos = {
-        fg = c.gray4
+        fg = c.fg
     },
 
     DiagnosticWord = {
-        fg = c.cyan.base
+        fg = c.fg
     },
 
     DiagnosticSource = {
-        fg = c.gray4
+        fg = c.fg
     },
 
     DiagnosticNormal = {
         link = 'Normal'
     }
+
 }
