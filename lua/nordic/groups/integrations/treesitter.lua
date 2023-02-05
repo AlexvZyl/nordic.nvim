@@ -66,6 +66,7 @@ return {
     ['@text.uri'] = { underline = true }, -- Any URI like a link or email.
     ['@text.diff.add'] = { link = 'DiffAdd' },
     ['@text.diff.delete'] = { link = 'DiffDelete' },
+    ['@text.literal'] = { link = 'String' },
 
     -- Lua
     -- luaTSProperty = { fg = c.red }, -- Same as `TSField`.
