@@ -30,7 +30,7 @@ M.defaults = {
     leap = {
         -- Dims the backdrop when using leap.
         dim_backdrop = false,
-    }
+    },
 }
 
 M.options = {}

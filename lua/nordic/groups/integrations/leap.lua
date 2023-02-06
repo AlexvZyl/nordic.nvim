@@ -1,5 +1,5 @@
 local c = require 'nordic.colors'
-local o = require 'nordic.config' .options
+local o = require('nordic.config').options
 
 local groups = {
 
@@ -8,13 +8,10 @@ local groups = {
         fg = c.black,
         bold = true,
     },
-
 }
 
-if o.leap.dim_backdrop then
-    groups.LeapBackdrop = {
-        fg = c.gray4
-    }
-end
+if o.leap.dim_backdrop then groups.LeapBackdrop = {
+    fg = c.gray4,
+} end
 
 return groups
