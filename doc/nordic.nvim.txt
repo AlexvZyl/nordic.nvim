@@ -1,4 +1,4 @@
-*nordic.nvim.txt*         For NVIM v0.8.0        Last change: 2023 February 05
+*nordic.nvim.txt*         For NVIM v0.8.0        Last change: 2023 February 06
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -190,7 +190,6 @@ default configuration.
             -- Avialable styles: 'dark', 'light'.
             theme = 'light',
         },
-        -- WIP.
         noice = {
             -- Available styles: `classic`, `flat`.
             style = 'flat'
