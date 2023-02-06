@@ -7,6 +7,10 @@ local groups = {
         bg = c.none,
         fg = c.cyan.base,
     },
+    NoiceCmdlinePopupBorderSearch = {
+        bg = c.none,
+        fg = c.cyan.base,
+    },
     NoiceCmdlineIcon = {
         bg = c.bg,
         fg = c.yellow.bright,
@@ -24,6 +28,10 @@ local groups = {
 
 if o.noice.style == 'flat' then
     groups.NoiceCmdlinePopupBorder = {
+        bg = c.bg_dark,
+        fg = c.bg_dark,
+    }
+    groups.NoiceCmdlinePopupBorderSearch = {
         bg = c.bg_dark,
         fg = c.bg_dark,
     }
