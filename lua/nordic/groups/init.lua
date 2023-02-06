@@ -22,7 +22,7 @@ M.integrations = {
     'nvim-notify',
     'vimtex',
     'noice',
-    'fidget'
+    'fidget',
 }
 
 M.core = {

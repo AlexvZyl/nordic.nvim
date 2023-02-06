@@ -8,7 +8,6 @@ return {
     },
 
     LeapBackdrop = {
-        fg = c.gray4
-    }
-
+        fg = c.gray4,
+    },
 }

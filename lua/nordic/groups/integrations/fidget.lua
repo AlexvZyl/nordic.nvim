@@ -3,11 +3,10 @@ local c = require 'nordic.colors'
 return {
 
     FidgetTitle = {
-        fg = c.yellow.base
+        fg = c.yellow.base,
     },
 
     FidgetTask = {
-        fg = c.gray4
-    }
-
+        fg = c.gray4,
+    },
 }

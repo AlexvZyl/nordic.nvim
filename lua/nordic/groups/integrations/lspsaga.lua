@@ -7,7 +7,7 @@ return {
     },
 
     SagaNormal = {
-        link = 'Normal'
+        link = 'Normal',
     },
 
     DefinitionBorder = {
@@ -19,19 +19,18 @@ return {
     },
 
     DiagnosticPos = {
-        fg = c.fg
+        fg = c.fg,
     },
 
     DiagnosticWord = {
-        fg = c.fg
+        fg = c.fg,
     },
 
     DiagnosticSource = {
-        fg = c.fg
+        fg = c.fg,
     },
 
     DiagnosticNormal = {
-        link = 'Normal'
-    }
-
+        link = 'Normal',
+    },
 }
