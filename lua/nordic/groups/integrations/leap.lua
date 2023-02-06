@@ -1,13 +1,20 @@
 local c = require 'nordic.colors'
+local o = require 'nordic.config' .options
 
-return {
+local groups = {
 
     LeapLabelPrimary = {
-        fg = c.red.bright,
+        bg = c.yellow.dim,
+        fg = c.black,
         bold = true,
     },
 
-    LeapBackdrop = {
-        fg = c.gray4,
-    },
 }
+
+if o.leap.dim_backdrop then
+    groups.LeapBackdrop = {
+        fg = c.gray4
+    }
+end
+
+return groups
