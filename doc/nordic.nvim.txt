@@ -36,12 +36,11 @@ up creating a colorscheme that is soft on the eyes.
 2. 📷 Showcase                                   *nordic.nvim-📷-showcase*
 
 _Nvim-tree, lsp, bar-bar, lualine and treesitter:_ <img
-src='https://user-images.githubusercontent.com/81622310/214236416-5cfe1638-e3f9-4f24-a330-489c341ce0fc.png'
+src='https://user-images.githubusercontent.com/81622310/217227697-2fa79b34-7201-4d4d-b485-44e54b01bb05.png'
 title=''/>
 
-_Alongside BTop++ <https://github.com/aristocratos/btop> and a Nord wallpaper:_
-<img
-src='https://user-images.githubusercontent.com/81622310/215334958-cba79eba-bd86-4ca9-bdf1-32937ce86828.png'
+_Kitty and BTop++:_ <img
+src='https://user-images.githubusercontent.com/81622310/217228212-619a8735-d5be-4c83-837d-3ab0cd4a33c0.png'
 title=''/>
 
 Telescope
@@ -85,7 +84,7 @@ Comparison
 </br>
 
 _Kitty <https://github.com/kovidgoyal/kitty>:_ <img
-src='https://user-images.githubusercontent.com/81622310/216267238-6ce23751-df00-4ed6-87c7-81dc345df0e9.png'
+src='https://user-images.githubusercontent.com/81622310/217228588-ca059166-84b3-416c-a372-e547e57f8f3e.png'
 title=''/>
 
 _Alacritty <https://github.com/alacritty/alacritty>:_ <img
