@@ -9,10 +9,11 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 # 📷 Showcase
 
 *Nvim-tree, lsp, bar-bar, lualine and treesitter:*
-![image](https://user-images.githubusercontent.com/81622310/214236416-5cfe1638-e3f9-4f24-a330-489c341ce0fc.png)
+![image](https://user-images.githubusercontent.com/81622310/217227697-2fa79b34-7201-4d4d-b485-44e54b01bb05.png)
 
-*Alongside [BTop++](https://github.com/aristocratos/btop) and a Nord wallpaper:*
-![image](https://user-images.githubusercontent.com/81622310/215334958-cba79eba-bd86-4ca9-bdf1-32937ce86828.png)
+*Kitty and BTop++:*
+![image](https://user-images.githubusercontent.com/81622310/217228212-619a8735-d5be-4c83-837d-3ab0cd4a33c0.png)
+
 
 <details>
 <summary>Telescope</summary>
@@ -53,7 +54,7 @@ Properly rendering fonts can be a complex problem and, as expected, different te
 </br>
 
 *[Kitty](https://github.com/kovidgoyal/kitty):*  
-![image](https://user-images.githubusercontent.com/81622310/216267238-6ce23751-df00-4ed6-87c7-81dc345df0e9.png)
+![image](https://user-images.githubusercontent.com/81622310/217228588-ca059166-84b3-416c-a372-e547e57f8f3e.png)
 
 *[Alacritty](https://github.com/alacritty/alacritty):*  
 ![image](https://user-images.githubusercontent.com/81622310/216267437-665ba1ca-02df-46c3-a84b-5ef76736164a.png)
