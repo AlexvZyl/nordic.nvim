@@ -149,11 +149,15 @@ require 'nordic' .setup {
     },
     noice = {
         -- Available styles: `classic`, `flat`.
-        style = 'flat'
+        style = 'flat',
     },
     telescope = {
         -- Available styles: `classic`, `flat`.
         style = 'flat',
+    },
+    leap = {
+        -- Dims the backdrop when using leap.
+        dim_backdrop = false,
     },
 }
 ```
