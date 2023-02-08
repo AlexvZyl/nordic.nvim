@@ -9,7 +9,7 @@ return {
     },
 
     BufferCurrentSign = {
-        fg = c.blue2,
+        fg = c.orange.bright,
         bg = c.gray0,
         bold = true,
     },
