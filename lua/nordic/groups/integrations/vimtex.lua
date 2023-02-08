@@ -16,4 +16,5 @@ return {
     texFileArg = { fg = c.green.base },
     texRefArg = { fg = c.magenta.bright },
     texGroupError = { link = 'DiagnosticError' },
+    texMathSub = { fg = c.fg },
 }

@@ -15,7 +15,7 @@ return {
     -- Files.
     NvimTreeOpenedFile = { bg = c.black },
     NvimTreeOpenedName = { fg = c.blue1 },
-    NvimTreeSpecialFile = { fg = c.fg, underline = true },
+    NvimTreeSpecialFile = { fg = c.magenta.bright, underline = true },
     NvimTreeImageFile = { fg = c.fg_sidebar },
 
     -- Root.
