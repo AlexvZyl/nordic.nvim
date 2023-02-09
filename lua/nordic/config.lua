@@ -1,6 +1,8 @@
 local M = {}
 
 M.defaults = {
+    -- Seperates the statuscolumn from the normal bg.
+    statuscolumn_hl = false,
     -- Enable bold keywords.
     bold_keywords = false,
     -- Enable italic comments.
