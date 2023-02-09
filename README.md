@@ -129,6 +129,8 @@ Nordic will use the default values, unless `setup` is called.  Below is the defa
 
 ```lua
 require 'nordic' .setup {
+    -- Seperates the statuscolumn from the normal bg.
+    statuscolumn_hl = false,
     -- Enable bold keywords.
     bold_keywords = false,
     -- Enable italic comments.
