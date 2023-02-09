@@ -149,9 +149,4 @@ if o.cursorline.theme == 'light' then
     palette.bg_visual = palette.gray1
 end
 
-if o.statuscolumn_hl then
-    palette.bg_sidebar = palette.gray1
-    palette.fg_sidebar = palette.gray3
-end
-
 return palette
