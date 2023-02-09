@@ -78,9 +78,6 @@ local palette = {
     },
 }
 
--- Reduced blue theme.
-if o.reduced_blue then palette.white0 = '#CFD5E1' end
-
 -- Add these for international convenience :)
 palette.grey0 = palette.gray0
 palette.grey1 = palette.gray1
@@ -103,13 +100,14 @@ palette.bg_popup = palette.bg
 palette.bg_search = palette.gray1
 palette.bg_statusline = palette.bg_dark
 palette.bg_selected = palette.gray1
+palette.bg_fold = palette.gray2
 
 -- Foregrounds.
 palette.fg = palette.white0
 palette.fg_bright = palette.white1
 palette.fg_dark = palette.white0
-palette.fg_sidebar = palette.fg
-palette.fg_gutter = palette.gray2
+palette.fg_sidebar = palette.gray1
+palette.fg_fold = palette.fg
 palette.fg_float = palette.fg_bright
 palette.fg_selected = palette.fg_bright
 
@@ -119,10 +117,10 @@ palette.border_float = palette.white1
 palette.border_nb = palette.orange.base
 
 -- Diffs.
-local diff_blend = 0.25
+local diff_blend = 0.35
 palette.diff = {}
 palette.diff.add = u.blend(palette.green.base, palette.bg, diff_blend)
-palette.diff.change0 = u.blend(palette.blue2, palette.bg, diff_blend * 0.2)
+palette.diff.change0 = u.blend(palette.blue2, palette.bg, diff_blend * 0.15)
 palette.diff.change1 = u.blend(palette.blue2, palette.bg, diff_blend)
 palette.diff.delete = u.blend(palette.red.base, palette.bg, diff_blend)
 
@@ -141,5 +139,19 @@ palette.info = palette.blue2
 
 -- Misc.
 palette.comment = palette.gray4
+
+-- Change palette based on config.
+
+if o.reduced_blue then palette.white0 = '#CFD5E1' end
+
+if o.cursorline.theme == 'light' then
+    palette.bg_highlight = palette.gray1
+    palette.bg_visual = palette.gray1
+end
+
+if o.statuscolumn_hl then
+    palette.bg_sidebar = palette.gray1
+    palette.fg_sidebar = palette.gray3
+end
 
 return palette
