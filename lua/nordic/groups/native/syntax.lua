@@ -30,7 +30,7 @@ return {
     Label = { link = 'Keyword' }, --    case, default, etc.
     Exception = { link = 'Keyword' }, --  try, catch, throw
     StorageClass = { link = 'Keyword' }, -- static, register, volatile, etc.
-    Operator = { fg = c.orange.bright }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = c.fg }, -- "sizeof", "+", "*", etc.
 
     Comment = { fg = c.comment, italic = o.italic_comments },
 

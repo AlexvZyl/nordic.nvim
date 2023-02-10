@@ -88,7 +88,7 @@ return {
     ['@conditional'] = { link = 'Keyword' },
     ['@class'] = { link = 'Keyword' },
     ['@operator'] = { link = 'Operator' },
-    ['@keyword.operator'] = { link = 'Operator' },
+    ['@keyword.operator'] = { link = 'Keyword' },
     -- Reds.
     ['@macro'] = { link = 'Macro' },
     ['@preproc'] = { link = 'Macro' },
