@@ -80,7 +80,7 @@ local palette = {
 
 -- Change palette based on config.
 if o.nordic.reduced_blue then
-    palette.white0 = '#CFD5E1'
+    palette.white0 = '#C0C8D8'
 end
 
 return palette
