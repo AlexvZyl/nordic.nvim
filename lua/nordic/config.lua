@@ -1,16 +1,21 @@
 local M = {}
 
 M.defaults = {
+    -- Available themes: 'nordic', 'onedark'.
+    theme = 'nordic',
     -- Enable bold keywords.
     bold_keywords = false,
     -- Enable italic comments.
     italic_comments = true,
     -- Enable general editor background transparency.
     transparent_bg = false,
-    -- Reduce the overall amount of blue in the theme (diverges from base Nord).
-    -- This just adjusts some colors to make the theme a bit nicer (imo).  Setting this
-    -- to false keeps the original Nord colors.
-    reduced_blue = true,
+    -- Nordic specific options.
+    nordic = {
+        -- Reduce the overall amount of blue in the theme (diverges from base Nord).
+        -- This just adjusts some colors to make the theme a bit nicer (imo).  Setting this
+        -- to false keeps the original Nord colors.
+        reduced_blue = true,
+    },
     -- Override the styling of any highlight group.
     override = {},
     cursorline = {
