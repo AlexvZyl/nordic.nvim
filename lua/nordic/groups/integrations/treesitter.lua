@@ -97,11 +97,11 @@ return {
     ['@define'] = { link = 'Macro' },
     ['@exception'] = { link = 'Macro' },
 
-    ['@function'] = { fg = c.blue2 },
-    ['@method'] = { fg = c.blue2 },
-    ['@method.call'] = { fg = c.blue2 },
-    ['@function.call'] = { fg = c.blue2 },
-    ['@function.builtin'] = { fg = c.blue2 },
+    ['@function'] = { link = 'Function' },
+    ['@method'] = { link = 'Function' },
+    ['@method.call'] = { link = 'Function' },
+    ['@function.call'] = { link = 'Function' },
+    ['@function.builtin'] = { link = 'Function' },
     ['@variable.builtin'] = { fg = c.blue0, italic = true },
 
     ['@field'] = { fg = c.cyan.base },
