@@ -20,6 +20,8 @@ return {
 
     Title = { fg = c.yellow.base },
 
+    Builtin = { fg = c.blue0 },
+
     Identifier = { fg = c.fg }, -- (preferred) any variable name
     Function = { fg = c.blue2 }, -- function name (also: methods for classes)
 

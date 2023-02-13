@@ -71,7 +71,6 @@ return {
     -- Lua
     -- luaTSProperty = { fg = c.red }, -- Same as `TSField`.
 
-    -- Magentas.
     ['@constant'] = { link = 'Constant' },
     ['Number'] = { link = 'Constant' },
     ['@number'] = { link = 'Constant' },
@@ -79,7 +78,7 @@ return {
     ['@boolean'] = { link = 'Constant' },
     ['@constant.macro'] = { link = 'Constant' },
     ['@constant.builtin'] = { link = 'Constant' },
-    -- Oranges (Keywords).
+
     ['@keyword'] = { link = 'Keyword' },
     ['@keyword.return'] = { link = 'Keyword' },
     ['@keyword.function'] = { link = 'Keyword' },
@@ -89,7 +88,7 @@ return {
     ['@class'] = { link = 'Keyword' },
     ['@operator'] = { link = 'Operator' },
     ['@keyword.operator'] = { link = 'Keyword' },
-    -- Reds.
+
     ['@macro'] = { link = 'Macro' },
     ['@preproc'] = { link = 'Macro' },
     ['@attribute'] = { link = 'Macro' },
@@ -97,24 +96,24 @@ return {
     ['@function.macro'] = { link = 'Macro' },
     ['@define'] = { link = 'Macro' },
     ['@exception'] = { link = 'Macro' },
-    -- Blues.
+
     ['@function'] = { fg = c.blue2 },
     ['@method'] = { fg = c.blue2 },
     ['@method.call'] = { fg = c.blue2 },
     ['@function.call'] = { fg = c.blue2 },
     ['@function.builtin'] = { fg = c.blue2 },
-    ['@variable.builtin'] = { fg = c.blue.dim, italic = true },
-    -- Cyan.
+    ['@variable.builtin'] = { fg = c.blue0, italic = true },
+
     ['@field'] = { fg = c.cyan.base },
     ['@property'] = { fg = c.cyan.base },
     ['@property.cpp'] = { fg = c.cyan.base },
-    -- Yellows.
+
     ['@namespace'] = { fg = c.yellow.dim, italic = true },
     ['@type'] = { link = 'Type' },
     ['@type.builtin'] = { link = 'Type' },
     ['@type.definition'] = { link = 'Type' },
     ['@punctuation.special'] = { link = 'Type' },
-    ['@type.qualifier'] = { link = 'Type' },
-    ['@storageclass'] = { link = 'Type' },
+    ['@type.qualifier'] = { link = 'Builtin' },
+    ['@storageclass'] = { link = 'Builtin' },
     -----------------------
 }
