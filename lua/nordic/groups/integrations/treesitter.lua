@@ -47,6 +47,7 @@ return {
     -- TSString            = { };    -- For strings.
     ['@string.regex'] = { fg = c.green.dim }, -- For regexes.
     ['@string.escape'] = { fg = c.green.bright }, -- For escape characters within a string.
+    ['@string.special'] = { fg = c.yellow.base }, -- For escape characters within a string.
     -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
     -- TSType              = { };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
