@@ -130,6 +130,7 @@ Nordic will use the default values, unless `setup` is called.  Below is the defa
 ```lua
 require 'nordic' .setup {
     -- Available themes: 'nordic', 'onedark'.
+    -- Onedark is WIP.
     theme = 'nordic',
     -- Enable bold keywords.
     bold_keywords = false,
@@ -147,6 +148,7 @@ require 'nordic' .setup {
     -- Onedark specific options.
     -- Set all to false to keep original onedark colors.
     -- Adjusts some colors to make the theme a bit nicer (imo).
+    -- WIP.
     onedark = {
         -- Brighten the whites to fit the theme better.
         brighter_whites = true,
