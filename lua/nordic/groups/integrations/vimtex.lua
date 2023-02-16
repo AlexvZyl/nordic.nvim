@@ -22,4 +22,6 @@ return {
     texSpecialChar = { fg = c.orange.base },
     texLigature = { fg = c.fg },
     texFileOpt = { fg = c.fg },
+    texVerbZone = { link = 'String' },
+    texLstZone = { link = 'String' },
 }

@@ -15,6 +15,7 @@ return {
     -- TSBoolean           = { };    -- For booleans.
     -- TSCharacter         = { };    -- For characters.
     -- TSComment           = { };    -- For comment blocks.
+    ['@comment'] = { link = 'Comment' },
     ['@text.todo'] = { link = 'Todo' },
     ['@text.note'] = { link = 'Note' },
     ['@text.warning'] = { fg = c.bg, bg = c.warning },
@@ -116,5 +117,6 @@ return {
     ['@punctuation.special'] = { link = 'Type' },
     ['@type.qualifier'] = { link = 'Builtin' },
     ['@storageclass'] = { link = 'Builtin' },
+    ['@none'] = { link = 'None' }
     -----------------------
 }
