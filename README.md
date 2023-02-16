@@ -14,6 +14,9 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 *Kitty and BTop++:*
 ![image](https://user-images.githubusercontent.com/81622310/217228212-619a8735-d5be-4c83-837d-3ab0cd4a33c0.png)
 
+*[WIP] Mixed with onedark:*
+![image](https://user-images.githubusercontent.com/81622310/219348746-ab68f109-5cf5-42dd-8c72-48c6976231df.png)
+
 <details>
 <summary>Telescope</summary>
 
