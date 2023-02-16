@@ -36,7 +36,7 @@ up creating a colorscheme that is soft on the eyes.
 2. 📷 Showcase                                   *nordic.nvim-📷-showcase*
 
 _Nvim-tree, lsp, bar-bar, lualine and treesitter:_ <img
-src='https://user-images.githubusercontent.com/81622310/217227697-2fa79b34-7201-4d4d-b485-44e54b01bb05.png'
+src='https://user-images.githubusercontent.com/81622310/219347174-035d2b63-7645-44a3-be15-119c829add90.png'
 title=''/>
 
 _Kitty and BTop++:_ <img
@@ -46,22 +46,22 @@ title=''/>
 Telescope
 
 _Flat:_ <img
-src='https://user-images.githubusercontent.com/81622310/213918343-a4daac04-9e98-4ba1-89f8-0e8eb4b73c10.png'
+src='https://user-images.githubusercontent.com/81622310/219347783-017a0e5a-f38d-4eb0-9d7c-29fc90527fc6.png'
 title=''/> _Classic:_ <img
-src='https://user-images.githubusercontent.com/81622310/213974295-c9381a16-6f02-49dd-88b3-64f03ef9d5c7.png'
+src='https://user-images.githubusercontent.com/81622310/219347870-05786199-a095-4602-a958-9db90b8acde3.png'
 title=''/>
 
 Dashboard
 
 <div class="figure">
-<img src="https://user-images.githubusercontent.com/81622310/215493953-5d9979cc-acd2-4f1b-8ab8-59892dc1dcc2.png" title="fig:"/>
+<img src="https://user-images.githubusercontent.com/81622310/219345149-4385bb9b-54de-488d-b0f3-a846b723ff1a.png" title="fig:"/>
 <p class="caption">image</p>
 </div>
 
 Diffview
 
 <div class="figure">
-<img src="https://user-images.githubusercontent.com/81622310/215494492-eb02ce7a-03a3-47e9-84b2-09505acc4d5f.png" title="fig:"/>
+<img src="https://user-images.githubusercontent.com/81622310/219347704-376d040d-6e30-4918-9dd1-06b3cd29035d.png" title="fig:"/>
 <p class="caption">image</p>
 </div>
 
