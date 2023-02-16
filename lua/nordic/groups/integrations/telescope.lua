@@ -76,6 +76,18 @@ local groups = {
         bg = c.bg,
         fg = c.orange.bright,
     },
+
+    -- Multi.
+    TelescopeMultiIcon = {
+        fg = c.yellow.bright,
+        bg = c.bg_dark,
+        bold = true
+    },
+    TelescopeMultiSelection = {
+        fg = c.fg,
+        bg = c.bg_dark
+    }
+
 }
 
 -- Apply the flat style.
