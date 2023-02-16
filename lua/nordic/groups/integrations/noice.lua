@@ -17,7 +17,7 @@ local groups = {
     },
     NoiceCmdlinePopup = {
         bg = c.bg,
-        fg = c.white0,
+        fg = c.fg,
         bold = true,
     },
     NoiceCmdline = {

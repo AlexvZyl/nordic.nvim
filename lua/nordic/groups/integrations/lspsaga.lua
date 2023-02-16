@@ -27,7 +27,7 @@ return {
     },
 
     DiagnosticSource = {
-        fg = c.fg,
+        fg = c.gray4,
     },
 
     DiagnosticNormal = {

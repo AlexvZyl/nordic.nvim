@@ -17,8 +17,11 @@ return {
     Number = { fg = c.magenta.bright }, --   a number constant: 234, 0xff
     Boolean = { fg = c.magenta.bright }, --  a boolean constant: TRUE, false
     Float = { fg = c.magenta.bright }, --    a floating point constant: 2.3e10
+    None = {  fg = c.none, bg = c.none },
 
     Title = { fg = c.yellow.base },
+
+    Builtin = { fg = c.blue0 },
 
     Identifier = { fg = c.fg }, -- (preferred) any variable name
     Function = { fg = c.blue2 }, -- function name (also: methods for classes)
@@ -30,7 +33,7 @@ return {
     Label = { link = 'Keyword' }, --    case, default, etc.
     Exception = { link = 'Keyword' }, --  try, catch, throw
     StorageClass = { link = 'Keyword' }, -- static, register, volatile, etc.
-    Operator = { fg = c.orange.bright }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = c.fg }, -- "sizeof", "+", "*", etc.
 
     Comment = { fg = c.comment, italic = o.italic_comments },
 

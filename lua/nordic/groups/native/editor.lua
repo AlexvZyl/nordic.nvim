@@ -4,12 +4,7 @@ local c = require 'nordic.colors'
 local o = require('nordic.config').options
 local u = require 'nordic.utils'
 
-if o.cursorline.theme == 'light' then
-    c.bg_highlight = c.gray1
-    c.bg_visual = c.gray1
-end
-
-return {
+local groups = {
 
     Comment = {
         fg = c.comment,
@@ -25,18 +20,16 @@ return {
     }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
     Cursor = {
-        fg = c.bg,
-        bg = c.fg,
+        fg = c.black,
+        bg = c.fg
     }, -- character under the cursor
 
     lCursor = {
-        fg = c.bg,
-        bg = c.fg,
+        fg = c.black,
     }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 
     CursorIM = {
-        fg = c.bg,
-        bg = c.fg,
+        fg = c.black,
     }, -- like Cursor, but used when in IME mode |CursorIM|
 
     CursorColumn = {
@@ -54,7 +47,7 @@ return {
     }, -- directory names (and other special names in listings)
 
     EndOfBuffer = {
-        fg = c.gray1,
+        fg = c.fg_sidebar,
     }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
 
     -- TermCursor  = { }, -- cursor in a focused terminal
@@ -73,26 +66,24 @@ return {
         bold = true,
     }, -- the column separating vertically split windows
 
-    -- TODO: Note sure if this will look good.
     Folded = {
-        fg = c.gray5,
-        bg = c.fg_gutter,
+        fg = c.fg_fold,
+        bg = c.bg_fold,
     }, -- line used for closed folds
 
-    -- TODO: Note sure if this will look good.
     FoldColumn = {
-        bg = c.bg,
-        fg = c.comment,
+        bg = c.bg_fold,
+        fg = c.fg_fold,
     }, -- 'foldcolumn'
 
     SignColumn = {
-        bg = o.transparent_bg and c.none or c.bg,
-        fg = c.fg_gutter,
+        bg = o.transparent_bg and c.none or c.bg_sidebar,
+        fg = c.fg_sidebar,
     }, -- column where |signs| are displayed
 
     SignColumnSB = {
         bg = c.bg_sidebar,
-        fg = c.fg_gutter,
+        fg = c.fg_sidebar,
     }, -- column where |signs| are displayed
 
     Substitute = {
@@ -101,7 +92,7 @@ return {
     }, -- |:substitute| replacement text highlighting
 
     LineNr = {
-        fg = c.fg_gutter,
+        fg = c.fg_sidebar,
     }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 
     CursorLineNr = {
@@ -174,7 +165,8 @@ return {
     }, -- Popup menu: scrollbar.
 
     PmenuThumb = {
-        bg = c.fg_gutter,
+        bg = c.bg_sidebar,
+        fg = c.fg_sidebar
     }, -- Popup menu: Thumb of the scrollbar.
 
     Question = {
@@ -230,17 +222,18 @@ return {
     }, -- status line of current window
 
     StatusLineNC = {
-        fg = c.fg_gutter,
+        fg = c.gray4,
         bg = c.bg_statusline,
     }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 
     TabLine = {
         bg = c.bg_statusline,
-        fg = c.fg_gutter,
+        fg = c.fg,
     }, -- tab pages line, not active tab page label
 
     TabLineFill = {
         bg = c.black,
+        fg = c.none
     }, -- tab pages line, where there are no labels
 
     TabLineSel = {
@@ -267,10 +260,22 @@ return {
     }, -- warning messages
 
     Whitespace = {
-        fg = c.fg_gutter,
+        fg = c.gray4,
     }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 
     WildMenu = {
         bg = c.bg_visual,
     }, -- current match in 'wildmenu' completion
+
+    WinBar = {
+        bg = c.bg_dark,
+        fg = c.fg,
+    },
+
+    WinBarNC = {
+        bg = c.bg_dark,
+        fg = c.gray4
+    }
 }
+
+return groups
