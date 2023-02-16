@@ -16,16 +16,14 @@ return {
     },
 
     TroubleFile = {
-        fg = c.cyan.bright
+        fg = c.cyan.bright,
     },
 
     TroubleIndent = {
-        fg = c.gray1
+        fg = c.gray1,
     },
 
     TroubleFoldIcon = {
-        fg = c.gray1
-    }
-
-
+        fg = c.gray1,
+    },
 }

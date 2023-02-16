@@ -10,7 +10,5 @@ return {
         fg = c.gray2,
     },
 
-    IndentBlanklineContextStart = {
-
-    },
+    IndentBlanklineContextStart = {},
 }

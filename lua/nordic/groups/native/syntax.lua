@@ -17,7 +17,7 @@ return {
     Number = { fg = c.magenta.bright }, --   a number constant: 234, 0xff
     Boolean = { fg = c.magenta.bright }, --  a boolean constant: TRUE, false
     Float = { fg = c.magenta.bright }, --    a floating point constant: 2.3e10
-    None = {  fg = c.none, bg = c.none },
+    None = { fg = c.none, bg = c.none },
 
     Title = { fg = c.yellow.base },
 

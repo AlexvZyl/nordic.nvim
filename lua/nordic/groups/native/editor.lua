@@ -21,7 +21,7 @@ local groups = {
 
     Cursor = {
         fg = c.black,
-        bg = c.fg
+        bg = c.fg,
     }, -- character under the cursor
 
     lCursor = {
@@ -166,7 +166,7 @@ local groups = {
 
     PmenuThumb = {
         bg = c.bg_sidebar,
-        fg = c.fg_sidebar
+        fg = c.fg_sidebar,
     }, -- Popup menu: Thumb of the scrollbar.
 
     Question = {
@@ -233,7 +233,7 @@ local groups = {
 
     TabLineFill = {
         bg = c.black,
-        fg = c.none
+        fg = c.none,
     }, -- tab pages line, where there are no labels
 
     TabLineSel = {
@@ -274,8 +274,8 @@ local groups = {
 
     WinBarNC = {
         bg = c.bg_dark,
-        fg = c.gray4
-    }
+        fg = c.gray4,
+    },
 }
 
 return groups

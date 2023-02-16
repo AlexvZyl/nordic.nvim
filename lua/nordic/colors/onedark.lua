@@ -1,7 +1,7 @@
--- The ondark palette from NvChad: 
+-- The ondark palette from NvChad:
 -- https://github.com/NvChad/base46/blob/master/lua/base46/themes/onedark.lua.
 
-local o = require 'nordic.config' .options
+local o = require('nordic.config').options
 
 local palette = {
 
@@ -61,8 +61,7 @@ local palette = {
         base = '#B48EAD',
         bright = '#C895BF',
         dim = '#9D7495',
-    }
-
+    },
 }
 
 if o.onedark.brighten_whites then

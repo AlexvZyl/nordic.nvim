@@ -117,6 +117,6 @@ return {
     ['@punctuation.special'] = { link = 'Type' },
     ['@type.qualifier'] = { link = 'Builtin' },
     ['@storageclass'] = { link = 'Builtin' },
-    ['@none'] = { link = 'None' }
+    ['@none'] = { link = 'None' },
     -----------------------
 }
