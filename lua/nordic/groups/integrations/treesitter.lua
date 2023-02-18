@@ -115,8 +115,8 @@ return {
     ['@type.builtin'] = { link = 'Type' },
     ['@type.definition'] = { link = 'Type' },
     ['@punctuation.special'] = { link = 'Type' },
-    ['@type.qualifier'] = { link = 'Builtin' },
-    ['@storageclass'] = { link = 'Builtin' },
+    ['@type.qualifier'] = { link = 'Keyword' },
+    ['@storageclass'] = { link = 'Keyword' },
     ['@none'] = { link = 'None' },
     -----------------------
 }
