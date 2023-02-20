@@ -96,13 +96,13 @@ local groups = {
     }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 
     CursorLineNr = {
-        bg = c.bg_highlight,
+        bg = c.bg,
         fg = c.gray5,
         bold = true,
     }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
     CursorLineSign = {
-        bg = c.bg_highlight
+        bg = c.bg
     },
 
     MatchParen = {
