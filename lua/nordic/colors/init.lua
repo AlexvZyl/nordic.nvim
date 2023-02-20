@@ -17,6 +17,8 @@ palette.grey5 = palette.gray5
 palette.bg = palette.gray0
 palette.bg_dark = palette.black
 palette.bg_highlight = palette.black
+
+palette.bg_highlight = u.blend(palette.black, palette.bg, 0.5)
 palette.bg_visual = palette.bg_highlight
 palette.bg_sidebar = palette.bg
 palette.bg_float = palette.bg
@@ -41,11 +43,11 @@ palette.border_float = palette.white1
 palette.border_nb = palette.orange.base
 
 -- Diffs.
-local diff_blend = 0.35
+local diff_blend = 0.2
 palette.diff = {}
-palette.diff.add = u.blend(palette.green.base, palette.bg, diff_blend)
-palette.diff.change0 = u.blend(palette.blue2, palette.bg, diff_blend * 0.15)
+palette.diff.change0 = u.blend(palette.blue1, palette.bg, 0.05)
 palette.diff.change1 = u.blend(palette.blue2, palette.bg, diff_blend)
+palette.diff.add = u.blend(palette.green.base, palette.bg, diff_blend)
 palette.diff.delete = u.blend(palette.red.base, palette.bg, diff_blend)
 
 -- Git.
@@ -65,8 +67,8 @@ palette.info = palette.blue2
 palette.comment = palette.gray4
 
 if o.cursorline.theme == 'light' then
-    palette.bg_highlight = palette.gray1
-    palette.bg_visual = palette.gray1
+    palette.bg_highlight = u.blend(palette.gray1, palette.bg, 0.5)
+    palette.bg_visual = palette.bg_highlight
 end
 
 return palette

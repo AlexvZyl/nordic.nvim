@@ -38,7 +38,7 @@ local groups = {
     }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 
     CursorLine = {
-        bg = u.blend(c.bg_highlight, c.bg, 0.5),
+        bg = c.bg_highlight,
         bold = o.cursorline.bold,
     }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 
@@ -96,9 +96,14 @@ local groups = {
     }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 
     CursorLineNr = {
+        bg = c.bg,
         fg = c.gray5,
         bold = true,
     }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+
+    CursorLineSign = {
+        bg = c.bg
+    },
 
     MatchParen = {
         fg = c.yellow.bright,

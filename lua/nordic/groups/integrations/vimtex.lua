@@ -1,6 +1,7 @@
 local c = require 'nordic.colors'
 
 return {
+    texGroup = { fg = c.fg },
     texEnvArgName = { fg = c.cyan.base },
     texMathEnvArgName = { link = 'texEnvArgName' },
     texArg = { fg = c.cyan.base },

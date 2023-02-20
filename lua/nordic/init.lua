@@ -16,6 +16,7 @@ function M.load(opts)
     local groups = merge(g.get_groups(), config.options.override)
     require('nordic.utils').highlight(groups)
     g.set_term_colors()
+    require 'nordic.commands'
 end
 
 -- Expose the colorsceheme to vim.

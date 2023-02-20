@@ -30,6 +30,8 @@ M.defaults = {
         bold = false,
         -- Avialable styles: 'dark', 'light'.
         theme = 'light',
+        -- Hide the cursorline when the window is not focused.
+        hide_unfocused = true,
     },
     noice = {
         -- Available styles: `classic`, `flat`.
