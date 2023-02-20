@@ -102,7 +102,7 @@ local groups = {
     }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
     CursorLineSign = {
-        bg = c.bg
+        bg = c.bg,
     },
 
     MatchParen = {
