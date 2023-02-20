@@ -17,6 +17,8 @@ palette.grey5 = palette.gray5
 palette.bg = palette.gray0
 palette.bg_dark = palette.black
 palette.bg_highlight = palette.black
+
+palette.bg_highlight = u.blend(palette.black, palette.bg, 0.5)
 palette.bg_visual = palette.bg_highlight
 palette.bg_sidebar = palette.bg
 palette.bg_float = palette.bg
@@ -65,8 +67,8 @@ palette.info = palette.blue2
 palette.comment = palette.gray4
 
 if o.cursorline.theme == 'light' then
-    palette.bg_highlight = palette.gray1
-    palette.bg_visual = palette.gray1
+    palette.bg_highlight = u.blend(palette.gray1, palette.bg, 0.5)
+    palette.bg_visual = palette.bg_highlight
 end
 
 return palette
