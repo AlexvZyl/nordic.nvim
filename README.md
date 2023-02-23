@@ -233,6 +233,7 @@ The list of currently supported platforms.
 - [iTerm2](https://github.com/gnachman/iTerm2)
 - [Windows Terminal](https://github.com/microsoft/terminal)
 - [wezterm](https://github.com/wez/wezterm)
+- [foot](https://codeberg.org/dnkl/foot)
 
 # 🎙️ Acknowledgements
 
