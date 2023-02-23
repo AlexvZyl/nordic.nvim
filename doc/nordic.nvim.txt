@@ -1,4 +1,4 @@
-*nordic.nvim.txt*         For NVIM v0.8.0        Last change: 2023 February 20
+*nordic.nvim.txt*         For NVIM v0.8.0        Last change: 2023 February 23
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -250,6 +250,7 @@ The list of currently supported platforms.
 - iTerm2 <https://github.com/gnachman/iTerm2>
 - Windows Terminal <https://github.com/microsoft/terminal>
 - wezterm <https://github.com/wez/wezterm>
+- foot <https://codeberg.org/dnkl/foot>
 
 
 ==============================================================================
