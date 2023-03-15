@@ -1,4 +1,4 @@
-*nordic.nvim.txt*         For NVIM v0.8.0        Last change: 2023 February 16
+*nordic.nvim.txt*         For NVIM v0.8.0        Last change: 2023 February 23
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -17,8 +17,7 @@ Table of Contents                              *nordic.nvim-table-of-contents*
 ==============================================================================
 1. 🌒 Nordic                                       *nordic.nvim-🌒-nordic*
 
-<img src='https://github.com/AlexvZyl/nordic.nvim/workflows/Tests/badge.svg'
-title=''/> <https://github.com/AlexvZyl/nordic.nvim/actions?workflow=Tests>
+<https://github.com/AlexvZyl/nordic.nvim/actions?workflow=Tests>
 
 A Neovim colorscheme based on Nord <https://www.nordtheme.com/>, but Aurora >
 Frost. The idea behind this colorscheme is to use Nord, but add some darker
@@ -31,51 +30,29 @@ up creating a colorscheme that is soft on the eyes.
   am dogfooding <https://en.wikipedia.org/wiki/Eating_your_own_dog_food> it to
   make sure I do not miss anything.
 
-
 ==============================================================================
 2. 📷 Showcase                                   *nordic.nvim-📷-showcase*
 
-_Nvim-tree, lsp, bar-bar, lualine and treesitter:_ <img
-src='https://user-images.githubusercontent.com/81622310/219347174-035d2b63-7645-44a3-be15-119c829add90.png'
-title=''/>
+_Nvim-tree, lsp, bar-bar, lualine and treesitter:_
 
-_Kitty and BTop++:_ <img
-src='https://user-images.githubusercontent.com/81622310/217228212-619a8735-d5be-4c83-837d-3ab0cd4a33c0.png'
-title=''/>
+_Kitty and BTop++:_
 
-[WIP] Mixed with onedark
+[WIP] Mixed with onedark ~
 
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/81622310/219348746-ab68f109-5cf5-42dd-8c72-48c6976231df.png" title="fig:"/>
-<p class="caption">image</p>
-</div>
+Telescope ~
 
-Telescope
+_Flat:_ _Classic:_
 
-_Flat:_ <img
-src='https://user-images.githubusercontent.com/81622310/219347783-017a0e5a-f38d-4eb0-9d7c-29fc90527fc6.png'
-title=''/> _Classic:_ <img
-src='https://user-images.githubusercontent.com/81622310/219347870-05786199-a095-4602-a958-9db90b8acde3.png'
-title=''/>
+Dashboard ~
 
-Dashboard
+Diffview ~
 
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/81622310/219345149-4385bb9b-54de-488d-b0f3-a846b723ff1a.png" title="fig:"/>
-<p class="caption">image</p>
-</div>
-
-Diffview
-
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/81622310/219347704-376d040d-6e30-4918-9dd1-06b3cd29035d.png" title="fig:"/>
-<p class="caption">image</p>
-</div>
 
 ==============================================================================
 3. 🎨 Palette                                     *nordic.nvim-🎨-palette*
 
 TODO
+
 
 ==============================================================================
 4. 📟 Terminal Emulators               *nordic.nvim-📟-terminal-emulators*
@@ -86,35 +63,29 @@ terminal emulators (TE) have different results. I personally use Kitty
 (imo). So if you use a different TE and the colors seem slightly inconsistent,
 that might be why.
 
-Comparison
+Comparison ~
 
-</br>
 
-_Kitty <https://github.com/kovidgoyal/kitty>:_ <img
-src='https://user-images.githubusercontent.com/81622310/217228588-ca059166-84b3-416c-a372-e547e57f8f3e.png'
-title=''/>
 
-_Alacritty <https://github.com/alacritty/alacritty>:_ <img
-src='https://user-images.githubusercontent.com/81622310/216267437-665ba1ca-02df-46c3-a84b-5ef76736164a.png'
-title=''/>
+_Kitty:_
 
-_Neovide <https://github.com/neovide/neovide>:_ <img
-src='https://user-images.githubusercontent.com/81622310/216267855-14502471-c761-4875-be34-3e43968aa39b.png'
-title=''/>
+_Alacritty:_
+
+_Neovide:_
+
 
 ==============================================================================
 5. 📦 Installation                           *nordic.nvim-📦-installation*
 
 With packer.nvim <https://github.com/wbthomason/packer.nvim>:
 
->
+>lua
     use 'AlexvZyl/nordic.nvim'
 <
 
-
 With lazy.nvim <https://github.com/folke/lazy.nvim>:
 
->
+>lua
     {
         'AlexvZyl/nordic.nvim',
         lazy = false,
@@ -125,10 +96,9 @@ With lazy.nvim <https://github.com/folke/lazy.nvim>:
     }
 <
 
-
 With vim-plug <https://github.com/junegunn/vim-plug>:
 
->
+>vim
     Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
 <
 
@@ -138,23 +108,21 @@ With vim-plug <https://github.com/junegunn/vim-plug>:
 
 Using vim:
 
->
+>vim
     colorscheme nordic
 <
 
-
 Using lua:
 
->
+>lua
     vim.cmd.colorscheme 'nordic'
     -- or
     require 'nordic' .load()
 <
 
-
 Using with lualine:
 
->
+>lua
     require 'lualine' .setup {
         options = {
             theme = 'nordic'
@@ -162,10 +130,9 @@ Using with lualine:
     }
 <
 
-
 To get the palette in lua:
 
->
+>lua
     local palette = require 'nordic.colors'
 <
 
@@ -176,7 +143,7 @@ To get the palette in lua:
 Nordic will use the default values, unless `setup` is called. Below is the
 default configuration.
 
->
+>lua
     require 'nordic' .setup {
         -- Available themes: 'nordic', 'onedark'.
         -- Onedark is WIP.
@@ -209,6 +176,8 @@ default configuration.
             bold = false,
             -- Avialable styles: 'dark', 'light'.
             theme = 'light',
+            -- Hide the cursorline when the window is not focused.
+            hide_unfocused = true,
         },
         noice = {
             -- Available styles: `classic`, `flat`.
@@ -225,10 +194,9 @@ default configuration.
     }
 <
 
-
 An example of overriding the `TelescopePromptTitle` colors:
 
->
+>lua
     local palette = require 'nordic.colors' .palette
     require 'nordic' .setup {
         override = {
@@ -282,6 +250,7 @@ The list of currently supported platforms.
 - iTerm2 <https://github.com/gnachman/iTerm2>
 - Windows Terminal <https://github.com/microsoft/terminal>
 - wezterm <https://github.com/wez/wezterm>
+- foot <https://codeberg.org/dnkl/foot>
 
 
 ==============================================================================
@@ -293,15 +262,23 @@ The list of currently supported platforms.
 - Dotfiles <https://github.com/AlexvZyl/.dotfiles> used in the screenshots.
 
 
-</br>
-
-<p align="center">
-
-<a href="https://github.com/AlexvZyl/nordic.nvim/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=AlexvZyl/nordic.nvim" />
-</a>
 
 
+
+==============================================================================
+11. Links                                                  *nordic.nvim-links*
+
+1. *Tests*: https://github.com/AlexvZyl/nordic.nvim/workflows/Tests/badge.svg
+2. *image*: https://user-images.githubusercontent.com/81622310/219347174-035d2b63-7645-44a3-be15-119c829add90.png
+3. *image*: https://user-images.githubusercontent.com/81622310/217228212-619a8735-d5be-4c83-837d-3ab0cd4a33c0.png
+4. *image*: https://user-images.githubusercontent.com/81622310/219348746-ab68f109-5cf5-42dd-8c72-48c6976231df.png
+5. *image*: https://user-images.githubusercontent.com/81622310/219347783-017a0e5a-f38d-4eb0-9d7c-29fc90527fc6.png
+6. *image*: https://user-images.githubusercontent.com/81622310/219347870-05786199-a095-4602-a958-9db90b8acde3.png
+7. *image*: https://user-images.githubusercontent.com/81622310/219345149-4385bb9b-54de-488d-b0f3-a846b723ff1a.png
+8. *image*: https://user-images.githubusercontent.com/81622310/219347704-376d040d-6e30-4918-9dd1-06b3cd29035d.png
+9. *image*: https://user-images.githubusercontent.com/81622310/217228588-ca059166-84b3-416c-a372-e547e57f8f3e.png
+10. *image*: https://user-images.githubusercontent.com/81622310/216267437-665ba1ca-02df-46c3-a84b-5ef76736164a.png
+11. *image*: https://user-images.githubusercontent.com/81622310/216267855-14502471-c761-4875-be34-3e43968aa39b.png
 
 Generated by panvimdoc <https://github.com/kdheepak/panvimdoc>
 
