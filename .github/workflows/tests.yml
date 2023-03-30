@@ -29,13 +29,13 @@ jobs:
       - name: Clone nordic.nvim (PR)
         if:   github.event_name == 'pull_request'
         run:  |
-              mkdir ~/.local/share/nvim/site/pack/ci/start/
+              mkdir -p ~/.local/share/nvim/site/pack/ci/start/
               git clone --branch ${{ steps.branch-name.outputs.current_branch }} https://github.com/${{ github.event.pull_request.head.repo.full_name }} ~/.local/share/nvim/site/pack/ci/start/nordic.nvim;
 
       - name: Clone nordic.nvim (Push)
         if:   github.event_name == 'push'
         run:  |
-              mkdir ~/.local/share/nvim/site/pack/ci/start/
+              mkdir -p ~/.local/share/nvim/site/pack/ci/start/
               git clone --branch ${{ steps.branch-name.outputs.current_branch }} https://github.com/${GITHUB_REPOSITORY} ~/.local/share/nvim/site/pack/ci/start/nordic.nvim;
 
       - name: Test nordic.nvim
