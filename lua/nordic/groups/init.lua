@@ -23,6 +23,7 @@ M.integrations = {
     'vimtex',
     'noice',
     'fidget',
+    'lsp-semantic-tokens',
 }
 
 M.core = {
