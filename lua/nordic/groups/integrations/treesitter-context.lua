@@ -3,12 +3,12 @@ local o = require('nordic.config').options
 
 local bg
 local fg
-if o.ts_context.brighter_background then
-    bg = c.gray1
-    fg = c.gray4
-else
+if o.ts_context.dark_background then
     bg = c.black
     fg = c.gray1
+else
+    bg = c.gray1
+    fg = c.gray4
 end
 
 return {
