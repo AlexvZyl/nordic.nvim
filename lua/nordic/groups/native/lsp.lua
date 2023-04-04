@@ -36,4 +36,50 @@ return {
 
     ALEErrorSign = { fg = c.error },
     ALEWarningSign = { fg = c.warning },
+
+    -- LSP Semantic Token Groups
+    -- types follow the pattern @lsp.type.<type>.<filetype>
+    -- ["@lsp.type.class"] = { link = '@class' },
+    ["@lsp.type.comment"] = { link = "@comment" },
+    ["@lsp.type.enum"] = { link = "@type" },
+    -- ["@lsp.type.enumMember"] = { link = '@type.builtin' },
+    -- ["@lsp.type.event"] = { link = '@label' },
+    -- ["@lsp.type.function"] = { link = '@function' },
+    ["@lsp.type.interface"] = { link = "Identifier" },
+    ["@lsp.type.keyword"] = { link = "@keyword" },
+    -- ["@lsp.type.macro"] = { link = '@macro' },
+    -- ["@lsp.type.method"] = { link = '@method' },
+    -- ["@lsp.type.modifier"] = { link = '@operator' },
+    ["@lsp.type.namespace"] = { link = "@namespace" },
+    -- ["@lsp.type.number"] = { link = '@number' },
+    -- ["@lsp.type.operator"] = { link = '@operator' },
+    ["@lsp.type.parameter"] = { link = "@parameter" },
+    ["@lsp.type.property"] = { link = "@property" },
+    -- ["@lsp.type.regexp"] = { link = '@string.regex' },
+    -- ["@lsp.type.string"] = { link = '@text' },
+    -- ["@lsp.type.struct"] = { link = '@type' },
+    -- ["@lsp.type.type"] = { link = '@type' },
+    -- ["@lsp.type.typeParameter"] = { link = '@type' },
+    -- ["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
+
+    -- modifiers follow the pattern @lsp.mod.<modifier>.<filetype>
+    -- ["@lsp.mod.abstract"] = {},
+    -- ["@lsp.mod.async"] = {},
+    -- ["@lsp.mod.declaration"] = {},
+    -- ["@lsp.mod.defaultLibrary"] = {},
+    -- ["@lsp.mod.definition"] = {},
+    -- ["@lsp.mod.deprecated"] = {},
+    -- ["@lsp.mod.documentation"] = {},
+    -- ["@lsp.mod.modification"] = {},
+    -- ["@lsp.mod.readonly"] = {},
+    -- ["@lsp.mod.static"] = {},
+
+    -- type modifiers follow the pattern @lsp.typemod.<type>.<modifier>.<filetype>
+    ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
+    ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
+    ["@lsp.typemod.operator.injected"] = { link = "@operator" },
+    ["@lsp.typemod.string.injected"] = { link = "@string" },
+    ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
+    ["@lsp.typemod.variable.injected"] = { link = "@variable" },
+    -- ["@lsp.typemod.variable.globalScope"] (global variables)
 }
