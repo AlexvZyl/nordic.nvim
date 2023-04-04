@@ -39,7 +39,7 @@ palette.fg_selected = palette.fg_bright
 
 -- Borders.
 palette.border = palette.black
-palette.border_float = palette.gray4
+palette.border_float = o.bright_border and palette.white1 or palette.gray4
 palette.border_nb = palette.orange.base
 
 -- Diffs.
