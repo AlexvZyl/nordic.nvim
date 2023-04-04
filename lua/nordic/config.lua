@@ -45,6 +45,10 @@ M.defaults = {
         -- Dims the backdrop when using leap.
         dim_backdrop = false,
     },
+    ts_context = {
+        -- Enable bright background for treesitter-context window
+        brighter_background = true,
+    }
 }
 
 M.options = {}

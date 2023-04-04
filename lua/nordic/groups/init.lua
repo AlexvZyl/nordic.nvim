@@ -23,6 +23,7 @@ M.integrations = {
     'vimtex',
     'noice',
     'fidget',
+    'treesitter-context',
 }
 
 M.core = {
