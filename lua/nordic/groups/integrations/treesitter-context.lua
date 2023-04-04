@@ -1,16 +1,17 @@
 local c = require 'nordic.colors'
 local o = require('nordic.config').options
 
+local bg
+local fg
 if o.ts_context.brighter_background then
-    return {
-        TreesitterContext = { bg = c.gray1 },
-
-        TreesitterContextLineNumber = { fg = c.gray4, bg = c.gray1 },
-    }
+    bg = c.gray1
+    fg = c.gray4
 else
-    return {
-        TreesitterContext = { bg = c.black },
-
-        TreesitterContextLineNumber = { fg = c.gray1, bg = c.black },
-    }
+    bg = c.black
+    fg = c.gray1
 end
+
+return {
+    TreesitterContext = { bg = bg },
+    TreesitterContextLineNumber = { fg = fg, bg = bg },
+}
