@@ -17,5 +17,6 @@ config.cursorline.hide_unfocused = false
 config.noice.style = 'flat'
 config.telescope.style = 'classic'
 config.leap.dim_backdrop = true
+config.bright_border = false
 
 load(config)
