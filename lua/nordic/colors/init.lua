@@ -2,6 +2,10 @@ local u = require 'nordic.utils'
 local o = require('nordic.config').options
 local palette = require('nordic.colors.' .. o.theme)
 
+-- Parameters.
+local diff_blend = 0.2
+local highlight_blend = 0.6
+
 -- Add these for international convenience :)
 palette.grey0 = palette.gray0
 palette.grey1 = palette.gray1
@@ -18,7 +22,7 @@ palette.bg = palette.gray0
 palette.bg_dark = palette.black
 palette.bg_highlight = palette.black
 
-palette.bg_highlight = u.blend(palette.black, palette.bg, 0.5)
+palette.bg_highlight = u.blend(palette.black, palette.bg, highlight_blend)
 palette.bg_visual = palette.bg_highlight
 palette.bg_sidebar = palette.bg
 palette.bg_float = palette.bg
@@ -43,7 +47,6 @@ palette.border_float = (o.bright_border and palette.white0) or palette.gray4
 palette.border_nb = palette.orange.base
 
 -- Diffs.
-local diff_blend = 0.2
 palette.diff = {}
 palette.diff.change0 = u.blend(palette.blue1, palette.bg, 0.05)
 palette.diff.change1 = u.blend(palette.blue2, palette.bg, diff_blend)
@@ -67,7 +70,7 @@ palette.info = palette.blue2
 palette.comment = palette.gray4
 
 if o.cursorline.theme == 'light' then
-    palette.bg_highlight = u.blend(palette.gray1, palette.bg, 0.5)
+    palette.bg_highlight = u.blend(palette.gray1, palette.bg, highlight_blend)
     palette.bg_visual = palette.bg_highlight
 end
 
