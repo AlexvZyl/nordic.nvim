@@ -182,8 +182,8 @@ require 'nordic' .setup {
         dim_backdrop = false,
     },
     ts_context = {
-        -- Enable bright background for treesitter-context window
-        brighter_background = true,
+        -- Enables dark background for treesitter-context window
+        dark_background = true,
     }
 }
 ```
