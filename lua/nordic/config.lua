@@ -9,6 +9,8 @@ M.defaults = {
     italic_comments = true,
     -- Enable general editor background transparency.
     transparent_bg = false,
+    -- Enable brighter float border.
+    bright_border = true,
     -- Nordic specific options.
     -- Set all to false to use original Nord colors.
     -- Adjusts some colors to make the theme a bit nicer (imo).
