@@ -100,8 +100,7 @@ local groups = {
         bold = true,
     }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
-    CursorLineSign = {
-    },
+    CursorLineSign = {},
 
     MatchParen = {
         fg = c.yellow.bright,
