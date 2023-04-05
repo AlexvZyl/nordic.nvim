@@ -228,6 +228,7 @@ This is the list of currently supported plugins.  If you want other plugins to b
 - [vimtex](https://github.com/lervag/vimtex)
 - [noice.nvim](https://github.com/folke/noice.nvim)
 - [fidget.nvim](https://github.com/j-hui/fidget.nvim)
+- [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 
 # 💻 Supported Platforms
 
