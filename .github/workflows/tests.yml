@@ -28,7 +28,6 @@ jobs:
               chmod a+x ./nvim.appimage
               ./nvim.appimage --appimage-extract
               echo "/tmp/nvim/squashfs-root/usr/bin/" >> $GITHUB_PATH
-              nvim --version;
 
       - name: Clone nordic.nvim (PR)
         if:   github.event_name == 'pull_request'
@@ -45,6 +44,7 @@ jobs:
       - name: Test nordic.nvim
         shell: bash
         run:  |
+              nvim --version
               OUTPUT=$(nvim --headless -c "lua require 'nordic.tests.options'" -c 'q' 2>&1);
               if [[ -n "$OUTPUT" ]]
               then
