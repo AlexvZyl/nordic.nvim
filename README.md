@@ -1,3 +1,5 @@
+**⚠️ &nbsp; I am currently under a lot of pressure to finish my Master's thesis and development has slowed down.  I plan on getting back to working on the colorscheme ASAP.**
+
 # 🌒 Nordic
 
 [![Tests](https://github.com/AlexvZyl/nordic.nvim/workflows/Tests/badge.svg)](https://github.com/AlexvZyl/nordic.nvim/actions?workflow=Tests) 
