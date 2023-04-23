@@ -104,13 +104,13 @@ if o.telescope.style == 'flat' then
 
     -- Selection.
     groups.TelescopeSelection = {
-        bg = c.gray1,
+        bg = c.grey0,
         fg = c.fg_bright,
         bold = true,
     }
     groups.TelescopeSelectionCaret = {
         fg = c.yellow.bright,
-        bg = c.gray1,
+        bg = c.gray0,
         bold = true,
     }
 
@@ -142,16 +142,16 @@ if o.telescope.style == 'flat' then
         bg = c.gray1,
     }
     groups.TelescopePromptBorder = {
-        bg = c.gray1,
-        fg = c.gray1,
+        bg = c.grey1,
+        fg = c.grey1
     }
     groups.TelescopeResultsBorder = {
         bg = c.bg_dark,
-        fg = c.bg_dark,
+        fg = c.grey1
     }
     groups.TelescopePreviewBorder = {
         bg = c.bg_dark,
-        fg = c.bg_dark,
+        fg = c.grey1
     }
 
     -- Misc.
