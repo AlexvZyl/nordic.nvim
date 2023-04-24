@@ -3,8 +3,8 @@ local c = require 'nordic.colors'
 return {
 
     CmpItemAbbrDeprecated = { fg = c.grey4},
-    CmpItemAbbrMatch = { fg = c.yellow.bright, bold = true },
-    CmpItemAbbrMatchFuzzy = { fg = c.yellow.bright, bold = true },
+    CmpItemAbbrMatch = { fg = c.blue1, bold = true },
+    CmpItemAbbrMatchFuzzy = { link = 'CmpItemAbbrMatch' },
 
     CmpItemKindField = { link = '@field' },
     CmpItemKindProperty = { link = '@proprty' },
@@ -16,7 +16,7 @@ return {
 
     CmpItemKindConstant = { link  = 'Constant' },
     CmpItemKindConstructor = { link = 'Function'},
-    CmpItemKindReference = { link = 'Variable' },
+    CmpItemKindReference = { fg = c.cyan.base },
 
     CmpItemKindFunction = { link = 'Function' },
     CmpItemKindStruct = { link = 'Type' },
@@ -24,11 +24,11 @@ return {
     CmpItemKindModule = { link = 'Macro' },
     CmpItemKindOperator = { link = 'Operator' },
 
-    CmpItemKindVariable = { link = '@variable' },
+    CmpItemKindVariable = { fg = c.cyan.base },
     CmpItemKindFile = { fg = c.blue1 },
 
     CmpItemKindUnit = { link = 'Constant' },
-    CmpItemKindSnippet = { },
+    CmpItemKindSnippet = { fg = c.blue1 },
     CmpItemKindFolder = { fg = c.yellow.dark },
 
     CmpItemKindMethod = { link = 'Function' },

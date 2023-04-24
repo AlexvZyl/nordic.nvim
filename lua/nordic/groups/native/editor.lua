@@ -158,7 +158,6 @@ local groups = {
 
     PmenuSel = {
         bg = c.bg_selected,
-        fg = c.fg_selected,
         bold = true,
     }, -- Popup menu: selected item.
 

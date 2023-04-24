@@ -5,6 +5,9 @@ local o = require('nordic.config').options
 local groups = {
 
     -- Normals.
+    TelescopeNormal = {
+        bg = c.bg
+    },
     TelescopePromptNormal = {
         bg = c.bg,
     },
@@ -19,7 +22,7 @@ local groups = {
     TelescopeSelection = {
         bg = c.bg_selected,
         fg = c.fg_selected,
-        bold = true,
+        bold = false,
     },
     TelescopeSelectionCaret = {
         fg = c.fg_selected,
@@ -80,18 +83,20 @@ local groups = {
     -- Multi.
     TelescopeMultiIcon = {
         fg = c.yellow.bright,
-        bg = c.bg_dark,
+        bg = c.bg,
         bold = true,
     },
     TelescopeMultiSelection = {
-        fg = c.fg,
-        bg = c.bg_dark,
+        bg = c.bg,
     },
 }
 
 -- Apply the flat style.
 if o.telescope.style == 'flat' then
     -- Normals.
+    groups.TelescopeNormal = {
+        bg = c.bg_dark
+    }
     groups.TelescopePromptNormal = {
         bg = c.gray1,
     }
@@ -106,7 +111,7 @@ if o.telescope.style == 'flat' then
     groups.TelescopeSelection = {
         bg = c.grey0,
         fg = c.fg_bright,
-        bold = true,
+        bold = false,
     }
     groups.TelescopeSelectionCaret = {
         fg = c.yellow.bright,
@@ -152,6 +157,16 @@ if o.telescope.style == 'flat' then
     groups.TelescopePreviewBorder = {
         bg = c.bg_dark,
         fg = c.grey1
+    }
+
+    -- Multi.
+    groups.TelescopeMultiIcon = {
+        fg = c.yellow.bright,
+        bg = c.bg_dark,
+        bold = true,
+    }
+    groups.TelescopeMultiSelection = {
+        bg = c.bg_dark,
     }
 
     -- Misc.

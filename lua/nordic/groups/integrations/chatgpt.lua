@@ -24,6 +24,12 @@ if vim.fn.exists('chatgpt') then
         ChatGPTWelcome = {
             bg = c.bg_dark,
             fg = c.grey4
+        },
+        ChatGPTQuestion = {
+            fg = c.blue1
+        },
+        ChatGPTCompletion = {
+            -- fg = c.red.base
         }
     }
 
