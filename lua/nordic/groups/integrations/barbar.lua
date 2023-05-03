@@ -5,7 +5,7 @@ return {
     BufferCurrent = {
         fg = c.white0,
         bg = c.gray0,
-        bold = true,
+        bold = false,
     },
 
     BufferCurrentSign = {
@@ -41,10 +41,28 @@ return {
         bg = c.black,
     },
 
-    BufferInactiveMod = {
-        fg = '#888888',
+    BufferInactive = {
+        fg = c.gray4,
         bg = c.black,
     },
+
+    BufferCurrentTarget = {
+        fg = c.red.bright,
+        bold = true,
+    },
+    BufferVisibleTarget = {
+        fg = c.red.bright,
+        bold = true
+    },
+    BufferInactiveTarget = {
+        bg = c.bg_dark,
+        fg = c.red.bright,
+        bold = true
+    },
+    BufferAlternateTarget = {
+        fg = c.red.bright,
+        bold = true
+    }
 
     -- BufferCurrentIndex = { bg = C.surface1, fg = C.blue },
     -- BufferCurrentTarget = { bg = C.surface1, fg = C.red },
