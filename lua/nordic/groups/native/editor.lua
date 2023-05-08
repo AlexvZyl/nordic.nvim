@@ -97,7 +97,6 @@ local groups = {
 
     CursorLineNr = {
         fg = c.gray5,
-        bold = true,
     }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
     CursorLineSign = {},
@@ -249,7 +248,7 @@ local groups = {
 
     Visual = {
         bg = c.bg_visual,
-        bold = true,
+        bold = o.cursorline.bold,
     }, -- Visual mode selection
 
     VisualNOS = {

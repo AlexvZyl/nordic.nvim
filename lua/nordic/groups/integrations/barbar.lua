@@ -1,7 +1,7 @@
 local c = require 'nordic.colors'
 local blend = require 'nordic.utils'.blend
 
-local barbar_bg = blend(c.gray0, c.black, 0.25)
+local barbar_bg = blend(c.gray0, c.black, 0.35)
 
 return {
 
@@ -12,7 +12,7 @@ return {
 
     -- Signs.
     BufferVisibleSign = { fg = c.black, bg = c.black, bold = true },
-    BufferCurrentSign = { fg = c.orange.bright, bg = c.gray0, bold = true },
+    BufferCurrentSign = { fg = c.orange.bright, bg = c.black, bold = true },
     BufferInactiveSign = { bg = c.black, fg = c.black },
 
     -- Mods.
@@ -25,8 +25,8 @@ return {
     -- Targets.
     BufferCurrentTarget = { fg = c.red.bright, bold = true },
     BufferVisibleTarget = { fg = c.red.bright, bold = true },
-    BufferInactiveTarget = { bg = c.bg_dark, fg = c.red.bright, bold = true },
-    BufferAlternateTarget = { fg = c.red.bright, bold = true }
+    BufferInactiveTarget = { bg = barbar_bg, fg = c.red.bright, bold = true },
+    BufferAlternateTarget = { fg = c.red.bright, bg = barbar_bg, bold = true }
 
     -- BufferCurrentIndex = { bg = C.surface1, fg = C.blue },
     -- BufferCurrentTarget = { bg = C.surface1, fg = C.red },
