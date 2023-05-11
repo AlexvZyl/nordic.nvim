@@ -7,16 +7,16 @@ return {
 
     -- Normals.
     BufferCurrent = { fg = c.white0, bg = c.bg },
-    BufferVisible = { fg = c.white0, bg = barbar_bg },
-    BufferInactive = { fg = c.gray4, bg = barbar_bg },
+    BufferVisible = { fg = c.white0, bg = barbar_bg, underline = true, sp = c.bg_dark },
+    BufferInactive = { fg = c.gray4, bg = barbar_bg, underline = true, sp = c.bg_dark },
 
     -- Signs.
     BufferCurrentSign = { fg = c.orange.bright, bg = c.bg },
     BufferCurrentSignRight = { fg = c.black, bg = c.bg },
-    BufferVisibleSign = { fg = c.black, bg = barbar_bg },
-    BufferVisibleSignRight = { fg = c.black, bg = barbar_bg },
-    BufferInactiveSign = { bg = barbar_bg, fg = c.black },
-    BufferInactiveSignRight = { bg = barbar_bg, fg = c.black },
+    BufferVisibleSign = { fg = c.black, bg = barbar_bg, underline = true, sp = c.bg_dark },
+    BufferVisibleSignRight = { fg = c.black, bg = barbar_bg, underline = true, sp = c.bg_dark },
+    BufferInactiveSign = { bg = barbar_bg, fg = c.black, underline = true, sp = c.bg_dark },
+    BufferInactiveSignRight = { bg = barbar_bg, fg = c.black, underline = true, sp = c.bg_dark },
 
     -- Mods.
     BufferCurrentMod = { fg = c.white0, bg = c.gray0 },

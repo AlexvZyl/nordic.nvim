@@ -5,18 +5,10 @@ local o = require('nordic.config').options
 local groups = {
 
     -- Normals.
-    TelescopeNormal = {
-        bg = c.bg
-    },
-    TelescopePromptNormal = {
-        bg = c.bg,
-    },
-    TelescopeResultsNormal = {
-        bg = c.bg,
-    },
-    TelescopePreviewNormal = {
-        bg = c.bg,
-    },
+    TelescopeNormal = { bg = c.bg },
+    TelescopePromptNormal = { bg = c.bg },
+    TelescopeResultsNormal = { bg = c.bg },
+    TelescopePreviewNormal = { bg = c.bg },
 
     -- Selection.
     TelescopeSelection = {
@@ -109,13 +101,14 @@ if o.telescope.style == 'flat' then
 
     -- Selection.
     groups.TelescopeSelection = {
-        bg = c.grey0,
-        fg = c.fg_bright,
-        bold = false,
+        bg = c.bg_dark,
+        fg = c.yellow.bright,
+        sp = c.gray2,
+        underline = true,
     }
     groups.TelescopeSelectionCaret = {
         fg = c.yellow.bright,
-        bg = c.gray0,
+        bg = c.bg_dark,
         bold = true,
     }
 
