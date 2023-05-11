@@ -1,22 +1,25 @@
 local c = require 'nordic.colors'
 local blend = require 'nordic.utils'.blend
 
-local barbar_bg = blend(c.gray0, c.black, 0.35)
+local barbar_bg = blend(c.gray0, c.black, 0.4)
 
 return {
 
     -- Normals.
-    BufferCurrent = { fg = c.white0, bg = c.gray0, bold = false },
+    BufferCurrent = { fg = c.white0, bg = c.bg },
     BufferVisible = { fg = c.white0, bg = barbar_bg },
-    BufferInactive = { fg = c.gray3, bg = barbar_bg },
+    BufferInactive = { fg = c.gray4, bg = barbar_bg },
 
     -- Signs.
-    BufferVisibleSign = { fg = c.black, bg = c.black, bold = true },
-    BufferCurrentSign = { fg = c.orange.bright, bg = c.black, bold = true },
-    BufferInactiveSign = { bg = c.black, fg = c.black },
+    BufferCurrentSign = { fg = c.orange.bright, bg = c.bg },
+    BufferCurrentSignRight = { fg = c.black, bg = c.bg },
+    BufferVisibleSign = { fg = c.black, bg = barbar_bg },
+    BufferVisibleSignRight = { fg = c.black, bg = barbar_bg },
+    BufferInactiveSign = { bg = barbar_bg, fg = c.black },
+    BufferInactiveSignRight = { bg = barbar_bg, fg = c.black },
 
     -- Mods.
-    BufferCurrentMod = { fg = c.white0, bg = c.gray0, bold = true },
+    BufferCurrentMod = { fg = c.white0, bg = c.gray0 },
     BufferVisibleMod = { fg = c.white0, bg = c.black },
 
     -- Diagnostics.
