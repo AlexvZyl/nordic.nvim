@@ -161,7 +161,7 @@ local groups = {
     }, -- Popup menu: selected item.
 
     PmenuSbar = {
-        bg = c.bg_popup,
+        bg = c.gray1,
     }, -- Popup menu: scrollbar.
 
     PmenuThumb = {

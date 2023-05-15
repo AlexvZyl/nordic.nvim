@@ -64,8 +64,7 @@ local groups = {
 
     -- Misc.
     TelescopeMatching = {
-        fg = c.green.bright,
-        bold = true,
+        bold = true
     },
     TelescopePromptPrefix = {
         bg = c.bg,
@@ -103,8 +102,6 @@ if o.telescope.style == 'flat' then
     groups.TelescopeSelection = {
         bg = c.bg_dark,
         fg = c.yellow.bright,
-        sp = c.gray2,
-        underline = true,
     }
     groups.TelescopeSelectionCaret = {
         fg = c.yellow.bright,

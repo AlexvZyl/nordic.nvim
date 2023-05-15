@@ -23,7 +23,9 @@ return {
     BufferVisibleMod = { fg = c.white0, bg = c.black },
 
     -- Diagnostics.
+    BufferCurrentError = { fg = c.red.bright, bg = c.bg },
     BufferVisibleError = { fg = c.red.bright, bg = barbar_bg },
+    BufferInactiveError = { fg = c.red.bright, bg = barbar_bg },
 
     -- Targets.
     BufferCurrentTarget = { fg = c.red.bright, bold = true },

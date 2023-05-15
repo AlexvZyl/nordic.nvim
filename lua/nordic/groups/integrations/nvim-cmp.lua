@@ -2,7 +2,7 @@ local c = require 'nordic.colors'
 
 return {
 
-    CmpItemAbbrDeprecated = { fg = c.grey4},
+    CmpItemAbbrDeprecated = { fg = c.grey4 },
     CmpItemAbbrMatch = { fg = c.blue1, bold = true },
     CmpItemAbbrMatchFuzzy = { link = 'CmpItemAbbrMatch' },
 
@@ -21,7 +21,7 @@ return {
     CmpItemKindFunction = { link = 'Function' },
     CmpItemKindStruct = { link = 'Type' },
     CmpItemKindClass = { link = 'Type' },
-    CmpItemKindModule = { link = 'Macro' },
+    CmpItemKindModule = { fg = c.yellow.dim },
     CmpItemKindOperator = { link = 'Operator' },
 
     CmpItemKindVariable = { fg = c.cyan.base },
