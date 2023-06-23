@@ -13,7 +13,7 @@ Table of Contents                              *nordic.nvim-table-of-contents*
 8. 🗒️ Supported Plugins           |nordic.nvim-🗒️-supported-plugins|
 9. 💻 Supported Platforms             |nordic.nvim-💻-supported-platforms|
 10. 🎙️ Acknowledgements            |nordic.nvim-🎙️-acknowledgements|
-**⚠️   Almost back to being supoprted. Look at this PR.**
+**⚠️   Almost back to being maintained. Look at this PR.**
 
 
 ==============================================================================
