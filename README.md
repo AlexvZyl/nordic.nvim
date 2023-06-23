@@ -1,4 +1,4 @@
-**⚠️ &nbsp; I am currently under a lot of pressure to finish my Master's thesis and development has slowed down.  I plan on getting back to working on the colorscheme ASAP.  Almost back, look at [this PR](https://github.com/AlexvZyl/nordic.nvim/pull/66)**
+**⚠️ &nbsp; Almost back to being supoprted.  Look at [this PR](https://github.com/AlexvZyl/nordic.nvim/pull/66).**
 
 # 🌒 Nordic
 
