@@ -1,4 +1,4 @@
-*nordic.nvim.txt*          For NVIM v0.8.0          Last change: 2023 April 21
+*nordic.nvim.txt*           For NVIM v0.8.0          Last change: 2023 June 23
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -15,7 +15,7 @@ Table of Contents                              *nordic.nvim-table-of-contents*
 10. 🎙️ Acknowledgements            |nordic.nvim-🎙️-acknowledgements|
 **⚠️   I am currently under a lot of pressure to finish my Master’s
 thesis and development has slowed down. I plan on getting back to working on
-the colorscheme ASAP.**
+the colorscheme ASAP. Almost back, look at this PR**
 
 
 ==============================================================================
@@ -222,7 +222,6 @@ An example of overriding the `TelescopePromptTitle` colors:
 This is the list of currently supported plugins. If you want other plugins to
 be supported either open an issue or submit a PR!
 
-
 - lualine.nvim <https://github.com/nvim-lualine/lualine.nvim>
 - barbar.nvim <https://github.com/romgrk/barbar.nvim>
 - nvim-dap <https://github.com/mfussenegger/nvim-dap>
@@ -251,7 +250,6 @@ be supported either open an issue or submit a PR!
 
 The list of currently supported platforms.
 
-
 - kitty <https://github.com/kovidgoyal/kitty>
 - iTerm2 <https://github.com/gnachman/iTerm2>
 - Windows Terminal <https://github.com/microsoft/terminal>
@@ -261,7 +259,6 @@ The list of currently supported platforms.
 
 ==============================================================================
 10. 🎙️ Acknowledgements            *nordic.nvim-🎙️-acknowledgements*
-
 
 - folke/tokyonight <https://github.com/folke/tokyonight.nvim> served as an excellent example and template to create a Neovim theme.
 - EdenEast/nightfox.nvim <https://github.com/EdenEast/nightfox.nvim> for bright & dim versions of the Nord palette.
