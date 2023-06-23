@@ -189,7 +189,7 @@ require 'nordic' .setup {
 An example of overriding the `TelescopePromptTitle` colors:
 
 ```lua
-local palette = require 'nordic.colors' .palette
+local palette = require 'nordic.colors'
 require 'nordic' .setup {
     override = {
         TelescopePromptTitle = {
