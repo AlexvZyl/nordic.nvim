@@ -1,4 +1,4 @@
-**⚠️ &nbsp; Almost back to being supoprted.  Look at [this PR](https://github.com/AlexvZyl/nordic.nvim/pull/66).**
+**⚠️ &nbsp; Almost back to being maintained.  Look at [this PR](https://github.com/AlexvZyl/nordic.nvim/pull/66).**
 
 # 🌒 Nordic
 
