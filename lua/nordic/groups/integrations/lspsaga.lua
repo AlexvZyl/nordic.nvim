@@ -3,7 +3,8 @@ local c = require 'nordic.colors'
 return {
 
     SagaBorder = {
-        fg = c.white0,
+        fg = c.border_float,
+        bg = c.bg_float,
     },
 
     SagaNormal = {

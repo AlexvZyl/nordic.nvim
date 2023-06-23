@@ -31,7 +31,11 @@ return {
     BufferCurrentTarget = { fg = c.red.bright, bold = true },
     BufferVisibleTarget = { fg = c.red.bright, bold = true },
     BufferInactiveTarget = { bg = barbar_bg, fg = c.red.bright, bold = true },
-    BufferAlternateTarget = { fg = c.red.bright, bg = barbar_bg, bold = true }
+    BufferAlternateTarget = { fg = c.red.bright, bg = barbar_bg, bold = true },
+
+    -- Changed.
+    BufferInactiveCHANGED = { bg = barbar_bg },
+    BufferOffset = { fg = c.yellow.base, bold = true, bg = c.bg_dark }
 
     -- BufferCurrentIndex = { bg = C.surface1, fg = C.blue },
     -- BufferCurrentTarget = { bg = C.surface1, fg = C.red },

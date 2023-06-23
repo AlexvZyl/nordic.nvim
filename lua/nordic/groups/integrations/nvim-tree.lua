@@ -19,7 +19,7 @@ return {
     NvimTreeImageFile = { fg = c.fg_sidebar },
 
     -- Root.
-    NvimTreeRootFolder = { fg = c.yellow.base, bold = true, underline = true },
+    NvimTreeRootFolder = { fg = c.gray2 },
 
     -- Git.
     NvimTreeGitDirty = { fg = c.gray2 },

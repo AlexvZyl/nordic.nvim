@@ -6,45 +6,19 @@ local u = require 'nordic.utils'
 
 local groups = {
 
-    Comment = {
-        fg = c.comment,
-        italic = o.italic_comments,
-    }, -- any comment
+    Comment = { fg = c.comment, italic = o.italic_comments }, -- any comment
 
-    ColorColumn = {
-        bg = c.bg_visual,
-    }, -- used for the columns set with 'colorcolumn'
+    ColorColumn = { bg = c.bg_visual }, -- used for the columns set with 'colorcolumn'
 
-    Conceal = {
-        fg = c.gray3,
-    }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+    Conceal = { fg = c.gray3 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
-    Cursor = {
-        fg = c.black,
-        bg = c.fg,
-    }, -- character under the cursor
+    Cursor = { fg = c.black, bg = c.fg }, -- character under the cursor
+    lCursor = { fg = c.black }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+    CursorIM = { fg = c.black }, -- like Cursor, but used when in IME mode |CursorIM|
+    CursorColumn = { bg = c.bg_highlight, bold = o.cursorline.bold }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
+    CursorLine = { bg = c.bg_highlight, bold = o.cursorline.bold }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 
-    lCursor = {
-        fg = c.black,
-    }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-
-    CursorIM = {
-        fg = c.black,
-    }, -- like Cursor, but used when in IME mode |CursorIM|
-
-    CursorColumn = {
-        bg = c.bg_highlight,
-        bold = o.cursorline.bold,
-    }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-
-    CursorLine = {
-        bg = c.bg_highlight,
-        bold = o.cursorline.bold,
-    }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-
-    Directory = {
-        fg = c.blue1,
-    }, -- directory names (and other special names in listings)
+    Directory = { fg = c.blue1 }, -- directory names (and other special names in listings)
 
     EndOfBuffer = {
         fg = c.fg_sidebar,
@@ -63,7 +37,6 @@ local groups = {
 
     WinSeparator = {
         fg = c.border,
-        bold = true,
     }, -- the column separating vertically split windows
 
     Folded = {
@@ -102,10 +75,7 @@ local groups = {
 
     CursorLineSign = {},
 
-    MatchParen = {
-        fg = c.yellow.bright,
-        bold = true,
-    }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    MatchParen = { underline = true, bold = false, sp = c.white1, bg = c.bg_dark }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 
     ModeMsg = {
         fg = c.fg,
@@ -161,12 +131,12 @@ local groups = {
     }, -- Popup menu: selected item.
 
     PmenuSbar = {
-        bg = c.gray1,
+        bg = c.gray2,
     }, -- Popup menu: scrollbar.
 
     PmenuThumb = {
-        bg = c.bg_sidebar,
-        fg = c.fg_sidebar,
+        bg = c.gray2,
+        fg = c.gray2,
     }, -- Popup menu: Thumb of the scrollbar.
 
     Question = {
@@ -262,20 +232,9 @@ local groups = {
     Whitespace = {
         fg = c.gray4,
     }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
-
-    WildMenu = {
-        bg = c.bg_visual,
-    }, -- current match in 'wildmenu' completion
-
-    WinBar = {
-        bg = c.bg_dark,
-        fg = c.fg,
-    },
-
-    WinBarNC = {
-        bg = c.bg_dark,
-        fg = c.gray4,
-    },
+    WildMenu = { bg = c.bg_visual }, -- current match in 'wildmenu' completion
+    WinBar = { bg = c.bg_dark, fg = c.fg },
+    WinBarNC = { bg = c.bg_dark, fg = c.gray4 },
 }
 
 return groups
