@@ -203,39 +203,13 @@ require 'nordic' .setup {
 
 # 🗒️ Supported Plugins
 
-This is the list of currently supported plugins.  If you want other plugins to be supported either open an issue or submit a PR!
+For the list of supported plugins, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/lua/nordic/groups/integrations).
 
-- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
-- [barbar.nvim](https://github.com/romgrk/barbar.nvim)
-- [nvim-dap](https://github.com/mfussenegger/nvim-dap)
-- [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
-- [dashboard-nvim](https://github.com/glepnir/dashboard-nvim)
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [leap.nvim](https://github.com/ggandor/leap.nvim)
-- [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
-- [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
-- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
-- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [trouble.nvim](https://github.com/folke/trouble.nvim)
-- [which-key.nvim](https://github.com/folke/which-key.nvim)
-- [diffview.nvim](https://github.com/sindrets/diffview.nvim)
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- [nvim-notify](https://github.com/rcarriga/nvim-notify)
-- [vimtex](https://github.com/lervag/vimtex)
-- [noice.nvim](https://github.com/folke/noice.nvim)
-- [fidget.nvim](https://github.com/j-hui/fidget.nvim)
 
 # 💻 Supported Platforms
 
-The list of currently supported platforms.
 
-- [kitty](https://github.com/kovidgoyal/kitty)
-- [iTerm2](https://github.com/gnachman/iTerm2)
-- [Windows Terminal](https://github.com/microsoft/terminal)
-- [wezterm](https://github.com/wez/wezterm)
-- [foot](https://codeberg.org/dnkl/foot)
+For the list of supported platforms, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/platforms).
 
 # 🎙️ Acknowledgements
 
