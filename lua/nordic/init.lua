@@ -5,7 +5,6 @@ local M = {}
 
 -- Load Nordic!
 function M.load(opts)
-    -- Clear if there is an existing theme.
     if vim.g.colors_name then vim.api.nvim_command 'hi clear' end
 
     vim.o.termguicolors = true
