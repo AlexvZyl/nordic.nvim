@@ -43,7 +43,7 @@ return {
         italic = true,
     }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
-    ['@punctuation.delimiter'] = { fg = c.fg }, -- For delimiters ie: `.`
+    ['@punctuation.delimiter'] = { link = 'Operator' }, -- For delimiters ie: `.`
     ['@punctuation.bracket'] = { fg = c.fg }, -- For brackets and parens.
     -- TSRepeat            = { };    -- For keywords related to loops.
     -- TSString            = { };    -- For strings.
@@ -91,11 +91,11 @@ return {
     ['@class'] = { link = 'Keyword' },
     ['@operator'] = { link = 'Operator' },
     ['@keyword.operator'] = { link = 'Keyword' },
+    ['@include'] = { link = 'Include' },
 
     ['@macro'] = { link = 'Macro' },
     ['@preproc'] = { link = 'Macro' },
     ['@attribute'] = { link = 'Macro' },
-    ['@include'] = { link = 'Macro' },
     ['@function.macro'] = { link = 'Macro' },
     ['@define'] = { link = 'Macro' },
     ['@exception'] = { link = 'Macro' },
@@ -105,7 +105,7 @@ return {
     ['@method.call'] = { link = 'Function' },
     ['@function.call'] = { link = 'Function' },
     ['@function.builtin'] = { link = 'Function' },
-    ['@variable.builtin'] = { fg = c.blue0, italic = true },
+    ['@variable.builtin'] = { link = 'Builtin' },
 
     ['@field'] = { fg = c.cyan.base },
     ['@property'] = { fg = c.cyan.base },
