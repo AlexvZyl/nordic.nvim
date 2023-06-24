@@ -24,7 +24,7 @@ M.integrations = {
     'noice',
 }
 
-M.core = {
+M.native = {
     'editor',
     'syntax',
     'diff',
@@ -33,11 +33,11 @@ M.core = {
 
 function M.get_groups()
     local groups = {}
+    for _, native in ipairs(M.native) do
+        groups = merge(groups, require('nordic.groups.native.' .. native))
+    end
     for _, integration in ipairs(M.integrations) do
         groups = merge(groups, require('nordic.groups.integrations.' .. integration))
-    end
-    for _, core in ipairs(M.core) do
-        groups = merge(groups, require('nordic.groups.native.' .. core))
     end
     return groups
 end
