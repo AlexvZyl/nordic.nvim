@@ -82,4 +82,5 @@ return {
     ['@lsp.typemod.variable.defaultLibrary'] = { link = '@variable.builtin' },
     ['@lsp.typemod.variable.injected'] = { link = '@variable' },
     -- ["@lsp.typemod.variable.globalScope"] (global variables)
+
 }

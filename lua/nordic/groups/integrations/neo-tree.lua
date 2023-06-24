@@ -1,6 +1,7 @@
 local c = require 'nordic.colors'
 
 return {
+
     NeoTreeCursorLine = { link = 'NvimTreeCursorLine' },
     NeoTreeDirectoryIcon = { link = 'NvimTreeFolderIcon' },
     NeoTreeRootName = { link = 'NvimTreeRootFolder' },
@@ -15,4 +16,5 @@ return {
     NeoTreeNormal = { link = 'NvimTreeNormal' },
     NeoTreeNormalNC = { link = 'NvimTreeNormalNC' },
     NeoTreeSymbolicLinkTarget = { link = 'NvimTreeSymlink' },
+
 }

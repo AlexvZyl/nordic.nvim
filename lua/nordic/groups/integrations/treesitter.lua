@@ -4,6 +4,7 @@ local c = require 'nordic.colors'
 local o = require('nordic.config').options
 
 return {
+
     -- These groups are for the neovim tree-sitter highlights.
     -- As of writing, tree-sitter support is a WIP, group names may change.
     -- By default, most of these groups link to an appropriate Vim group,
@@ -118,5 +119,5 @@ return {
     ['@type.qualifier'] = { link = 'Keyword' },
     ['@storageclass'] = { link = 'Keyword' },
     ['@none'] = { link = 'None' },
-    -----------------------
+
 }

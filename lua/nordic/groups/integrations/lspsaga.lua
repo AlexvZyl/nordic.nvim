@@ -12,4 +12,5 @@ return {
     DiagnosticWord = { fg = c.fg },
     DiagnosticSource = { fg = c.gray4 },
     DiagnosticNormal = { link = 'Normal' },
+
 }

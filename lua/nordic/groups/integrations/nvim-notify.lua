@@ -1,6 +1,7 @@
 local c = require 'nordic.colors'
 
 return {
+
     NotifyERRORBorder = { fg = c.error },
     NotifyERRORIcon = { fg = c.error },
     NotifyERRORTitle = { fg = c.error, bold = true },
@@ -25,4 +26,5 @@ return {
     NotifyTRACEIcon = { fg = c.gray5 },
     NotifyTRACETitle = { fg = c.gray5, bold = true },
     NotifyTRACEBody = { fg = c.fg },
+
 }
