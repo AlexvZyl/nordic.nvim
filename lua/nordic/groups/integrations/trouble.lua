@@ -10,4 +10,5 @@ return {
 
     TroubleFile = { fg = c.cyan.bright },
     TroubleFoldIcon = { fg = c.gray1 },
+
 }

@@ -12,36 +12,37 @@ return {
     -- Uncomment and edit if you want more specific syntax highlighting.
 
     Constant = { fg = c.magenta.bright }, -- (preferred) any constant
+    Number = { link = 'Constant' }, --   a number constant: 234, 0xff
+    Boolean = { link = 'Number' }, --  a boolean constant: TRUE, false
+    Float = { link = 'Number' }, --    a floating point constant: 2.3e10
+    None = { fg = c.none, bg = c.none },
     String = { fg = c.green.base }, --   a string constant: "this is a string"
     Character = { fg = c.green.base }, --  a character constant: 'c', '\n'
-    Number = { fg = c.magenta.bright }, --   a number constant: 234, 0xff
-    Boolean = { fg = c.magenta.bright }, --  a boolean constant: TRUE, false
-    Float = { fg = c.magenta.bright }, --    a floating point constant: 2.3e10
-    None = { fg = c.none, bg = c.none },
 
     Title = { fg = c.yellow.base },
 
-    Builtin = { fg = c.blue0 },
+    Builtin = { fg = c.blue0, italic = true },
 
     Identifier = { fg = c.fg }, -- (preferred) any variable name
     Function = { fg = c.blue2 }, -- function name (also: methods for classes)
 
-    Keyword = { fg = c.orange.bright, bold = o.bold_keywords }, --  any other keyword
+    Keyword = { fg = c.orange.base, bold = o.bold_keywords }, --  any other keyword
     Statement = { link = 'Keyword' }, -- (preferred) any statement
     Conditional = { link = 'Keyword' }, --  if, then, else, endif, switch, etc.
     Repeat = { link = 'Keyword' }, --   for, do, while, etc.
     Label = { link = 'Keyword' }, --    case, default, etc.
     Exception = { link = 'Keyword' }, --  try, catch, throw
     StorageClass = { link = 'Keyword' }, -- static, register, volatile, etc.
+
     Operator = { fg = c.fg }, -- "sizeof", "+", "*", etc.
 
-    Comment = { fg = c.comment, italic = o.italic_comments },
-
-    Macro = { fg = c.red.base, bold = false }, --    same as Define
+    Macro = { fg = c.red.base }, --    same as Define
     PreProc = { link = 'Macro' }, -- (preferred) generic Preprocessor
     Include = { link = 'Macro' }, --  preprocessor #include
     Define = { link = 'Macro' }, --   preprocessor #define
     PreCondit = { link = 'Macro' }, --  preprocessor #if, #else, #endif, etc.
+
+    Comment = { fg = c.comment, italic = o.italic_comments },
 
     Type = { fg = c.yellow.base, bold = false }, -- (preferred) int, long, char, etc.
     Structure = { link = 'Type' }, --  struct, union, enum, etc.
@@ -63,8 +64,8 @@ return {
     -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
     Error = { fg = c.error }, -- (preferred) any erroneous construct
-    Todo = { bg = c.yellow.dim, fg = c.bg_dark }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-    Note = { fg = c.bg, bg = c.info },
+    Todo = { bg = c.yellow.dim, fg = c.black }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Note = { fg = c.black, bg = c.info },
 
     -- What are these? TODO.
     qfLineNr = { fg = c.gray4 },
