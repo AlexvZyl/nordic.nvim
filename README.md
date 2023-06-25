@@ -50,26 +50,6 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 
 TODO
 
-# 📟 Terminal Emulators
-
-Properly rendering fonts can be a complex problem and, as expected, different terminal emulators (TE) have different results.  I personally use [Kitty](https://github.com/kovidgoyal/kitty) due to it having the best font rendering (imo).  So if you use a different TE and the colors seem slightly inconsistent, that might be why.
-
-<details>
-<summary>Comparison</summary>
-
-</br>
-
-*[Kitty](https://github.com/kovidgoyal/kitty):*  
-![image](https://user-images.githubusercontent.com/81622310/217228588-ca059166-84b3-416c-a372-e547e57f8f3e.png)
-
-*[Alacritty](https://github.com/alacritty/alacritty):*  
-![image](https://user-images.githubusercontent.com/81622310/216267437-665ba1ca-02df-46c3-a84b-5ef76736164a.png)
-
-*[Neovide](https://github.com/neovide/neovide):*  
-![image](https://user-images.githubusercontent.com/81622310/216267855-14502471-c761-4875-be34-3e43968aa39b.png)
-
-</details>
-
 # 📦 Installation
 
 With [packer.nvim](https://github.com/wbthomason/packer.nvim):
