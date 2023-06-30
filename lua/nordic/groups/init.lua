@@ -3,7 +3,7 @@ local merge = require('nordic.utils').merge
 local M = {}
 
 M.integrations = {
-    'barbar',
+    'bufferline',
     'dap-ui',
     'dap',
     'dashboard',

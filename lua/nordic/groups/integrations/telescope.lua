@@ -32,27 +32,27 @@ local groups = {
 
 if o.telescope.style == 'flat' then
 
-    groups.TelescopeNormal = { bg = c.bg_dark }
-    groups.TelescopePromptNormal = { bg = c.gray1 }
-    groups.TelescopeResultsNormal = { bg = c.bg_dark }
-    groups.TelescopePreviewNormal = { bg = c.bg_dark }
+    groups.TelescopeNormal = { bg = c.black1 }
+    groups.TelescopePromptNormal = { bg = c.black }
+    groups.TelescopeResultsNormal = { bg = c.black1 }
+    groups.TelescopePreviewNormal = { bg = c.black1 }
 
-    groups.TelescopeSelection = { bg = c.bg_dark, fg = c.yellow.bright }
-    groups.TelescopeSelectionCaret = { fg = c.yellow.bright, bg = c.bg_dark, bold = true }
+    groups.TelescopeSelection = { bg = c.black1, fg = c.yellow.bright }
+    groups.TelescopeSelectionCaret = { fg = c.yellow.bright, bg = c.black1, bold = true }
 
     groups.TelescopePreviewTitle = { bg = c.blue2, fg = c.black, bold = true }
     groups.TelescopeResultsTitle = { bg = c.orange.base, fg = c.black, bold = true }
     groups.TelescopePromptTitle = { bg = c.orange.base, fg = c.black, bold = true }
     groups.TelescopeTitle = { bg = c.orange.base, fg = c.black, bold = true }
 
-    groups.TelescopeBorder = { fg = c.gray1, bg = c.gray1 }
-    groups.TelescopePromptBorder = { bg = c.grey1, fg = c.grey1 }
-    groups.TelescopeResultsBorder = { bg = c.bg_dark, fg = c.grey1 }
-    groups.TelescopePreviewBorder = { bg = c.bg_dark, fg = c.grey1 }
+    groups.TelescopeBorder = { fg = c.black, bg = c.black }
+    groups.TelescopePromptBorder = { bg = c.black, fg = c.black }
+    groups.TelescopeResultsBorder = { bg = c.black1, fg = c.black }
+    groups.TelescopePreviewBorder = { bg = c.black1, fg = c.black }
 
-    groups.TelescopeMultiIcon = { fg = c.yellow.bright, bg = c.bg_dark, bold = true }
-    groups.TelescopeMultiSelection = { bg = c.bg_dark }
-    groups.TelescopePromptPrefix = { bg = c.gray1, fg = c.orange.bright }
+    groups.TelescopeMultiIcon = { fg = c.yellow.bright, bg = c.black1, bold = true }
+    groups.TelescopeMultiSelection = { bg = c.black1 }
+    groups.TelescopePromptPrefix = { bg = c.black, fg = c.orange.bright }
 
 end
 

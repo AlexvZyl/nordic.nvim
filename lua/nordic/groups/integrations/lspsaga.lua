@@ -2,8 +2,8 @@ local c = require 'nordic.colors'
 
 return {
 
-    SagaBorder = { fg = c.border_float, bg = c.bg_dark },
-    SagaNormal = { bg = c.bg_dark },
+    SagaBorder = { fg = c.black, bg = c.black1 },
+    SagaNormal = { bg = c.black1 },
 
     DefinitionBorder = { bg = c.bg, fg = c.black },
     DefinitionNormal = { link = 'Normal' },
@@ -12,5 +12,6 @@ return {
     DiagnosticWord = { fg = c.fg },
     DiagnosticSource = { fg = c.gray4 },
     DiagnosticNormal = { link = 'Normal' },
+    DiagnosticShowBorder = { fg = c.black , bg = c.black1 }
 
 }

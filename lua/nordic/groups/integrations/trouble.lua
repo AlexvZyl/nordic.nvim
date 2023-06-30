@@ -2,7 +2,7 @@ local c = require 'nordic.colors'
 
 return {
 
-    TroubleNormal = { bg = c.black },
+    TroubleNormal = { bg = c.black1 },
     TroubleText = { fg = c.fg },
 
     TroubleCount = { fg = c.white1, bg = c.gray2 },
