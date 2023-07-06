@@ -5,12 +5,10 @@ local load = require('nordic').load
 
 load(config)
 
-config.theme = 'onedark'
 config.bold_keywords = true
 config.italic_comments = false
 config.transparent_bg = true
-config.nordic.reduced_blue = false
-config.onedark.brighter_whites = false
+config.reduced_blue = false
 config.cursorline.theme = 'light'
 config.cursorline.bold = true
 config.cursorline.hide_unfocused = false
