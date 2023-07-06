@@ -133,7 +133,7 @@ require 'nordic' .setup {
     },
     noice = {
         -- Available styles: `classic`, `flat`.
-        style = 'classic',
+        style = 'flat',
     },
     telescope = {
         -- Available styles: `classic`, `flat`.
