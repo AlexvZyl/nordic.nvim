@@ -8,17 +8,14 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 
 # 📷 Showcase
 
-*Nvim-tree, lsp, bar-bar, lualine and treesitter:*
-![image](https://user-images.githubusercontent.com/81622310/219347174-035d2b63-7645-44a3-be15-119c829add90.png)
-
-*Kitty and BTop++:*
-![image](https://user-images.githubusercontent.com/81622310/217228212-619a8735-d5be-4c83-837d-3ab0cd4a33c0.png)
+*From my dotfiles:*
+![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/cf90906c-22b6-45d9-830d-b4d8b9919714)
 
 <details>
 <summary>Telescope</summary>
 
 *Flat:*
-![image](https://user-images.githubusercontent.com/81622310/219347783-017a0e5a-f38d-4eb0-9d7c-29fc90527fc6.png)
+![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/fd920834-125b-4566-be2c-e32e26b6f969)
 *Classic:*
 ![image](https://user-images.githubusercontent.com/81622310/219347870-05786199-a095-4602-a958-9db90b8acde3.png)
 
@@ -27,17 +24,9 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 <details>
 <summary>Dashboard</summary>
 
-![image](https://user-images.githubusercontent.com/81622310/219345149-4385bb9b-54de-488d-b0f3-a846b723ff1a.png)
+![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/fe2abaff-697f-4eed-92f1-7c8241990e10)
 
 </details>
-
-<details>
-<summary>Diffview</summary>
-
-![image](https://user-images.githubusercontent.com/81622310/219347704-376d040d-6e30-4918-9dd1-06b3cd29035d.png)
-
-</details>
-
 
 # 🎨 Palette
 
