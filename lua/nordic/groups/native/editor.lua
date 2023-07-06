@@ -42,11 +42,9 @@ local groups = {
     MatchParen = { underline = true, bold = false, sp = C.white1, bg = C.bg_dark }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 
     ModeMsg = { fg = C.fg, bold = true }, -- 'showmode' message (e.g., "-- INSERT -- ")
-
     MsgArea = { fg = C.fg }, -- Area for messages and cmdline
     -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = C.blue1 }, -- |more-prompt|
-
     NonText = { fg = C.gray4 }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 
     Normal = { fg = C.fg, bg = O.transparent_bg and C.none or C.bg }, -- normal text
