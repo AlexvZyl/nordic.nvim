@@ -14,6 +14,15 @@ palette.grey3 = palette.gray3
 palette.grey4 = palette.gray4
 palette.grey5 = palette.gray5
 
+-- Blacks,
+palette.black0 = palette.black
+palette.black1 = u.blend(palette.black, palette.gray0, 0.6)
+
+-- Swop background
+-- local ph = palette.gray0
+-- palette.gray0 = palette.black1
+-- palette.black1 = ph
+
 -- Now define some use cases.
 -- Some of the format is from @folke/tokyonight.nvim.
 

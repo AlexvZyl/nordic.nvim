@@ -15,13 +15,6 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 ![image](https://user-images.githubusercontent.com/81622310/217228212-619a8735-d5be-4c83-837d-3ab0cd4a33c0.png)
 
 <details>
-<summary>[WIP] Mixed with onedark</summary>
-
-![image](https://user-images.githubusercontent.com/81622310/219348746-ab68f109-5cf5-42dd-8c72-48c6976231df.png)
-
-</details>
-
-<details>
 <summary>Telescope</summary>
 
 *Flat:*
@@ -126,21 +119,11 @@ require 'nordic' .setup {
     transparent_bg = false,
     -- Enable brighter float border.
     bright_border = true,
-    -- Nordic specific options.
-    -- Set all to false to use original Nord colors.
     -- Adjusts some colors to make the theme a bit nicer (imo).
-    nordic = {
-        -- Reduce the overall amount of blue in the theme (diverges from base Nord).
-        reduced_blue = true,
-    },
-    -- Onedark specific options.
-    -- Set all to false to keep original onedark colors.
-    -- Adjusts some colors to make the theme a bit nicer (imo).
-    -- WIP.
-    onedark = {
-        -- Brighten the whites to fit the theme better.
-        brighter_whites = true,
-    },
+    -- Reduce the overall amount of blue in the theme (diverges from base Nord).
+    reduced_blue = true,
+    -- Swop the dark background with the normal one.
+    swop_backgrounds = false,
     -- Override the styling of any highlight group.
     override = {},
     cursorline = {

@@ -21,8 +21,8 @@ return {
     BufferLineModifiedVisible = { fg = c.gray4, underline = true, sp = c.bg_dark },
     BufferLineModifiedSelected = { fg = c.fg },
 
-    BufferLineOffset = { fg = c.yellow.base, bg = c.black1, bold = true },
-    BufferLineOffsetSeparator = { bg = c.black1, fg = c.black1 },
+    BufferLineOffset = { fg = c.yellow.base, bg = c.black, bold = true },
+    BufferLineOffsetSeparator = { bg = c.black, fg = c.black },
 
     BufferLineDevIconLuaInactive = { bg = c.bg, underline = true, sp = c.bg_dark }
 
