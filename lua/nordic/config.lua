@@ -8,11 +8,11 @@ M.defaults = {
     -- Enable general editor background transparency.
     transparent_bg = false,
     -- Enable brighter float border.
-    bright_border = true,
+    bright_border = false,
     -- Adjusts some colors to make the theme a bit nicer (imo).
     reduced_blue = true,
     -- Swop the dark background with the normal one.
-    swop_backgrounds = false,
+    swap_backgrounds = false,
     -- Override the styling of any highlight group.
     override = {},
     -- Cursorline options.
@@ -40,9 +40,9 @@ M.defaults = {
 
 M.options = M.defaults
 
-function M.setup(opt)
-    if not opt then return end
-    M.options = vim.tbl_deep_extend('force', M.options, opt)
+function M.setup(opts)
+    M.options = vim.tbl_deep_extend('force', M.options, opts or {})
+    require 'nordic.colors' .reload()
 end
 
 return M
