@@ -7,9 +7,7 @@ local u = require 'nordic.utils'
 local groups = {
 
     Comment = { fg = c.comment, italic = o.italic_comments }, -- any comment
-
     ColorColumn = { bg = c.bg_visual }, -- used for the columns set with 'colorcolumn'
-
     Conceal = { fg = c.gray3 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
     Cursor = { fg = c.black, bg = c.fg }, -- character under the cursor
@@ -17,6 +15,8 @@ local groups = {
     CursorIM = { fg = c.black }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn = { bg = c.bg_highlight, bold = o.cursorline.bold }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine = { bg = c.bg_highlight, bold = o.cursorline.bold }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+    CursorLineNr = { fg = c.gray5 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    CursorLineSign = {},
 
     Directory = { fg = c.blue1 }, -- directory names (and other special names in listings)
 
@@ -39,10 +39,6 @@ local groups = {
     Substitute = { bg = c.red.base, fg = c.bg_dark }, -- |:substitute| replacement text highlighting
 
     LineNr = { fg = c.fg_sidebar }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-
-    CursorLineNr = { fg = c.gray5, bold = true }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-
-    CursorLineSign = {},
 
     MatchParen = { underline = true, bold = false, sp = c.white1, bg = c.bg_dark }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 
