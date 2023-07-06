@@ -25,7 +25,7 @@ if O.noice.style == 'classic' then
 
     groups.NoiceCmdline = { bg = C.bg, fg = C.cyan.base }
     groups.NoiceCmdlinePopup = { bg = C.bg }
-    groups.NoicePopupBorder = { bg = C.bg, fg = C.cyan.base }
+    groups.NoicePopupBorder = { bg = C.bg, fg = C.border_float_fg }
     groups.NoiceCmdlineIcon = { bg = C.bg, fg = C.yellow.bright }
 
 end

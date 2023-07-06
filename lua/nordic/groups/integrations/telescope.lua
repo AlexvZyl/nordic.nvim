@@ -12,15 +12,15 @@ local groups = {
     TelescopeSelection = { bg = C.bg_selected, fg = C.fg_selected, bold = false },
     TelescopeSelectionCaret = { fg = C.fg_selected, bg = C.bg_selected, bold = true },
 
-    TelescopePreviewTitle = { fg = C.border_float, bg = C.bg, bold = true },
-    TelescopeResultsTitle = { fg = C.border_float, bg = C.bg, bold = true },
-    TelescopePromptTitle = { fg = C.border_float, bg = C.bg, bold = true },
-    TelescopeTitle = { fg = C.border_float, bg = C.bg, bold = true },
+    TelescopePreviewTitle = { fg = C.border_float_fg, bg = C.bg, bold = true },
+    TelescopeResultsTitle = { fg = C.border_float_fg, bg = C.bg, bold = true },
+    TelescopePromptTitle = { fg = C.border_float_fg, bg = C.bg, bold = true },
+    TelescopeTitle = { fg = C.border_float_fg, bg = C.bg, bold = true },
 
-    TelescopeBorder = { fg = C.border_float, bg = C.bg },
-    TelescopePromptBorder = { fg = C.border_float, bg = C.bg },
-    TelescopeResultsBorder = { fg = C.border_float, bg = C.bg },
-    TelescopePreviewBorder = { fg = C.border_float, bg = C.bg },
+    TelescopeBorder = { fg = C.border_float_fg, bg = C.bg },
+    TelescopePromptBorder = { fg = C.border_float_bg, bg = C.bg },
+    TelescopeResultsBorder = { fg = C.border_float_bg, bg = C.bg },
+    TelescopePreviewBorder = { fg = C.border_float_bg, bg = C.bg },
 
     TelescopeMatching = { bold = true },
     TelescopePromptPrefix = { bg = C.bg, fg = C.orange.bright },
@@ -45,10 +45,10 @@ if O.telescope.style == 'flat' then
     groups.TelescopePromptTitle = { bg = C.orange.base, fg = C.black, bold = true }
     groups.TelescopeTitle = { bg = C.orange.base, fg = C.black, bold = true }
 
-    groups.TelescopeBorder = { fg = C.black, bg = C.black }
-    groups.TelescopePromptBorder = { bg = C.black, fg = C.black }
-    groups.TelescopeResultsBorder = { bg = C.black1, fg = C.black }
-    groups.TelescopePreviewBorder = { bg = C.black1, fg = C.black }
+    groups.TelescopeBorder = { fg = C.border_float_fg, bg = C.black }
+    groups.TelescopePromptBorder = { bg = C.black, fg = C.border_float_fg }
+    groups.TelescopeResultsBorder = { bg = C.black1, fg = C.border_float_fg }
+    groups.TelescopePreviewBorder = { bg = C.black1, fg = C.border_float_fg }
 
     groups.TelescopeMultiIcon = { fg = C.yellow.bright, bg = C.black1, bold = true }
     groups.TelescopeMultiSelection = { bg = C.black1 }
