@@ -1,8 +1,6 @@
 local M = {}
 
 M.defaults = {
-    -- Available themes: 'nordic', 'onedark'.
-    theme = 'nordic',
     -- Enable bold keywords.
     bold_keywords = false,
     -- Enable italic comments.
@@ -50,7 +48,6 @@ function M.extend(options)
     M.options = vim.tbl_deep_extend('force', {}, M.options or M.defaults, options or {})
 end
 
--- Init the config.
 M.setup()
 
 return M

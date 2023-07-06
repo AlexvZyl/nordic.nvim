@@ -1,6 +1,6 @@
 local u = require 'nordic.utils'
 local o = require('nordic.config').options
-local palette = require('nordic.colors.' .. o.theme)
+local palette = require('nordic.colors.nordic')
 
 -- Parameters
 local diff_blend = 0.2
@@ -31,12 +31,13 @@ end
 -- Backgrounds
 palette.bg = palette.gray0
 palette.bg_dark = palette.black
-palette.bg_highlight = palette.black
-palette.bg_highlight = u.blend(palette.black, palette.bg, highlight_blend)
+
+palette.bg_highlight = palette.bg_dark
+palette.bg_highlight = u.blend(palette.bg_dark, palette.bg, highlight_blend)
 palette.bg_visual = palette.bg_highlight
 palette.bg_sidebar = palette.bg
-palette.bg_float = palette.bg
-palette.bg_popup = palette.bg
+palette.bg_float = palette.black1
+palette.bg_popup = palette.black1
 palette.bg_search = palette.gray1
 palette.bg_statusline = palette.bg_dark
 palette.bg_selected = palette.gray1
@@ -48,13 +49,14 @@ palette.fg_bright = palette.white1
 palette.fg_dark = palette.white0
 palette.fg_sidebar = palette.gray2
 palette.fg_fold = palette.fg
-palette.fg_float = palette.fg_bright
+palette.fg_float = palette.fg
 palette.fg_selected = palette.fg_bright
 
 -- Borders
-palette.border = palette.black
-palette.border_float = (o.bright_border and palette.white0) or palette.gray1
-palette.border_nb = palette.orange.base
+palette.border_fg = (o.bright_border and palette.white0) or palette.black0
+palette.border_bg = palette.bg
+palette.border_float_fg = palette.border_fg
+palette.border_float_bg = palette.bg_popup
 
 -- Diffs
 palette.diff = {}

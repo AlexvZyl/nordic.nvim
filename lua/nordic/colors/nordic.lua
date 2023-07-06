@@ -1,7 +1,6 @@
 -- The Nord palette: https://www.nordtheme.com/.
 
 local o = require('nordic.config').options
-local u = require('nordic.utils')
 
 local palette = {
 
