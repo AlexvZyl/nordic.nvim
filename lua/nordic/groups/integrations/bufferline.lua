@@ -1,29 +1,29 @@
-local c = require 'nordic.colors'
+local C = require 'nordic.colors'
 local blend = require 'nordic.utils'.blend
 
-local inactive_bg = blend(c.gray0, c.black, 0.4)
+local inactive_bg = blend(C.gray0, C.black, 0.4)
 
 return {
 
-    BufferLineBufferVisible = { bg = c.bg, fg = c.gray4, underline = true, sp = c.bg_dark },
-    BufferLineBufferSelected = { fg = c.fg },
+    BufferLineBufferVisible = { bg = C.bg, fg = C.gray4, underline = true, sp = C.bg_dark },
+    BufferLineBufferSelected = { fg = C.fg },
 
-    BufferLineCloseButtonVisible = { fg = c.gray4, underline = true, sp = c.bg_dark },
+    BufferLineCloseButtonVisible = { fg = C.gray4, underline = true, sp = C.bg_dark },
 
-    BufferLineSeparatorSelected = { bg = c.bg },
-    BufferLineSeparatorVisible = { underline = true, sp = c.bg_dark },
+    BufferLineSeparatorSelected = { bg = C.bg },
+    BufferLineSeparatorVisible = { underline = true, sp = C.bg_dark },
 
-    BufferLineFill = { bg = c.bg_dark },
+    BufferLineFill = { bg = C.bg_dark },
 
-    BufferLinePick = { fg = c.red.bright },
+    BufferLinePick = { fg = C.red.bright },
 
-    BufferLineModified = { fg = c.fg },
-    BufferLineModifiedVisible = { fg = c.gray4, underline = true, sp = c.bg_dark },
-    BufferLineModifiedSelected = { fg = c.fg },
+    BufferLineModified = { fg = C.fg },
+    BufferLineModifiedVisible = { fg = C.gray4, underline = true, sp = C.bg_dark },
+    BufferLineModifiedSelected = { fg = C.fg },
 
-    BufferLineOffset = { fg = c.yellow.base, bg = c.black, bold = true },
-    BufferLineOffsetSeparator = { bg = c.black, fg = c.black },
+    BufferLineOffset = { fg = C.yellow.base, bg = C.black, bold = true },
+    BufferLineOffsetSeparator = { bg = C.black, fg = C.black },
 
-    BufferLineDevIconLuaInactive = { bg = c.bg, underline = true, sp = c.bg_dark }
+    BufferLineDevIconLuaInactive = { bg = C.bg, underline = true, sp = C.bg_dark }
 
 }

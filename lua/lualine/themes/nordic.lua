@@ -1,47 +1,47 @@
-local c = require 'nordic.colors'
+local C = require 'nordic.colors'
 
 local nordic = {}
 
 nordic.normal = {
-    a = { bg = c.orange.bright, fg = c.black, bold = true },
-    b = { bg = c.gray1, fg = c.white1 },
-    c = { bg = c.bg_statusline, fg = c.white0 },
+    a = { bg = C.orange.bright, fg = C.black, bold = true },
+    b = { bg = C.gray1, fg = C.white1 },
+    c = { bg = C.bg_statusline, fg = C.white0 },
 }
 
 nordic.insert = {
-    a = { bg = c.green.bright, fg = c.black, bold = true },
-    b = { bg = c.gray1, fg = c.white1 },
-    c = { bg = c.bg_statusline, fg = c.white0 },
+    a = { bg = C.green.bright, fg = C.black, bold = true },
+    b = { bg = C.gray1, fg = C.white1 },
+    c = { bg = C.bg_statusline, fg = C.white0 },
 }
 
 nordic.command = {
-    a = { bg = c.cyan.bright, fg = c.black, bold = true },
-    b = { bg = c.gray1, fg = c.white1 },
-    c = { bg = c.bg_statusline, fg = c.white0 },
+    a = { bg = C.cyan.bright, fg = C.black, bold = true },
+    b = { bg = C.gray1, fg = C.white1 },
+    c = { bg = C.bg_statusline, fg = C.white0 },
 }
 
 nordic.visual = {
-    a = { bg = c.red.bright, fg = c.black, bold = true },
-    b = { bg = c.gray1, fg = c.white1 },
-    c = { bg = c.bg_statusline, fg = c.white0 },
+    a = { bg = C.red.bright, fg = C.black, bold = true },
+    b = { bg = C.gray1, fg = C.white1 },
+    c = { bg = C.bg_statusline, fg = C.white0 },
 }
 
 nordic.replace = {
-    a = { bg = c.magenta.bright, fg = c.black, bold = true },
-    b = { bg = c.gray1, fg = c.white1 },
-    c = { bg = c.bg_statusline, fg = c.white0 },
+    a = { bg = C.magenta.bright, fg = C.black, bold = true },
+    b = { bg = C.gray1, fg = C.white1 },
+    c = { bg = C.bg_statusline, fg = C.white0 },
 }
 
 nordic.terminal = {
-    a = { bg = c.blue2, fg = c.black, bold = true },
-    b = { bg = c.gray1, fg = c.white1 },
-    c = { bg = c.bg_statusline, fg = c.white0 },
+    a = { bg = C.blue2, fg = C.black, bold = true },
+    b = { bg = C.gray1, fg = C.white1 },
+    c = { bg = C.bg_statusline, fg = C.white0 },
 }
 
 nordic.inactive = {
-    a = { bg = c.gray2, fg = c.black, bold = true },
-    b = { bg = c.gray1, fg = c.white1 },
-    c = { bg = c.bg_statusline, fg = c.white0 },
+    a = { bg = C.gray2, fg = C.black, bold = true },
+    b = { bg = C.gray1, fg = C.white1 },
+    c = { bg = C.bg_statusline, fg = C.white0 },
 }
 
 return nordic

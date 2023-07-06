@@ -1,30 +1,30 @@
-local c = require 'nordic.colors'
+local C = require 'nordic.colors'
 
 return {
 
-    DapUINormal = { bg = c.black1 },
+    DapUINormal = { bg = C.black1 },
 
-    DapUIStop = { fg = c.red.bright, bold = true },
-    DapUIRestart = { fg = c.green.bright, bold = true },
-    DapUIPlayPause = { fg = c.green.bright, bold = true },
-    DapUIStepInto = { fg = c.blue2, bold = true },
-    DapUIStepOver = { fg = c.blue2, bold = true },
-    DapUIStepOut = { fg = c.blue2, bold = true },
-    DapUIStepBack = { fg = c.blue3, bold = true },
+    DapUIStop = { fg = C.red.bright, bold = true },
+    DapUIRestart = { fg = C.green.bright, bold = true },
+    DapUIPlayPause = { fg = C.green.bright, bold = true },
+    DapUIStepInto = { fg = C.blue2, bold = true },
+    DapUIStepOver = { fg = C.blue2, bold = true },
+    DapUIStepOut = { fg = C.blue2, bold = true },
+    DapUIStepBack = { fg = C.blue3, bold = true },
 
-    DapUIValue = { fg = c.magenta.bright },
-    DapUIWatchesValue = { fg = c.green.bright },
-    DapUIType = { fg = c.yellow.base },
+    DapUIValue = { fg = C.magenta.bright },
+    DapUIWatchesValue = { fg = C.green.bright },
+    DapUIType = { fg = C.yellow.base },
 
-    DapUIFloatBorder = { fg = c.border_nb, bg = c.bg },
-    DapUIFloatNormal = { bg = c.bg },
-    DapUILineNumber = { fg = c.green.bright },
+    DapUIFloatBorder = { fg = C.border_nb, bg = C.bg },
+    DapUIFloatNormal = { bg = C.bg },
+    DapUILineNumber = { fg = C.green.bright },
 
     -- ???
-    DapUIBreakpointsInfo = { fg = c.red.bright },
-    DapUIBreakpointsLine = { fg = c.red.bright },
-    DapUIBreakpointsPath = { fg = c.red.bright },
-    DapUIBreakpointsCurrentLine = { fg = c.red.bright },
-    DapUIBreakpointsDisabledLine = { fg = c.red.bright },
+    DapUIBreakpointsInfo = { fg = C.red.bright },
+    DapUIBreakpointsLine = { fg = C.red.bright },
+    DapUIBreakpointsPath = { fg = C.red.bright },
+    DapUIBreakpointsCurrentLine = { fg = C.red.bright },
+    DapUIBreakpointsDisabledLine = { fg = C.red.bright },
 
 }

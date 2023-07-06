@@ -1,9 +1,9 @@
-local c = require 'nordic.colors'
+local C = require 'nordic.colors'
 
 return {
 
-    IndentBlanklineChar = { fg = c.gray1 },
-    IndentBlanklineContextChar = { fg = c.gray2 },
+    IndentBlanklineChar = { fg = C.gray1 },
+    IndentBlanklineContextChar = { fg = C.gray2 },
     IndentBlanklineContextStart = {},
 
 }

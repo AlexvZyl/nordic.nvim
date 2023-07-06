@@ -1,14 +1,14 @@
-local c = require 'nordic.colors'
+local C = require 'nordic.colors'
 
 return {
 
-    TroubleNormal = { bg = c.black1 },
-    TroubleText = { fg = c.fg },
+    TroubleNormal = { bg = C.black1 },
+    TroubleText = { fg = C.fg },
 
-    TroubleCount = { fg = c.white1, bg = c.gray2 },
-    TroubleIndent = { fg = c.gray1 },
+    TroubleCount = { fg = C.white1, bg = C.gray2 },
+    TroubleIndent = { fg = C.gray1 },
 
-    TroubleFile = { fg = c.cyan.bright },
-    TroubleFoldIcon = { fg = c.gray1 },
+    TroubleFile = { fg = C.cyan.bright },
+    TroubleFoldIcon = { fg = C.gray1 },
 
 }

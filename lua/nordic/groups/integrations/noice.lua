@@ -1,32 +1,32 @@
-local c = require 'nordic.colors'
-local o = require('nordic.config').options
+local C = require 'nordic.colors'
+local O = require('nordic.config').options
 
 local groups = {
 
-    NoiceLspProgressTitle = { fg = c.yellow.base, bg = c.bg, bold = true },
-    NoiceLspProgressClient = { fg = c.gray4, bg = c.bg },
-    NoiceLspProgressSpinner = { fg = c.cyan.bright, bg = c.bg },
+    NoiceLspProgressTitle = { fg = C.yellow.base, bg = C.bg, bold = true },
+    NoiceLspProgressClient = { fg = C.gray4, bg = C.bg },
+    NoiceLspProgressSpinner = { fg = C.cyan.bright, bg = C.bg },
 
-    NoiceFormatProgressDone = { bg = c.green.bright, fg = c.black },
-    NoiceFormatProgressTodo = { bg = c.gray5, fg = c.black },
+    NoiceFormatProgressDone = { bg = C.green.bright, fg = C.black },
+    NoiceFormatProgressTodo = { bg = C.gray5, fg = C.black },
 
-    NoiceCmdline = { bg = c.bg_dark, fg = c.fg },
-    NoiceCmdlineIcon = { bg = c.bg_float, fg = c.yellow.base },
-    NoiceCmdlineIconSearch = { bg = c.bg_dark, fg = c.yellow.base },
+    NoiceCmdline = { bg = C.bg_dark, fg = C.fg },
+    NoiceCmdlineIcon = { bg = C.bg_float, fg = C.yellow.base },
+    NoiceCmdlineIconSearch = { bg = C.bg_dark, fg = C.yellow.base },
 
-    NoiceCmdlinePopup = { bg = c.black },
-    NoiceCmdlinePopupBorder = { fg = c.border_float_fg, bg = c.border_float_bg },
+    NoiceCmdlinePopup = { bg = C.black },
+    NoiceCmdlinePopupBorder = { fg = C.border_float_fg, bg = C.border_float_bg },
     NoiceCmdlinePopupBorderSearch = { link = 'NoiceCmdlinePopupBorder' },
 
 }
 
-if o.noice.style == 'classic' then
+if O.noice.style == 'classic' then
 
-    groups.NoiceCmdlinePopupBorder = { bg = c.bg, fg = c.cyan.base }
+    groups.NoiceCmdlinePopupBorder = { bg = C.bg, fg = C.cyan.base }
 
-    groups.NoiceCmdlineIcon = { bg = c.bg, fg = c.yellow.bright }
-    groups.NoiceCmdlinePopup = { bg = c.bg, fg = c.fg, bold = true }
-    groups.NoiceCmdline = { bg = c.bg, fg = c.cyan.base }
+    groups.NoiceCmdlineIcon = { bg = C.bg, fg = C.yellow.bright }
+    groups.NoiceCmdlinePopup = { bg = C.bg, fg = C.fg, bold = true }
+    groups.NoiceCmdline = { bg = C.bg, fg = C.cyan.base }
 
 end
 
