@@ -17,13 +17,14 @@ M.defaults = {
     swop_backgrounds = false,
     -- Override the styling of any highlight group.
     override = {},
+    -- Cursorline options.
     cursorline = {
         -- Enable bold font in cursorline.
         bold = false,
         -- Avialable styles: 'dark', 'light'.
         theme = 'light',
         -- Hide the cursorline when the window is not focused.
-        hide_unfocused = true,
+        hide_unfocused = false,
     },
     noice = {
         -- Available styles: `classic`, `flat`.

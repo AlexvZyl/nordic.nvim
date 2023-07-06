@@ -126,13 +126,14 @@ require 'nordic' .setup {
     swop_backgrounds = false,
     -- Override the styling of any highlight group.
     override = {},
+    -- Cursorline options.
     cursorline = {
         -- Enable bold font in cursorline.
         bold = false,
         -- Avialable styles: 'dark', 'light'.
         theme = 'light',
         -- Hide the cursorline when the window is not focused.
-        hide_unfocused = true,
+        hide_unfocused = false,
     },
     noice = {
         -- Available styles: `classic`, `flat`.
@@ -156,7 +157,7 @@ local palette = require 'nordic.colors'
 require 'nordic' .setup {
     override = {
         TelescopePromptTitle = {
-	    fg = palette.red.bright,
+	        fg = palette.red.bright,
             bg = palette.green.base,
             italic = true,
         },
