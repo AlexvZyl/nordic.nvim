@@ -12,7 +12,7 @@ function M.load(opts)
         require 'nordic.commands'
     end
 
-    if opts then C.extend(opts) end
+    if opts then C.setup(opts) end
 
     local groups = U.merge(G.get_groups(), C.options.override)
     U.highlight(groups)
