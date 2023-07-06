@@ -127,7 +127,7 @@ require 'nordic' .setup {
         -- Enable bold font in cursorline.
         bold = false,
         -- Avialable styles: 'dark', 'light'.
-        theme = 'light',
+        theme = 'dark',
         -- Hide the cursorline when the window is not focused.
         hide_unfocused = false,
     },

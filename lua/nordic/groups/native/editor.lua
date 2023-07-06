@@ -52,8 +52,8 @@ local groups = {
     Normal = { fg = C.fg, bg = O.transparent_bg and C.none or C.bg }, -- normal text
     NormalNC = { fg = C.fg, bg = O.transparent_bg and C.none or C.bg }, -- normal text in non-current windows
     NormalSB = { fg = C.fg_sidebar, bg = O.transparent_bg and C.none or C.bg_sidebar }, -- normal text in sidebar
-    NormalFloat = { fg = C.fg_float, bg = C.bg_float }, -- Normal text in floating windows.
 
+    NormalFloat = { fg = C.fg_float, bg = C.bg_float }, -- Normal text in floating windows.
     FloatBorder = { fg = C.border_float_fg, bg = C.border_float_bg },
 
     Pmenu = { bg = C.bg_popup, fg = C.fg }, -- Popup menu: normal item.

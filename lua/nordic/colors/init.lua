@@ -1,6 +1,6 @@
 local U = require 'nordic.utils'
 local O = require('nordic.config').options
-local C = require('nordic.colors.nordic')
+local C = require 'nordic.colors.nordic'
 
 local diff_blend = 0.2
 local highlight_blend = 0.6

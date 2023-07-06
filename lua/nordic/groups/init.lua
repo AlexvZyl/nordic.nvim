@@ -1,4 +1,5 @@
 local merge = require('nordic.utils').merge
+local C = require 'nordic.config'
 
 local M = {}
 
@@ -39,7 +40,7 @@ function M.get_groups()
     for _, integration in ipairs(M.integrations) do
         groups = merge(groups, require('nordic.groups.integrations.' .. integration))
     end
-    return groups
+    return merge(groups, C.options.override)
 end
 
 function M.set_term_colors()

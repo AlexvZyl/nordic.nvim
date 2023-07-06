@@ -14,19 +14,19 @@ local groups = {
     NoiceCmdlineIcon = { bg = C.bg_float, fg = C.yellow.base },
     NoiceCmdlineIconSearch = { bg = C.bg_dark, fg = C.yellow.base },
 
-    NoiceCmdlinePopup = { bg = C.black1 },
-    NoiceCmdlinePopupBorder = { fg = C.border_float_fg, bg = C.border_float_bg },
-    NoiceCmdlinePopupBorderSearch = { link = 'NoiceCmdlinePopupBorder' },
+    NoicePopupBorder = { fg = C.border_float_fg, bg = C.border_float_bg },
+    NoiceCmdlinePopupBorder = { link = 'NoicePopupBorder' },
+    NoiceCmdlinePopupBorderSearch = { link = 'NoicePopupBorder' },
+    NoiceCmdlinePopup = { bg = C.black1},
 
 }
 
 if O.noice.style == 'classic' then
 
-    groups.NoiceCmdlinePopupBorder = { bg = C.bg, fg = C.cyan.base }
-
-    groups.NoiceCmdlineIcon = { bg = C.bg, fg = C.yellow.bright }
-    groups.NoiceCmdlinePopup = { bg = C.bg, fg = C.fg, bold = true }
     groups.NoiceCmdline = { bg = C.bg, fg = C.cyan.base }
+    groups.NoiceCmdlinePopup = { bg = C.bg }
+    groups.NoicePopupBorder = { bg = C.bg, fg = C.cyan.base }
+    groups.NoiceCmdlineIcon = { bg = C.bg, fg = C.yellow.bright }
 
 end
 

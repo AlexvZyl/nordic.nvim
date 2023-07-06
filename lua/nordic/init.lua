@@ -13,9 +13,7 @@ function M.load(opts)
     end
 
     C.setup(opts)
-
-    local groups = U.merge(G.get_groups(), C.options.override)
-    U.highlight(groups)
+    U.highlight(G.get_groups())
     G.set_term_colors()
 end
 

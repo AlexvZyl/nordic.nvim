@@ -1,6 +1,6 @@
 local M = {}
 
-M.defaults = {
+local defaults = {
     -- Enable bold keywords.
     bold_keywords = false,
     -- Enable italic comments.
@@ -20,7 +20,7 @@ M.defaults = {
         -- Enable bold font in cursorline.
         bold = false,
         -- Avialable styles: 'dark', 'light'.
-        theme = 'light',
+        theme = 'dark',
         -- Hide the cursorline when the window is not focused.
         hide_unfocused = false,
     },
@@ -38,11 +38,10 @@ M.defaults = {
     },
 }
 
-M.options = M.defaults
+M.options = defaults
 
-function M.setup(opts)
-    M.options = vim.tbl_deep_extend('force', M.options, opts or {})
-    require 'nordic.colors' .reload()
+function M.setup(options)
+  M.options = vim.tbl_deep_extend("force", {}, M.options or defaults, options or {})
 end
 
 return M
