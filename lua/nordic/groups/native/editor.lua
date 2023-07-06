@@ -2,7 +2,6 @@
 
 local C = require 'nordic.colors'
 local O = require('nordic.config').options
-local U = require 'nordic.utils'
 
 local groups = {
 
@@ -55,7 +54,7 @@ local groups = {
     NormalSB = { fg = C.fg_sidebar, bg = O.transparent_bg and C.none or C.bg_sidebar }, -- normal text in sidebar
     NormalFloat = { fg = C.fg_float, bg = C.bg_float }, -- Normal text in floating windows.
 
-    FloatBorder = { fg = C.border_float, bg = C.bg_float },
+    FloatBorder = { fg = C.border_float_fg, bg = C.border_float_bg },
 
     Pmenu = { bg = C.bg_popup, fg = C.fg }, -- Popup menu: normal item.
     PmenuSel = { bg = C.bg_selected }, -- Popup menu: selected item.

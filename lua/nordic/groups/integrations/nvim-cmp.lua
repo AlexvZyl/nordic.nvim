@@ -39,4 +39,7 @@ return {
     CmpItemKindColor = { link = 'Constant' },
     CmpItemKindTypeParameter = { link = 'Type' },
 
+    CmpItemKindTabNine = { fg = C.red.base },
+    CmpItemKindCopilot = { fg = C.red.base },
+
 }
