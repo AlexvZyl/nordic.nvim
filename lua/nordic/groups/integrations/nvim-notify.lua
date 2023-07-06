@@ -26,5 +26,4 @@ return {
     NotifyTRACEIcon = { fg = C.gray5 },
     NotifyTRACETitle = { fg = C.gray5, bold = true },
     NotifyTRACEBody = { fg = C.fg },
-
 }

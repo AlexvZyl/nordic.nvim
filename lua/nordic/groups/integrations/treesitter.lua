@@ -119,5 +119,4 @@ return {
     ['@type.qualifier'] = { link = 'Keyword' },
     ['@storageclass'] = { link = 'Keyword' },
     ['@none'] = { link = 'None' },
-
 }

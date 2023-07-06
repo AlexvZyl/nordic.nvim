@@ -18,5 +18,4 @@ return {
 
     diffLine = {},
     diffIndexLine = {},
-
 }

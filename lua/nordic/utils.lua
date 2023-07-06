@@ -7,7 +7,9 @@ function M.highlight(table)
 end
 
 M.NAME = 'nordic'
-function M.loaded() return vim.g.colors_name == M.NAME end
+function M.loaded()
+    return vim.g.colors_name == M.NAME
+end
 
 function M.merge(table1, table2)
     if table1 == table2 == nil then return {} end

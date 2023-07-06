@@ -6,7 +6,6 @@ local diff_blend = 0.2
 local highlight_blend = 0.6
 
 function C.reload()
-
     -- Add these for international convenience :)
     C.grey0 = C.gray0
     C.grey1 = C.gray1
@@ -87,7 +86,6 @@ function C.reload()
         C.bg_highlight = U.blend(C.gray1, C.bg, highlight_blend)
         C.bg_visual = C.bg_highlight
     end
-
 end
 
 C.reload()

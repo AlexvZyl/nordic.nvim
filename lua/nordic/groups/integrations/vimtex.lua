@@ -26,5 +26,4 @@ return {
     texFileOpt = { fg = C.fg },
     texVerbZone = { link = 'String' },
     texLstZone = { link = 'String' },
-
 }

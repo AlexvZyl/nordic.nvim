@@ -26,5 +26,4 @@ return {
     DapUIBreakpointsPath = { fg = C.red.bright },
     DapUIBreakpointsCurrentLine = { fg = C.red.bright },
     DapUIBreakpointsDisabledLine = { fg = C.red.bright },
-
 }

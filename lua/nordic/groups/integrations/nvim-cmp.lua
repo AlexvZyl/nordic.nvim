@@ -14,8 +14,8 @@ return {
     CmpItemKindEnum = { link = 'Type' },
     CmpItemKindKeyword = { link = 'Keyword' },
 
-    CmpItemKindConstant = { link  = 'Constant' },
-    CmpItemKindConstructor = { link = 'Function'},
+    CmpItemKindConstant = { link = 'Constant' },
+    CmpItemKindConstructor = { link = 'Function' },
     CmpItemKindReference = { fg = C.cyan.base },
 
     CmpItemKindFunction = { link = 'Function' },
@@ -41,5 +41,4 @@ return {
 
     CmpItemKindTabNine = { fg = C.red.base },
     CmpItemKindCopilot = { fg = C.red.base },
-
 }

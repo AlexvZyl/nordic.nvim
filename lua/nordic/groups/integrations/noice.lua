@@ -17,17 +17,14 @@ local groups = {
     NoicePopupBorder = { fg = C.border_float_fg, bg = C.border_float_bg },
     NoiceCmdlinePopupBorder = { link = 'NoicePopupBorder' },
     NoiceCmdlinePopupBorderSearch = { link = 'NoicePopupBorder' },
-    NoiceCmdlinePopup = { bg = C.black1},
-
+    NoiceCmdlinePopup = { bg = C.black1 },
 }
 
 if O.noice.style == 'classic' then
-
     groups.NoiceCmdline = { bg = C.bg, fg = C.cyan.base }
     groups.NoiceCmdlinePopup = { bg = C.bg }
     groups.NoicePopupBorder = { bg = C.bg, fg = C.border_float_fg }
     groups.NoiceCmdlineIcon = { bg = C.bg, fg = C.yellow.bright }
-
 end
 
 return groups

@@ -1,5 +1,5 @@
 local C = require 'nordic.colors'
-local blend = require 'nordic.utils'.blend
+local blend = require('nordic.utils').blend
 
 local inactive_bg = blend(C.gray0, C.black, 0.4)
 
@@ -24,6 +24,5 @@ return {
     BufferLineOffset = { fg = C.yellow.base, bg = C.black, bold = true },
     BufferLineOffsetSeparator = { bg = C.black, fg = C.black },
 
-    BufferLineDevIconLuaInactive = { bg = C.bg, underline = true, sp = C.bg_dark }
-
+    BufferLineDevIconLuaInactive = { bg = C.bg, underline = true, sp = C.bg_dark },
 }

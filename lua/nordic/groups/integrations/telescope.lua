@@ -27,11 +27,9 @@ local groups = {
 
     TelescopeMultiIcon = { fg = C.yellow.bright, bg = C.bg, bold = true },
     TelescopeMultiSelection = { bg = C.bg },
-
 }
 
 if O.telescope.style == 'flat' then
-
     groups.TelescopeNormal = { bg = C.black1 }
     groups.TelescopePromptNormal = { bg = C.black }
     groups.TelescopeResultsNormal = { bg = C.black1 }
@@ -53,7 +51,6 @@ if O.telescope.style == 'flat' then
     groups.TelescopeMultiIcon = { fg = C.yellow.bright, bg = C.black1, bold = true }
     groups.TelescopeMultiSelection = { bg = C.black1 }
     groups.TelescopePromptPrefix = { bg = C.black, fg = C.orange.bright }
-
 end
 
 return groups

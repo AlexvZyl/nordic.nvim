@@ -91,7 +91,6 @@ local groups = {
     WildMenu = { bg = C.bg_visual }, -- current match in 'wildmenu' completion
     WinBar = { bg = C.bg_dark, fg = C.fg },
     WinBarNC = { bg = C.bg_dark, fg = C.gray4 },
-
 }
 
 return groups

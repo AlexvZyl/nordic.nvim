@@ -25,5 +25,4 @@ return {
 
     terminal_color_7 = C.white0,
     terminal_color_15 = C.white1,
-
 }

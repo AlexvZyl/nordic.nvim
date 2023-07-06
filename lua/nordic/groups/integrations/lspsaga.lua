@@ -12,6 +12,5 @@ return {
     DiagnosticWord = { fg = C.fg },
     DiagnosticSource = { fg = C.gray4 },
     DiagnosticNormal = { link = 'Normal' },
-    DiagnosticShowBorder = { fg = C.black , bg = C.black1 }
-
+    DiagnosticShowBorder = { fg = C.black, bg = C.black1 },
 }

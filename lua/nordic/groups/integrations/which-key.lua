@@ -11,5 +11,4 @@ return {
     -- TODO: Unsure.
     WhichKeySeperator = {},
     WhichKeyValue = {},
-
 }

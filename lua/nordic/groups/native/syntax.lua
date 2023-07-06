@@ -98,5 +98,4 @@ return {
 
     debugPC = { bg = C.bg_sidebar }, -- used for highlighting the current line in terminal-debug
     debugBreakpoint = { bg = C.black, fg = C.info }, -- used for breakpoint colors in terminal-debug
-
 }

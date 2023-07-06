@@ -20,5 +20,4 @@ return {
     DashboardDesc = { fg = C.green.base },
     DashboardKey = { fg = C.red.base, bold = true },
     DashboardIcon = { fg = C.green.base },
-
 }
