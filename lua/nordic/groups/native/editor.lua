@@ -27,7 +27,7 @@ local groups = {
     ErrorMsg = { fg = C.error }, -- error messages on the command line
 
     VertSplit = { fg = C.border }, -- the column separating vertically split windows
-    WinSeparator = { fg = C.border }, -- the column separating vertically split windows
+    WinSeparator = { fg = C.border_fg, bg = C.border_bg }, -- the column separating vertically split windows
 
     Folded = { fg = C.fg_fold, bg = C.bg_fold }, -- line used for closed folds
     FoldColumn = { bg = C.bg_fold, fg = C.fg_fold }, -- 'foldcolumn'
@@ -56,7 +56,7 @@ local groups = {
     NormalFloat = { fg = C.fg_float, bg = C.bg_float }, -- Normal text in floating windows.
     FloatBorder = { fg = C.border_float_fg, bg = C.border_float_bg },
 
-    Pmenu = { bg = C.bg_popup, fg = C.fg }, -- Popup menu: normal item.
+    Pmenu = { bg = C.bg_popup }, -- Popup menu: normal item.
     PmenuSel = { bg = C.bg_selected }, -- Popup menu: selected item.
     PmenuSbar = { bg = C.gray2 }, -- Popup menu: scrollbar.
     PmenuThumb = { bg = C.gray2, fg = C.gray2 }, -- Popup menu: Thumb of the scrollbar.
