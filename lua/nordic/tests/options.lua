@@ -11,10 +11,11 @@ config.transparent_bg = true
 config.reduced_blue = false
 config.cursorline.theme = 'light'
 config.cursorline.bold = true
-config.cursorline.hide_unfocused = false
-config.noice.style = 'flat'
+config.cursorline.hide_unfocused = true
+config.noice.style = 'classic'
 config.telescope.style = 'classic'
 config.leap.dim_backdrop = true
-config.bright_border = false
+config.bright_border = true
+config.swap_backgrounds = true
 
 load(config)
