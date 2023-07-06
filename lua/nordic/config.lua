@@ -1,8 +1,6 @@
 local M = {}
 
-M.defaults = {
-    -- Available themes: 'nordic', 'onedark'.
-    theme = 'nordic',
+local defaults = {
     -- Enable bold keywords.
     bold_keywords = false,
     -- Enable italic comments.
@@ -10,34 +8,25 @@ M.defaults = {
     -- Enable general editor background transparency.
     transparent_bg = false,
     -- Enable brighter float border.
-    bright_border = true,
-    -- Nordic specific options.
-    -- Set all to false to use original Nord colors.
+    bright_border = false,
     -- Adjusts some colors to make the theme a bit nicer (imo).
-    nordic = {
-        -- Reduce the overall amount of blue in the theme (diverges from base Nord).
-        reduced_blue = true,
-    },
-    -- Onedark specific options.
-    -- Set all to false to keep original onedark colors.
-    -- Adjusts some colors to make the theme a bit nicer (imo).
-    onedark = {
-        -- Brighten the whites to fit the theme better.
-        brighter_whites = true,
-    },
+    reduced_blue = true,
+    -- Swop the dark background with the normal one.
+    swap_backgrounds = false,
     -- Override the styling of any highlight group.
     override = {},
+    -- Cursorline options.
     cursorline = {
         -- Enable bold font in cursorline.
         bold = false,
         -- Avialable styles: 'dark', 'light'.
-        theme = 'light',
+        theme = 'dark',
         -- Hide the cursorline when the window is not focused.
-        hide_unfocused = true,
+        hide_unfocused = false,
     },
     noice = {
         -- Available styles: `classic`, `flat`.
-        style = 'classic',
+        style = 'flat',
     },
     telescope = {
         -- Available styles: `classic`, `flat`.
@@ -49,17 +38,10 @@ M.defaults = {
     },
 }
 
-M.options = {}
+M.options = defaults
 
 function M.setup(options)
-    M.options = vim.tbl_deep_extend('force', {}, M.defaults, options or {})
+  M.options = vim.tbl_deep_extend("force", {}, M.options or defaults, options or {})
 end
-
-function M.extend(options)
-    M.options = vim.tbl_deep_extend('force', {}, M.options or M.defaults, options or {})
-end
-
--- Init the config.
-M.setup()
 
 return M

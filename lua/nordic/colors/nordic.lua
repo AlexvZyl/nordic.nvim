@@ -1,6 +1,6 @@
 -- The Nord palette: https://www.nordtheme.com/.
 
-local o = require('nordic.config').options
+local O = require('nordic.config').options
 
 local palette = {
 
@@ -78,6 +78,6 @@ local palette = {
 }
 
 -- Change palette based on config.
-if o.nordic.reduced_blue then palette.white0 = '#C0C8D8' end
+if O.reduced_blue then palette.white0 = '#C0C8D8' end
 
 return palette

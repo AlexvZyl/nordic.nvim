@@ -1,164 +1,59 @@
-local c = require 'nordic.colors'
-local o = require('nordic.config').options
+local C = require 'nordic.colors'
+local O = require('nordic.config').options
 
 -- Classic.
 local groups = {
 
-    -- Normals.
-    TelescopePromptNormal = {
-        bg = c.bg,
-    },
-    TelescopeResultsNormal = {
-        bg = c.bg,
-    },
-    TelescopePreviewNormal = {
-        bg = c.bg,
-    },
+    TelescopeNormal = { bg = C.bg },
+    TelescopePromptNormal = { bg = C.bg },
+    TelescopeResultsNormal = { bg = C.bg },
+    TelescopePreviewNormal = { bg = C.bg },
 
-    -- Selection.
-    TelescopeSelection = {
-        bg = c.bg_selected,
-        fg = c.fg_selected,
-        bold = true,
-    },
-    TelescopeSelectionCaret = {
-        fg = c.fg_selected,
-        bg = c.bg_selected,
-        bold = true,
-    },
+    TelescopeSelection = { bg = C.bg_selected, fg = C.fg_selected, bold = false },
+    TelescopeSelectionCaret = { fg = C.fg_selected, bg = C.bg_selected, bold = true },
 
-    -- Titles.
-    TelescopePreviewTitle = {
-        fg = c.border_float,
-        bg = c.bg,
-        bold = true,
-    },
-    TelescopeResultsTitle = {
-        fg = c.border_float,
-        bg = c.bg,
-        bold = true,
-    },
-    TelescopePromptTitle = {
-        fg = c.border_float,
-        bg = c.bg,
-        bold = true,
-    },
-    TelescopeTitle = {
-        fg = c.border_float,
-        bg = c.bg,
-        bold = true,
-    },
+    TelescopePreviewTitle = { fg = C.border_float_fg, bg = C.bg, bold = true },
+    TelescopeResultsTitle = { fg = C.border_float_fg, bg = C.bg, bold = true },
+    TelescopePromptTitle = { fg = C.border_float_fg, bg = C.bg, bold = true },
+    TelescopeTitle = { fg = C.border_float_fg, bg = C.bg, bold = true },
 
-    -- Borders.
-    TelescopeBorder = {
-        fg = c.border_float,
-        bg = c.bg,
-    },
-    TelescopePromptBorder = {
-        fg = c.border_float,
-        bg = c.bg,
-    },
-    TelescopeResultsBorder = {
-        fg = c.border_float,
-        bg = c.bg,
-    },
-    TelescopePreviewBorder = {
-        fg = c.border_float,
-        bg = c.bg,
-    },
+    TelescopeBorder = { fg = C.border_float_fg, bg = C.bg },
+    TelescopePromptBorder = { fg = C.border_float_bg, bg = C.bg },
+    TelescopeResultsBorder = { fg = C.border_float_bg, bg = C.bg },
+    TelescopePreviewBorder = { fg = C.border_float_bg, bg = C.bg },
 
-    -- Misc.
-    TelescopeMatching = {
-        fg = c.green.bright,
-        bold = true,
-    },
-    TelescopePromptPrefix = {
-        bg = c.bg,
-        fg = c.orange.bright,
-    },
+    TelescopeMatching = { bold = true },
+    TelescopePromptPrefix = { bg = C.bg, fg = C.orange.bright },
 
-    -- Multi.
-    TelescopeMultiIcon = {
-        fg = c.yellow.bright,
-        bg = c.bg_dark,
-        bold = true,
-    },
-    TelescopeMultiSelection = {
-        fg = c.fg,
-        bg = c.bg_dark,
-    },
+    TelescopeMultiIcon = { fg = C.yellow.bright, bg = C.bg, bold = true },
+    TelescopeMultiSelection = { bg = C.bg },
+
 }
 
--- Apply the flat style.
-if o.telescope.style == 'flat' then
-    -- Normals.
-    groups.TelescopePromptNormal = {
-        bg = c.gray1,
-    }
-    groups.TelescopeResultsNormal = {
-        bg = c.bg_dark,
-    }
-    groups.TelescopePreviewNormal = {
-        bg = c.bg_dark,
-    }
+if O.telescope.style == 'flat' then
 
-    -- Selection.
-    groups.TelescopeSelection = {
-        bg = c.gray1,
-        fg = c.fg_bright,
-        bold = true,
-    }
-    groups.TelescopeSelectionCaret = {
-        fg = c.yellow.bright,
-        bg = c.gray1,
-        bold = true,
-    }
+    groups.TelescopeNormal = { bg = C.black1 }
+    groups.TelescopePromptNormal = { bg = C.black }
+    groups.TelescopeResultsNormal = { bg = C.black1 }
+    groups.TelescopePreviewNormal = { bg = C.black1 }
 
-    -- Titles.
-    groups.TelescopePreviewTitle = {
-        bg = c.blue2,
-        fg = c.black,
-        bold = true,
-    }
-    groups.TelescopeResultsTitle = {
-        bg = c.orange.base,
-        fg = c.black,
-        bold = true,
-    }
-    groups.TelescopePromptTitle = {
-        bg = c.orange.base,
-        fg = c.black,
-        bold = true,
-    }
-    groups.TelescopeTitle = {
-        bg = c.orange.base,
-        fg = c.black,
-        bold = true,
-    }
+    groups.TelescopeSelection = { bg = C.black1, fg = C.yellow.bright }
+    groups.TelescopeSelectionCaret = { fg = C.yellow.bright, bg = C.black1, bold = true }
 
-    -- Borders.
-    groups.TelescopeBorder = {
-        fg = c.gray1,
-        bg = c.gray1,
-    }
-    groups.TelescopePromptBorder = {
-        bg = c.gray1,
-        fg = c.gray1,
-    }
-    groups.TelescopeResultsBorder = {
-        bg = c.bg_dark,
-        fg = c.bg_dark,
-    }
-    groups.TelescopePreviewBorder = {
-        bg = c.bg_dark,
-        fg = c.bg_dark,
-    }
+    groups.TelescopePreviewTitle = { bg = C.blue2, fg = C.black, bold = true }
+    groups.TelescopeResultsTitle = { bg = C.orange.base, fg = C.black, bold = true }
+    groups.TelescopePromptTitle = { bg = C.orange.base, fg = C.black, bold = true }
+    groups.TelescopeTitle = { bg = C.orange.base, fg = C.black, bold = true }
 
-    -- Misc.
-    groups.TelescopePromptPrefix = {
-        bg = c.gray1,
-        fg = c.orange.bright,
-    }
+    groups.TelescopeBorder = { fg = C.border_float_fg, bg = C.black }
+    groups.TelescopePromptBorder = { bg = C.black, fg = C.border_float_fg }
+    groups.TelescopeResultsBorder = { bg = C.black1, fg = C.border_float_fg }
+    groups.TelescopePreviewBorder = { bg = C.black1, fg = C.border_float_fg }
+
+    groups.TelescopeMultiIcon = { fg = C.yellow.bright, bg = C.black1, bold = true }
+    groups.TelescopeMultiSelection = { bg = C.black1 }
+    groups.TelescopePromptPrefix = { bg = C.black, fg = C.orange.bright }
+
 end
 
 return groups

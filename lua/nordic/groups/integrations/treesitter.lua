@@ -1,9 +1,10 @@
 -- Notes and format from @folke/tokyonight.nvim.
 
-local c = require 'nordic.colors'
-local o = require('nordic.config').options
+local C = require 'nordic.colors'
+local O = require('nordic.config').options
 
 return {
+
     -- These groups are for the neovim tree-sitter highlights.
     -- As of writing, tree-sitter support is a WIP, group names may change.
     -- By default, most of these groups link to an appropriate Vim group,
@@ -18,8 +19,8 @@ return {
     ['@comment'] = { link = 'Comment' },
     ['@text.todo'] = { link = 'Todo' },
     ['@text.note'] = { link = 'Note' },
-    ['@text.warning'] = { fg = c.bg, bg = c.warning },
-    ['@text.danger'] = { fg = c.bg, bg = c.error },
+    ['@text.warning'] = { fg = C.bg, bg = C.warning },
+    ['@text.danger'] = { fg = C.bg, bg = C.error },
     ['@constructor'] = { link = '@function' }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     -- TSConditional       = { };    -- For keywords related to conditionnals.
     -- TSConstant          = { };    -- For constants
@@ -32,33 +33,33 @@ return {
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-    ['@label'] = { fg = c.blue1 }, -- For labels: `label:` in C and `:label:` in Lua.
+    ['@label'] = { fg = C.blue1 }, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
     -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
     ['@parameter'] = {
-        fg = c.fg,
+        fg = C.fg,
         italic = true,
     }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
-    ['@punctuation.delimiter'] = { fg = c.fg }, -- For delimiters ie: `.`
-    ['@punctuation.bracket'] = { fg = c.fg }, -- For brackets and parens.
+    ['@punctuation.delimiter'] = { link = 'Operator' }, -- For delimiters ie: `.`
+    ['@punctuation.bracket'] = { fg = C.fg }, -- For brackets and parens.
     -- TSRepeat            = { };    -- For keywords related to loops.
     -- TSString            = { };    -- For strings.
-    ['@string.regex'] = { fg = c.green.dim }, -- For regexes.
-    ['@string.escape'] = { fg = c.green.bright }, -- For escape characters within a string.
-    ['@string.special'] = { fg = c.yellow.base }, -- For escape characters within a string.
+    ['@string.regex'] = { fg = C.green.dim }, -- For regexes.
+    ['@string.escape'] = { fg = C.green.bright }, -- For escape characters within a string.
+    ['@string.special'] = { fg = C.yellow.base }, -- For escape characters within a string.
     -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
     -- TSType              = { };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
-    ['@variable'] = { fg = c.fg }, -- Any variable name that does not have another highlight.
+    ['@variable'] = { fg = C.fg }, -- Any variable name that does not have another highlight.
 
-    ['@tag'] = { fg = c.blue1 }, -- Tags like html tag names.
-    ['@tag.delimiter'] = { fg = c.fg }, -- Tag delimiter like `<` `>` `/`
-    ['@tag.attribute'] = { fg = c.yellow.base }, -- Tag attribute like `id` `class`
+    ['@tag'] = { fg = C.blue1 }, -- Tags like html tag names.
+    ['@tag.delimiter'] = { fg = C.fg }, -- Tag delimiter like `<` `>` `/`
+    ['@tag.attribute'] = { fg = C.yellow.base }, -- Tag attribute like `id` `class`
     ['@text'] = { link = 'Normal' }, -- For strings considered text in a markup language.
-    ['@text.reference'] = { fg = c.green.base },
+    ['@text.reference'] = { fg = C.green.base },
     ['@text.strong'] = { bold = true },
     ['@text.emphasis'] = { italic = true }, -- For text to be represented with emphasis.
     ['@text.underline'] = { underline = true }, -- For text to be represented with an underline.
@@ -90,11 +91,11 @@ return {
     ['@class'] = { link = 'Keyword' },
     ['@operator'] = { link = 'Operator' },
     ['@keyword.operator'] = { link = 'Keyword' },
+    ['@include'] = { link = 'Include' },
 
     ['@macro'] = { link = 'Macro' },
     ['@preproc'] = { link = 'Macro' },
     ['@attribute'] = { link = 'Macro' },
-    ['@include'] = { link = 'Macro' },
     ['@function.macro'] = { link = 'Macro' },
     ['@define'] = { link = 'Macro' },
     ['@exception'] = { link = 'Macro' },
@@ -104,13 +105,13 @@ return {
     ['@method.call'] = { link = 'Function' },
     ['@function.call'] = { link = 'Function' },
     ['@function.builtin'] = { link = 'Function' },
-    ['@variable.builtin'] = { fg = c.blue0, italic = true },
+    ['@variable.builtin'] = { link = 'Builtin' },
 
-    ['@field'] = { fg = c.cyan.base },
-    ['@property'] = { fg = c.cyan.base },
-    ['@property.cpp'] = { fg = c.cyan.base },
+    ['@field'] = { fg = C.cyan.base },
+    ['@property'] = { fg = C.cyan.base },
+    ['@property.cpp'] = { fg = C.cyan.base },
 
-    ['@namespace'] = { fg = c.yellow.dim, italic = true },
+    ['@namespace'] = { fg = C.yellow.dim, italic = true },
     ['@type'] = { link = 'Type' },
     ['@type.builtin'] = { link = 'Type' },
     ['@type.definition'] = { link = 'Type' },
@@ -118,5 +119,5 @@ return {
     ['@type.qualifier'] = { link = 'Keyword' },
     ['@storageclass'] = { link = 'Keyword' },
     ['@none'] = { link = 'None' },
-    -----------------------
+
 }

@@ -1,28 +1,30 @@
-local c = require 'nordic.colors'
+local C = require 'nordic.colors'
 
 return {
-    NotifyERRORBorder = { fg = c.error },
-    NotifyERRORIcon = { fg = c.error },
-    NotifyERRORTitle = { fg = c.error, bold = true },
-    NotifyERRORBody = { fg = c.fg },
 
-    NotifyWARNBorder = { fg = c.warn },
-    NotifyWARNIcon = { fg = c.warn },
-    NotifyWARNTitle = { fg = c.warn, bold = true },
-    NotifyWARNBody = { fg = c.fg },
+    NotifyERRORBorder = { fg = C.error },
+    NotifyERRORIcon = { fg = C.error },
+    NotifyERRORTitle = { fg = C.error, bold = true },
+    NotifyERRORBody = { fg = C.fg },
 
-    NotifyINFOBorder = { fg = c.info },
-    NotifyINFOIcon = { fg = c.info },
-    NotifyINFOTitle = { fg = c.info, bold = true },
-    NotifyINFOBody = { fg = c.fg },
+    NotifyWARNBorder = { fg = C.warn },
+    NotifyWARNIcon = { fg = C.warn },
+    NotifyWARNTitle = { fg = C.warn, bold = true },
+    NotifyWARNBody = { fg = C.fg },
 
-    NotifyDEBUGBorder = { fg = c.orange.bright },
-    NotifyDEBUGIcon = { fg = c.orange.bright },
-    NotifyDEBUGTitle = { fg = c.orange.bright, bold = true },
-    NotifyDEBUGBody = { fg = c.fg },
+    NotifyINFOBorder = { fg = C.info },
+    NotifyINFOIcon = { fg = C.info },
+    NotifyINFOTitle = { fg = C.info, bold = true },
+    NotifyINFOBody = { fg = C.fg },
 
-    NotifyTRACEBorder = { fg = c.gray5 },
-    NotifyTRACEIcon = { fg = c.gray5 },
-    NotifyTRACETitle = { fg = c.gray5, bold = true },
-    NotifyTRACEBody = { fg = c.fg },
+    NotifyDEBUGBorder = { fg = C.orange.bright },
+    NotifyDEBUGIcon = { fg = C.orange.bright },
+    NotifyDEBUGTitle = { fg = C.orange.bright, bold = true },
+    NotifyDEBUGBody = { fg = C.fg },
+
+    NotifyTRACEBorder = { fg = C.gray5 },
+    NotifyTRACEIcon = { fg = C.gray5 },
+    NotifyTRACETitle = { fg = C.gray5, bold = true },
+    NotifyTRACEBody = { fg = C.fg },
+
 }

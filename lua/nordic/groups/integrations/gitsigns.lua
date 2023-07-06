@@ -1,28 +1,13 @@
-local c = require 'nordic.colors'
-local o = require('nordic.config').options
+local C = require 'nordic.colors'
+local O = require('nordic.config').options
 
 return {
 
-    GitSignsAdd = {
-        fg = c.git.add,
-        bg = o.transparent_bg and c.none or c.bg_sidebar,
-    },
+    GitSignsAdd = { fg = C.git.add, bg = O.transparent_bg and C.none or C.bg_sidebar },
+    GitSignsChange = { fg = C.git.change, bg = O.transparent_bg and C.none or C.bg_sidebar },
+    GitSignsDelete = { fg = C.git.delete, bg = O.transparent_bg and C.none or C.bg_sidebar },
 
-    GitSignsChange = {
-        fg = c.git.change,
-        bg = o.transparent_bg and c.none or c.bg_sidebar,
-    },
+    GitSignsAddPreview =  { link = 'GitSignsAdd' },
+    GitSignsDeletePreview = { link = 'GitSignsDelete' },
 
-    GitSignsDelete = {
-        fg = c.git.delete,
-        bg = o.transparent_bg and c.none or c.bg_sidebar,
-    },
-
-    GitSignsAddPreview = {
-        link = 'GitSignsAdd',
-    },
-
-    GitSignsDeletePreview = {
-        link = 'GitSignsDelete',
-    },
 }

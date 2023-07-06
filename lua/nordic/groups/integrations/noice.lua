@@ -1,50 +1,33 @@
-local c = require 'nordic.colors'
-local o = require('nordic.config').options
+local C = require 'nordic.colors'
+local O = require('nordic.config').options
 
 local groups = {
 
-    NoiceCmdlinePopupBorder = {
-        bg = c.none,
-        fg = c.cyan.base,
-    },
-    NoiceCmdlinePopupBorderSearch = {
-        bg = c.none,
-        fg = c.cyan.base,
-    },
-    NoiceCmdlineIcon = {
-        bg = c.bg,
-        fg = c.yellow.bright,
-    },
-    NoiceCmdlinePopup = {
-        bg = c.bg,
-        fg = c.fg,
-        bold = true,
-    },
-    NoiceCmdline = {
-        bg = c.bg,
-        fg = c.cyan.base,
-    },
+    NoiceLspProgressTitle = { fg = C.yellow.base, bg = C.bg, bold = true },
+    NoiceLspProgressClient = { fg = C.gray4, bg = C.bg },
+    NoiceLspProgressSpinner = { fg = C.cyan.bright, bg = C.bg },
+
+    NoiceFormatProgressDone = { bg = C.green.bright, fg = C.black },
+    NoiceFormatProgressTodo = { bg = C.gray5, fg = C.black },
+
+    NoiceCmdline = { bg = C.bg_dark, fg = C.fg },
+    NoiceCmdlineIcon = { bg = C.bg_float, fg = C.yellow.base },
+    NoiceCmdlineIconSearch = { bg = C.bg_dark, fg = C.yellow.base },
+
+    NoicePopupBorder = { fg = C.border_float_fg, bg = C.border_float_bg },
+    NoiceCmdlinePopupBorder = { link = 'NoicePopupBorder' },
+    NoiceCmdlinePopupBorderSearch = { link = 'NoicePopupBorder' },
+    NoiceCmdlinePopup = { bg = C.black1},
+
 }
 
-if o.noice.style == 'flat' then
-    groups.NoiceCmdlinePopupBorder = {
-        bg = c.bg_dark,
-        fg = c.bg_dark,
-    }
-    groups.NoiceCmdlinePopupBorderSearch = {
-        bg = c.bg_dark,
-        fg = c.bg_dark,
-    }
-    groups.NoiceCmdlineIcon = {
-        bg = c.bg_dark,
-        fg = c.yellow.base,
-    }
-    groups.NoiceCmdlinePopup = {
-        bg = c.black,
-    }
-    groups.NoiceCmdlinePrompt = {
-        -- bg = c.bg_dark
-    }
+if O.noice.style == 'classic' then
+
+    groups.NoiceCmdline = { bg = C.bg, fg = C.cyan.base }
+    groups.NoiceCmdlinePopup = { bg = C.bg }
+    groups.NoicePopupBorder = { bg = C.bg, fg = C.border_float_fg }
+    groups.NoiceCmdlineIcon = { bg = C.bg, fg = C.yellow.bright }
+
 end
 
 return groups

@@ -1,53 +1,22 @@
--- Notes and format from @folke/tokyonight.nvim.
+-- Notes and format from folke/tokyonight.nvim @GutHub.
 
-local c = require 'nordic.colors'
+local C = require 'nordic.colors'
 
 return {
 
-    DiffAdd = {
-        bg = c.diff.add,
-        bold = true,
-    }, -- diff mode: Added line |diff.txt|
+    DiffAdd = { bg = C.diff.add, bold = true }, -- diff mode: Added line |diff.txt|
+    DiffChange = { bg = C.diff.change0 }, -- diff mode: Changed line |diff.txt|
+    DiffDelete = { bg = C.diff.delete, bold = true }, -- diff mode: Deleted line |diff.txt|
+    DiffText = { bg = C.diff.change1, bold = true }, -- diff mode: Changed text within a changed line |diff.txt|
 
-    DiffChange = {
-        bg = c.diff.change0,
-    }, -- diff mode: Changed line |diff.txt|
-
-    DiffDelete = {
-        bg = c.diff.delete,
-        bold = true,
-    }, -- diff mode: Deleted line |diff.txt|
-
-    DiffText = {
-        bg = c.diff.change1,
-        bold = true,
-    }, -- diff mode: Changed text within a changed line |diff.txt|
-
-    diffAdded = {
-        fg = c.git.add,
-    },
-
-    diffRemoved = {
-        fg = c.git.delete,
-    },
-
-    diffChanged = {
-        fg = c.git.change,
-    },
-
-    diffOldFile = {
-        fg = c.fg,
-    },
-
-    diffNewFile = {
-        fg = c.green.base,
-    },
-
-    diffFile = {
-        fg = c.fg,
-    },
+    diffAdded = { fg = C.git.add },
+    diffRemoved = { fg = C.git.delete },
+    diffChanged = { fg = C.git.change },
+    diffOldFile = { fg = C.fg },
+    diffNewFile = { fg = C.green.base },
+    diffFile = { fg = C.fg },
 
     diffLine = {},
-
     diffIndexLine = {},
+
 }

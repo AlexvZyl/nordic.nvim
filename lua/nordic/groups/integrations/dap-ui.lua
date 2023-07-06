@@ -1,68 +1,30 @@
-local c = require 'nordic.colors'
+local C = require 'nordic.colors'
 
 return {
 
-    DapUINormal = {
-        bg = c.bg_dark,
-    },
+    DapUINormal = { bg = C.black1 },
 
-    DapUIStop = {
-        fg = c.red.bright,
-        bold = true,
-    },
+    DapUIStop = { fg = C.red.bright, bold = true },
+    DapUIRestart = { fg = C.green.bright, bold = true },
+    DapUIPlayPause = { fg = C.green.bright, bold = true },
+    DapUIStepInto = { fg = C.blue2, bold = true },
+    DapUIStepOver = { fg = C.blue2, bold = true },
+    DapUIStepOut = { fg = C.blue2, bold = true },
+    DapUIStepBack = { fg = C.blue3, bold = true },
 
-    DapUIRestart = {
-        fg = c.green.bright,
-        bold = true,
-    },
+    DapUIValue = { fg = C.magenta.bright },
+    DapUIWatchesValue = { fg = C.green.bright },
+    DapUIType = { fg = C.yellow.base },
 
-    DapUIPlayPause = {
-        fg = c.green.bright,
-        bold = true,
-    },
+    DapUIFloatBorder = { fg = C.border_nb, bg = C.bg },
+    DapUIFloatNormal = { bg = C.bg },
+    DapUILineNumber = { fg = C.green.bright },
 
-    DapUIStepInto = {
-        fg = c.blue2,
-        bold = true,
-    },
+    -- ???
+    DapUIBreakpointsInfo = { fg = C.red.bright },
+    DapUIBreakpointsLine = { fg = C.red.bright },
+    DapUIBreakpointsPath = { fg = C.red.bright },
+    DapUIBreakpointsCurrentLine = { fg = C.red.bright },
+    DapUIBreakpointsDisabledLine = { fg = C.red.bright },
 
-    DapUIStepOver = {
-        fg = c.blue2,
-        bold = true,
-    },
-
-    DapUIStepOut = {
-        fg = c.blue2,
-        bold = true,
-    },
-
-    DapUIStepBack = {
-        fg = c.blue2,
-        bold = true,
-    },
-
-    DapUIValue = {
-        fg = c.magenta.bright,
-    },
-
-    DapUIWatchesValue = {
-        fg = c.green.bright,
-    },
-
-    DapUIType = {
-        fg = c.yellow.base,
-    },
-
-    DapUIFloatBorder = {
-        fg = c.border_nb,
-        bg = c.bg,
-    },
-
-    DapUIFloatNormal = {
-        bg = c.bg,
-    },
-
-    DapUILineNumber = {
-        fg = c.green.bright,
-    },
 }

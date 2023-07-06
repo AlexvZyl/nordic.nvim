@@ -1,27 +1,12 @@
-local c = require 'nordic.colors'
+local C = require 'nordic.colors'
 
 return {
 
-    DiffviewNormal = {
-        bg = c.bg_dark,
-        fg = c.fg,
-    },
+    DiffviewNormal = { bg = C.bg_dark, fg = C.fg },
+    DiffviewStatusLine = { bg = C.black },
 
-    DiffviewFilePanelTitle = {
-        fg = c.orange.base,
-        bold = true,
-    },
+    DiffviewFilePanelTitle = { fg = C.orange.base, bold = true },
+    DiffviewFolderSign = { fg = C.yellow.dim },
+    DiffviewFolderName = { bg = C.bg_dark, fg = C.blue1 },
 
-    DiffviewFolderSign = {
-        fg = c.yellow.dim,
-    },
-
-    DiffviewFolderName = {
-        bg = c.bg_dark,
-        fg = c.blue1,
-    },
-
-    DiffviewStatusLine = {
-        bg = c.black,
-    },
 }
