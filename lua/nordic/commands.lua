@@ -1,4 +1,4 @@
-local o = require('nordic.config').options
+local O = require('nordic.config').options
 local api = vim.api
 
 function _Win_leave()
@@ -9,7 +9,7 @@ function _Win_enter()
     vim.cmd [[setlocal cursorlineopt=both]]
 end
 
-if o.cursorline.hide_unfocused then
+if O.cursorline.hide_unfocused then
     api.nvim_create_autocmd({ 'WinEnter' }, {
         callback = _Win_enter,
     })
