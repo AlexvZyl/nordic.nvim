@@ -2,7 +2,7 @@ local u = require 'nordic.utils'
 local o = require('nordic.config').options
 local palette = require('nordic.colors.' .. o.theme)
 
--- Parameters.
+-- Parameters
 local diff_blend = 0.2
 local highlight_blend = 0.6
 
@@ -14,23 +14,24 @@ palette.grey3 = palette.gray3
 palette.grey4 = palette.gray4
 palette.grey5 = palette.gray5
 
--- Blacks,
+-- Blacks
 palette.black0 = palette.black
 palette.black1 = u.blend(palette.black, palette.gray0, 0.6)
 
 -- Swop background
--- local ph = palette.gray0
--- palette.gray0 = palette.black1
--- palette.black1 = ph
+if o.swop_backgrounds then
+    local ph = palette.gray0
+    palette.gray0 = palette.black1
+    palette.black1 = ph
+end
 
 -- Now define some use cases.
 -- Some of the format is from @folke/tokyonight.nvim.
 
--- Backgrounds.
+-- Backgrounds
 palette.bg = palette.gray0
 palette.bg_dark = palette.black
 palette.bg_highlight = palette.black
-
 palette.bg_highlight = u.blend(palette.black, palette.bg, highlight_blend)
 palette.bg_visual = palette.bg_highlight
 palette.bg_sidebar = palette.bg
@@ -41,7 +42,7 @@ palette.bg_statusline = palette.bg_dark
 palette.bg_selected = palette.gray1
 palette.bg_fold = palette.gray2
 
--- Foregrounds.
+-- Foregrounds
 palette.fg = palette.white0
 palette.fg_bright = palette.white1
 palette.fg_dark = palette.white0
@@ -50,34 +51,35 @@ palette.fg_fold = palette.fg
 palette.fg_float = palette.fg_bright
 palette.fg_selected = palette.fg_bright
 
--- Borders.
+-- Borders
 palette.border = palette.black
 palette.border_float = (o.bright_border and palette.white0) or palette.gray1
 palette.border_nb = palette.orange.base
 
--- Diffs.
+-- Diffs
 palette.diff = {}
 palette.diff.change0 = u.blend(palette.blue1, palette.bg, 0.05)
 palette.diff.change1 = u.blend(palette.blue2, palette.bg, diff_blend)
 palette.diff.add = u.blend(palette.green.base, palette.bg, diff_blend)
 palette.diff.delete = u.blend(palette.red.base, palette.bg, diff_blend)
 
--- Git.
+-- Git
 palette.git = {}
 palette.git.add = palette.green.base
 palette.git.delete = palette.red.base
 palette.git.change = palette.blue1
 
--- Diagnostics.
+-- Diagnostics
 palette.error = palette.red.bright
 palette.warn = palette.yellow.base
 palette.warning = palette.warn
 palette.hint = palette.green.bright
 palette.info = palette.blue2
 
--- Misc.
+-- Misc
 palette.comment = palette.gray4
 
+-- Cursorline
 if o.cursorline.theme == 'light' then
     palette.bg_highlight = u.blend(palette.gray1, palette.bg, highlight_blend)
     palette.bg_visual = palette.bg_highlight
