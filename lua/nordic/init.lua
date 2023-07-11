@@ -12,6 +12,11 @@ function M.load(opts)
     end
 
     C.setup(opts)
+    M.set_hl_groups()
+end
+
+function M.set_hl_groups()
+    require('nordic.colors').extend_palette()
     U.highlight(G.get_groups())
     G.set_term_colors()
 end
