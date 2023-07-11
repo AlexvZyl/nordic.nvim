@@ -118,7 +118,7 @@ require 'nordic' .setup {
         -- Avialable styles: 'dark', 'light'.
         theme = 'dark',
         -- Blending the cursorline bg with the buffer bg.
-        blend = 0.6,
+        blend = 0.7,
     },
     noice = {
         -- Available styles: `classic`, `flat`.
