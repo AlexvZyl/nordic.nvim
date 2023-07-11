@@ -9,7 +9,6 @@ function M.load(opts)
         vim.api.nvim_command 'hi clear'
         vim.o.termguicolors = true
         vim.g.colors_name = U.NAME
-        require 'nordic.commands'
     end
 
     C.setup(opts)
