@@ -1,4 +1,4 @@
-*nordic.nvim.txt*           For NVIM v0.8.0          Last change: 2023 July 06
+*nordic.nvim.txt*           For NVIM v0.8.0          Last change: 2023 July 12
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -136,10 +136,12 @@ default configuration.
         cursorline = {
             -- Enable bold font in cursorline.
             bold = false,
+            -- Bold cursorline number.
+            bold_number = true,
             -- Avialable styles: 'dark', 'light'.
             theme = 'dark',
-            -- Hide the cursorline when the window is not focused.
-            hide_unfocused = false,
+            -- Blending the cursorline bg with the buffer bg.
+            blend = 0.7,
         },
         noice = {
             -- Available styles: `classic`, `flat`.
