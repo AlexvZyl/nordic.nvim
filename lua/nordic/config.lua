@@ -19,6 +19,8 @@ local defaults = {
     cursorline = {
         -- Enable bold font in cursorline.
         bold = false,
+        -- Bold cursorline number.
+        bold_number = true,
         -- Avialable styles: 'dark', 'light'.
         theme = 'dark',
         -- Blending the cursorline bg with the buffer bg.

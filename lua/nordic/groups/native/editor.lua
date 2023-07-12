@@ -14,7 +14,7 @@ local groups = {
     CursorIM = { fg = C.black }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn = { bg = C.bg_highlight, bold = O.cursorline.bold }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine = { bg = C.bg_highlight, bold = O.cursorline.bold }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-    CursorLineNr = { fg = C.gray5 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    CursorLineNr = { fg = C.gray5, bold = O.cursorline.bold_number }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     CursorLineSign = {},
 
     Directory = { fg = C.blue1 }, -- directory names (and other special names in listings)
