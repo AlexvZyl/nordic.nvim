@@ -19,10 +19,12 @@ local defaults = {
     cursorline = {
         -- Enable bold font in cursorline.
         bold = false,
+        -- Bold cursorline number.
+        bold_number = true,
         -- Avialable styles: 'dark', 'light'.
         theme = 'dark',
-        -- Hide the cursorline when the window is not focused.
-        hide_unfocused = false,
+        -- Blending the cursorline bg with the buffer bg.
+        blend = 0.7,
     },
     noice = {
         -- Available styles: `classic`, `flat`.
@@ -41,7 +43,7 @@ local defaults = {
 M.options = defaults
 
 function M.setup(options)
-    M.options = vim.tbl_deep_extend('force', {}, M.options or defaults, options or {})
+    M.options = vim.tbl_deep_extend('force', M.options or defaults, options or {})
 end
 
 return M

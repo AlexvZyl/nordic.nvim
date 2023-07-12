@@ -2,10 +2,9 @@ local U = require 'nordic.utils'
 local O = require('nordic.config').options
 local C = require 'nordic.colors.nordic'
 
-local diff_blend = 0.2
-local highlight_blend = 0.6
+function C.extend_palette()
+    local diff_blend = 0.2
 
-function C.reload()
     -- Add these for international convenience :)
     C.grey0 = C.gray0
     C.grey1 = C.gray1
@@ -18,14 +17,14 @@ function C.reload()
     C.black0 = C.black
     C.black1 = U.blend(C.black, C.gray0, 0.6)
 
-    -- Swop background
+    -- Swap background
     if O.swap_backgrounds then
-        local ph = C.gray0
+        local gray0 = C.gray0
         C.gray0 = C.black1
-        C.black1 = ph
+        C.black1 = gray0
     end
 
-    -- Now define some use cases.
+    -- Define some use cases.
     -- Some of the format is from @folke/tokyonight.nvim.
 
     -- Backgrounds
@@ -33,7 +32,7 @@ function C.reload()
     C.bg_dark = C.black0
 
     C.bg_highlight = C.bg_dark
-    C.bg_highlight = U.blend(C.bg_dark, C.bg, highlight_blend)
+    C.bg_highlight = U.blend(C.bg_dark, C.bg, O.cursorline.blend)
     C.bg_visual = C.bg_highlight
     C.bg_sidebar = C.bg
     C.bg_float = C.black1
@@ -83,11 +82,9 @@ function C.reload()
 
     -- Cursorline
     if O.cursorline.theme == 'light' then
-        C.bg_highlight = U.blend(C.gray1, C.bg, highlight_blend)
+        C.bg_highlight = U.blend(C.gray1, C.bg, O.cursorline.blend)
         C.bg_visual = C.bg_highlight
     end
 end
-
-C.reload()
 
 return C
