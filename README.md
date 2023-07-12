@@ -147,7 +147,10 @@ require 'nordic' .setup {
             fg = palette.red.bright,
             bg = palette.green.base,
             italic = true,
-        },
+            underline = true,
+            sp = palette.yellow.dim,
+            undercurl = false
+        }
     }
 }
 ```
