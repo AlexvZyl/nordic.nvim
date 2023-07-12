@@ -1,0 +1,25 @@
+# Name: Nordic
+# Auother: XXiaoA
+
+# Syntax Highlighting Colors
+fish_color_normal D8DEE9
+fish_color_command 8AA872
+fish_color_keyword c099ff
+fish_color_quote EBCB8B
+fish_color_redirection D8DEE9
+fish_color_end D89079
+fish_color_error D06F79
+fish_color_param C895BF
+fish_color_comment 81A1C1
+fish_color_selection --background=8CAFD2
+fish_color_search_match --background=8CAFD2
+fish_color_operator A3BE8C
+fish_color_escape c099ff
+fish_color_autosuggestion 81A1C1
+
+# Completion Pager Colors
+fish_pager_color_progress 81A1C1
+fish_pager_color_prefix EBCB8B
+fish_pager_color_completion D8DEE9
+fish_pager_color_description 81A1C1
+fish_pager_color_selected_background --background=3B4252
