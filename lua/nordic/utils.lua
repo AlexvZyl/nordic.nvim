@@ -1,14 +1,14 @@
 local M = {}
 
+M.NAME = 'nordic'
+function M.loaded()
+    return vim.g.colors_name == M.NAME
+end
+
 function M.highlight(table)
     for group, config in pairs(table) do
         vim.api.nvim_set_hl(0, group, config)
     end
-end
-
-M.NAME = 'nordic'
-function M.loaded()
-    return vim.g.colors_name == M.NAME
 end
 
 function M.merge(table1, table2)

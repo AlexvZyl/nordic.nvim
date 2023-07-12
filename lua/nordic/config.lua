@@ -43,7 +43,7 @@ local defaults = {
 M.options = defaults
 
 function M.setup(options)
-    M.options = vim.tbl_deep_extend('force', {}, M.options or defaults, options or {})
+    M.options = vim.tbl_deep_extend('force', M.options or defaults, options or {})
 end
 
 return M
