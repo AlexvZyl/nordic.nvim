@@ -15,9 +15,9 @@ local defaults = {
     swap_backgrounds = false,
     -- Override the styling of any highlight group.
     override = {},
-    -- Cursorline options.
+    -- Cursorline options.  Also includes visual/selection.
     cursorline = {
-        -- Enable bold font in cursorline.
+        -- Bold font in cursorline.
         bold = false,
         -- Bold cursorline number.
         bold_number = true,
