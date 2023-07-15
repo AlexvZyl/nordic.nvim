@@ -1,15 +1,20 @@
 local C = require 'nordic.colors'
 
 return {
-    SagaBorder = { fg = C.border_float_fg, bg = C.border_float_bg },
-    SagaNormal = { bg = C.black1 },
+    SagaBorder = { bg = C.bg, fg = C.border_float_fg },
+    SagaNormal = { link = 'Normal' },
 
-    RenameBorder = { link = 'SagaBorder' },
+    HoverBorder = { link = 'FloatBorder' },
+    HoverNormal = { link = 'NormalFloat' },
+
     RenameNormal = { bg = C.bg_float, fg = C.yellow.bright },
+    RenameBorder = { link = 'FloatBorder' },
 
     DiagnosticPos = { fg = C.fg },
     DiagnosticWord = { fg = C.fg },
     DiagnosticSource = { fg = C.gray4 },
-    DiagnosticNormal = { link = 'SagaNormal' },
-    DiagnosticShowBorder = { link = 'SagaBorder' },
+    DiagnosticNormal = { link = 'NormalFloat' },
+    DiagnosticShowNormal = { link = 'NormalFloat' },
+    DiagnosticShowBorder = { link = 'FloatBorder' },
+    DiagnosticBorder = { link = 'FloatBorder' },
 }

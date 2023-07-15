@@ -20,10 +20,5 @@ return {
     DapUIFloatNormal = { bg = C.bg },
     DapUILineNumber = { fg = C.green.bright },
 
-    -- ???
-    DapUIBreakpointsInfo = { fg = C.red.bright },
-    DapUIBreakpointsLine = { fg = C.red.bright },
-    DapUIBreakpointsPath = { fg = C.red.bright },
-    DapUIBreakpointsCurrentLine = { fg = C.red.bright },
-    DapUIBreakpointsDisabledLine = { fg = C.red.bright },
+    DapBreakPoint = { fg = C.red.bright },
 }

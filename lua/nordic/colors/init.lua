@@ -15,7 +15,7 @@ function C.extend_palette()
 
     -- Blacks
     C.black0 = C.black
-    C.black1 = U.blend(C.black, C.gray0, 0.6)
+    C.black1 = U.blend(C.black, C.gray0, 0.55)
 
     -- Swap background
     if O.swap_backgrounds then

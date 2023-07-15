@@ -21,7 +21,7 @@ return {
 
     Title = { fg = C.yellow.base },
 
-    Builtin = { fg = C.blue0, italic = true },
+    Builtin = { fg = C.blue0 },
 
     Identifier = { fg = C.fg }, -- (preferred) any variable name
     Function = { fg = C.blue2 }, -- function name (also: methods for classes)
@@ -31,12 +31,12 @@ return {
     Conditional = { link = 'Keyword' }, --  if, then, else, endif, switch, etc.
     Repeat = { link = 'Keyword' }, --   for, do, while, etc.
     Label = { link = 'Keyword' }, --    case, default, etc.
-    Exception = { link = 'Keyword' }, --  try, catch, throw
     StorageClass = { link = 'Keyword' }, -- static, register, volatile, etc.
 
     Operator = { fg = C.fg }, -- "sizeof", "+", "*", etc.
 
     Macro = { fg = C.red.base }, --    same as Define
+    Exception = { link = 'Macro' }, --  try, catch, throw
     PreProc = { link = 'Macro' }, -- (preferred) generic Preprocessor
     Include = { link = 'Macro' }, --  preprocessor #include
     Define = { link = 'Macro' }, --   preprocessor #define
