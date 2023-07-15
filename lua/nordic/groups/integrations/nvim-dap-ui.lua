@@ -19,6 +19,4 @@ return {
     DapUIFloatBorder = { fg = C.border_nb, bg = C.bg },
     DapUIFloatNormal = { bg = C.bg },
     DapUILineNumber = { fg = C.green.bright },
-
-    DapBreakPoint = { fg = C.red.bright },
 }
