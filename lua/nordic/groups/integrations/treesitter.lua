@@ -1,7 +1,6 @@
 -- Notes and format from @folke/tokyonight.nvim.
 
 local C = require 'nordic.colors'
-local O = require('nordic.config').options
 
 return {
 
@@ -111,7 +110,7 @@ return {
     ['@property'] = { fg = C.cyan.base },
     ['@property.cpp'] = { fg = C.cyan.base },
 
-    ['@namespace'] = { fg = C.yellow.dim, italic = true },
+    ['@namespace'] = { fg = C.yellow.dim },
     ['@type'] = { link = 'Type' },
     ['@type.builtin'] = { link = 'Type' },
     ['@type.definition'] = { link = 'Type' },

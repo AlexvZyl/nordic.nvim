@@ -4,7 +4,6 @@ local C = require 'nordic.config'
 local M = {}
 
 M.integrations = {
-    'bufferline',
     'nvim-dap-ui',
     'nvim-dap',
     'dashboard',
