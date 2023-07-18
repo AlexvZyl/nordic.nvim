@@ -30,7 +30,7 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 
 # 🎨 Palette
 
-TODO
+For the list of colors/palette, see [this file](https://github.com/AlexvZyl/nordic.nvim/blob/dev/lua/nordic/colors/nordic.lua).  Some extra colors and use cases are generated in [this file](https://github.com/AlexvZyl/nordic.nvim/blob/dev/lua/nordic/colors/init.lua).
 
 # 📦 Installation
 
