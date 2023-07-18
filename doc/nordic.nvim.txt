@@ -45,9 +45,9 @@ Dashboard ~
 3. 🎨 Palette                                     *nordic.nvim-🎨-palette*
 
 For the list of colors/palette, see this file
-<https://github.com/AlexvZyl/nordic.nvim/blob/dev/lua/nordic/colors/nordic.lua>.
+<https://github.com/AlexvZyl/nordic.nvim/blob/main/lua/nordic/colors/nordic.lua>.
 Some extra colors and use cases are generated in this file
-<https://github.com/AlexvZyl/nordic.nvim/blob/dev/lua/nordic/colors/init.lua>.
+<https://github.com/AlexvZyl/nordic.nvim/blob/main/lua/nordic/colors/init.lua>.
 
 
 ==============================================================================
