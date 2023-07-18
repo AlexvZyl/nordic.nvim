@@ -3,7 +3,6 @@
 local C = require 'nordic.colors'
 
 return {
-
     DiffAdd = { bg = C.diff.add, bold = true }, -- diff mode: Added line |diff.txt|
     DiffChange = { bg = C.diff.change0 }, -- diff mode: Changed line |diff.txt|
     DiffDelete = { bg = C.diff.delete, bold = true }, -- diff mode: Deleted line |diff.txt|
