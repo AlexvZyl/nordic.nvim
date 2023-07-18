@@ -72,7 +72,7 @@ return {
     qfFileName = { fg = C.blue1 },
 
     htmlH1 = { fg = C.yellow.base, bold = true },
-    htmlH2 = { fg = C.orange.base, bold = true },
+    htmlH2 = { fg = C.orange.base },
 
     Link = { fg = C.blue1, underline = true },
     CodeBlock = { bg = C.black1, fg = C.fg },
