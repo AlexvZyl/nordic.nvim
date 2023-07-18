@@ -71,16 +71,18 @@ return {
     htmlH1 = { fg = C.yellow.base, bold = true },
     htmlH2 = { fg = C.orange.base, bold = true },
 
-    mkdHeading = { fg = C.yellow.base, bold = true },
-    mkdCode = { bg = C.black1, fg = C.fg },
-    mkdCodeDelimiter = { bg = C.black1, fg = C.fg },
+    CodeBlock = { bg = C.black1, fg = C.fg },
+
+    mkdHeading = { link = 'htmlH1' },
+    mkdCode = { link = 'CodeBlock' },
+    mkdCodeDelimiter = { link = 'CodeBlock' },
     mkdCodeStart = { fg = C.cyan.base, bold = true },
     mkdCodeEnd = { fg = C.cyan.base, bold = true },
     mkdLink = { fg = C.blue1, underline = true },
 
     markdownHeadingDelimiter = { link = 'mkdHeading' },
-    markdownCode = { link = 'mkdCode' },
-    markdownCodeBlock = { link = 'mkdCode' },
+    markdownCode = { link = 'CodeBlock' },
+    markdownCodeBlock = { link = 'CodeBlock' },
     markdownH1 = { link = 'htmlH1' },
     markdownH2 = { link = 'htmlH2' },
     markdownLinkText = { link = 'mkdLink' },
