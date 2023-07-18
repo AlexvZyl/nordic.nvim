@@ -16,6 +16,7 @@ function C.extend_palette()
     -- Blacks
     C.black0 = C.black
     C.black1 = U.blend(C.black, C.gray0, 0.6)
+    C.black2 = U.blend(C.black, C.gray0, 0.2)
 
     -- Swap background
     if O.swap_backgrounds then
@@ -85,6 +86,8 @@ function C.extend_palette()
         C.bg_highlight = U.blend(C.gray1, C.bg, O.cursorline.blend)
         C.bg_visual = C.bg_highlight
     end
+
+    C = O.on_palette(C)
 end
 
 return C

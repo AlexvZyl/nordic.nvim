@@ -4,5 +4,5 @@ return {
 
     IndentBlanklineChar = { fg = C.gray1 },
     IndentBlanklineContextChar = { fg = C.gray2 },
-    IndentBlanklineContextStart = {},
+    IndentBlanklineContextStart = { link = 'IndentBlanklineContextChar' },
 }

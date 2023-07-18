@@ -97,6 +97,8 @@ Nordic will use the default values, unless `setup` is called.  Below is the defa
 
 ```lua
 require 'nordic' .setup {
+    -- This callback can be used to override the colors used in the palette.
+    on_palette = function(palette) return palette end,
     -- Enable bold keywords.
     bold_keywords = false,
     -- Enable italic comments.
@@ -111,9 +113,9 @@ require 'nordic' .setup {
     swap_backgrounds = false,
     -- Override the styling of any highlight group.
     override = {},
-    -- Cursorline options.
+    -- Cursorline options.  Also includes visual/selection.
     cursorline = {
-        -- Enable bold font in cursorline.
+        -- Bold font in cursorline.
         bold = false,
         -- Bold cursorline number.
         bold_number = true,
