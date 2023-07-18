@@ -136,6 +136,10 @@ require 'nordic' .setup {
         -- Dims the backdrop when using leap.
         dim_backdrop = false,
     },
+    ts_context = {
+        -- Enables dark background for treesitter-context window
+        dark_background = true,
+    }
 }
 ```
 
@@ -161,9 +165,7 @@ require 'nordic' .setup {
 
 For the list of supported plugins, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/lua/nordic/groups/integrations).
 
-
 # 💻 Supported Platforms
-
 
 For the list of supported platforms, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/platforms).
 
