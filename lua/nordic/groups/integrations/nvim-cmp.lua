@@ -42,5 +42,5 @@ return {
     CmpItemKindTabNine = { fg = C.red.base },
     CmpItemKindCopilot = { fg = C.red.base },
 
-    SpecialCmpBorder = { fg = C.bg, bg = C.bg_float }
+    SpecialCmpBorder = { fg = C.bg, bg = C.bg_float },
 }

@@ -5,8 +5,8 @@ local O = require('nordic.config').options
 
 return {
 
-    -- These groups are not listed as default vim groups, but they 
-    -- are defacto standard group names for syntax highlighting.  Commented 
+    -- These groups are not listed as default vim groups, but they
+    -- are defacto standard group names for syntax highlighting.  Commented
     -- out groups should chain up to their "preferred" group by default.
     -- Uncomment and edit if you want more specific syntax highlighting.
 
@@ -99,5 +99,5 @@ return {
     ['helpCommand'] = { bg = C.black, fg = C.blue1 },
 
     debugPC = { bg = C.bg_sidebar }, -- used for highlighting the current line in terminal-debug
-    debugBreakpoint = { fg = C.red.bright  }, -- used for breakpoint colors in terminal-debug
+    debugBreakpoint = { fg = C.red.bright }, -- used for breakpoint colors in terminal-debug
 }
