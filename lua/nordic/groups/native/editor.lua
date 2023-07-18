@@ -4,7 +4,6 @@ local C = require 'nordic.colors'
 local O = require('nordic.config').options
 
 local groups = {
-
     Comment = { fg = C.comment, italic = O.italic_comments }, -- any comment
     ColorColumn = { bg = C.bg_visual }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = C.gray3 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
@@ -53,6 +52,7 @@ local groups = {
 
     NormalFloat = { fg = C.fg_float, bg = C.bg_float }, -- Normal text in floating windows.
     FloatBorder = { fg = C.border_float_fg, bg = C.border_float_bg },
+    FloatTitle = { fg = C.yellow.base },
 
     Pmenu = { bg = C.bg_popup }, -- Popup menu: normal item.
     PmenuSel = { bg = C.bg_selected }, -- Popup menu: selected item.
@@ -89,7 +89,8 @@ local groups = {
     WarningMsg = { fg = C.warning }, -- warning messages
     Whitespace = { fg = C.gray4 }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu = { bg = C.bg_visual }, -- current match in 'wildmenu' completion
-    WinBar = { bg = C.bg_dark, fg = C.fg },
+
+    WinBar = { bg = C.bg_dark, fg = C.gray5 },
     WinBarNC = { bg = C.bg_dark, fg = C.gray4 },
 }
 
