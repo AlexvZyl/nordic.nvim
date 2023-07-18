@@ -17,6 +17,9 @@ return {
     None = { fg = C.none, bg = C.none },
     String = { fg = C.green.base }, --   a string constant: "this is a string"
     Character = { fg = C.green.base }, --  a character constant: 'c', '\n'
+    Variable = { fg = C.fg },
+    Namespace = { fg = C.yellow.dim },
+    Field = { fg = C.cyan.base },
 
     Title = { fg = C.yellow.base },
 
@@ -71,6 +74,7 @@ return {
     htmlH1 = { fg = C.yellow.base, bold = true },
     htmlH2 = { fg = C.orange.base, bold = true },
 
+    Link = { fg = C.blue1, underline = true },
     CodeBlock = { bg = C.black1, fg = C.fg },
 
     mkdHeading = { link = 'htmlH1' },
@@ -78,14 +82,14 @@ return {
     mkdCodeDelimiter = { link = 'CodeBlock' },
     mkdCodeStart = { fg = C.cyan.base, bold = true },
     mkdCodeEnd = { fg = C.cyan.base, bold = true },
-    mkdLink = { fg = C.blue1, underline = true },
+    mkdLink = { link = 'Link' },
 
     markdownHeadingDelimiter = { link = 'mkdHeading' },
     markdownCode = { link = 'CodeBlock' },
     markdownCodeBlock = { link = 'CodeBlock' },
     markdownH1 = { link = 'htmlH1' },
     markdownH2 = { link = 'htmlH2' },
-    markdownLinkText = { link = 'mkdLink' },
+    markdownLinkText = { link = 'Link' },
 
     ['@punctuation.special.markdown'] = { fg = C.orange.base, bold = true },
     ['@text.todo.unchecked'] = { fg = C.blue1 }, -- For brackets and parens.
