@@ -1,14 +1,14 @@
-local c = require 'nordic.colors'
-local o = require('nordic.config').options
+local C = require 'nordic.colors'
+local O = require('nordic.config').options
 
 local bg
 local fg
-if o.ts_context.dark_background then
-    bg = c.black
-    fg = c.gray1
+if O.ts_context.dark_background then
+    bg = C.black
+    fg = C.gray1
 else
-    bg = c.gray1
-    fg = c.gray4
+    bg = C.gray1
+    fg = C.gray4
 end
 
 return {

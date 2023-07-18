@@ -22,5 +22,6 @@ config.cursorline.blend = 0
 config.noice.style = 'classic'
 config.telescope.style = 'classic'
 config.leap.dim_backdrop = true
+config.ts_context.dark_background = false
 
 load(config)

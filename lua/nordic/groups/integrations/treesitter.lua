@@ -32,7 +32,7 @@ return {
     --- Keywords
     ['@keyword'] = { link = 'Keyword' }, -- For keywords that don't fall in previous categories.
     ['@keyword.coroutine'] = { link = 'Macro' }, -- For keywords related to coroutines.
-    ['@keyword.function'] = { link = 'Function' }, -- For keywords used to define a fuction.
+    ['@keyword.function'] = { link = 'Keyword' }, -- For keywords used to define a fuction.
     ['@label'] = { link = 'Keyword' }, -- For labels: `label:` in C and `:label:` in Lua.
 
     --- Types
