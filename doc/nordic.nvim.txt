@@ -1,4 +1,4 @@
-*nordic.nvim.txt*           For NVIM v0.8.0          Last change: 2023 July 12
+*nordic.nvim.txt*           For NVIM v0.8.0          Last change: 2023 July 18
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -44,7 +44,10 @@ Dashboard ~
 ==============================================================================
 3. 🎨 Palette                                     *nordic.nvim-🎨-palette*
 
-TODO
+For the list of colors/palette, see this file
+<https://github.com/AlexvZyl/nordic.nvim/blob/dev/lua/nordic/colors/nordic.lua>.
+Some extra colors and use cases are generated in this file
+<https://github.com/AlexvZyl/nordic.nvim/blob/dev/lua/nordic/colors/init.lua>.
 
 
 ==============================================================================
