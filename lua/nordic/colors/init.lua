@@ -1,74 +1,93 @@
-local u = require 'nordic.utils'
-local o = require('nordic.config').options
-local palette = require('nordic.colors.' .. o.theme)
+local U = require 'nordic.utils'
+local O = require('nordic.config').options
+local C = require 'nordic.colors.nordic'
 
--- Add these for international convenience :)
-palette.grey0 = palette.gray0
-palette.grey1 = palette.gray1
-palette.grey2 = palette.gray2
-palette.grey3 = palette.gray3
-palette.grey4 = palette.gray4
-palette.grey5 = palette.gray5
+function C.extend_palette()
+    local diff_blend = 0.2
 
--- Now define some use cases.
--- Some of the format is from @folke/tokyonight.nvim.
+    -- Add these for international convenience :)
+    C.grey0 = C.gray0
+    C.grey1 = C.gray1
+    C.grey2 = C.gray2
+    C.grey3 = C.gray3
+    C.grey4 = C.gray4
+    C.grey5 = C.gray5
 
--- Backgrounds.
-palette.bg = palette.gray0
-palette.bg_dark = palette.black
-palette.bg_highlight = palette.black
+    -- Blacks
+    C.black0 = C.black
+    C.black1 = U.blend(C.black, C.gray0, 0.6)
+    C.black2 = U.blend(C.black, C.gray0, 0.2)
 
-palette.bg_highlight = u.blend(palette.black, palette.bg, 0.5)
-palette.bg_visual = palette.bg_highlight
-palette.bg_sidebar = palette.bg
-palette.bg_float = palette.bg
-palette.bg_popup = palette.bg
-palette.bg_search = palette.gray1
-palette.bg_statusline = palette.bg_dark
-palette.bg_selected = palette.gray1
-palette.bg_fold = palette.gray2
+    -- Swap background
+    if O.swap_backgrounds then
+        local gray0 = C.gray0
+        C.gray0 = C.black1
+        C.black1 = gray0
+    end
 
--- Foregrounds.
-palette.fg = palette.white0
-palette.fg_bright = palette.white1
-palette.fg_dark = palette.white0
-palette.fg_sidebar = palette.gray2
-palette.fg_fold = palette.fg
-palette.fg_float = palette.fg_bright
-palette.fg_selected = palette.fg_bright
+    -- Define some use cases.
+    -- Some of the format is from @folke/tokyonight.nvim.
 
--- Borders.
-palette.border = palette.black
-palette.border_float = palette.white1
-palette.border_nb = palette.orange.base
+    -- Backgrounds
+    C.bg = C.gray0
+    C.bg_dark = C.black0
 
--- Diffs.
-local diff_blend = 0.2
-palette.diff = {}
-palette.diff.change0 = u.blend(palette.blue1, palette.bg, 0.05)
-palette.diff.change1 = u.blend(palette.blue2, palette.bg, diff_blend)
-palette.diff.add = u.blend(palette.green.base, palette.bg, diff_blend)
-palette.diff.delete = u.blend(palette.red.base, palette.bg, diff_blend)
+    C.bg_highlight = C.bg_dark
+    C.bg_highlight = U.blend(C.bg_dark, C.bg, O.cursorline.blend)
+    C.bg_visual = C.bg_highlight
+    C.bg_sidebar = C.bg
+    C.bg_float = C.black1
+    C.bg_popup = C.black1
+    C.bg_search = C.gray1
+    C.bg_statusline = C.bg_dark
+    C.bg_selected = C.gray1
+    C.bg_fold = C.gray2
 
--- Git.
-palette.git = {}
-palette.git.add = palette.green.base
-palette.git.delete = palette.red.base
-palette.git.change = palette.blue1
+    -- Foregrounds
+    C.fg = C.white0
+    C.fg_bright = C.white1
+    C.fg_dark = C.white0
+    C.fg_sidebar = C.gray2
+    C.fg_fold = C.fg
+    C.fg_float = C.fg
+    C.fg_selected = C.fg_bright
 
--- Diagnostics.
-palette.error = palette.red.bright
-palette.warn = palette.yellow.base
-palette.warning = palette.warn
-palette.hint = palette.green.bright
-palette.info = palette.blue2
+    -- Borders
+    C.border_fg = (O.bright_border and C.white0) or C.black0
+    C.border_bg = C.bg
+    C.border_float_fg = C.border_fg
+    C.border_float_bg = C.bg_popup
 
--- Misc.
-palette.comment = palette.gray4
+    -- Diffs
+    C.diff = {}
+    C.diff.change0 = U.blend(C.blue1, C.bg, 0.05)
+    C.diff.change1 = U.blend(C.blue2, C.bg, diff_blend)
+    C.diff.add = U.blend(C.green.base, C.bg, diff_blend)
+    C.diff.delete = U.blend(C.red.base, C.bg, diff_blend)
 
-if o.cursorline.theme == 'light' then
-    palette.bg_highlight = u.blend(palette.gray1, palette.bg, 0.5)
-    palette.bg_visual = palette.bg_highlight
+    -- Git
+    C.git = {}
+    C.git.add = C.green.base
+    C.git.delete = C.red.base
+    C.git.change = C.blue1
+
+    -- Diagnostics
+    C.error = C.red.bright
+    C.warn = C.yellow.base
+    C.warning = C.warn
+    C.hint = C.green.bright
+    C.info = C.blue2
+
+    -- Misc
+    C.comment = C.gray4
+
+    -- Cursorline
+    if O.cursorline.theme == 'light' then
+        C.bg_highlight = U.blend(C.gray1, C.bg, O.cursorline.blend)
+        C.bg_visual = C.bg_highlight
+    end
+
+    C = O.on_palette(C)
 end
 
-return palette
+return C

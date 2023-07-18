@@ -1,6 +1,8 @@
 -- The Nord palette: https://www.nordtheme.com/.
+-- This file has a bunch of added colors.
+-- Some of the colors are from @nightfox.nvim.
 
-local o = require('nordic.config').options
+local O = require('nordic.config').options
 
 local palette = {
 
@@ -23,7 +25,6 @@ local palette = {
     gray5 = '#60728A',
 
     -- Dim white.
-    -- From @nightfox.nvim.
     white0 = '#BBC3D4',
 
     -- Snow storm.
@@ -77,7 +78,8 @@ local palette = {
     },
 }
 
--- Change palette based on config.
-if o.nordic.reduced_blue then palette.white0 = '#C0C8D8' end
+-- `white0` is used as the default fg, and has a blue tint.
+-- Reduce that amount of tint.
+if O.reduced_blue then palette.white0 = '#C0C8D8' end
 
 return palette

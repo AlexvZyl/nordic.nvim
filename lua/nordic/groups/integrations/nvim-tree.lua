@@ -1,40 +1,33 @@
-local c = require 'nordic.colors'
-local o = require('nordic.config').options
+local C = require 'nordic.colors'
+local O = require('nordic.config').options
 
 return {
-    -- Normals.
-    NvimTreeNormal = { fg = c.fg, bg = o.transparent_bg and c.none or c.black },
-    NvimTreeNormalNC = { fg = c.fg, bg = o.transparent_bg and c.none or c.black },
 
-    -- Folders.
-    NvimTreeFolderName = { fg = c.blue1 },
-    NvimTreeOpenedFolderName = { fg = c.blue1 },
-    NvimTreeEmptyFolderName = { fg = c.blue1 },
-    NvimTreeFolderIcon = { fg = c.yellow.dim },
+    NvimTreeNormal = { fg = C.fg, bg = O.transparent_bg and C.none or C.black },
+    NvimTreeNormalNC = { fg = C.fg, bg = O.transparent_bg and C.none or C.black },
 
-    -- Files.
-    NvimTreeOpenedFile = { bg = c.black },
-    NvimTreeOpenedName = { fg = c.blue1 },
-    NvimTreeSpecialFile = { fg = c.magenta.bright },
-    NvimTreeImageFile = { fg = c.fg_sidebar },
+    NvimTreeFolderName = { fg = C.blue1 },
+    NvimTreeOpenedFolderName = { fg = C.blue1 },
+    NvimTreeEmptyFolderName = { fg = C.blue1 },
+    NvimTreeFolderIcon = { fg = C.yellow.dim },
 
-    -- Root.
-    NvimTreeRootFolder = { fg = c.yellow.base, bold = true, underline = true },
+    NvimTreeOpenedFile = { bg = C.black },
+    NvimTreeOpenedName = { fg = C.blue1 },
+    NvimTreeSpecialFile = { fg = C.magenta.bright },
+    NvimTreeImageFile = { fg = C.fg_sidebar },
 
-    -- Git.
-    NvimTreeGitDirty = { fg = c.gray2 },
-    NvimTreeGitNew = { fg = c.gray2 },
-    NvimTreeGitDeleted = { fg = c.gray2 },
-    NvimTreeGitStaged = { fg = c.gray2 },
+    NvimTreeRootFolder = { fg = C.gray2 },
 
-    -- UI.
-    NvimTreeIndentMarker = { fg = c.gray1 },
-    NvimTreeWinSeparator = { fg = c.bg_sidebar, bg = o.transparent_bg and c.none or c.bg_sidebar },
+    NvimTreeGitDirty = { fg = C.gray2 },
+    NvimTreeGitNew = { fg = C.gray2 },
+    NvimTreeGitDeleted = { fg = C.gray2 },
+    NvimTreeGitStaged = { fg = C.gray2 },
 
-    -- Cursor.
-    NvimTreeCursorLine = { bg = c.gray1 },
-    NvimTreeCursor = { bg = c.none, fg = c.none },
+    NvimTreeIndentMarker = { fg = C.gray1 },
+    NvimTreeWinSeparator = { fg = C.bg_dark, bg = O.transparent_bg and C.none or C.bg_dark },
 
-    -- Misc.
-    NvimTreeSymlink = { fg = c.blue1 },
+    NvimTreeCursorLine = { bg = C.gray1 },
+    NvimTreeCursor = { bg = C.none, fg = C.none },
+
+    NvimTreeSymlink = { fg = C.blue1 },
 }

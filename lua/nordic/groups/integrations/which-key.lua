@@ -1,27 +1,12 @@
-local c = require 'nordic.colors'
+local C = require 'nordic.colors'
 
 return {
 
-    WhichKey = {
-        fg = c.yellow.base,
-    },
-
-    WhichKeyFloat = {
-        bg = c.black,
-    },
-
-    WhichKeyDesc = {
-        fg = c.white0,
-    },
-
-    WhichKeyGroup = {
-        fg = c.orange.bright,
-        bold = true,
-    },
-
-    WhichKeyBorder = {
-        fg = c.black,
-    },
+    WhichKey = { fg = C.yellow.base },
+    WhichKeyFloat = { bg = C.black1 },
+    WhichKeyDesc = { fg = C.white0 },
+    WhichKeyGroup = { fg = C.orange.bright, bold = true },
+    WhichKeyBorder = { fg = C.black, bg = C.black1 },
 
     -- TODO: Unsure.
     WhichKeySeperator = {},

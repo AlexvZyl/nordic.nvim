@@ -8,24 +8,14 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 
 # 📷 Showcase
 
-*Nvim-tree, lsp, bar-bar, lualine and treesitter:*
-![image](https://user-images.githubusercontent.com/81622310/219347174-035d2b63-7645-44a3-be15-119c829add90.png)
-
-*Kitty and BTop++:*
-![image](https://user-images.githubusercontent.com/81622310/217228212-619a8735-d5be-4c83-837d-3ab0cd4a33c0.png)
-
-<details>
-<summary>[WIP] Mixed with onedark</summary>
-
-![image](https://user-images.githubusercontent.com/81622310/219348746-ab68f109-5cf5-42dd-8c72-48c6976231df.png)
-
-</details>
+*From my dotfiles:*
+![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/cf90906c-22b6-45d9-830d-b4d8b9919714)
 
 <details>
 <summary>Telescope</summary>
 
 *Flat:*
-![image](https://user-images.githubusercontent.com/81622310/219347783-017a0e5a-f38d-4eb0-9d7c-29fc90527fc6.png)
+![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/fd920834-125b-4566-be2c-e32e26b6f969)
 *Classic:*
 ![image](https://user-images.githubusercontent.com/81622310/219347870-05786199-a095-4602-a958-9db90b8acde3.png)
 
@@ -34,41 +24,13 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 <details>
 <summary>Dashboard</summary>
 
-![image](https://user-images.githubusercontent.com/81622310/219345149-4385bb9b-54de-488d-b0f3-a846b723ff1a.png)
+![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/fe2abaff-697f-4eed-92f1-7c8241990e10)
 
 </details>
-
-<details>
-<summary>Diffview</summary>
-
-![image](https://user-images.githubusercontent.com/81622310/219347704-376d040d-6e30-4918-9dd1-06b3cd29035d.png)
-
-</details>
-
 
 # 🎨 Palette
 
-TODO
-
-# 📟 Terminal Emulators
-
-Properly rendering fonts can be a complex problem and, as expected, different terminal emulators (TE) have different results.  I personally use [Kitty](https://github.com/kovidgoyal/kitty) due to it having the best font rendering (imo).  So if you use a different TE and the colors seem slightly inconsistent, that might be why.
-
-<details>
-<summary>Comparison</summary>
-
-</br>
-
-*[Kitty](https://github.com/kovidgoyal/kitty):*  
-![image](https://user-images.githubusercontent.com/81622310/217228588-ca059166-84b3-416c-a372-e547e57f8f3e.png)
-
-*[Alacritty](https://github.com/alacritty/alacritty):*  
-![image](https://user-images.githubusercontent.com/81622310/216267437-665ba1ca-02df-46c3-a84b-5ef76736164a.png)
-
-*[Neovide](https://github.com/neovide/neovide):*  
-![image](https://user-images.githubusercontent.com/81622310/216267855-14502471-c761-4875-be34-3e43968aa39b.png)
-
-</details>
+For the list of colors/palette, see [this file](https://github.com/AlexvZyl/nordic.nvim/blob/main/lua/nordic/colors/nordic.lua).  Some extra colors and use cases are generated in [this file](https://github.com/AlexvZyl/nordic.nvim/blob/main/lua/nordic/colors/init.lua).
 
 # 📦 Installation
 
@@ -135,43 +97,36 @@ Nordic will use the default values, unless `setup` is called.  Below is the defa
 
 ```lua
 require 'nordic' .setup {
-    -- Available themes: 'nordic', 'onedark'.
-    -- Onedark is WIP.
-    theme = 'nordic',
+    -- This callback can be used to override the colors used in the palette.
+    on_palette = function(palette) return palette end,
     -- Enable bold keywords.
     bold_keywords = false,
     -- Enable italic comments.
     italic_comments = true,
     -- Enable general editor background transparency.
     transparent_bg = false,
-    -- Nordic specific options.
-    -- Set all to false to use original Nord colors.
-    -- Adjusts some colors to make the theme a bit nicer (imo).
-    nordic = {
-        -- Reduce the overall amount of blue in the theme (diverges from base Nord).
-        reduced_blue = true,
-    },
-    -- Onedark specific options.
-    -- Set all to false to keep original onedark colors.
-    -- Adjusts some colors to make the theme a bit nicer (imo).
-    -- WIP.
-    onedark = {
-        -- Brighten the whites to fit the theme better.
-        brighter_whites = true,
-    },
+    -- Enable brighter float border.
+    bright_border = false,
+    -- Reduce the overall amount of blue in the theme (diverges from base Nord).
+    reduced_blue = true,
+    -- Swap the dark background with the normal one.
+    swap_backgrounds = false,
     -- Override the styling of any highlight group.
     override = {},
+    -- Cursorline options.  Also includes visual/selection.
     cursorline = {
-        -- Enable bold font in cursorline.
+        -- Bold font in cursorline.
         bold = false,
+        -- Bold cursorline number.
+        bold_number = true,
         -- Avialable styles: 'dark', 'light'.
-        theme = 'light',
-        -- Hide the cursorline when the window is not focused.
-        hide_unfocused = true,
+        theme = 'dark',
+        -- Blending the cursorline bg with the buffer bg.
+        blend = 0.7,
     },
     noice = {
         -- Available styles: `classic`, `flat`.
-        style = 'classic',
+        style = 'flat',
     },
     telescope = {
         -- Available styles: `classic`, `flat`.
@@ -191,54 +146,28 @@ require 'nordic' .setup {
 An example of overriding the `TelescopePromptTitle` colors:
 
 ```lua
-local palette = require 'nordic.colors' .palette
+local palette = require 'nordic.colors'
 require 'nordic' .setup {
     override = {
         TelescopePromptTitle = {
-	    fg = palette.red.bright,
+            fg = palette.red.bright,
             bg = palette.green.base,
             italic = true,
-        },
+            underline = true,
+            sp = palette.yellow.dim,
+            undercurl = false
+        }
     }
 }
 ```
 
 # 🗒️ Supported Plugins
 
-This is the list of currently supported plugins.  If you want other plugins to be supported either open an issue or submit a PR!
-
-- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
-- [barbar.nvim](https://github.com/romgrk/barbar.nvim)
-- [nvim-dap](https://github.com/mfussenegger/nvim-dap)
-- [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
-- [dashboard-nvim](https://github.com/glepnir/dashboard-nvim)
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [leap.nvim](https://github.com/ggandor/leap.nvim)
-- [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
-- [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
-- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
-- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [trouble.nvim](https://github.com/folke/trouble.nvim)
-- [which-key.nvim](https://github.com/folke/which-key.nvim)
-- [diffview.nvim](https://github.com/sindrets/diffview.nvim)
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- [nvim-notify](https://github.com/rcarriga/nvim-notify)
-- [vimtex](https://github.com/lervag/vimtex)
-- [noice.nvim](https://github.com/folke/noice.nvim)
-- [fidget.nvim](https://github.com/j-hui/fidget.nvim)
-- [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
+For the list of supported plugins, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/lua/nordic/groups/integrations).
 
 # 💻 Supported Platforms
 
-The list of currently supported platforms.
-
-- [kitty](https://github.com/kovidgoyal/kitty)
-- [iTerm2](https://github.com/gnachman/iTerm2)
-- [Windows Terminal](https://github.com/microsoft/terminal)
-- [wezterm](https://github.com/wez/wezterm)
-- [foot](https://codeberg.org/dnkl/foot)
+For the list of supported platforms, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/platforms).
 
 # 🎙️ Acknowledgements
 
