@@ -45,7 +45,7 @@ local defaults = {
     ts_context = {
         -- Enables dark background for treesitter-context window
         dark_background = true,
-    }
+    },
 }
 
 M.options = defaults
