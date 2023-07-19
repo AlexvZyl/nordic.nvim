@@ -53,7 +53,7 @@ if O.telescope.style == 'flat' then
     groups.TelescopeMultiSelection = { bg = C.black1 }
     groups.TelescopePromptPrefix = { bg = C.black2, fg = C.orange.bright }
 
-    groups.TelescopePreviewLine = { bg = C.gray0 }
+    groups.TelescopePreviewLine = { bg = C.black2 }
 
 end
 
