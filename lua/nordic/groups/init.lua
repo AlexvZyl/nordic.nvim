@@ -23,7 +23,7 @@ M.integrations = {
     'vimtex',
     'noice',
     'lazy',
-    'lsp_signature'
+    'lsp_signature',
 }
 
 M.native = {

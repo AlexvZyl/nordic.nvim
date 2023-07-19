@@ -54,7 +54,6 @@ if O.telescope.style == 'flat' then
     groups.TelescopePromptPrefix = { bg = C.black2, fg = C.orange.bright }
 
     groups.TelescopePreviewLine = { bg = C.gray1 }
-
 end
 
 return groups
