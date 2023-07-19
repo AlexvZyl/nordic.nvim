@@ -42,7 +42,7 @@ return {
     Define = { link = 'Macro' }, --   preprocessor #define
     PreCondit = { link = 'Macro' }, --  preprocessor #if, #else, #endif, etc.
 
-    Comment = { fg = C.comment, italic = O.italic_comments },
+    Comment = { fg = C.gray4, italic = O.italic_comments },
 
     Type = { fg = C.yellow.base }, -- (preferred) int, long, char, etc.
     StorageClass = { link = 'Keyword' }, -- static, register, volatile, etc.
@@ -72,7 +72,7 @@ return {
     qfFileName = { fg = C.blue1 },
 
     htmlH1 = { fg = C.yellow.base, bold = true },
-    htmlH2 = { fg = C.orange.base, bold = true },
+    htmlH2 = { fg = C.orange.base },
 
     Link = { fg = C.blue1, underline = true },
     CodeBlock = { bg = C.black1, fg = C.fg },

@@ -22,6 +22,8 @@ M.integrations = {
     'nvim-notify',
     'vimtex',
     'noice',
+    'lazy',
+    'lsp_signature'
 }
 
 M.native = {

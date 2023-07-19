@@ -9,8 +9,8 @@ return {
     -- As of writing, tree-sitter support is a WIP, group names may change.
 
     --- Misc
-    -- TODO:
-    ['@comment.documentation'] = {},
+    ['@comment'] = { link = 'Comment' },
+    ['@comment.documentation'] = { link = 'Comment' },
     ['@operator'] = { fg = C.fg }, -- For any operator: `+`, but also `->` and `*` in C.
 
     --- Punctuation
@@ -45,6 +45,7 @@ return {
     ['@variable.builtin'] = { link = 'Builtin' }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     --- Text
+    ['@spell'] = { },
     -- ["@text.literal.markdown"] = { },
     ['@text.literal.markdown_inline'] = { bg = C.black2, fg = C.fg },
     ['@text.reference'] = { link = 'Link' },
@@ -95,7 +96,6 @@ return {
     ['@lsp.typemod.variable.globalScope'] = { link = 'Macro' },
 
     -- Things that seems to be missing?
-    ['@comment'] = { link = 'Comment' },
     ['@text.todo'] = { link = 'Todo' },
     ['@text.note'] = { link = 'Note' },
     ['@string.special'] = { fg = C.yellow.base }, -- For escape characters within a string.

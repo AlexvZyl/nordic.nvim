@@ -62,9 +62,8 @@ local groups = {
     Question = { fg = C.info }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine = { bg = C.bg_visual, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 
-    Search = { bg = C.bg_search, fg = C.fg }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-    IncSearch = { bg = C.orange.base, fg = C.black }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-
+    Search = { bg = C.black1, fg = C.yellow.bright, bold = true, underline = true }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    IncSearch = { bg = C.yellow.base, fg = C.black0, bold = true }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { link = 'IncSearch' },
 
     SpecialKey = { fg = C.gray5 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|

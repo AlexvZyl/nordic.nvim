@@ -18,8 +18,8 @@ function C.extend_palette()
 
     -- Blacks
     C.black0 = C.black
-    C.black1 = U.blend(C.black, C.gray0, 0.6)
-    C.black2 = U.blend(C.black, C.gray0, 0.2)
+    C.black1 = U.blend(C.black, C.gray0, 0.65)
+    C.black2 = U.blend(C.black, C.gray0, 0.25)
 
     -- Swap background
     if O.swap_backgrounds then
@@ -41,9 +41,8 @@ function C.extend_palette()
     C.bg_sidebar = C.bg
     C.bg_float = C.black1
     C.bg_popup = C.black1
-    C.bg_search = C.gray1
     C.bg_statusline = C.bg_dark
-    C.bg_selected = C.gray1
+    C.bg_selected = U.blend(C.gray2, C.black0, 0.4)
     C.bg_fold = C.gray2
 
     -- Foregrounds
@@ -80,9 +79,6 @@ function C.extend_palette()
     C.warning = C.warn
     C.hint = C.green.bright
     C.info = C.blue2
-
-    -- Misc
-    C.comment = C.gray4
 
     -- Cursorline
     if O.cursorline.theme == 'light' then
