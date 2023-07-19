@@ -8,7 +8,7 @@ local groups = {
     TelescopePromptNormal = { bg = C.bg },
     TelescopeResultsNormal = { bg = C.bg },
     TelescopePreviewNormal = { bg = C.bg },
-    TelescopePreviewLine = { bg = C.gray1 },
+    TelescopePreviewLine = { bg = C.gray2 },
 
     TelescopeSelection = { bg = C.bg, fg = C.yellow.bright, bold = false },
     TelescopeSelectionCaret = { fg = C.yellow.bright, bg = C.bg, bold = true },
@@ -53,7 +53,7 @@ if O.telescope.style == 'flat' then
     groups.TelescopeMultiSelection = { bg = C.black1 }
     groups.TelescopePromptPrefix = { bg = C.black2, fg = C.orange.bright }
 
-    groups.TelescopePreviewLine = { bg = C.black2 }
+    groups.TelescopePreviewLine = { bg = C.gray1 }
 
 end
 
