@@ -41,9 +41,8 @@ function C.extend_palette()
     C.bg_sidebar = C.bg
     C.bg_float = C.black1
     C.bg_popup = C.black1
-    C.bg_search = C.gray1
     C.bg_statusline = C.bg_dark
-    C.bg_selected = C.black2
+    C.bg_selected = U.blend(C.gray2, C.black0, 0.4)
     C.bg_fold = C.gray2
 
     -- Foregrounds
