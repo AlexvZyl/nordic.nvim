@@ -43,7 +43,7 @@ function C.extend_palette()
     C.bg_popup = C.black1
     C.bg_search = C.gray1
     C.bg_statusline = C.bg_dark
-    C.bg_selected = C.gray1
+    C.bg_selected = C.black2
     C.bg_fold = C.gray2
 
     -- Foregrounds
