@@ -8,16 +8,26 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 
 # 📷 Showcase
 
-*From my dotfiles:*
+![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/628148ce-6b4e-4bc2-a723-fba65df4eb9e)
+
+**From my dotfiles:**
 ![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/cf90906c-22b6-45d9-830d-b4d8b9919714)
 
 <details>
 <summary>Telescope</summary>
 
-*Flat:*
-![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/fd920834-125b-4566-be2c-e32e26b6f969)
-*Classic:*
+**Flat:**  This looks better with [these border chars](https://github.com/AlexvZyl/.dotfiles/blob/9284a5651d01e7a2598762882f828945cd701697/.config/nvim/lua/alex/utils.lua#L28).
+![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/380b7818-dd61-431f-90cc-98064c66767d)
+
+**Classic:**
 ![image](https://user-images.githubusercontent.com/81622310/219347870-05786199-a095-4602-a958-9db90b8acde3.png)
+
+</details>
+
+<details>
+<summary>Lazy.nvim</summary>
+
+![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/1f8e9474-a51b-4d5f-a3c4-ea478313ad2d)
 
 </details>
 
