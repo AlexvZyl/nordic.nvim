@@ -24,6 +24,7 @@ M.integrations = {
     'noice',
     'lazy',
     'lsp_signature',
+    'ministatusline',
 }
 
 M.native = {
