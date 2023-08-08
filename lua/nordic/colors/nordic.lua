@@ -10,10 +10,13 @@ local palette = {
 
     -- Darker colors.
     -- Not in base Nord.
-    black = '#191C24',
-    -- This color is actually used on their website's dark theme.
-    gray0 = '#242933',
+    black0 = '#191D24',
+    black1 = '#1E222A',
+    black2 = '#222630',
 
+    -- Grays
+    -- This color is used on their website's dark theme.
+    gray0 = '#242933',
     -- Polar Night.
     gray1 = '#2E3440',
     gray2 = '#3B4252',

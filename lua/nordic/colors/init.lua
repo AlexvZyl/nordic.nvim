@@ -3,10 +3,11 @@ local O = require('nordic.config').options
 local C = require 'nordic.colors.nordic'
 
 function C.extend_palette()
-    -- Modify the palette before generating colors.
-    C = O.on_palette(C)
 
     local diff_blend = 0.2
+
+    -- Backwards comp (for now)
+    C.black = C.black0
 
     -- Add these for international convenience :)
     C.grey0 = C.gray0
@@ -15,11 +16,6 @@ function C.extend_palette()
     C.grey3 = C.gray3
     C.grey4 = C.gray4
     C.grey5 = C.gray5
-
-    -- Blacks
-    C.black0 = C.black
-    C.black1 = U.blend(C.black, C.gray0, 0.65)
-    C.black2 = U.blend(C.black, C.gray0, 0.25)
 
     -- Swap background
     if O.swap_backgrounds then
@@ -85,6 +81,9 @@ function C.extend_palette()
         C.bg_highlight = U.blend(C.gray1, C.bg, O.cursorline.blend)
         C.bg_visual = C.bg_highlight
     end
+
+    -- Modify the palette before generating colors.
+    C = O.on_palette(C)
 end
 
 return C
