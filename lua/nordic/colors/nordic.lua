@@ -8,8 +8,8 @@ local palette = {
 
     none = 'NONE',
 
-    -- Darker colors.
-    -- Not in base Nord.
+    -- Blacks. Not in base Nord.
+    deepblack = '#15181E', -- Not really used, but can be useful
     black0 = '#191D24',
     black1 = '#1E222A',
     black2 = '#222630',
