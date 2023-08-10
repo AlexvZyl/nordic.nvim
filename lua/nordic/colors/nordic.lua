@@ -1,6 +1,5 @@
 -- The Nord palette: https://www.nordtheme.com/.
 -- This file has a bunch of added colors.
--- Some of the colors are from @nightfox.nvim.
 
 local O = require('nordic.config').options
 
@@ -53,7 +52,6 @@ local palette = {
     -- Aurora.
     -- These colors are used a lot, so we need variations for them.
     -- Base colors are from original Nord palette.
-    -- Bright & dim from @nightfox.nvim.
     red = {
         base = '#BF616A',
         bright = '#C5727A',
