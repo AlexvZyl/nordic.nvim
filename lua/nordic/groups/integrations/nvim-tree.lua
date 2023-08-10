@@ -3,8 +3,8 @@ local O = require('nordic.config').options
 
 return {
 
-    NvimTreeNormal = { fg = C.fg, bg = O.transparent_bg and C.none or C.black0 },
-    NvimTreeNormalNC = { fg = C.fg, bg = O.transparent_bg and C.none or C.black0 },
+    NvimTreeNormal = { fg = C.fg, bg = O.transparent_bg and C.none or C.gray0 },
+    NvimTreeNormalNC = { fg = C.fg, bg = O.transparent_bg and C.none or C.gray0 },
 
     NvimTreeFolderName = { fg = C.blue1 },
     NvimTreeOpenedFolderName = { fg = C.blue1 },
@@ -16,7 +16,7 @@ return {
     NvimTreeSpecialFile = { fg = C.magenta.bright },
     NvimTreeImageFile = { fg = C.fg_sidebar },
 
-    NvimTreeRootFolder = { fg = C.gray2 },
+    NvimTreeRootFolder = { fg = C.gray3 },
 
     NvimTreeGitDirty = { fg = C.gray2 },
     NvimTreeGitNew = { fg = C.gray2 },
@@ -24,7 +24,7 @@ return {
     NvimTreeGitStaged = { fg = C.gray2 },
 
     NvimTreeIndentMarker = { fg = C.gray1 },
-    NvimTreeWinSeparator = { fg = C.bg_dark, bg = O.transparent_bg and C.none or C.bg_dark },
+    NvimTreeWinSeparator = { fg = C.bg_dark, bg = O.transparent_bg and C.none or C.gray0 },
 
     NvimTreeCursorLine = { bg = C.gray1 },
     NvimTreeCursor = { bg = C.none, fg = C.none },
