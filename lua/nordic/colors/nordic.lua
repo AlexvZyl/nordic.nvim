@@ -12,11 +12,11 @@ local palette = {
     deepblack = '#15181E', -- Not really used, but can be useful
     black0 = '#191D24',
     black1 = '#1E222A',
-    black2 = '#222630',
+    black2 = '#222630', -- Slightly darker than bg.  Very useful for certain popups
 
     -- Grays
     -- This color is used on their website's dark theme.
-    gray0 = '#242933',
+    gray0 = '#242933', -- bg
     -- Polar Night.
     gray1 = '#2E3440',
     gray2 = '#3B4252',
@@ -46,8 +46,8 @@ local palette = {
     },
     cyan = {
         base = '#8FBCBB',
-        bright = '#93CCDC',
-        dim = '#69A7BA',
+        bright = '#9FC6C5',
+        dim = '#80B3B2',
     },
 
     -- Aurora.
@@ -56,28 +56,28 @@ local palette = {
     -- Bright & dim from @nightfox.nvim.
     red = {
         base = '#BF616A',
-        bright = '#D06F79',
-        dim = '#A54E56',
+        bright = '#C5727A',
+        dim = '#B74E58',
     },
     orange = {
         base = '#D08770',
-        bright = '#D89079',
-        dim = '#B46950',
+        bright = '#D79784',
+        dim = '#CB775D',
     },
     yellow = {
         base = '#EBCB8B',
-        bright = '#F0D399',
-        dim = '#D9B263',
+        bright = '#EFD49F',
+        dim = '#E7C173',
     },
     green = {
         base = '#A3BE8C',
-        bright = '#B1D196',
-        dim = '#8AA872',
+        bright = '#B1C89D',
+        dim = '#97B67C',
     },
     magenta = {
         base = '#B48EAD',
-        bright = '#C895BF',
-        dim = '#9D7495',
+        bright = '#BE9DB8',
+        dim = '#A97EA1',
     },
 }
 
