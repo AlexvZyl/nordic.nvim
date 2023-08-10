@@ -3,7 +3,6 @@ local O = require('nordic.config').options
 local C = require 'nordic.colors.nordic'
 
 function C.extend_palette()
-
     local diff_blend = 0.2
 
     -- Add these for international convenience :)
