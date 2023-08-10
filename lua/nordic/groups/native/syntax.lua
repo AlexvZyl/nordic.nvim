@@ -64,7 +64,7 @@ return {
     Ignore = { fg = C.gray2 }, -- (preferred) left blank, hidden  |hl-Ignore|
 
     Error = { fg = C.error }, -- (preferred) any erroneous construct
-    Todo = { bg = C.yellow.dim, fg = C.black }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Todo = { bg = C.yellow.dim, fg = C.black0 }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     Note = { fg = C.black, bg = C.info },
 
     -- What are these?

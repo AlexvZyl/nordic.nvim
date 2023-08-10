@@ -9,8 +9,8 @@ local groups = {
     Conceal = { fg = C.gray3 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
     Cursor = { fg = C.black, bg = C.fg }, -- character under the cursor
-    lCursor = { fg = C.black }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-    CursorIM = { fg = C.black }, -- like Cursor, but used when in IME mode |CursorIM|
+    lCursor = { fg = C.black0 }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+    CursorIM = { fg = C.black0 }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn = { bg = C.bg_highlight, bold = O.cursorline.bold }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine = { bg = C.bg_highlight, bold = O.cursorline.bold }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     CursorLineNr = { fg = C.gray5, bold = O.cursorline.bold_number }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.

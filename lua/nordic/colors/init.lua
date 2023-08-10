@@ -6,9 +6,6 @@ function C.extend_palette()
 
     local diff_blend = 0.2
 
-    -- Backwards comp (for now)
-    C.black = C.black0
-
     -- Add these for international convenience :)
     C.grey0 = C.gray0
     C.grey1 = C.gray1
