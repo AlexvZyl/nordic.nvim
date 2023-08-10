@@ -3,15 +3,15 @@ local O = require('nordic.config').options
 
 return {
 
-    NvimTreeNormal = { fg = C.fg, bg = O.transparent_bg and C.none or C.black },
-    NvimTreeNormalNC = { fg = C.fg, bg = O.transparent_bg and C.none or C.black },
+    NvimTreeNormal = { fg = C.fg, bg = O.transparent_bg and C.none or C.black0 },
+    NvimTreeNormalNC = { fg = C.fg, bg = O.transparent_bg and C.none or C.black0 },
 
     NvimTreeFolderName = { fg = C.blue1 },
     NvimTreeOpenedFolderName = { fg = C.blue1 },
     NvimTreeEmptyFolderName = { fg = C.blue1 },
     NvimTreeFolderIcon = { fg = C.yellow.dim },
 
-    NvimTreeOpenedFile = { bg = C.black },
+    NvimTreeOpenedFile = { bg = C.black0 },
     NvimTreeOpenedName = { fg = C.blue1 },
     NvimTreeSpecialFile = { fg = C.magenta.bright },
     NvimTreeImageFile = { fg = C.fg_sidebar },

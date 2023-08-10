@@ -7,8 +7,8 @@ local groups = {
     NoiceLspProgressClient = { fg = C.gray4, bg = C.bg },
     NoiceLspProgressSpinner = { fg = C.cyan.bright, bg = C.bg },
 
-    NoiceFormatProgressDone = { bg = C.green.bright, fg = C.black },
-    NoiceFormatProgressTodo = { bg = C.gray5, fg = C.black },
+    NoiceFormatProgressDone = { bg = C.green.bright, fg = C.black0 },
+    NoiceFormatProgressTodo = { bg = C.gray5, fg = C.black0 },
 
     NoiceCmdline = { bg = C.bg_dark, fg = C.fg },
     NoiceCmdlineIcon = { bg = C.bg_float, fg = C.yellow.base },

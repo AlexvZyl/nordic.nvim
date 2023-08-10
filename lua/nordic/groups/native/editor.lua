@@ -8,9 +8,9 @@ local groups = {
     ColorColumn = { bg = C.bg_visual }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = C.gray3 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
-    Cursor = { fg = C.black, bg = C.fg }, -- character under the cursor
-    lCursor = { fg = C.black }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-    CursorIM = { fg = C.black }, -- like Cursor, but used when in IME mode |CursorIM|
+    Cursor = { fg = C.black0, bg = C.fg }, -- character under the cursor
+    lCursor = { fg = C.black0 }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+    CursorIM = { fg = C.black0 }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn = { bg = C.bg_highlight, bold = O.cursorline.bold }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine = { bg = C.bg_highlight, bold = O.cursorline.bold }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     CursorLineNr = { fg = C.gray5, bold = O.cursorline.bold_number }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
@@ -77,7 +77,7 @@ local groups = {
     StatusLineNC = { fg = C.gray4, bg = C.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 
     TabLine = { bg = C.bg_statusline, fg = C.fg }, -- tab pages line, not active tab page label
-    TabLineFill = { bg = C.black, fg = C.none }, -- tab pages line, where there are no labels
+    TabLineFill = { bg = C.black0, fg = C.none }, -- tab pages line, where there are no labels
     TabLineSel = { fg = C.fg_bright, bg = C.gray0 }, -- tab pages line, active tab page label
 
     Title = { fg = C.fg_bright, bold = true }, -- titles for output from ":set all", ":autocmd" etc.

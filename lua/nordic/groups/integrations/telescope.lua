@@ -39,12 +39,12 @@ if O.telescope.style == 'flat' then
     groups.TelescopeSelection = { bg = C.black1, fg = C.yellow.bright }
     groups.TelescopeSelectionCaret = { fg = C.yellow.bright, bg = C.black1, bold = true }
 
-    groups.TelescopePreviewTitle = { bg = C.blue2, fg = C.black, bold = true }
-    groups.TelescopeResultsTitle = { bg = C.orange.base, fg = C.black, bold = true }
-    groups.TelescopePromptTitle = { bg = C.orange.base, fg = C.black, bold = true }
-    groups.TelescopeTitle = { bg = C.orange.base, fg = C.black, bold = true }
+    groups.TelescopePreviewTitle = { bg = C.blue2, fg = C.black0, bold = true }
+    groups.TelescopeResultsTitle = { bg = C.orange.base, fg = C.black0, bold = true }
+    groups.TelescopePromptTitle = { bg = C.orange.base, fg = C.black0, bold = true }
+    groups.TelescopeTitle = { bg = C.orange.base, fg = C.black0, bold = true }
 
-    groups.TelescopeBorder = { fg = C.border_float_fg, bg = C.black }
+    groups.TelescopeBorder = { fg = C.border_float_fg, bg = C.black0 }
     groups.TelescopePromptBorder = { bg = C.black2, fg = C.border_float_fg }
     groups.TelescopeResultsBorder = { bg = C.black1, fg = C.border_float_fg }
     groups.TelescopePreviewBorder = { bg = C.black1, fg = C.border_float_fg }
