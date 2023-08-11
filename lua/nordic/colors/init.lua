@@ -80,7 +80,6 @@ function C.extend_palette()
         C.bg_highlight = U.blend(C.gray1, C.bg, O.cursorline.blend)
         C.bg_visual = C.bg_highlight
     end
-
 end
 
 return C
