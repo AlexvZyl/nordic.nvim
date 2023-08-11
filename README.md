@@ -8,6 +8,11 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 
 # 📷 Showcase
 
+> INFO 
+>
+> I have been making a decent amount of changes, so these screenshots are currently out of date.
+
+
 ![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/628148ce-6b4e-4bc2-a723-fba65df4eb9e)
 
 **From my dotfiles:**
