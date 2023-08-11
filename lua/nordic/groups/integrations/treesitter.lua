@@ -20,7 +20,7 @@ return {
     ['@punctuation.special.markdown'] = { fg = C.orange.base, bold = true },
 
     --- Literals
-    ['@string.documentation'] = { fg = C.yellow.base },
+    ['@string.documentation'] = { link = 'String' },
     ['@string.regex'] = { fg = C.magenta.bright }, -- For regexes.
     ['@string.escape'] = { fg = C.magenta.bright }, -- For escape characters within a string.
 
@@ -45,7 +45,7 @@ return {
     ['@variable.builtin'] = { link = 'Builtin' }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     --- Text
-    ['@spell'] = {},
+    --['@spell'] = {},
     -- ["@text.literal.markdown"] = { },
     ['@text.literal.markdown_inline'] = { bg = C.black2, fg = C.fg },
     ['@text.reference'] = { link = 'Link' },

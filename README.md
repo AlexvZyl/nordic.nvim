@@ -8,6 +8,9 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 
 # 📷 Showcase
 
+> ℹ️ &nbsp; I have been making a decent amount of changes, so these screenshots are currently out of date.
+
+
 ![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/628148ce-6b4e-4bc2-a723-fba65df4eb9e)
 
 **From my dotfiles:**
@@ -171,13 +174,11 @@ require 'nordic' .setup {
 }
 ```
 
-# 🗒️ Supported Plugins
+# 🗒️ Supported Plugins and Platforms
 
-For the list of supported plugins, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/lua/nordic/groups/integrations).
+For the list of supported plugins, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/lua/nordic/groups/integrations).  For the list of supported platforms, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/platforms).
 
-# 💻 Supported Platforms
-
-For the list of supported platforms, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/platforms).
+I do not personally use all of the platforms and plugins in the list, so if something is not right, or you have a suggestion, please open a PR!
 
 # 🎙️ Acknowledgements
 

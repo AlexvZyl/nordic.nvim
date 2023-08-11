@@ -35,14 +35,10 @@ local palette = {
     white3 = '#ECEFF4',
 
     -- Frost.
-    -- Bright & dim @nightfox.nvim.
     blue0 = '#5E81AC',
     blue1 = '#81A1C1',
     blue2 = '#88C0D0',
-    blue = {
-        bright = '#8CAFD2',
-        dim = '#668AAB',
-    },
+
     cyan = {
         base = '#8FBCBB',
         bright = '#9FC6C5',

@@ -3,6 +3,9 @@ local O = require('nordic.config').options
 local C = require 'nordic.colors.nordic'
 
 function C.extend_palette()
+    -- Modify the palette before generating colors.
+    C = O.on_palette(C)
+
     local diff_blend = 0.2
 
     -- Add these for international convenience :)
@@ -78,8 +81,6 @@ function C.extend_palette()
         C.bg_visual = C.bg_highlight
     end
 
-    -- Modify the palette before generating colors.
-    C = O.on_palette(C)
 end
 
 return C
