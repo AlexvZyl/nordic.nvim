@@ -4,20 +4,30 @@
 
 A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > Frost.  The idea behind this colorscheme is to use Nord, but add some darker colors and use Aurora more prominently than Nord themes usually do.  This ends up creating a colorscheme that is soft on the eyes.
 
-> ⚠️ &nbsp; This colorscheme is still in early development, so please do not hesitate if there is anything wrong or if you have any suggestions!  Currently I am [dogfooding](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) it to make sure I do not miss anything.
+> ⚠️ &nbsp; This colorscheme is still in development, so please do not hesitate if there is anything wrong or if you have any suggestions!  Currently I am [dogfooding](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) it to make sure I do not miss anything.
 
 # 📷 Showcase
 
-*From my dotfiles:*
+![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/628148ce-6b4e-4bc2-a723-fba65df4eb9e)
+
+**From my dotfiles:**
 ![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/cf90906c-22b6-45d9-830d-b4d8b9919714)
 
 <details>
 <summary>Telescope</summary>
 
-*Flat:*
-![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/fd920834-125b-4566-be2c-e32e26b6f969)
-*Classic:*
+**Flat:**  This looks better with [these border chars](https://github.com/AlexvZyl/.dotfiles/blob/9284a5651d01e7a2598762882f828945cd701697/.config/nvim/lua/alex/utils.lua#L28).
+![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/380b7818-dd61-431f-90cc-98064c66767d)
+
+**Classic:**
 ![image](https://user-images.githubusercontent.com/81622310/219347870-05786199-a095-4602-a958-9db90b8acde3.png)
+
+</details>
+
+<details>
+<summary>Lazy.nvim</summary>
+
+![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/1f8e9474-a51b-4d5f-a3c4-ea478313ad2d)
 
 </details>
 
@@ -172,7 +182,6 @@ For the list of supported platforms, please take a look at [this directory](http
 # 🎙️ Acknowledgements
 
 - [folke/tokyonight](https://github.com/folke/tokyonight.nvim) served as an excellent example and template to create a Neovim theme.
-- [EdenEast/nightfox.nvim](https://github.com/EdenEast/nightfox.nvim) for bright & dim versions of the Nord palette.
 - [Dotfiles](https://github.com/AlexvZyl/.dotfiles) used in the screenshots.
 
 </br>
