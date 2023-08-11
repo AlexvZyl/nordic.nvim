@@ -1,4 +1,4 @@
-*nordic.nvim.txt*          For NVIM v0.8.0         Last change: 2023 August 10
+*nordic.nvim.txt*          For NVIM v0.8.0         Last change: 2023 August 11
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -9,9 +9,8 @@ Table of Contents                              *nordic.nvim-table-of-contents*
 4. 📦 Installation                           |nordic.nvim-📦-installation|
 5. 🚀 Usage                                         |nordic.nvim-🚀-usage|
 6. ⚙️ Configuration                     |nordic.nvim-⚙️-configuration|
-7. 🗒️ Supported Plugins           |nordic.nvim-🗒️-supported-plugins|
-8. 💻 Supported Platforms             |nordic.nvim-💻-supported-platforms|
-9. 🎙️ Acknowledgements             |nordic.nvim-🎙️-acknowledgements|
+7. 🗒️ Supported Plugins and Platforms|nordic.nvim-🗒️-supported-plugins-and-platforms|
+8. 🎙️ Acknowledgements             |nordic.nvim-🎙️-acknowledgements|
 
 ==============================================================================
 1. 🌒 Nordic                                       *nordic.nvim-🌒-nordic*
@@ -32,6 +31,9 @@ up creating a colorscheme that is soft on the eyes.
 ==============================================================================
 2. 📷 Showcase                                   *nordic.nvim-📷-showcase*
 
+
+  ℹ️   I have been making a decent amount of changes, so these screenshots
+  are currently out of date.
 **From my dotfiles:**
 
 Telescope ~
@@ -192,21 +194,19 @@ An example of overriding the `TelescopePromptTitle` colors:
 
 
 ==============================================================================
-7. 🗒️ Supported Plugins           *nordic.nvim-🗒️-supported-plugins*
+7. 🗒️ Supported Plugins and Platforms*nordic.nvim-🗒️-supported-plugins-and-platforms*
 
 For the list of supported plugins, please take a look at this directory
 <https://github.com/AlexvZyl/nordic.nvim/tree/main/lua/nordic/groups/integrations>.
-
-
-==============================================================================
-8. 💻 Supported Platforms             *nordic.nvim-💻-supported-platforms*
-
 For the list of supported platforms, please take a look at this directory
 <https://github.com/AlexvZyl/nordic.nvim/tree/main/platforms>.
 
+I do not personally use all of the platforms and plugins in the list, so if
+something is not right, or you have a suggestion, please open a PR!
+
 
 ==============================================================================
-9. 🎙️ Acknowledgements             *nordic.nvim-🎙️-acknowledgements*
+8. 🎙️ Acknowledgements             *nordic.nvim-🎙️-acknowledgements*
 
 - folke/tokyonight <https://github.com/folke/tokyonight.nvim> served as an excellent example and template to create a Neovim theme.
 - Dotfiles <https://github.com/AlexvZyl/.dotfiles> used in the screenshots.
@@ -216,7 +216,7 @@ For the list of supported platforms, please take a look at this directory
 
 
 ==============================================================================
-10. Links                                                  *nordic.nvim-links*
+9. Links                                                   *nordic.nvim-links*
 
 1. *Tests*: https://github.com/AlexvZyl/nordic.nvim/workflows/Tests/badge.svg
 2. *image*: https://github.com/AlexvZyl/nordic.nvim/assets/81622310/628148ce-6b4e-4bc2-a723-fba65df4eb9e
