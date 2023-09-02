@@ -38,7 +38,7 @@ local groups = {
 
     LineNr = { fg = C.fg_sidebar }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 
-    MatchParen = { underline = true, bold = false, sp = C.white1, bg = C.bg_dark }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    MatchParen = { underline = true, bold = true, sp = C.white1 }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 
     ModeMsg = { fg = C.fg, bold = true }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea = { fg = C.fg }, -- Area for messages and cmdline

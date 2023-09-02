@@ -3,5 +3,5 @@ local C = require 'nordic.colors'
 return {
     IndentBlanklineChar = { fg = C.gray1 },
     IndentBlanklineContextChar = { fg = C.gray2 },
-    IndentBlanklineContextStart = { link = 'IndentBlanklineContextChar' },
+    IndentBlanklineContextStart = { sp = C.white0, underline = true },
 }
