@@ -4,15 +4,13 @@ local config = require('nordic.config').options
 local load = require('nordic').load
 
 local function flip_string(string)
-    if string == 'light' then
-        return 'dark'
-    elseif string == 'dark' then
-        return 'light'
-    elseif string == 'classic' then
-        return 'flat'
-    elseif string == 'flat' then
-        return 'classic'
-    end
+    local string_flip = {
+        ["light"] = "dark",
+        ["dark"] = "light",
+        ["flat"] = "classic",
+        ["classic"] = "flat",
+    }
+    return string_flip[string]
 end
 
 load(config)
