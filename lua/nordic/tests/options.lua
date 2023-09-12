@@ -3,6 +3,18 @@
 local config = require('nordic.config').options
 local load = require('nordic').load
 
+local function flip_string(string)
+    if string == 'light' then
+        return 'dark'
+    elseif string == 'dark' then
+        return 'light'
+    elseif string == 'classic' then
+        return 'flat'
+    elseif string == 'flat' then
+        return 'classic'
+    end
+end
+
 load(config)
 
 config.on_palette = function(palette)
@@ -19,10 +31,10 @@ config.reduced_blue = not config.reduced_blue
 config.swap_backgrounds = not config.swap_backgrounds
 config.cursorline.bold = not config.cursorline.bold
 config.cursorline.bold_number = not config.cursorline.bold_number
-config.cursorline.theme = 'light'
+config.cursorline.theme = flip_string(config.cursorline.theme)
 config.cursorline.blend = 0
-config.noice.style = 'classic'
-config.telescope.style = 'classic'
+config.noice.style = flip_string(config.noice.style)
+config.telescope.style = flip_string(config.telescope.style)
 config.leap.dim_backdrop = not config.leap.dim_backdrop
 config.ts_context.dark_background = not config.ts_context.dark_background
 
