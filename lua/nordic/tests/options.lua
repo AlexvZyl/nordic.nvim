@@ -3,25 +3,37 @@
 local config = require('nordic.config').options
 local load = require('nordic').load
 
+local function flip_string(string)
+    local switch = {
+        ["light"] = "dark",
+        ["dark"] = "light",
+        ["flat"] = "classic",
+        ["classic"] = "flat",
+    }
+    return switch[string]
+end
+
 load(config)
 
 config.on_palette = function(palette)
     palette.black0 = '#000000'
     return palette
 end
-config.bold_keywords = true
-config.italic_comments = false
-config.transparent_bg = true
-config.bright_border = true
-config.reduced_blue = false
-config.swap_backgrounds = true
-config.cursorline.bold = true
-config.cursorline.bold_number = false
-config.cursorline.theme = 'light'
+
+-- Flip all fields
+config.bold_keywords = not config.bold_keywords
+config.italic_comments = not config.italic_comments
+config.transparent_bg = not config.transparent_bg
+config.bright_border = not config.bright_border
+config.reduced_blue = not config.reduced_blue
+config.swap_backgrounds = not config.swap_backgrounds
+config.cursorline.bold = not config.cursorline.bold
+config.cursorline.bold_number = not config.cursorline.bold_number
+config.cursorline.theme = flip_string(config.cursorline.theme)
 config.cursorline.blend = 0
-config.noice.style = 'classic'
-config.telescope.style = 'classic'
-config.leap.dim_backdrop = true
-config.ts_context.dark_background = false
+config.noice.style = flip_string(config.noice.style)
+config.telescope.style = flip_string(config.telescope.style)
+config.leap.dim_backdrop = not config.leap.dim_backdrop
+config.ts_context.dark_background = not config.ts_context.dark_background
 
 load(config)
