@@ -5,10 +5,10 @@ local load = require('nordic').load
 
 local function flip_string(string)
     local switch = {
-        ["light"] = "dark",
-        ["dark"] = "light",
-        ["flat"] = "classic",
-        ["classic"] = "flat",
+        ['light'] = 'dark',
+        ['dark'] = 'light',
+        ['flat'] = 'classic',
+        ['classic'] = 'flat',
     }
     return switch[string]
 end
