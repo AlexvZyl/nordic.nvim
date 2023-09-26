@@ -30,10 +30,6 @@ local defaults = {
         -- Blending the cursorline bg with the buffer bg.
         blend = 0.7,
     },
-    noice = {
-        -- Available styles: `classic`, `flat`.
-        style = 'flat',
-    },
     telescope = {
         -- Available styles: `classic`, `flat`.
         style = 'flat',
