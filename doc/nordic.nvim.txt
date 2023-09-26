@@ -1,4 +1,4 @@
-*nordic.nvim.txt*        For NVIM v0.8.0        Last change: 2023 September 17
+*nordic.nvim.txt*        For NVIM v0.8.0        Last change: 2023 September 26
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -21,6 +21,12 @@ A Neovim colorscheme based on Nord <https://www.nordtheme.com/>, but Aurora >
 Frost. The idea behind this colorscheme is to use Nord, but add some darker
 colors and use Aurora more prominently than Nord themes usually do. This ends
 up creating a colorscheme that is soft on the eyes.
+
+
+💡 LOOKING FOR MAINTAINERS
+
+Currently looking for maintainers. If you are keen, head on over to the
+discussion <https://github.com/AlexvZyl/nordic.nvim/discussions/96>
 
 
 ==============================================================================
