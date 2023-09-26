@@ -31,7 +31,6 @@ config.cursorline.bold = not config.cursorline.bold
 config.cursorline.bold_number = not config.cursorline.bold_number
 config.cursorline.theme = flip_string(config.cursorline.theme)
 config.cursorline.blend = 0
-config.noice.style = flip_string(config.noice.style)
 config.telescope.style = flip_string(config.telescope.style)
 config.leap.dim_backdrop = not config.leap.dim_backdrop
 config.ts_context.dark_background = not config.ts_context.dark_background
