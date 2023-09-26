@@ -4,6 +4,10 @@
 
 A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > Frost.  The idea behind this colorscheme is to use Nord, but add some darker colors and use Aurora more prominently than Nord themes usually do.  This ends up creating a colorscheme that is soft on the eyes.
 
+#### 💡 Looking for Maintainers
+
+Currently looking for maintainers.  If you are keen, head on over to [the discussion](https://github.com/AlexvZyl/nordic.nvim/discussions/96)
+
 # 📷 Showcase
 
 ![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/2437fc89-733a-4368-b418-88cfe804d5d3)
