@@ -32,7 +32,7 @@ local defaults = {
     },
     noice = {
         -- Available styles: `classic`, `flat`.
-        style = 'flat',
+        style = 'classic',
     },
     telescope = {
         -- Available styles: `classic`, `flat`.
