@@ -6,7 +6,7 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 
 #### 💡 Looking for Maintainers
 
-Currently looking for maintainers.  If you are keen, head on over to [the discussion](https://github.com/AlexvZyl/nordic.nvim/discussions/96)
+Currently looking for maintainers.  If you are keen, head on over to [the discussion](https://github.com/AlexvZyl/nordic.nvim/discussions/96).
 
 # 📷 Showcase
 
