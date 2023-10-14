@@ -53,7 +53,7 @@ function C.extend_palette()
     C.bg_popup = C.bg
     C.fg_popup = C.fg
     C.bg_popup_border = C.bg
-    C.fg_popup_border =  C.black0
+    C.fg_popup_border =  C.border_fg
 
     -- Floating windows
     C.bg_float = C.black1
