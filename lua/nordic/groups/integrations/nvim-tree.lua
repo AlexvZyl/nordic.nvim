@@ -1,10 +1,9 @@
 local C = require 'nordic.colors'
-local O = require('nordic.config').options
 
 return {
 
-    NvimTreeNormal = { fg = C.fg, bg = O.transparent_bg and C.none or C.gray0 },
-    NvimTreeNormalNC = { fg = C.fg, bg = O.transparent_bg and C.none or C.gray0 },
+    NvimTreeNormal = { fg = C.fg, bg =  C.bg },
+    NvimTreeNormalNC = { fg = C.fg, bg = C.bg },
 
     NvimTreeFolderName = { fg = C.blue1 },
     NvimTreeOpenedFolderName = { link = 'NvimTreeFolderName' },
@@ -20,7 +19,7 @@ return {
     NvimTreeGitStaged = { fg = C.gray4 },
     NvimTreeIndentMarker = { fg = C.gray4 },
 
-    NvimTreeWinSeparator = { fg = C.bg_dark, bg = O.transparent_bg and C.none or C.gray0 },
+    NvimTreeWinSeparator = { fg = C.bg_dark, bg = C.bg },
 
     NvimTreeCursorLine = { bg = C.gray1 },
     NvimTreeCursor = { bg = C.none, fg = C.none },

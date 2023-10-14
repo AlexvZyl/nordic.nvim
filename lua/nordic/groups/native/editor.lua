@@ -31,7 +31,7 @@ local groups = {
     Folded = { fg = C.fg_fold, bg = C.bg_fold }, -- line used for closed folds
     FoldColumn = { bg = C.bg_fold, fg = C.fg_fold }, -- 'foldcolumn'
 
-    SignColumn = { bg = O.transparent_bg and C.none or C.bg_sidebar, fg = C.fg_sidebar }, -- column where |signs| are displayed
+    SignColumn = { bg = C.bg_sidebar, fg = C.fg_sidebar }, -- column where |signs| are displayed
     SignColumnSB = { bg = C.bg_sidebar, fg = C.fg_sidebar }, -- column where |signs| are displayed
 
     Substitute = { bg = C.red.base, fg = C.bg_dark }, -- |:substitute| replacement text highlighting
@@ -46,9 +46,9 @@ local groups = {
     MoreMsg = { fg = C.blue1 }, -- |more-prompt|
     NonText = { fg = C.gray4 }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 
-    Normal = { fg = C.fg, bg = O.transparent_bg and C.none or C.bg }, -- normal text
-    NormalNC = { fg = C.fg, bg = O.transparent_bg and C.none or C.bg }, -- normal text in non-current windows
-    NormalSB = { fg = C.fg_sidebar, bg = O.transparent_bg and C.none or C.bg_sidebar }, -- normal text in sidebar
+    Normal = { fg = C.fg, bg = C.bg }, -- normal text
+    NormalNC = { fg = C.fg, bg = C.bg }, -- normal text in non-current windows
+    NormalSB = { fg = C.fg_sidebar, bg = C.bg_sidebar }, -- normal text in sidebar
 
     NormalFloat = { fg = C.fg_float, bg = C.bg_float }, -- Normal text in floating windows.
     FloatBorder = { fg = C.fg_float_border, bg = C.bg_float_border },

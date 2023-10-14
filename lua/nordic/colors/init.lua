@@ -27,13 +27,12 @@ function C.extend_palette()
     -- Some of the format is from @folke/tokyonight.nvim.
 
     -- Backgrounds
-    C.bg = C.gray0
-    C.bg_dark = C.black0
-    C.bg_highlight = C.bg_dark
+    C.bg = (O.transparent_bg and C.none) or C.gray0
+    C.bg_dark = (O.transparent_bg and C.none) or C.black0
     C.bg_highlight = U.blend(C.bg_dark, C.bg, O.cursorline.blend)
     C.bg_visual = C.bg_highlight
-    C.bg_sidebar = C.bg
-    C.bg_popup = C.bg
+    C.bg_sidebar = (O.transparent_bg and C.none) or C.bg
+    C.bg_popup = (O.transparent_bg and C.none) or C.bg
     C.bg_statusline = C.bg_dark
     C.bg_selected = U.blend(C.gray2, C.black0, 0.4)
     C.bg_fold = C.gray2
