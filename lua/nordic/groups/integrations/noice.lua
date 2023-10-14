@@ -14,7 +14,7 @@ local groups = {
     NoiceCmdlineIcon = { bg = C.bg_float, fg = C.yellow.base },
     NoiceCmdlineIconSearch = { bg = C.bg_dark, fg = C.yellow.base },
 
-    NoicePopupBorder = { fg = C.border_float_fg, bg = C.border_float_bg },
+    NoicePopupBorder = { fg = C.black0, bg = C.black1 },
     NoiceCmdlinePopupBorder = { link = 'NoicePopupBorder' },
     NoiceCmdlinePopupBorderSearch = { link = 'NoicePopupBorder' },
     NoiceCmdlinePopup = { bg = C.black1 },

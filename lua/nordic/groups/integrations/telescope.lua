@@ -44,10 +44,10 @@ if O.telescope.style == 'flat' then
     groups.TelescopePromptTitle = { bg = C.orange.base, fg = C.black0, bold = true }
     groups.TelescopeTitle = { bg = C.orange.base, fg = C.black0, bold = true }
 
-    groups.TelescopeBorder = { fg = C.border_float_fg, bg = C.black0 }
-    groups.TelescopePromptBorder = { bg = C.black2, fg = C.border_float_fg }
-    groups.TelescopeResultsBorder = { bg = C.black1, fg = C.border_float_fg }
-    groups.TelescopePreviewBorder = { bg = C.black1, fg = C.border_float_fg }
+    groups.TelescopeBorder = { fg = C.black0, bg = C.black0 }
+    groups.TelescopePromptBorder = { bg = C.black2, fg = C.black0 }
+    groups.TelescopeResultsBorder = { bg = C.black1, fg = C.black0 }
+    groups.TelescopePreviewBorder = { bg = C.black1, fg = C.black0 }
 
     groups.TelescopeMultiIcon = { fg = C.yellow.bright, bg = C.black1, bold = true }
     groups.TelescopeMultiSelection = { bg = C.black1 }

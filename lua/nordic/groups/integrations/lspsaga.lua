@@ -1,7 +1,7 @@
 local C = require 'nordic.colors'
 
 return {
-    SagaBorder = { bg = C.black2, fg = C.border_float_fg },
+    SagaBorder = { bg = C.black2, fg = C.fg_float_border },
     SagaNormal = { bg = C.black2 },
 
     HoverBorder = { link = 'FloatBorder' },
