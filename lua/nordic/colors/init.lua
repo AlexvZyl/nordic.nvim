@@ -38,6 +38,10 @@ function C.extend_palette()
     C.bg_selected = U.blend(C.gray2, C.black0, 0.4)
     C.bg_fold = C.gray2
 
+    -- Borders
+    C.border_fg = (O.bright_border and C.white0) or C.black0
+    C.border_bg = C.bg
+
     -- Foregrounds
     C.fg = C.white0
     C.fg_bright = C.white1
@@ -57,10 +61,6 @@ function C.extend_palette()
     C.fg_float = C.fg
     C.bg_float_border = C.bg_float
     C.fg_float_border = C.border_fg
-
-    -- Borders
-    C.border_fg = (O.bright_border and C.white0) or C.black0
-    C.border_bg = C.bg
 
     -- Diffs
     C.diff = {
