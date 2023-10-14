@@ -23,7 +23,7 @@ local groups = {
 if O.noice.style == 'classic' then
     groups.NoiceCmdline = { bg = C.bg, fg = C.cyan.base }
     groups.NoiceCmdlinePopup = { bg = C.bg }
-    groups.NoicePopupBorder = { bg = C.bg, fg = C.border_float_fg }
+    groups.NoicePopupBorder = { bg = C.bg, fg = C.cyan.base }
     groups.NoiceCmdlineIcon = { bg = C.bg, fg = C.yellow.bright }
 end
 
