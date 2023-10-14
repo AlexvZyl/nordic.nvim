@@ -55,7 +55,7 @@ function C.extend_palette()
     -- Floating windows
     C.bg_float = C.black1
     C.fg_float = C.fg
-    C.bg_float_border = C.bg_dark
+    C.bg_float_border = C.bg_float
     C.fg_float_border = C.border_fg
 
     -- Borders
