@@ -39,7 +39,7 @@ function C.extend_palette()
 
     -- Borders
     C.border_fg = (O.bright_border and C.white0) or C.black0
-    C.border_bg = C.bg
+    C.border_bg = (O.transparent_bg and C.none) or C.bg
 
     -- Foregrounds
     C.fg = C.white0
