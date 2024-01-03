@@ -1,10 +1,11 @@
 local U = require 'nordic.utils'
-local O = require('nordic.config').options
 local C = require 'nordic.colors.nordic'
 
 function C.extend_palette()
+    local options = require('nordic.config').options
+
     -- Modify the palette before generating colors.
-    C = O.on_palette(C)
+    C = options.on_palette(C)
 
     local diff_blend = 0.2
 
@@ -17,7 +18,7 @@ function C.extend_palette()
     C.grey5 = C.gray5
 
     -- Swap background
-    if O.swap_backgrounds then
+    if options.swap_backgrounds then
         local gray0 = C.gray0
         C.gray0 = C.black1
         C.black1 = gray0
@@ -27,19 +28,20 @@ function C.extend_palette()
     -- Some of the format is from @folke/tokyonight.nvim.
 
     -- Backgrounds
-    C.bg = (O.transparent_bg and C.none) or C.gray0
-    C.bg_dark = (O.transparent_bg and C.none) or C.black0
-    C.bg_highlight = U.blend(C.bg_dark, C.bg, O.cursorline.blend)
-    C.bg_visual = C.bg_highlight
-    C.bg_sidebar = (O.transparent_bg and C.none) or C.bg
-    C.bg_popup = (O.transparent_bg and C.none) or C.bg
+    C.bg = (options.transparent_bg and C.none) or C.gray0
+    C.bg_dark = (options.transparent_bg and C.none) or C.black0
+    C.bg_sidebar = (options.transparent_bg and C.none) or C.bg
+    C.bg_popup = (options.transparent_bg and C.none) or C.bg
     C.bg_statusline = C.bg_dark
     C.bg_selected = U.blend(C.gray2, C.black0, 0.4)
     C.bg_fold = C.gray2
+    -- Cursorline Background
+    C.bg_highlight = U.blend(options.cursorline.bg, C.bg, options.cursorline.blend)
+    C.bg_visual = C.bg_highlight
 
     -- Borders
-    C.border_fg = (O.bright_border and C.white0) or C.black0
-    C.border_bg = (O.transparent_bg and C.none) or C.bg
+    C.border_fg = (options.bright_border and C.white0) or C.black0
+    C.border_bg = (options.transparent_bg and C.none) or C.bg
 
     -- Foregrounds
     C.fg = C.white0
@@ -82,12 +84,6 @@ function C.extend_palette()
     C.warning = C.warn
     C.hint = C.green.bright
     C.info = C.blue2
-
-    -- Cursorline
-    if O.cursorline.theme == 'light' then
-        C.bg_highlight = U.blend(C.gray1, C.bg, O.cursorline.blend)
-        C.bg_visual = C.bg_highlight
-    end
 end
 
 return C

@@ -25,8 +25,8 @@ local defaults = {
         bold = false,
         -- Bold cursorline number.
         bold_number = true,
-        -- Avialable styles: 'dark', 'light'.
-        theme = 'dark',
+        -- Cursorline bg.
+        bg = '#191D24',
         -- Blending the cursorline bg with the buffer bg.
         blend = 0.85,
     },
