@@ -4,9 +4,11 @@
 
 A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > Frost.  The idea behind this colorscheme is to use Nord, but add some darker colors and use Aurora more prominently than Nord themes usually do.  This ends up creating a colorscheme that is soft on the eyes.
 
+If there is anything that does not seem right, even if it is a very small highlight, please let me know with an issue or PR!
+
 #### 💡 Looking for Maintainers
 
-Currently looking for maintainers.  If you are keen, head on over to [the discussion](https://github.com/AlexvZyl/nordic.nvim/discussions/96)
+Currently looking for maintainers.  If you are keen, head on over to [the discussion](https://github.com/AlexvZyl/nordic.nvim/discussions/96).
 
 # 📷 Showcase
 
@@ -109,11 +111,11 @@ require 'nordic' .setup {
         -- Avialable styles: 'dark', 'light'.
         theme = 'dark',
         -- Blending the cursorline bg with the buffer bg.
-        blend = 0.7,
+        blend = 0.85,
     },
     noice = {
         -- Available styles: `classic`, `flat`.
-        style = 'flat',
+        style = 'classic',
     },
     telescope = {
         -- Available styles: `classic`, `flat`.

@@ -27,18 +27,19 @@ function C.extend_palette()
     -- Some of the format is from @folke/tokyonight.nvim.
 
     -- Backgrounds
-    C.bg = C.gray0
-    C.bg_dark = C.black0
-
-    C.bg_highlight = C.bg_dark
+    C.bg = (O.transparent_bg and C.none) or C.gray0
+    C.bg_dark = (O.transparent_bg and C.none) or C.black0
     C.bg_highlight = U.blend(C.bg_dark, C.bg, O.cursorline.blend)
     C.bg_visual = C.bg_highlight
-    C.bg_sidebar = C.bg
-    C.bg_float = C.black1
-    C.bg_popup = C.black1
+    C.bg_sidebar = (O.transparent_bg and C.none) or C.bg
+    C.bg_popup = (O.transparent_bg and C.none) or C.bg
     C.bg_statusline = C.bg_dark
     C.bg_selected = U.blend(C.gray2, C.black0, 0.4)
     C.bg_fold = C.gray2
+
+    -- Borders
+    C.border_fg = (O.bright_border and C.white0) or C.black0
+    C.border_bg = (O.transparent_bg and C.none) or C.bg
 
     -- Foregrounds
     C.fg = C.white0
@@ -46,27 +47,34 @@ function C.extend_palette()
     C.fg_dark = C.white0
     C.fg_sidebar = C.gray2
     C.fg_fold = C.fg
-    C.fg_float = C.fg
     C.fg_selected = C.fg_bright
 
-    -- Borders
-    C.border_fg = (O.bright_border and C.white0) or C.black0
-    C.border_bg = C.bg
-    C.border_float_fg = C.border_fg
-    C.border_float_bg = C.bg_popup
+    -- Popups
+    C.bg_popup = C.bg
+    C.fg_popup = C.fg
+    C.bg_popup_border = C.bg
+    C.fg_popup_border =  C.border_fg
+
+    -- Floating windows
+    C.bg_float = C.black1
+    C.fg_float = C.fg
+    C.bg_float_border = C.bg_float
+    C.fg_float_border = C.border_fg
 
     -- Diffs
-    C.diff = {}
-    C.diff.change0 = U.blend(C.blue1, C.bg, 0.05)
-    C.diff.change1 = U.blend(C.blue2, C.bg, diff_blend)
-    C.diff.add = U.blend(C.green.base, C.bg, diff_blend)
-    C.diff.delete = U.blend(C.red.base, C.bg, diff_blend)
+    C.diff = {
+        change0 = U.blend(C.blue1, C.bg, 0.05),
+        change1 = U.blend(C.blue2, C.bg, diff_blend),
+        add = U.blend(C.green.base, C.bg, diff_blend),
+        delete = U.blend(C.red.base, C.bg, diff_blend)
+    }
 
     -- Git
-    C.git = {}
-    C.git.add = C.green.base
-    C.git.delete = C.red.base
-    C.git.change = C.blue1
+    C.git = {
+        add = C.green.base,
+        delete = C.red.base,
+        change = C.blue1
+    }
 
     -- Diagnostics
     C.error = C.red.bright

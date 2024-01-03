@@ -28,11 +28,11 @@ local defaults = {
         -- Avialable styles: 'dark', 'light'.
         theme = 'dark',
         -- Blending the cursorline bg with the buffer bg.
-        blend = 0.7,
+        blend = 0.85,
     },
     noice = {
         -- Available styles: `classic`, `flat`.
-        style = 'flat',
+        style = 'classic',
     },
     telescope = {
         -- Available styles: `classic`, `flat`.
