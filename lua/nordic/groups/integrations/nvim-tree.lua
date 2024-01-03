@@ -2,7 +2,7 @@ local C = require 'nordic.colors'
 
 return {
 
-    NvimTreeNormal = { fg = C.fg, bg =  C.bg },
+    NvimTreeNormal = { fg = C.fg, bg = C.bg },
     NvimTreeNormalNC = { fg = C.fg, bg = C.bg },
 
     NvimTreeFolderName = { fg = C.blue1 },

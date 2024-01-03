@@ -53,7 +53,7 @@ function C.extend_palette()
     C.bg_popup = C.bg
     C.fg_popup = C.fg
     C.bg_popup_border = C.bg
-    C.fg_popup_border =  C.border_fg
+    C.fg_popup_border = C.border_fg
 
     -- Floating windows
     C.bg_float = C.black1
@@ -66,14 +66,14 @@ function C.extend_palette()
         change0 = U.blend(C.blue1, C.bg, 0.05),
         change1 = U.blend(C.blue2, C.bg, diff_blend),
         add = U.blend(C.green.base, C.bg, diff_blend),
-        delete = U.blend(C.red.base, C.bg, diff_blend)
+        delete = U.blend(C.red.base, C.bg, diff_blend),
     }
 
     -- Git
     C.git = {
         add = C.green.base,
         delete = C.red.base,
-        change = C.blue1
+        change = C.blue1,
     }
 
     -- Diagnostics
