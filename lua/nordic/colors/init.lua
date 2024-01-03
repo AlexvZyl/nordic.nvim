@@ -2,7 +2,11 @@ local U = require 'nordic.utils'
 local O = require('nordic.config').options
 local C = require 'nordic.colors.nordic'
 
+C.extended = false
+
 function C.extend_palette()
+    C.extended = true
+
     -- Modify the palette before generating colors.
     C = O.on_palette(C)
 
@@ -88,6 +92,12 @@ function C.extend_palette()
         C.bg_highlight = U.blend(C.gray1, C.bg, O.cursorline.blend)
         C.bg_visual = C.bg_highlight
     end
+end
+
+-- Sometimes the palette is required before the theme has been loaded,
+-- so we need to extend the palette in those cases.
+if not C.extended then
+    C.extend_palette()
 end
 
 return C
