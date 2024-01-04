@@ -107,9 +107,7 @@ end
 
 -- Adapted from @folke/tokyonight.nvim.
 function M.blend(foreground, background, alpha)
-    if foreground == 'NONE' or background == 'NONE' then
-        return 'NONE'
-    end
+    if foreground == 'NONE' or background == 'NONE' then return 'NONE' end
 
     local fg = { M.hex_to_rgb(foreground) }
     local bg = { M.hex_to_rgb(background) }
