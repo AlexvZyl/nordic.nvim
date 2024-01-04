@@ -1,14 +1,14 @@
 # 🌒 Nordic
 
-[![Tests](https://github.com/AlexvZyl/nordic.nvim/workflows/Tests/badge.svg)](https://github.com/AlexvZyl/nordic.nvim/actions?workflow=Tests) 
+[![Tests](https://github.com/AlexvZyl/nordic.nvim/workflows/Tests/badge.svg)](https://github.com/AlexvZyl/nordic.nvim/actions?workflow=Tests)
 
-A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > Frost.  The idea behind this colorscheme is to use Nord, but add some darker colors and use Aurora more prominently than Nord themes usually do.  This ends up creating a colorscheme that is soft on the eyes.
+A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > Frost. The idea behind this colorscheme is to use Nord, but add some darker colors and use Aurora more prominently than Nord themes usually do. This ends up creating a colorscheme that is soft on the eyes.
 
 If there is anything that does not seem right, even if it is a very small highlight, please let me know with an issue or PR!
 
 #### 💡 Looking for Maintainers
 
-Currently looking for maintainers.  If you are keen, head on over to [the discussion](https://github.com/AlexvZyl/nordic.nvim/discussions/96).
+Currently looking for maintainers. If you are keen, head on over to [the discussion](https://github.com/AlexvZyl/nordic.nvim/discussions/96).
 
 # 📷 Showcase
 
@@ -19,7 +19,9 @@ Currently looking for maintainers.  If you are keen, head on over to [the discus
 
 # 🎨 Palette
 
-For the list of colors/palette, see [this file](https://github.com/AlexvZyl/nordic.nvim/blob/main/lua/nordic/colors/nordic.lua).  Some extra colors and use cases are generated in [this file](https://github.com/AlexvZyl/nordic.nvim/blob/main/lua/nordic/colors/init.lua).
+![image](assets/palette.png)
+
+For the list of colors/palette, see [this file](https://github.com/AlexvZyl/nordic.nvim/blob/main/lua/nordic/colors/nordic.lua). Some extra colors and use cases are generated in [this file](https://github.com/AlexvZyl/nordic.nvim/blob/main/lua/nordic/colors/init.lua).
 
 # 📦 Installation
 
@@ -82,7 +84,7 @@ local palette = require 'nordic.colors'
 
 # ⚙️ Configuration
 
-Nordic will use the default values, unless `setup` is called.  Below is the default configuration.
+Nordic will use the default values, unless `setup` is called. Below is the default configuration.
 
 ```lua
 require 'nordic' .setup {
@@ -152,7 +154,7 @@ require 'nordic' .setup {
 
 # 🗒️ Supported Plugins and Platforms
 
-For the list of supported plugins, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/lua/nordic/groups/integrations).  For the list of supported platforms, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/platforms).
+For the list of supported plugins, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/lua/nordic/groups/integrations). For the list of supported platforms, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/platforms).
 
 I do not personally use all of the platforms and plugins in the list, so if something is not right, or you have a suggestion, please open a PR!
 
@@ -160,6 +162,7 @@ I do not personally use all of the platforms and plugins in the list, so if some
 
 - [folke/tokyonight](https://github.com/folke/tokyonight.nvim) served as an excellent example and template to create a Neovim theme.
 - [Dotfiles](https://github.com/AlexvZyl/.dotfiles) used in the screenshots.
+- [Aonodensetsu/prev_gen](https://github.com/Aonodensetsu/prev_gen) was used to create the palette preview.
 
 </br>
 
