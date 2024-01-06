@@ -36,8 +36,7 @@ function C.extend_palette()
     C.bg_selected = U.blend(C.gray2, C.black0, 0.4)
     C.bg_fold = C.gray2
     -- Cursorline Background
-    C.bg_highlight = (options.transparent_bg and options.cursorline.bg)
-        or U.blend(options.cursorline.bg, C.bg, options.cursorline.blend)
+    C.bg_highlight = U.blend(options.cursorline.bg, C.bg, options.cursorline.blend)
     C.bg_visual = C.bg_highlight
 
     -- Borders
