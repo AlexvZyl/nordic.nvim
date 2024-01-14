@@ -11,6 +11,14 @@ function M.highlight(table)
     end
 end
 
+function M.is_none(string)
+    return string == 'NONE' or string == 'none'
+end
+
+function M.none()
+    return 'NONE'
+end
+
 function M.merge(table1, table2)
     if table1 == table2 == nil then return {} end
     if table1 == nil then
@@ -107,7 +115,7 @@ end
 
 -- Adapted from @folke/tokyonight.nvim.
 function M.blend(foreground, background, alpha)
-    if foreground == 'NONE' or background == 'NONE' then return 'NONE' end
+    if M.is_none(foreground) or M.is_none(background) then return M.none() end
 
     local fg = { M.hex_to_rgb(foreground) }
     local bg = { M.hex_to_rgb(background) }
