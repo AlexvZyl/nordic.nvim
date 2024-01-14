@@ -96,8 +96,6 @@ end
 
 -- Sometimes the palette is required before the theme has been loaded,
 -- so we need to extend the palette in those cases.
-if not C.extended then
-    C.extend_palette()
-end
+if not C.extended then C.extend_palette() end
 
 return C
