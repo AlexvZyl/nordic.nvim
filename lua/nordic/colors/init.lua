@@ -1,8 +1,11 @@
 local U = require 'nordic.utils'
 local C = require 'nordic.colors.nordic'
 
+C.extended = false
+
 function C.extend_palette()
-    local options = require('nordic.config').options
+   C.extended = true
+   local options = require('nordic.config').options
 
     -- Modify the palette before generating colors.
     C = options.on_palette(C)
@@ -58,7 +61,7 @@ function C.extend_palette()
     C.fg_popup_border = C.border_fg
 
     -- Floating windows
-    C.bg_float = C.black1
+    C.bg_float = (O.transparent_bg and C.none) or C.black1
     C.fg_float = C.fg
     C.bg_float_border = C.bg_float
     C.fg_float_border = C.border_fg
@@ -85,5 +88,9 @@ function C.extend_palette()
     C.hint = C.green.bright
     C.info = C.blue2
 end
+
+-- Sometimes the palette is required before the theme has been loaded,
+-- so we need to extend the palette in those cases.
+if not C.extended then C.extend_palette() end
 
 return C
