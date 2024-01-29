@@ -19,9 +19,9 @@ Currently looking for maintainers. If you are keen, head on over to [the discuss
 
 # 🎨 Palette
 
-![image](assets/palette.png)
-
 For the list of colors/palette, see [this file](https://github.com/AlexvZyl/nordic.nvim/blob/main/lua/nordic/colors/nordic.lua). Some extra colors and use cases are generated in [this file](https://github.com/AlexvZyl/nordic.nvim/blob/main/lua/nordic/colors/init.lua).
+
+![image](assets/palette.png)
 
 # 📦 Installation
 
