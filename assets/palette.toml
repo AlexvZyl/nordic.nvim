@@ -1,0 +1,53 @@
+#
+palette = [
+    [
+      ["#191D24", "black0" ],
+      ["#1E222A", "black1" ],
+      ["#222630", "black2" ],
+      ["#242933", "gray0"  ],
+      ["#2E3440", "gray1"  ],
+      ["#3B4252", "gray2"  ],
+      ["#434C5E", "gray3"  ]
+    ],
+    [
+      ["#C0C8D8", "white_alt"],
+      ["#BBC3D4", "white0"  ],
+      ["#D8DEE9", "white1"  ],
+      ["#E5E9F0", "white2"  ],
+      ["#ECEFF4", "white3"  ],
+      ["#60728A", "gray5"   ],
+      ["#4C566A", "gray4"   ]
+    ],
+    [
+      ["#5E81AC", "blue0"           ],
+      ["#8FBCBB", "cyan"            ],
+      ["#BF616A", "red"             ],
+      ["#D08770", "orange"          ],
+      ["#EBCB8B", "yellow"          ],
+      ["#A3BE8C", "green"           ],
+      ["#B48EAD", "magenta"         ]
+    ],
+    [
+      ["#81A1C1", "blue1"             ],
+      ["#9FC6C5", "cyan_b"            ],
+      ["#C5727A", "red_b"             ],
+      ["#D79784", "orange_b"          ],
+      ["#EFD49F", "yellow_b"          ],
+      ["#B1C89D", "green_b"           ],
+      ["#BE9DB8", "magenta_b"         ]
+    ],
+    [
+      ["#88C0D0", "blue2"             ],
+      ["#80B3B2", "cyan_d"            ],
+      ["#B74E58", "red_d"             ],
+      ["#CB775D", "orange_d"          ],
+      ["#E7C173", "yellow_d"          ],
+      ["#97B67C", "green_d"           ],
+      ["#A97EA1", "magenta_d"         ]
+    ]
+]
+
+[settings]
+fileName = "Nordic"
+nameSize = 34
+hexSize = 24
