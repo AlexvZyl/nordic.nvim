@@ -11,45 +11,59 @@ return {
     --- Misc
     ['@comment'] = { link = 'Comment' },
     ['@comment.documentation'] = { link = 'Comment' },
-    ['@operator'] = { fg = C.fg }, -- For any operator: `+`, but also `->` and `*` in C.
+    ['@operator'] = { fg = C.blue1 }, -- For any operator: `+`, but also `->` and `*` in C.
 
     --- Punctuation
     ['@punctuation.delimiter'] = { link = '@operator' }, -- For delimiters ie: `.`
-    ['@punctuation.bracket'] = { link = '@operator' }, -- For brackets and parens.
-    ['@punctuation.special'] = { link = 'Macro' }, -- For special punctutation that does not fall in the catagories before.
-    ['@punctuation.special.markdown'] = { fg = C.orange.base, bold = true },
+    ['@punctuation.bracket'] = { link = '@operator' },   -- For brackets and parens.
+    ['@punctuation.special'] = { link = 'Macro' },       -- For special punctutation that does not fall in the catagories before.
+    -- ['@punctuation.special.markdown'] = { fg = C.orange.base, bold = true },
+    ['@markup.list'] = { link = '@operator' },                 -- For special punctutation that does not fall in the catagories before.
+    ['@markup.list.markdown'] = { fg = C.yellow.base, bold = true },
 
     --- Literals
     ['@string.documentation'] = { link = 'String' },
-    ['@string.regex'] = { fg = C.magenta.bright }, -- For regexes.
+    ['@string.regex'] = { fg = C.magenta.bright },  -- For regexes.
     ['@string.escape'] = { fg = C.magenta.bright }, -- For escape characters within a string.
 
     --- Functions
-    ['@constructor'] = { link = 'Function' }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    ['@parameter'] = { fg = C.fg, italic = true }, -- For parameters of a function.
-    ['@parameter.builtin'] = { link = 'Builtin' }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
+    ['@constructor'] = { link = 'Function' },      -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    ['@variable.parameter'] = { fg = C.fg, italic = true }, -- For parameters of a function.
+    ['@variable.parameter.builtin'] = { link = 'Builtin' }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
     --- Keywords
-    ['@keyword'] = { link = 'Keyword' }, -- For keywords that don't fall in previous categories.
-    ['@keyword.coroutine'] = { link = 'Macro' }, -- For keywords related to coroutines.
+    ['@keyword'] = { link = 'Keyword' },          -- For keywords that don't fall in previous categories.
+    ['@keyword.coroutine'] = { link = 'Macro' },  -- For keywords related to coroutines.
     ['@keyword.function'] = { link = 'Keyword' }, -- For keywords used to define a fuction.
-    ['@label'] = { link = 'Keyword' }, -- For labels: `label:` in C and `:label:` in Lua.
+    ['@label'] = { link = 'Keyword' },            -- For labels: `label:` in C and `:label:` in Lua.
 
     --- Types
     ['@type.builtin'] = { link = 'Type' },
+    ['@variable.member'] = { link = 'Field' },
     ['@field'] = { link = 'Field' }, -- For fields.
     ['@property'] = { link = 'Field' },
 
     --- Identifiers
-    ['@variable'] = { link = 'Variable' }, -- Any variable name that does not have another highlight.
+    ['@variable'] = { link = 'Variable' },        -- Any variable name that does not have another highlight.
     ['@variable.builtin'] = { link = 'Builtin' }, -- Variable names that are defined by the languages, like `this` or `self`.
+    ['@module.builtin'] = { link = 'Builtin' },
 
     --- Text
     --['@spell'] = {},
     -- ["@text.literal.markdown"] = { },
     ['@text.literal.markdown_inline'] = { bg = C.black2, fg = C.fg },
+
+    ['@markup.raw.markdown_inline'] = { bg = C.black2, fg = C.fg },
+    ['@markup.link'] = { fg = C.cyan.base },
+    ["@markup.list.unchecked"] = { fg = C.fg }, -- For brackets and parens.
+    ["@markup.list.checked"] = { link = 'Field' }, -- For brackets and parens.
+    ["@diff.plus"] = { link = "DiffAdd" },
+    ["@diff.minus"] = { link = "DiffDelete" },
+    ["@diff.delta"] = { link = "DiffChange" },
+    ["@module"] = { fg = C.yellow.base },
+
     ['@text.reference'] = { link = 'Link' },
-    ['@text.todo.unchecked'] = { fg = C.blue1 }, -- For brackets and parens.
+    ['@text.todo.unchecked'] = { fg = C.blue1 },      -- For brackets and parens.
     ['@text.todo.checked'] = { fg = C.green.bright }, -- For brackets and parens.
     ['@text.warning'] = { fg = C.warning },
     ['@text.danger'] = { fg = C.error },
@@ -79,7 +93,7 @@ return {
     ['@lsp.type.selfKeyword'] = { link = 'Builtin' },
     ['@lsp.type.string.rust'] = { link = 'String' },
     ['@lsp.type.typeAlias'] = { link = 'Type' },
-    ['@lsp.type.unresolvedReference'] = {},
+    ['@lsp.type.unresolvedReference'] = { undercurl = true, sp = C.error },
     ['@lsp.type.variable'] = {}, -- use treesitter styles for regular variables
     ['@lsp.typemod.class.defaultLibrary'] = { link = 'Type' },
     ['@lsp.typemod.enum.defaultLibrary'] = { link = 'Type' },
@@ -99,16 +113,16 @@ return {
     ['@text.todo'] = { link = 'Todo' },
     ['@text.note'] = { link = 'Note' },
     ['@string.special'] = { fg = C.yellow.base }, -- For escape characters within a string.
-    ['@tag'] = { fg = C.blue1 }, -- Tags like html tag names.
-    ['@tag.delimiter'] = { fg = C.fg }, -- Tag delimiter like `<` `>` `/`
-    ['@tag.attribute'] = { fg = C.yellow.base }, -- Tag attribute like `id` `class`
-    ['@text'] = { link = 'Normal' }, -- For strings considered text in a markup language.
+    ['@tag'] = { fg = C.blue1 },                  -- Tags like html tag names.
+    ['@tag.delimiter'] = { fg = C.fg },           -- Tag delimiter like `<` `>` `/`
+    ['@tag.attribute'] = { fg = C.yellow.base },  -- Tag attribute like `id` `class`
+    ['@text'] = { link = 'Normal' },              -- For strings considered text in a markup language.
     ['@text.strong'] = { bold = true },
-    ['@text.emphasis'] = { italic = true }, -- For text to be represented with emphasis.
-    ['@text.underline'] = { underline = true }, -- For text to be represented with an underline.
-    ['@text.strike'] = { strikethrough = true }, -- For strikethrough text.
-    ['@text.title'] = { link = 'Title' }, -- Text that is part of a title.
-    ['@text.uri'] = { underline = true }, -- Any URI like a link or email.
+    ['@text.emphasis'] = { italic = true },       -- For text to be represented with emphasis.
+    ['@text.underline'] = { underline = true },   -- For text to be represented with an underline.
+    ['@text.strike'] = { strikethrough = true },  -- For strikethrough text.
+    ['@text.title'] = { link = 'Title' },         -- Text that is part of a title.
+    ['@text.uri'] = { underline = true },         -- Any URI like a link or email.
     ['@text.literal'] = { link = 'String' },
     ['@constant'] = { link = 'Constant' },
     ['@number'] = { link = 'Constant' },
@@ -141,4 +155,42 @@ return {
     ['@type.qualifier'] = { link = 'Keyword' },
     ['@storageclass'] = { link = 'Keyword' },
     ['@none'] = { link = 'None' },
+
+    -- These groups are for the Neovim tree-sitter highlights.
+    ["@annotation"] = { link = "PreProc" },
+    ["@character"] = { link = "Character" },
+    ["@character.special"] = { link = "SpecialChar" },
+    ["@keyword.conditional"] = { link = "Conditional" },
+    ["@keyword.debug"] = { link = "Debug" },
+    ["@keyword.directive.define"] = { link = "Define" },
+    ["@keyword.exception"] = { link = "Exception" },
+    ["@number.float"] = { link = "Float" },
+    ["@keyword.import"] = { link = "Include" },
+    ["@function.method"] = { link = "Function" },
+    ["@function.method.call"] = { link = "@function.method" },
+    ["@namespace.builtin"] = { link = "@variable.builtin" },
+    ["@keyword.directive"] = { link = "PreProc" },
+    ["@keyword.repeat"] = { link = "Repeat" },
+    ["@keyword.storage"] = { link = "StorageClass" },
+    ["@string"] = { link = "String" },
+    ["@markup.link.label"] = { link = "SpecialChar" },
+    ["@markup.link.label.symbol"] = { link = "Identifier" },
+    ["@markup"] = { link = "@none" },
+    ["@markup.environment"] = { link = "Macro" },
+    ["@markup.environment.name"] = { link = "Type" },
+    ["@markup.raw"] = { link = "String" },
+    ["@markup.math"] = { link = "Special" },
+    ["@markup.strong"] = { bold = true },
+    ["@markup.italic"] = { italic = true },
+    ["@markup.emphasis"] = { italic = true },
+    ["@markup.strikethrough"] = { strikethrough = true },
+    ["@markup.underline"] = { underline = true },
+    ["@markup.heading"] = { link = "Title" },
+    ["@comment.note"] = { fg = C.hint },
+    ["@comment.error"] = { fg = C.error },
+    ["@comment.hint"] = { fg = C.hint },
+    ["@comment.info"] = { fg = C.info },
+    ["@comment.warning"] = { fg = C.warning },
+    ["@comment.todo"] = { fg = C.todo },
+    ["@markup.link.url"] = { link = "Underlined" },
 }
