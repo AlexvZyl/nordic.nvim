@@ -4,8 +4,8 @@ local C = require 'nordic.colors.nordic'
 C.extended = false
 
 function C.extend_palette()
-   C.extended = true
-   local options = require('nordic.config').options
+    C.extended = true
+    local options = require('nordic.config').options
 
     -- Modify the palette before generating colors.
     C = options.on_palette(C)
@@ -39,7 +39,8 @@ function C.extend_palette()
     C.bg_selected = U.blend(C.gray2, C.black0, 0.4)
     C.bg_fold = C.gray2
     -- Cursorline Background
-    C.bg_highlight = U.blend(options.cursorline.bg, C.bg, options.cursorline.blend)
+    C.bg_highlight = (options.transparent_bg and options.cursorline.bg) or
+        U.blend(options.cursorline.bg, C.bg, options.cursorline.blend)
     C.bg_visual = C.bg_highlight
 
     -- Borders
@@ -61,7 +62,7 @@ function C.extend_palette()
     C.fg_popup_border = C.border_fg
 
     -- Floating windows
-    C.bg_float = (O.transparent_bg and C.none) or C.black1
+    C.bg_float = (options.transparent_bg and C.none) or C.black1
     C.fg_float = C.fg
     C.bg_float_border = C.bg_float
     C.fg_float_border = C.border_fg
