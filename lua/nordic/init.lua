@@ -14,7 +14,6 @@ function M.load(opts)
     C.setup(opts)
 
     -- Apply theme
-    require('nordic.colors').extend_palette()
     U.highlight(G.get_groups())
     G.set_term_colors()
 end
