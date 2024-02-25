@@ -2,7 +2,7 @@ local C = require 'nordic.colors'
 
 return {
 
-    DapUINormal = { bg = C.black1 },
+    DapUINormal = { bg = C.bg_float },
 
     DapUIStop = { fg = C.red.bright, bold = true },
     DapUIRestart = { fg = C.green.bright, bold = true },

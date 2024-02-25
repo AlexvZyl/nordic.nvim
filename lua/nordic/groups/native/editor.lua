@@ -62,7 +62,7 @@ local groups = {
     Question = { fg = C.info }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine = { bg = C.bg_visual, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 
-    Search = { bg = C.black1, fg = C.yellow.bright, bold = true, underline = true }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    Search = { bg = C.bg_float, fg = C.yellow.bright, bold = true, underline = true }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { bg = C.yellow.base, fg = C.black0, bold = true }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { link = 'IncSearch' },
 
@@ -78,7 +78,7 @@ local groups = {
 
     TabLine = { bg = C.bg_statusline, fg = C.fg }, -- tab pages line, not active tab page label
     TabLineFill = { bg = C.black0, fg = C.none }, -- tab pages line, where there are no labels
-    TabLineSel = { fg = C.fg_bright, bg = C.gray0 }, -- tab pages line, active tab page label
+    TabLineSel = { fg = C.fg_bright, bg = C.bg }, -- tab pages line, active tab page label
 
     Title = { fg = C.fg_bright, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
 

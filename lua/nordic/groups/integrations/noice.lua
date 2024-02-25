@@ -14,10 +14,10 @@ local groups = {
     NoiceCmdlineIcon = { bg = C.bg_float, fg = C.yellow.base },
     NoiceCmdlineIconSearch = { bg = C.bg_dark, fg = C.yellow.base },
 
-    NoicePopupBorder = { fg = C.black0, bg = C.black1 },
+    NoicePopupBorder = { fg = C.black0, bg = C.bg_float },
     NoiceCmdlinePopupBorder = { link = 'NoicePopupBorder' },
     NoiceCmdlinePopupBorderSearch = { link = 'NoicePopupBorder' },
-    NoiceCmdlinePopup = { bg = C.black1 },
+    NoiceCmdlinePopup = { bg = C.bg_float },
 }
 
 if O.noice.style == 'classic' then

@@ -75,7 +75,7 @@ return {
     htmlH2 = { fg = C.orange.base },
 
     Link = { fg = C.blue1, underline = true },
-    CodeBlock = { bg = C.black1, fg = C.fg },
+    CodeBlock = { bg = C.bg_float, fg = C.fg },
 
     mkdHeading = { link = 'htmlH1' },
     mkdCode = { link = 'CodeBlock' },

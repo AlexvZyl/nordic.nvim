@@ -21,18 +21,12 @@ function C.extend_palette()
     C.grey4 = C.gray4
     C.grey5 = C.gray5
 
-    -- Swap background
-    if options.swap_backgrounds then
-        local gray0 = C.gray0
-        C.gray0 = C.black1
-        C.black1 = gray0
-    end
-
     -- Define some use cases.
     -- Some of the format is from @folke/tokyonight.nvim.
 
     -- Backgrounds
-    C.bg = (options.transparent_bg and C.none) or C.gray0
+    C.bg = (options.transparent_bg and C.none) or
+        ((options.swap_backgrounds and C.black1) or C.gray0)
     C.bg_dark = (options.transparent_bg and C.none) or C.black0
     C.bg_sidebar = (options.transparent_bg and C.none) or C.bg
     C.bg_popup = (options.transparent_bg and C.none) or C.bg
@@ -63,7 +57,8 @@ function C.extend_palette()
     C.fg_popup_border = C.border_fg
 
     -- Floating windows
-    C.bg_float = (options.transparent_bg and C.none) or C.black1
+    C.bg_float = (options.transparent_bg and C.none) or
+        ((options.swap_backgrounds and C.gray0) or C.black1)
     C.fg_float = C.fg
     C.bg_float_border = C.bg_float
     C.fg_float_border = C.border_fg
