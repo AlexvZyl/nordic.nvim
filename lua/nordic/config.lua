@@ -1,5 +1,7 @@
 local M = {}
 
+local palette = require("nordic.colors.nordic")
+
 local defaults = {
     -- This callback can be used to override the colors used in the palette.
     on_palette = function(palette)
@@ -26,7 +28,7 @@ local defaults = {
         -- Bold cursorline number.
         bold_number = true,
         -- Cursorline bg.
-        bg = '#191D24',
+        bg = palette.black0,
         -- Blending the cursorline bg with the buffer bg.
         blend = 0.85,
     },
