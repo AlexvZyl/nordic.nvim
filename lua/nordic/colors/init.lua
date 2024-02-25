@@ -1,10 +1,7 @@
 local U = require 'nordic.utils'
 local C = require 'nordic.colors.nordic'
 
-C.extended = false
-
 function C.extend_palette()
-    C.extended = true
     local options = require('nordic.config').options
 
     -- `white0` is used as the default fg, and has a blue tint.
@@ -96,6 +93,6 @@ end
 
 -- Sometimes the palette is required before the theme has been loaded,
 -- so we need to extend the palette in those cases.
-if not C.extended then C.extend_palette() end
+C.extend_palette()
 
 return C
