@@ -1,16 +1,15 @@
 local U = require 'nordic.utils'
-local O = require('nordic.config').options
 local C = require 'nordic.colors.nordic'
 
 C.extended = false
 
 function C.extend_palette()
+    local O = require 'nordic.config'.options
+
     C.extended = true
 
     -- Modify the palette before generating colors.
     C = O.on_palette(C)
-
-    local diff_blend = 0.2
 
     -- Add these for international convenience :)
     C.grey0 = C.gray0
@@ -19,13 +18,6 @@ function C.extend_palette()
     C.grey3 = C.gray3
     C.grey4 = C.gray4
     C.grey5 = C.gray5
-
-    -- Swap background
-    if O.swap_backgrounds then
-        local gray0 = C.gray0
-        C.gray0 = C.black1
-        C.black1 = gray0
-    end
 
     -- Define some use cases.
     -- Some of the format is from @folke/tokyonight.nvim.
@@ -66,6 +58,7 @@ function C.extend_palette()
     C.fg_float_border = C.border_fg
 
     -- Diffs
+    local diff_blend = 0.2
     C.diff = {
         change0 = U.blend(C.blue1, C.bg, 0.05),
         change1 = U.blend(C.blue2, C.bg, diff_blend),
@@ -87,15 +80,32 @@ function C.extend_palette()
     C.hint = C.green.bright
     C.info = C.blue2
 
-    -- Cursorline
-    if O.cursorline.theme == 'light' then
-        C.bg_highlight = U.blend(C.gray1, C.bg, O.cursorline.blend)
-        C.bg_visual = C.bg_highlight
-    end
+    -- Misc
+    C.comment = C.gray4
 end
 
 -- Sometimes the palette is required before the theme has been loaded,
 -- so we need to extend the palette in those cases.
 if not C.extended then C.extend_palette() end
+
+-- We only want to call these on setup.
+function C.apply_modifications()
+    local O = require 'nordic.config'.options
+    -- Cursorline
+    if O.cursorline.theme == 'light' then
+        C.bg_highlight = U.blend(C.gray1, C.bg, O.cursorline.blend)
+        C.bg_visual = C.bg_highlight
+    end
+    -- Swap background
+    if O.swap_backgrounds then
+        local gray0 = C.gray0
+        C.gray0 = C.black1
+        C.black1 = gray0
+    end
+    -- Change white.
+    if O.reduced_blue then
+        C.white0 = C.white0_alt
+    end
+end
 
 return C
