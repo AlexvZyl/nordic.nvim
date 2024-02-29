@@ -66,7 +66,7 @@ function M.get_groups()
     G.htmlH1 = { fg = C.yellow.base, bold = true }
     G.htmlH2 = { fg = C.orange.base }
     G.Link = { fg = C.blue1, underline = true }
-    G.CodeBlock = { bg = C.black1, fg = C.fg }
+    G.CodeBlock = { bg = C.bg_float, fg = C.fg }
     G.mkdHeading = { link = 'htmlH1' }
     G.mkdCode = { link = 'CodeBlock' }
     G.mkdCodeDelimiter = { link = 'CodeBlock' }
@@ -111,7 +111,7 @@ function M.get_groups()
     G.DiagnosticUnderlineWarn = { undercurl = true, sp = C.warning } -- Used to underline "Warning" diagnostics
     G.DiagnosticUnderlineInfo = { undercurl = true, sp = C.info } -- Used to underline "Information" diagnostics
     G.DiagnosticUnderlineHint = { undercurl = true, sp = C.hint } -- Used to underline "Hint" diagnostics
-    G.DiagnosticText = { bg = C.black1 }
+    G.DiagnosticText = { bg = C.bg_float }
     G.LspSignatureActiveParameter = { bg = C.gray3, bold = true }
     G.LspCodeLens = { fg = C.comment }
     G.LspInfoBorder = { link = 'FloatBorder' }
@@ -163,7 +163,7 @@ function M.get_groups()
     G.PmenuThumb = { bg = C.gray2, fg = C.gray2 } -- Popup menu: Thumb of the scrollbar.
     G.Question = { fg = C.info } -- |hit-enter| prompt and yes/no questions
     G.QuickFixLine = { bg = C.bg_visual, bold = true } -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    G.Search = { bg = C.black1, fg = C.yellow.bright, bold = true, underline = true } -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    G.Search = { bg = C.bg_float, fg = C.yellow.bright, bold = true, underline = true } -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     G.IncSearch = { bg = C.yellow.base, fg = C.black0, bold = true } -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     G.CurSearch = { link = 'IncSearch' }
     G.SpecialKey = { fg = C.gray5 } -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
@@ -175,7 +175,7 @@ function M.get_groups()
     G.StatusLineNC = { fg = C.gray4, bg = C.bg_statusline } -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     G.TabLine = { bg = C.bg_statusline, fg = C.fg } -- tab pages line, not active tab page label
     G.TabLineFill = { bg = C.black0, fg = C.none } -- tab pages line, where there are no labels
-    G.TabLineSel = { fg = C.fg_bright, bg = C.gray0 } -- tab pages line, active tab page label
+    G.TabLineSel = { fg = C.fg_bright, bg = C.bg } -- tab pages line, active tab page label
     G.Title = { fg = C.fg_bright, bold = true } -- titles for output from ":set all", ":autocmd" etc.
     G.Visual = { bg = C.bg_visual, bold = O.cursorline.bold } -- Visual mode selection
     G.VisualNOS = { bg = C.bg_visual } -- Visual mode selection when vim is "Not Owning the Selection".
