@@ -26,13 +26,22 @@ function C.extend_palette()
     C.bg = (options.transparent_bg and C.none) or
         ((options.swap_backgrounds and C.black1) or C.gray0)
     C.bg_dark = (options.transparent_bg and C.none) or C.black0
-    C.bg_highlight = U.blend(C.bg_dark, C.bg, options.cursorline.blend)
-    C.bg_visual = C.bg_highlight
     C.bg_sidebar = (options.transparent_bg and C.none) or C.bg
     C.bg_popup = (options.transparent_bg and C.none) or C.bg
     C.bg_statusline = C.bg_dark
     C.bg_selected = U.blend(C.gray2, C.black0, 0.4)
     C.bg_fold = C.gray2
+
+    -- Cursorline Background
+    if options.cursorline.theme == 'light' then
+        options.cursorline.bg = C.gray1
+    else
+        options.cursorline.bg = C.bg_dark
+    end
+
+    C.bg_highlight = (options.transparent_bg and options.cursorline.bg)
+        or U.blend(options.cursorline.bg, C.bg, options.cursorline.blend)
+    C.bg_visual = C.bg_highlight
 
     -- Borders
     C.border_fg = (options.bright_border and C.white0) or C.black0
@@ -81,12 +90,6 @@ function C.extend_palette()
     C.warning = C.warn
     C.hint = C.green.bright
     C.info = C.blue2
-
-    -- Cursorline
-    if options.cursorline.theme == 'light' then
-        C.bg_highlight = U.blend(C.gray1, C.bg, options.cursorline.blend)
-        C.bg_visual = C.bg_highlight
-    end
 
     -- Misc
     C.comment = C.gray4
