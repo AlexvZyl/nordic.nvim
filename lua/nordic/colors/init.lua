@@ -97,6 +97,9 @@ function C.extend_palette()
         C.bg_highlight = U.blend(C.gray1, C.bg, options.cursorline.blend)
         C.bg_visual = C.bg_highlight
     end
+
+    -- Misc
+    C.comment = C.gray4
 end
 
 -- Sometimes the palette is required before the theme has been loaded,
