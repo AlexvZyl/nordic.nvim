@@ -1,11 +1,7 @@
 local U = require 'nordic.utils'
 local C = require 'nordic.colors.nordic'
 
-C.extended = false
-
 function C.extend_palette()
-    C.extended = true
-
     local options = require('nordic.config').options
 
     -- `white0` is used as the default fg, and has a blue tint.
@@ -14,8 +10,6 @@ function C.extend_palette()
 
     -- Modify the palette before generating colors.
     C = options.on_palette(C)
-
-    local diff_blend = 0.2
 
     -- Add these for international convenience :)
     C.grey0 = C.gray0
@@ -71,6 +65,7 @@ function C.extend_palette()
     C.fg_float_border = C.border_fg
 
     -- Diffs
+    local diff_blend = 0.2
     C.diff = {
         change0 = U.blend(C.blue1, C.bg, 0.05),
         change1 = U.blend(C.blue2, C.bg, diff_blend),
@@ -104,6 +99,6 @@ end
 
 -- Sometimes the palette is required before the theme has been loaded,
 -- so we need to extend the palette in those cases.
-if not C.extended then C.extend_palette() end
+C.extend_palette()
 
 return C
