@@ -7,6 +7,10 @@ C.extended = false
 function C.extend_palette()
     C.extended = true
 
+    -- `white0` is used as the default fg, and has a blue tint.
+    -- Reduce that amount of tint.
+    C.white0 = (O.reduced_blue and C.white0_reduce_blue) or C.white0_normal
+
     -- Modify the palette before generating colors.
     C = O.on_palette(C)
 
