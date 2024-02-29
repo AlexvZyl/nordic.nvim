@@ -7,8 +7,6 @@ function M.get_groups()
         require('nordic.groups.native').get_groups(),
         require('nordic.groups.integrations').get_groups()
     )
-    print(vim.inspect(groups["Comment"]))
-    print(vim.inspect(groups["@comment"]))
     return merge(
         groups,
         require 'nordic.config'.options.override
