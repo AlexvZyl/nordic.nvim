@@ -17,9 +17,9 @@ function M.load(opts)
     require('nordic.colors').extend_palette()
 
     -- Apply theme
-    local groups = require 'nordic.groups'
-    U.highlight(groups.get_groups())
-    groups.set_term_colors()
+    local G = require 'nordic.groups'
+    U.highlight(G.get_groups())
+    G.set_term_colors()
 end
 
 -- Add command to nvim
