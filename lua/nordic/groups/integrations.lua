@@ -152,6 +152,7 @@ function M.get_groups()
         G.NoiceCmdlinePopup = { bg = C.bg }
         G.NoicePopupBorder = { bg = C.bg, fg = C.cyan.base }
         G.NoiceCmdlineIcon = { bg = C.bg, fg = C.yellow.bright }
+        vim.fn.cmd 'aklsdjhfalksdhf'
     end
 
     -- Nvim cmp.
