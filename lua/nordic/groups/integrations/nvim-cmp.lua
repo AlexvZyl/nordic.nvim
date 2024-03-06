@@ -7,7 +7,7 @@ return {
     CmpItemAbbrMatchFuzzy = { link = 'CmpItemAbbrMatch' },
 
     CmpItemKindField = { link = '@field' },
-    CmpItemKindProperty = { link = '@proprty' },
+    CmpItemKindProperty = { link = '@property' },
     CmpItemKindEvent = { link = 'Type' },
 
     CmpItemKindText = { fg = C.grey4 },
