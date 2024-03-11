@@ -7,6 +7,8 @@ function M.get_groups()
         require('nordic.groups.native').get_groups(),
         require('nordic.groups.integrations').get_groups()
     )
+
+
     return merge(
         groups,
         require 'nordic.config'.options.override

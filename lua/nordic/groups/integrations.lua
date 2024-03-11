@@ -141,10 +141,10 @@ function M.get_groups()
     G.NoiceCmdline = { bg = C.bg_dark, fg = C.fg }
     G.NoiceCmdlineIcon = { bg = C.bg_float, fg = C.yellow.base }
     G.NoiceCmdlineIconSearch = { bg = C.bg_dark, fg = C.yellow.base }
-    G.NoicePopupBorder = { fg = C.black0, bg = C.black1 }
+    G.NoicePopupBorder = { fg = C.black0, bg = C.bg_float }
     G.NoiceCmdlinePopupBorder = { link = 'NoicePopupBorder' }
     G.NoiceCmdlinePopupBorderSearch = { link = 'NoicePopupBorder' }
-    G.NoiceCmdlinePopup = { bg = C.black1 }
+    G.NoiceCmdlinePopup = { bg = C.bg_float }
 
     -- Noice Classic.
     if O.noice.style == 'classic' then
@@ -190,7 +190,7 @@ function M.get_groups()
     G.DapBreakPoint = { fg = C.red.bright }
 
     -- Nvim DAP UI.
-    G.DapUINormal = { bg = C.black1 }
+    G.DapUINormal = { bg = C.bg_float }
     G.DapUIStop = { fg = C.red.bright, bold = true }
     G.DapUIRestart = { fg = C.green.bright, bold = true }
     G.DapUIPlayPause = { fg = C.green.bright, bold = true }
@@ -251,22 +251,22 @@ function M.get_groups()
 
     -- Telescope Flat.
     if O.telescope.style == 'flat' then
-        G.TelescopeNormal = { bg = C.black1 }
+        G.TelescopeNormal = { bg = C.bg_float }
         G.TelescopePromptNormal = { bg = C.black2 }
-        G.TelescopeResultsNormal = { bg = C.black1 }
-        G.TelescopePreviewNormal = { bg = C.black1 }
-        G.TelescopeSelection = { bg = C.black1, fg = C.yellow.bright }
-        G.TelescopeSelectionCaret = { fg = C.yellow.bright, bg = C.black1, bold = true }
+        G.TelescopeResultsNormal = { bg = C.bg_float }
+        G.TelescopePreviewNormal = { bg = C.bg_float }
+        G.TelescopeSelection = { bg = C.bg_float, fg = C.yellow.bright }
+        G.TelescopeSelectionCaret = { fg = C.yellow.bright, bg = C.bg_float, bold = true }
         G.TelescopePreviewTitle = { bg = C.blue2, fg = C.black0, bold = true }
         G.TelescopeResultsTitle = { bg = C.orange.base, fg = C.black0, bold = true }
         G.TelescopePromptTitle = { bg = C.orange.base, fg = C.black0, bold = true }
         G.TelescopeTitle = { bg = C.orange.base, fg = C.black0, bold = true }
         G.TelescopeBorder = { fg = C.black0, bg = C.black0 }
         G.TelescopePromptBorder = { bg = C.black2, fg = C.black0 }
-        G.TelescopeResultsBorder = { bg = C.black1, fg = C.black0 }
-        G.TelescopePreviewBorder = { bg = C.black1, fg = C.black0 }
-        G.TelescopeMultiIcon = { fg = C.yellow.bright, bg = C.black1, bold = true }
-        G.TelescopeMultiSelection = { bg = C.black1 }
+        G.TelescopeResultsBorder = { bg = C.bg_float, fg = C.black0 }
+        G.TelescopePreviewBorder = { bg = C.bg_float, fg = C.black0 }
+        G.TelescopeMultiIcon = { fg = C.yellow.bright, bg = C.bg_float, bold = true }
+        G.TelescopeMultiSelection = { bg = C.bg_float }
         G.TelescopePromptPrefix = { bg = C.black2, fg = C.orange.bright }
         G.TelescopePreviewLine = { bg = C.gray1 }
     end
@@ -415,7 +415,7 @@ function M.get_groups()
     G.TreesitterContextLineNumber = { fg = fg, bg = bg }
 
     -- Trouble.
-    G.TroubleNormal = { bg = C.black1 }
+    G.TroubleNormal = { bg = C.bg_float }
     G.TroubleText = { fg = C.fg }
     G.TroubleCount = { fg = C.white1, bg = C.gray2 }
     G.TroubleIndent = { fg = C.gray1 }
@@ -450,10 +450,10 @@ function M.get_groups()
 
     -- Whichkey.
     G.WhichKey = { fg = C.yellow.base }
-    G.WhichKeyFloat = { bg = C.black1 }
+    G.WhichKeyFloat = { bg = C.bg_float }
     G.WhichKeyDesc = { fg = C.white0 }
     G.WhichKeyGroup = { fg = C.orange.bright, bold = true }
-    G.WhichKeyBorder = { fg = C.black0, bg = C.black1 }
+    G.WhichKeyBorder = { fg = C.black0, bg = C.bg_float }
     -- TODO: Unsure.
     G.WhichKeySeperator = {}
     G.WhichKeyValue = {}

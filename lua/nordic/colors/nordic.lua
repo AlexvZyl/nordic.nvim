@@ -25,10 +25,10 @@ local palette = {
     gray5 = '#60728A',
 
     -- Dim white.
-    -- `white0` is used as the default fg, and has a blue tint.
-    -- Reduce that amount of tint.
-    white0_alt = '#C0C8D8',
-    white0 = '#BBC3D4',
+    -- default fg, has a blue tint.
+    white0_normal = '#BBC3D4',
+    -- less blue tint
+    white0_reduce_blue = '#C0C8D8',
 
     -- Snow storm.
     white1 = '#D8DEE9',

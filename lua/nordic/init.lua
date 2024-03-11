@@ -13,12 +13,10 @@ function M.load(opts)
         require 'nordic.config'.setup(opts)
     end
 
-    -- Setup colors.
-    local colors = require('nordic.colors')
-    colors.apply_modifications()
-    colors.extend_palette()
+    -- Setup colors
+    require('nordic.colors').extend_palette()
 
-    -- Apply theme.
+    -- Apply theme
     local G = require 'nordic.groups'
     U.highlight(G.get_groups())
     G.set_term_colors()
@@ -31,6 +29,6 @@ end, {
     nargs = 1,
 })
 
-M.setup = require 'nordic.config'.setup
+M.setup = require('nordic.config').setup
 
 return M
