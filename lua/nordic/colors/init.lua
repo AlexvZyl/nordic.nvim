@@ -28,8 +28,7 @@ function C.extend_palette()
     C.bg_dark = (options.transparent_bg and C.none) or C.black0
     C.bg_sidebar = (options.transparent_bg and C.none) or C.bg
     C.bg_popup = (options.transparent_bg and C.none) or C.bg
-    C.bg_highlight = (options.swap_backgrounds and C.gray0) or C.black1
-    C.bg_statusline = C.bg_dark
+    C.bg_statusline = C.black0
     C.bg_selected = U.blend(C.gray2, C.black0, 0.4)
     C.bg_fold = C.gray2
 
@@ -37,7 +36,7 @@ function C.extend_palette()
     if options.cursorline.theme == 'light' then
         options.cursorline.bg = C.gray1
     else
-        options.cursorline.bg = C.bg_dark
+        options.cursorline.bg = C.black0
     end
 
     C.bg_visual = (options.transparent_bg and options.cursorline.bg)

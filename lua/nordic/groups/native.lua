@@ -66,7 +66,7 @@ function M.get_groups()
     G.htmlH1 = { fg = C.yellow.base, bold = true }
     G.htmlH2 = { fg = C.orange.base }
     G.Link = { fg = C.blue1, underline = true }
-    G.CodeBlock = { bg = C.bg_highlight, fg = C.fg }
+    G.CodeBlock = { bg = C.bg_float, fg = C.fg }
     G.mkdHeading = { link = 'htmlH1' }
     G.mkdCode = { link = 'CodeBlock' }
     G.mkdCodeDelimiter = { link = 'CodeBlock' }
@@ -163,8 +163,8 @@ function M.get_groups()
     G.PmenuThumb = { bg = C.gray2, fg = C.gray2 } -- Popup menu: Thumb of the scrollbar.
     G.Question = { fg = C.info } -- |hit-enter| prompt and yes/no questions
     G.QuickFixLine = { bg = C.bg_visual, bold = true } -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    G.Search = { bg = C.bg_highlight, fg = C.yellow.bright, bold = true, underline = true } -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-    G.IncSearch = { bg = C.yellow.base, fg = C.black0, bold = true } -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    G.Search = { bg = C.bg_visual, fg = C.yellow.bright, bold = true, underline = true } -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    G.IncSearch = { bg = C.yellow.base, fg = C.bg_visual, bold = true } -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     G.CurSearch = { link = 'IncSearch' }
     G.SpecialKey = { fg = C.gray5 } -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     G.SpellBad = { sp = C.error, undercurl = true } -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
