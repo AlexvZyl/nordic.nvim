@@ -49,7 +49,7 @@ function M.get_groups()
     G.Special = { fg = C.blue1 } -- (preferred) any special symbol
     -- SpecialChar   = { } --  special character in a constant
     -- Tag           = { } --    you can use CTRL-] on this
-    -- Delimiter     = { } --  character that needs attention
+    G.Delimiter = { italic = true, fg = C.gray5} --  character that needs attention
     -- SpecialComment= { } -- special things inside a comment
     -- Debug         = { } --    debugging statements
     G.Underlined = { underline = true } -- (preferred) text that stands out, HTML links

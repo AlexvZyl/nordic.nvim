@@ -288,7 +288,7 @@ function M.get_groups()
     G["@comment.todo"] = { fg = C.todo }
     G['@operator'] = { fg = C.fg } -- For any operator: `+`, but also `->` and `*` in C.
     --- Punctuation
-    G['@punctuation.delimiter'] = { link = '@operator' } -- For delimiters ie: `.`
+    G['@punctuation.delimiter'] = { link = 'Delimiter' } -- For delimiters ie: `.`
     G['@punctuation.bracket'] = { link = '@operator' } -- For brackets and parens.
     G['@punctuation.special'] = { link = 'Macro' } -- For special punctutation that does not fall in the catagories before.
     G['@punctuation.special.markdown'] = { fg = C.orange.base, bold = true }
