@@ -110,7 +110,7 @@ require 'nordic' .setup {
         bold = false,
         -- Bold cursorline number.
         bold_number = true,
-        -- Avialable styles: 'dark', 'light'.
+        -- Available styles: 'dark', 'light'.
         theme = 'dark',
         -- Blending the cursorline bg with the buffer bg.
         blend = 0.85,

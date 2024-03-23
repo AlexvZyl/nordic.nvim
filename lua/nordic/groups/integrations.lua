@@ -159,7 +159,7 @@ function M.get_groups()
     G.CmpItemAbbrMatch = { fg = C.blue1, bold = true }
     G.CmpItemAbbrMatchFuzzy = { link = 'CmpItemAbbrMatch' }
     G.CmpItemKindField = { link = '@field' }
-    G.CmpItemKindProperty = { link = '@proprty' }
+    G.CmpItemKindProperty = { link = '@property' }
     G.CmpItemKindEvent = { link = 'Type' }
     G.CmpItemKindText = { fg = C.grey4 }
     G.CmpItemKindEnum = { link = 'Type' }
