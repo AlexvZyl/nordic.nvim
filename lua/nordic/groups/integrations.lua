@@ -326,7 +326,7 @@ function M.get_groups()
     G['@variable.builtin'] = { link = 'Builtin' } -- Variable names that are defined by the languages, like `this` or `self`.
     G['@variable.member'] = { link = 'Field' }
     --- Text
-     G['@spell'] = { link = 'Comment' }
+    -- G['@spell'] = { link = 'Comment' } -- This seems to interfere with regular text
     -- G["@text.literal.markdown"] = { }
     G['@text'] = { link = 'Normal' } -- For strings considered text in a markup language.
     G['@text.strong'] = { bold = true }
