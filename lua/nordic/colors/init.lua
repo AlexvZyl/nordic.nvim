@@ -1,16 +1,15 @@
 local U = require 'nordic.utils'
-local O = require('nordic.config').options
 local C = require 'nordic.colors.nordic'
 
-C.extended = false
-
 function C.extend_palette()
-    C.extended = true
+    local options = require('nordic.config').options
+
+    -- `white0` is used as the default fg, and has a blue tint.
+    -- Reduce that amount of tint.
+    C.white0 = (options.reduced_blue and C.white0_reduce_blue) or C.white0_normal
 
     -- Modify the palette before generating colors.
-    C = O.on_palette(C)
-
-    local diff_blend = 0.2
+    C = options.on_palette(C)
 
     -- Add these for international convenience :)
     C.grey0 = C.gray0
@@ -20,30 +19,32 @@ function C.extend_palette()
     C.grey4 = C.gray4
     C.grey5 = C.gray5
 
-    -- Swap background
-    if O.swap_backgrounds then
-        local gray0 = C.gray0
-        C.gray0 = C.black1
-        C.black1 = gray0
-    end
-
     -- Define some use cases.
     -- Some of the format is from @folke/tokyonight.nvim.
 
     -- Backgrounds
-    C.bg = (O.transparent_bg and C.none) or C.gray0
-    C.bg_dark = (O.transparent_bg and C.none) or C.black0
-    C.bg_highlight = U.blend(C.bg_dark, C.bg, O.cursorline.blend)
-    C.bg_visual = C.bg_highlight
-    C.bg_sidebar = (O.transparent_bg and C.none) or C.bg
-    C.bg_popup = (O.transparent_bg and C.none) or C.bg
-    C.bg_statusline = C.bg_dark
+    C.bg = (options.transparent_bg and C.none) or
+        ((options.swap_backgrounds and C.black1) or C.gray0)
+    C.bg_dark = (options.transparent_bg and C.none) or C.black0
+    C.bg_sidebar = (options.transparent_bg and C.none) or C.bg
+    C.bg_popup = (options.transparent_bg and C.none) or C.bg
+    C.bg_statusline = C.black0
     C.bg_selected = U.blend(C.gray2, C.black0, 0.4)
     C.bg_fold = C.gray2
 
+    -- Cursorline Background
+    if options.cursorline.theme == 'light' then
+        options.cursorline.bg = C.gray1
+    else
+        options.cursorline.bg = C.black0
+    end
+
+    C.bg_visual = (options.transparent_bg and options.cursorline.bg)
+        or U.blend(options.cursorline.bg, C.bg, options.cursorline.blend)
+
     -- Borders
-    C.border_fg = (O.bright_border and C.white0) or C.black0
-    C.border_bg = (O.transparent_bg and C.none) or C.bg
+    C.border_fg = (options.bright_border and C.white0) or C.black0
+    C.border_bg = (options.transparent_bg and C.none) or C.bg
 
     -- Foregrounds
     C.fg = C.white0
@@ -60,12 +61,14 @@ function C.extend_palette()
     C.fg_popup_border = C.border_fg
 
     -- Floating windows
-    C.bg_float = (O.transparent_bg and C.none) or C.black1
+    C.bg_float = (options.transparent_bg and C.none) or
+        ((options.swap_backgrounds and C.gray0) or C.black1)
     C.fg_float = C.fg
     C.bg_float_border = C.bg_float
     C.fg_float_border = C.border_fg
 
     -- Diffs
+    local diff_blend = 0.2
     C.diff = {
         change0 = U.blend(C.blue1, C.bg, 0.05),
         change1 = U.blend(C.blue2, C.bg, diff_blend),
@@ -87,15 +90,12 @@ function C.extend_palette()
     C.hint = C.green.bright
     C.info = C.blue2
 
-    -- Cursorline
-    if O.cursorline.theme == 'light' then
-        C.bg_highlight = U.blend(C.gray1, C.bg, O.cursorline.blend)
-        C.bg_visual = C.bg_highlight
-    end
+    -- Misc
+    C.comment = C.gray4
 end
 
 -- Sometimes the palette is required before the theme has been loaded,
 -- so we need to extend the palette in those cases.
-if not C.extended then C.extend_palette() end
+C.extend_palette()
 
 return C

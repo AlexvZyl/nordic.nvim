@@ -1,5 +1,3 @@
-local C = require 'nordic.config'
-local G = require 'nordic.groups'
 local U = require 'nordic.utils'
 
 local M = {}
@@ -11,10 +9,15 @@ function M.load(opts)
         vim.g.colors_name = U.NAME
     end
 
-    C.setup(opts)
+    if opts then
+        require 'nordic.config'.setup(opts)
+    end
+
+    -- Setup colors
+    require('nordic.colors').extend_palette()
 
     -- Apply theme
-    require('nordic.colors').extend_palette()
+    local G = require 'nordic.groups'
     U.highlight(G.get_groups())
     G.set_term_colors()
 end
@@ -26,6 +29,6 @@ end, {
     nargs = 1,
 })
 
-M.setup = C.setup
+M.setup = require('nordic.config').setup
 
 return M
