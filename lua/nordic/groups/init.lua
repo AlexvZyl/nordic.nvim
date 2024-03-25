@@ -3,16 +3,14 @@ local merge = require('nordic.utils').merge
 local M = {}
 
 function M.get_groups()
+    local O = require('nordic.config').options
+
     local groups = merge(
         require('nordic.groups.native').get_groups(),
         require('nordic.groups.integrations').get_groups()
     )
 
-
-    return merge(
-        groups,
-        require 'nordic.config'.options.override
-    )
+    return O.on_highlight(groups, require('nordic.colors'))
 end
 
 function M.set_term_colors()
