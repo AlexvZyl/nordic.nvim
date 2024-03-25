@@ -92,6 +92,10 @@ function C.extend_palette()
 
     -- Misc
     C.comment = C.gray4
+
+    -- Modify the palette after generating the colors.
+    -- This allows users to override individual colors in the extended palette as well ; )
+    C = options.on_palette(C)
 end
 
 -- Sometimes the palette is required before the theme has been loaded,
