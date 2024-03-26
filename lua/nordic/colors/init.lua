@@ -100,6 +100,8 @@ local function build_palette()
     C.comment = C.gray4
 
     -- Modify the palette after generating the colors.
+    -- Set all values in the base palette back to their defaults
+    C = vim.tbl_deep_extend('force', C, P)
     -- This allows users to override individual colors in the extended palette as well ; )
     C = options.on_palette(C)
 end
