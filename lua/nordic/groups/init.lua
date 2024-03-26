@@ -8,11 +8,18 @@ function M.get_groups()
         require('nordic.groups.integrations').get_groups()
     )
 
+    local O = require('nordic.config').options
 
-    return merge(
-        groups,
-        require 'nordic.config'.options.override
-    )
+    if O.override ~= nil then
+        vim.api.nvim_echo(
+        { { 'nordic.nvim override config option is now depricated, please use on_highlight', 'WarningMsg' } }, true, {})
+        groups = merge(
+            groups,
+            O.override
+        )
+    end
+
+    return O.on_highlight(groups, require('nordic.colors'))
 end
 
 function M.set_term_colors()

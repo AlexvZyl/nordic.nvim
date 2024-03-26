@@ -1,7 +1,13 @@
 local U = require 'nordic.utils'
-local C = require 'nordic.colors.nordic'
+local P = require 'nordic.colors.nordic'
 
-function C.extend_palette()
+local C = {}
+
+local function build_palette()
+    -- make a new palette
+    C = vim.deepcopy(P)
+    C.build_palette = build_palette
+
     local options = require('nordic.config').options
 
     -- `white0` is used as the default fg, and has a blue tint.
@@ -92,10 +98,15 @@ function C.extend_palette()
 
     -- Misc
     C.comment = C.gray4
+
+    -- Modify the palette after generating the colors.
+    -- Set all values in the base palette back to their defaults
+    C = vim.tbl_deep_extend('force', C, P)
+    -- This allows users to override individual colors in the extended palette as well ; )
+    C = options.on_palette(C)
 end
 
--- Sometimes the palette is required before the theme has been loaded,
--- so we need to extend the palette in those cases.
-C.extend_palette()
+-- build the first palette
+build_palette()
 
 return C
