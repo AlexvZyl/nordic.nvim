@@ -14,7 +14,7 @@ function M.load(opts)
     end
 
     -- Setup colors
-    require('nordic.colors').extend_palette()
+    require('nordic.colors').build_palette()
 
     -- Apply theme
     local G = require 'nordic.groups'
