@@ -56,6 +56,17 @@ local defaults = {
 M.options = defaults
 
 function M.setup(options)
+    if options.transparent_bg then
+        vim.api.nvim_echo(
+            { { 'nordic.nvim transparent_bg is deprecated, please use transparent instead. See docs for details', 'WarningMsg' } }, true, {})
+        if not options.transparent then
+            options.transparent = {
+                bg = true,
+                float = true,
+            }
+        end
+    end
+
     M.options = vim.tbl_deep_extend('force', M.options or defaults, options or {})
 end
 
