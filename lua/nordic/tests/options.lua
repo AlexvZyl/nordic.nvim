@@ -23,7 +23,8 @@ end
 -- Flip all fields
 config.bold_keywords = not config.bold_keywords
 config.italic_comments = not config.italic_comments
-config.transparent_bg = not config.transparent_bg
+config.transparent.bg = not config.transparent.bg
+config.transparent.float = not config.transparent.float
 config.bright_border = not config.bright_border
 config.reduced_blue = not config.reduced_blue
 config.swap_backgrounds = not config.swap_backgrounds

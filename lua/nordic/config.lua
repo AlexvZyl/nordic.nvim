@@ -9,8 +9,13 @@ local defaults = {
     bold_keywords = false,
     -- Enable italic comments.
     italic_comments = true,
-    -- Enable general editor background transparency.
-    transparent_bg = false,
+    -- Enable editor background transparency.
+    transparent = {
+        -- Enable transparent background.
+        bg = false,
+        -- Enable transparent background for floating windows.
+        float = false,
+    },
     -- Enable brighter float border.
     bright_border = false,
     -- Adjusts some colors to make the theme a bit nicer (imo).
@@ -51,6 +56,17 @@ local defaults = {
 M.options = defaults
 
 function M.setup(options)
+    if options.transparent_bg then
+        vim.api.nvim_echo(
+            { { 'nordic.nvim transparent_bg is deprecated, please use transparent instead. See docs for details', 'WarningMsg' } }, true, {})
+        if not options.transparent then
+            options.transparent = {
+                bg = true,
+                float = true,
+            }
+        end
+    end
+
     M.options = vim.tbl_deep_extend('force', M.options or defaults, options or {})
 end
 
