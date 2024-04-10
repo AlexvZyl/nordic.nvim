@@ -134,6 +134,11 @@ require 'nordic' .setup {
 }
 ```
 
+**Examples:**
+
+<details>
+  <summary><b><code>on_highlight</code></b></summary>
+
 An example of overriding the `TelescopePromptTitle` colors:
 
 ```lua
@@ -151,6 +156,42 @@ require 'nordic' .setup {
     end
 }
 ```
+
+</details>
+
+<details>
+  <summary><b><code>on_palette</code></b></summary>
+
+An example of overriding colors in the base palette & extended palette:
+
+```lua
+require 'nordic' .setup {
+    on_palette = function(palette)
+        palette.black1 = "#BF616A"
+        palette.bg = palette.yellow.base
+        return palette
+    end,
+}
+```
+
+Internally the provided function is called twice, so you can safely use colors form the extended palette if you check that `palette.extended` is true.
+
+Example of how to change the cursorline color to orange:
+
+
+```lua
+require 'nordic' .setup {
+    on_palette = function(palette)
+        -- If the palette is extended, we can safely use palette.bg
+        if palette.extended then
+            palette.bg_visual = require("nordic.utils").blend(palette.orange.base, palette.bg, 0.2)
+        end
+        return palette
+    end,
+}
+```
+
+</details>
 
 # 🗒️ Supported Plugins and Platforms
 

@@ -15,7 +15,12 @@ local function build_palette()
     C.white0 = (options.reduced_blue and C.white0_reduce_blue) or C.white0_normal
 
     -- Modify the palette before generating colors.
+
+    -- This flag allows users to check if the extended palette can be used.
+    -- On the first run only the base palette is available.
     C.extended = false
+    -- Any changes to the palette made in this run will be overwritten.
+    -- However they will be used to setup the extended palette.
     C = options.on_palette(C)
 
     -- Add these for international convenience :)
@@ -101,10 +106,16 @@ local function build_palette()
     C.comment = C.gray4
 
     -- Modify the palette after generating the colors.
-    -- Set all values in the base palette back to their defaults
-    C = vim.tbl_deep_extend('force', C, P)
-    -- This allows users to override individual colors in the extended palette as well ; )
+
+    -- Now the extended palette is available.
     C.extended = true
+
+    -- Set all values in the base palette back to their defaults.
+    -- This means that on_palette will receive the same base palette as the first run & set the values again.
+    C = vim.tbl_deep_extend('force', C, P)
+
+    -- This time we already have extended the palette & any changes made will not be overwritten.
+    -- So now on_palette will resetup the base palette & change individual colors in the extended one.
     C = options.on_palette(C)
 end
 
