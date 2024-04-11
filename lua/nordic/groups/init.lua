@@ -10,9 +10,8 @@ function M.get_groups()
 
     local O = require('nordic.config').options
 
+    -- deprecated option for backwards compatibility
     if O.override ~= nil then
-        vim.api.nvim_echo(
-        { { 'nordic.nvim override config option is now depricated, please use on_highlight', 'WarningMsg' } }, true, {})
         groups = merge(
             groups,
             O.override
