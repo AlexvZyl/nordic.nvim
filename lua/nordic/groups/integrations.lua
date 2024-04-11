@@ -352,6 +352,12 @@ function M.get_groups()
     G["@markup.environment"] = { link = "Macro" }
     G["@markup.environment.name"] = { link = "Type" }
     G["@markup.heading"] = { link = "Title" }
+    G["@markup.heading.1"] = { fg = C.yellow.base, bold = true }
+    G["@markup.heading.2"] = { fg = C.orange.base, bold = true }
+    G["@markup.heading.3"] = { fg = C.magenta.base, bold = true }
+    G["@markup.heading.4"] = { fg = C.green.base }
+    G["@markup.heading.5"] = { fg = C.blue2, italic = true }
+    G["@markup.heading.6"] = { fg = C.cyan.base, italic = true }
     G["@markup.italic"] = { italic = true }
     G['@markup.list'] = { link = '@operator' }
     G["@markup.list.checked"] = { link = 'Field' }
@@ -458,6 +464,21 @@ function M.get_groups()
     end
     G.TreesitterContext = { bg = bg }
     G.TreesitterContextLineNumber = { fg = fg, bg = bg }
+
+    -- Neorg
+    G["@neorg.headings.1.title"] = { link = "@markup.heading.1" }
+    G["@neorg.headings.1.prefix"] = { link = "@markup.heading.1" }
+    G["@neorg.headings.2.title"] = { link = "@markup.heading.2" }
+    G["@neorg.headings.2.prefix"] = { link = "@markup.heading.2" }
+    G["@neorg.headings.3.title"] = { link = "@markup.heading.3" }
+    G["@neorg.headings.3.prefix"] = { link = "@markup.heading.3" }
+    G["@neorg.headings.4.title"] = { link = "@markup.heading.4" }
+    G["@neorg.headings.4.prefix"] = { link = "@markup.heading.4" }
+    G["@neorg.headings.5.title"] = { link = "@markup.heading.5" }
+    G["@neorg.headings.5.prefix"] = { link = "@markup.heading.5" }
+    G["@neorg.headings.6.title"] = { link = "@markup.heading.6" }
+    G["@neorg.headings.6.prefix"] = { link = "@markup.heading.6" }
+
 
     -- Trouble.
     G.TroubleNormal = { bg = C.bg_float }
