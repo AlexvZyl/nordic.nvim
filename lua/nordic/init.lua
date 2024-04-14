@@ -9,9 +9,7 @@ function M.load(opts)
         vim.g.colors_name = U.NAME
     end
 
-    if opts then
-        require 'nordic.config'.setup(opts)
-    end
+    if opts then require('nordic.config').setup(opts) end
 
     -- Setup colors
     require('nordic.colors').build_palette()

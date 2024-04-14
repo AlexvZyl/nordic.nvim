@@ -1,28 +1,37 @@
-name: Formatting
+name: Generate docs and format
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "dev" ]
 
 jobs:
-  fmt:
+
+  docs-and-fmt:
     if: github.event != 'pull_request'
-    name: Format with StyLua
+    name: Generate docs and format
     runs-on: ubuntu-latest
     permissions:
       actions: write
       contents: write
+
     steps:
       - uses: actions/checkout@v2
+
+      - name: Panvimdoc generate
+        uses: kdheepak/panvimdoc@main
+        with:
+          vimdoc: nordic.nvim
+
       - name: Run StyLua
         uses: JohnnyMorganz/stylua-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           args: --config-path=.stylua.toml .
+
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "CI(bot): Formatting"
+          commit_message: "CI(bot): Generate docs and format"
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
           commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"

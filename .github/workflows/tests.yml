@@ -2,7 +2,7 @@ name: Tests
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "dev" ]
   pull_request:
     branches: [ "**" ]
 
@@ -17,11 +17,11 @@ jobs:
 
       - uses: actions/checkout@v3
       - id:   branch-name
-        uses: tj-actions/branch-names@v6 
+        uses: tj-actions/branch-names@v6
 
       - name: Install Neovim
         shell: bash
-        run:  | 
+        run:  |
               mkdir -p /tmp/nvim
               wget -q https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage -O /tmp/nvim/nvim.appimage
               cd /tmp/nvim
