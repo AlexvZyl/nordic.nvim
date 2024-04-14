@@ -6,10 +6,6 @@ A Neovim colorscheme based on [Nord](https://www.nordtheme.com/), but Aurora > F
 
 If there is anything that does not seem right, even if it is a very small highlight, please let me know with an issue or PR!
 
-#### 💡 Looking for Maintainers
-
-Currently looking for maintainers. If you are keen, head on over to [the discussion](https://github.com/AlexvZyl/nordic.nvim/discussions/96).
-
 # 📷 Showcase
 
 ![image](https://github.com/AlexvZyl/nordic.nvim/assets/81622310/2437fc89-733a-4368-b418-88cfe804d5d3)
