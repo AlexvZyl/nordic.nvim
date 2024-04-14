@@ -2,7 +2,7 @@ name: Generate docs and format
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "dev" ]
 
 jobs:
 
