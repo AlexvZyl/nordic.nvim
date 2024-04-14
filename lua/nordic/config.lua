@@ -55,6 +55,7 @@ local defaults = {
 
 M.options = defaults
 
+-- called automatically by load
 function M.setup(options)
     if options.transparent_bg then
         if not options.transparent then

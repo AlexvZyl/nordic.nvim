@@ -3,16 +3,10 @@ local merge = require('nordic.utils').merge
 local M = {}
 
 function M.get_groups()
-    local groups = merge(
-        require('nordic.groups.native').get_groups(),
-        require('nordic.groups.integrations').get_groups()
-    )
+    local groups =
+        merge(require('nordic.groups.native').get_groups(), require('nordic.groups.integrations').get_groups())
 
-
-    return merge(
-        groups,
-        require 'nordic.config'.options.override
-    )
+    return merge(groups, require('nordic.config').options.override)
 end
 
 function M.set_term_colors()

@@ -7,17 +7,15 @@ local M = {}
 
 function M.get_groups()
     local C = require 'nordic.colors'
-    local O = require 'nordic.config'.options
+    local O = require('nordic.config').options
 
     local G = {}
 
-
     -- SYNTAX
 
-
-    G.Constant = { fg = C.magenta.bright }  -- (preferred) any constant
-    G.Number = { link = 'Constant' }  --   a number constant: 234  0xff
-    G.Boolean = { link = 'Number' }  --  a boolean constant: TRUE  false
+    G.Constant = { fg = C.magenta.bright } -- (preferred) any constant
+    G.Number = { link = 'Constant' } --   a number constant: 234  0xff
+    G.Boolean = { link = 'Number' } --  a boolean constant: TRUE  false
     G.Float = { link = 'Number' } --    a floating point constant: 2.3e10
     G.None = { fg = C.none, bg = C.none }
     G.String = { fg = C.green.base } --   a string constant: "this is a string"
@@ -49,7 +47,7 @@ function M.get_groups()
     G.Special = { fg = C.blue1 } -- (preferred) any special symbol
     -- SpecialChar   = { } --  special character in a constant
     -- Tag           = { } --    you can use CTRL-] on this
-    -- Delimiter     = { } --  character that needs attention
+    G.Delimiter = { italic = true, fg = C.gray5 } --  character that needs attention
     -- SpecialComment= { } -- special things inside a comment
     -- Debug         = { } --    debugging statements
     G.Underlined = { underline = true } -- (preferred) text that stands out, HTML links
@@ -88,9 +86,7 @@ function M.get_groups()
     G.debugPC = { bg = C.bg_sidebar } -- used for highlighting the current line in terminal-debug
     G.debugBreakpoint = { fg = C.red.bright } -- used for breakpoint colors in terminal-debug
 
-
     -- LANGUAGE SERVER PROTOCOL
-
 
     -- These groups are for the native LSP client. Some other LSP clients may
     -- use these groups, or use their own. Consult your LSP client's
@@ -118,9 +114,7 @@ function M.get_groups()
     G.ALEErrorSign = { fg = C.error }
     G.ALEWarningSign = { fg = C.warning }
 
-
     -- EDITOR
-
 
     G.Comment = { fg = C.comment, italic = O.italic_comments } -- any comment
     G.ColorColumn = { bg = C.bg_visual } -- used for the columns set with 'colorcolumn'
@@ -185,9 +179,7 @@ function M.get_groups()
     G.WinBar = { bg = C.bg_dark, fg = C.gray5 }
     G.WinBarNC = { bg = C.bg_dark, fg = C.gray4 }
 
-
     -- DIFF
-
 
     G.DiffAdd = { bg = C.diff.add, bold = true } -- diff mode: Added line |diff.txt|
     G.DiffChange = { bg = C.diff.change0 } -- diff mode: Changed line |diff.txt|
@@ -202,9 +194,7 @@ function M.get_groups()
     G.diffLine = {}
     G.diffIndexLine = {}
 
-
     return G
-
 end
 
 return M
