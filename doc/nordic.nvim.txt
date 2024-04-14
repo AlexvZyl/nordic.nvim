@@ -1,4 +1,4 @@
-*nordic.nvim.txt*         For NVIM v0.8.0        Last change: 2024 February 08
+*nordic.nvim.txt*          For NVIM v0.8.0          Last change: 2024 April 14
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -11,6 +11,7 @@ Table of Contents                              *nordic.nvim-table-of-contents*
 6. ⚙️ Configuration                     |nordic.nvim-⚙️-configuration|
 7. 🗒️ Supported Plugins and Platforms|nordic.nvim-🗒️-supported-plugins-and-platforms|
 8. 🎙️ Acknowledgements             |nordic.nvim-🎙️-acknowledgements|
+9. Links                                                   |nordic.nvim-links|
 
 ==============================================================================
 1. 🌒 Nordic                                       *nordic.nvim-🌒-nordic*
@@ -24,12 +25,6 @@ up creating a colorscheme that is soft on the eyes.
 
 If there is anything that does not seem right, even if it is a very small
 highlight, please let me know with an issue or PR!
-
-
-💡 LOOKING FOR MAINTAINERS
-
-Currently looking for maintainers. If you are keen, head on over to the
-discussion <https://github.com/AlexvZyl/nordic.nvim/discussions/96>.
 
 
 ==============================================================================
@@ -140,7 +135,7 @@ default configuration.
             bold = false,
             -- Bold cursorline number.
             bold_number = true,
-            -- Avialable styles: 'dark', 'light'.
+            -- Available styles: 'dark', 'light'.
             theme = 'dark',
             -- Blending the cursorline bg with the buffer bg.
             blend = 0.85,
@@ -186,8 +181,8 @@ An example of overriding the `TelescopePromptTitle` colors:
 ==============================================================================
 7. 🗒️ Supported Plugins and Platforms*nordic.nvim-🗒️-supported-plugins-and-platforms*
 
-For the list of supported plugins, please take a look at this directory
-<https://github.com/AlexvZyl/nordic.nvim/tree/main/lua/nordic/groups/integrations>.
+For the list of supported plugins, please take a look at this file
+<https://github.com/AlexvZyl/nordic.nvim/blob/main/lua/nordic/groups/integrations.lua>.
 For the list of supported platforms, please take a look at this directory
 <https://github.com/AlexvZyl/nordic.nvim/tree/main/platforms>.
 

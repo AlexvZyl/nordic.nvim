@@ -2,7 +2,7 @@ local M = {}
 
 function M.get_groups()
     local C = require 'nordic.colors'
-    local O = require 'nordic.config'.options
+    local O = require('nordic.config').options
 
     local G = {}
 
@@ -86,16 +86,16 @@ function M.get_groups()
 
     -- Mini Statusline.
     local LC = require 'lualine.themes.nordic'
-    G.MiniStatuslineModeNormal = { bg = LC.normal.a.bg, fg = LC.normal.a.fg, bold = LC.normal.a.gui == 'bold', }
-    G.MiniStatuslineModeInsert = { bg = LC.insert.a.bg, fg = LC.insert.a.fg, bold = LC.insert.a.gui == 'bold', }
-    G.MiniStatuslineModeVisual = { bg = LC.visual.a.bg, fg = LC.visual.a.fg, bold = LC.visual.a.gui == 'bold', }
-    G.MiniStatuslineModeReplace = { bg = LC.replace.a.bg, fg = LC.replace.a.fg, bold = LC.replace.a.gui == 'bold', }
-    G.MiniStatuslineModeCommand = { bg = LC.command.a.bg, fg = LC.command.a.fg, bold = LC.command.a.gui == 'bold', }
-    G.MiniStatuslineModeOther = { bg = LC.terminal.a.bg, fg = LC.terminal.a.fg, bold = LC.terminal.a.gui == 'bold', }
-    G.MiniStatuslineDevinfo = { bg = LC.normal.b.bg, fg = LC.normal.b.fg, }
-    G.MiniStatuslineFilename = { bg = LC.normal.c.bg, fg = LC.normal.c.fg, }
-    G.MiniStatuslineFileinfo = { bg = LC.normal.b.bg, fg = LC.normal.b.fg, }
-    G.MiniStatuslineInactive = { bg = LC.inactive.a.bg, fg = LC.inactive.a.fg, bold = LC.inactive.a.gui == 'bold', }
+    G.MiniStatuslineModeNormal = { bg = LC.normal.a.bg, fg = LC.normal.a.fg, bold = LC.normal.a.gui == 'bold' }
+    G.MiniStatuslineModeInsert = { bg = LC.insert.a.bg, fg = LC.insert.a.fg, bold = LC.insert.a.gui == 'bold' }
+    G.MiniStatuslineModeVisual = { bg = LC.visual.a.bg, fg = LC.visual.a.fg, bold = LC.visual.a.gui == 'bold' }
+    G.MiniStatuslineModeReplace = { bg = LC.replace.a.bg, fg = LC.replace.a.fg, bold = LC.replace.a.gui == 'bold' }
+    G.MiniStatuslineModeCommand = { bg = LC.command.a.bg, fg = LC.command.a.fg, bold = LC.command.a.gui == 'bold' }
+    G.MiniStatuslineModeOther = { bg = LC.terminal.a.bg, fg = LC.terminal.a.fg, bold = LC.terminal.a.gui == 'bold' }
+    G.MiniStatuslineDevinfo = { bg = LC.normal.b.bg, fg = LC.normal.b.fg }
+    G.MiniStatuslineFilename = { bg = LC.normal.c.bg, fg = LC.normal.c.fg }
+    G.MiniStatuslineFileinfo = { bg = LC.normal.b.bg, fg = LC.normal.b.fg }
+    G.MiniStatuslineInactive = { bg = LC.inactive.a.bg, fg = LC.inactive.a.fg, bold = LC.inactive.a.gui == 'bold' }
 
     -- Nvim tree.
     G.NvimTreeNormal = { fg = C.fg, bg = C.bg }
@@ -280,12 +280,12 @@ function M.get_groups()
     G['@comment'] = { link = 'Comment' }
     --G['@comment.documentation'] = { link = 'Comment' }
     G['@comment.documentation'] = { link = 'Comment' }
-    G["@comment.note"] = { fg = C.hint }
-    G["@comment.error"] = { fg = C.error }
-    G["@comment.hint"] = { fg = C.hint }
-    G["@comment.info"] = { fg = C.info }
-    G["@comment.warning"] = { fg = C.warning }
-    G["@comment.todo"] = { fg = C.todo }
+    G['@comment.note'] = { fg = C.hint }
+    G['@comment.error'] = { fg = C.error }
+    G['@comment.hint'] = { fg = C.hint }
+    G['@comment.info'] = { fg = C.info }
+    G['@comment.warning'] = { fg = C.warning }
+    G['@comment.todo'] = { fg = C.todo }
     G['@operator'] = { fg = C.fg } -- For any operator: `+`, but also `->` and `*` in C.
     --- Punctuation
     G['@punctuation.delimiter'] = { link = 'Delimiter' } -- For delimiters ie: `.`
@@ -293,7 +293,7 @@ function M.get_groups()
     G['@punctuation.special'] = { link = 'Macro' } -- For special punctutation that does not fall in the catagories before.
     G['@punctuation.special.markdown'] = { fg = C.orange.base, bold = true }
     --- Literals
-    G["@string"] = { link = "String" }
+    G['@string'] = { link = 'String' }
     G['@string.documentation'] = { link = 'String' }
     G['@string.escape'] = { fg = C.magenta.bright } -- For escape characters within a string.
     G['@string.regex'] = { fg = C.magenta.bright } -- For regexes.
@@ -303,19 +303,19 @@ function M.get_groups()
     G['@parameter.builtin'] = { link = 'Builtin' } -- For builtin parameters of a function, e.g. "..." or Smali's pG[1-99]
     --- Keywords
     G['@keyword'] = { link = 'Keyword' } -- For keywords that don't fall in previous categories.
-    G["@keyword.conditional"] = { link = "Conditional" }
+    G['@keyword.conditional'] = { link = 'Conditional' }
     G['@keyword.coroutine'] = { link = 'Macro' } -- For keywords related to coroutines.
-    G["@keyword.debug"] = { link = "Debug" }
-    G["@keyword.directive"] = { link = "PreProc" }
-    G["@keyword.directive.define"] = { link = "Define" }
-    G["@keyword.exception"] = { link = "Exception" }
+    G['@keyword.debug'] = { link = 'Debug' }
+    G['@keyword.directive'] = { link = 'PreProc' }
+    G['@keyword.directive.define'] = { link = 'Define' }
+    G['@keyword.exception'] = { link = 'Exception' }
     G['@keyword.export'] = { link = 'Keyword' }
     G['@keyword.function'] = { link = 'Keyword' } -- For keywords used to define a fuction.
-    G["@keyword.import"] = { link = "Include" }
+    G['@keyword.import'] = { link = 'Include' }
     G['@keyword.operator'] = { link = 'Keyword' }
-    G["@keyword.repeat"] = { link = "Repeat" }
+    G['@keyword.repeat'] = { link = 'Repeat' }
     G['@keyword.return'] = { link = 'Keyword' }
-    G["@keyword.storage"] = { link = "StorageClass" }
+    G['@keyword.storage'] = { link = 'StorageClass' }
     G['@label'] = { link = 'Keyword' } -- For labels: `label:` in C and `:label:` in Lua.
     --- Types
     G['@type.builtin'] = { link = 'Type' }
@@ -347,32 +347,32 @@ function M.get_groups()
     G['@text.todo'] = { link = 'Todo' }
     G['@text.note'] = { link = 'Note' }
     --- Markup
-    G["@markup"] = { link = "@none" }
-    G["@markup.emphasis"] = { italic = true }
-    G["@markup.environment"] = { link = "Macro" }
-    G["@markup.environment.name"] = { link = "Type" }
-    G["@markup.heading"] = { link = "Title" }
-    G["@markup.heading.1"] = { fg = C.yellow.base, bold = true }
-    G["@markup.heading.2"] = { fg = C.orange.base, bold = true }
-    G["@markup.heading.3"] = { fg = C.magenta.base, bold = true }
-    G["@markup.heading.4"] = { fg = C.green.base }
-    G["@markup.heading.5"] = { fg = C.blue2, italic = true }
-    G["@markup.heading.6"] = { fg = C.cyan.base, italic = true }
-    G["@markup.italic"] = { italic = true }
+    G['@markup'] = { link = '@none' }
+    G['@markup.emphasis'] = { italic = true }
+    G['@markup.environment'] = { link = 'Macro' }
+    G['@markup.environment.name'] = { link = 'Type' }
+    G['@markup.heading'] = { link = 'Title' }
+    G['@markup.heading.1'] = { fg = C.yellow.base, bold = true }
+    G['@markup.heading.2'] = { fg = C.orange.base, bold = true }
+    G['@markup.heading.3'] = { fg = C.magenta.base, bold = true }
+    G['@markup.heading.4'] = { fg = C.green.base }
+    G['@markup.heading.5'] = { fg = C.blue2, italic = true }
+    G['@markup.heading.6'] = { fg = C.cyan.base, italic = true }
+    G['@markup.italic'] = { italic = true }
     G['@markup.list'] = { link = '@operator' }
-    G["@markup.list.checked"] = { link = 'Field' }
+    G['@markup.list.checked'] = { link = 'Field' }
     G['@markup.list.markdown'] = { fg = C.yellow.base, bold = true }
-    G["@markup.list.unchecked"] = { fg = C.fg }
+    G['@markup.list.unchecked'] = { fg = C.fg }
     G['@markup.link'] = { fg = C.cyan.base }
-    G["@markup.link.label"] = { link = "SpecialChar" }
-    G["@markup.link.label.symbol"] = { link = "Identifier" }
-    G["@markup.link.url"] = { link = "Underlined" }
-    G["@markup.math"] = { link = "Special" }
-    G["@markup.raw"] = { link = "String" }
+    G['@markup.link.label'] = { link = 'SpecialChar' }
+    G['@markup.link.label.symbol'] = { link = 'Identifier' }
+    G['@markup.link.url'] = { link = 'Underlined' }
+    G['@markup.math'] = { link = 'Special' }
+    G['@markup.raw'] = { link = 'String' }
     G['@markup.raw.markdown_inline'] = { bg = C.black2, fg = C.fg }
-    G["@markup.strong"] = { bold = true }
-    G["@markup.strikethrough"] = { strikethrough = true }
-    G["@markup.underline"] = { underline = true }
+    G['@markup.strong'] = { bold = true }
+    G['@markup.strikethrough'] = { strikethrough = true }
+    G['@markup.underline'] = { underline = true }
     -- TSX
     G['@tag.tsx'] = { fg = C.blue1 }
     G['@constructor.tsx'] = { fg = C.blue1 }
@@ -411,12 +411,12 @@ function M.get_groups()
     G['@lsp.typemod.variable.injected'] = { link = 'Variable' }
     G['@lsp.typemod.variable.globalScope'] = { link = 'Macro' }
     -- Things that seems to be missing?
-    G["@annotation"] = { link = "PreProc" }
-    G["@diff.plus"] = { link = "DiffAdd" }
-    G["@diff.minus"] = { link = "DiffDelete" }
-    G["@diff.delta"] = { link = "DiffChange" }
-    G["@character"] = { link = "Character" }
-    G["@character.special"] = { link = "SpecialChar" }
+    G['@annotation'] = { link = 'PreProc' }
+    G['@diff.plus'] = { link = 'DiffAdd' }
+    G['@diff.minus'] = { link = 'DiffDelete' }
+    G['@diff.delta'] = { link = 'DiffChange' }
+    G['@character'] = { link = 'Character' }
+    G['@character.special'] = { link = 'SpecialChar' }
     G['@string.special'] = { fg = C.yellow.base } -- For escape characters within a string.
     G['@tag'] = { fg = C.blue1 } -- Tags like html tag names.
     G['@tag.delimiter'] = { fg = C.fg } -- Tag delimiter like `<` `>` `/`
@@ -432,7 +432,7 @@ function M.get_groups()
     G['@class'] = { link = 'Keyword' }
     G['@include'] = { link = 'Include' }
     G['@macro'] = { link = 'Macro' }
-    G["@module"] = { fg = C.yellow.base }
+    G['@module'] = { fg = C.yellow.base }
     G['@module.builtin'] = { link = 'Builtin' }
     G['@preproc'] = { link = 'Macro' }
     G['@attribute'] = { link = 'Macro' }
@@ -466,19 +466,18 @@ function M.get_groups()
     G.TreesitterContextLineNumber = { fg = fg, bg = bg }
 
     -- Neorg
-    G["@neorg.headings.1.title"] = { link = "@markup.heading.1" }
-    G["@neorg.headings.1.prefix"] = { link = "@markup.heading.1" }
-    G["@neorg.headings.2.title"] = { link = "@markup.heading.2" }
-    G["@neorg.headings.2.prefix"] = { link = "@markup.heading.2" }
-    G["@neorg.headings.3.title"] = { link = "@markup.heading.3" }
-    G["@neorg.headings.3.prefix"] = { link = "@markup.heading.3" }
-    G["@neorg.headings.4.title"] = { link = "@markup.heading.4" }
-    G["@neorg.headings.4.prefix"] = { link = "@markup.heading.4" }
-    G["@neorg.headings.5.title"] = { link = "@markup.heading.5" }
-    G["@neorg.headings.5.prefix"] = { link = "@markup.heading.5" }
-    G["@neorg.headings.6.title"] = { link = "@markup.heading.6" }
-    G["@neorg.headings.6.prefix"] = { link = "@markup.heading.6" }
-
+    G['@neorg.headings.1.title'] = { link = '@markup.heading.1' }
+    G['@neorg.headings.1.prefix'] = { link = '@markup.heading.1' }
+    G['@neorg.headings.2.title'] = { link = '@markup.heading.2' }
+    G['@neorg.headings.2.prefix'] = { link = '@markup.heading.2' }
+    G['@neorg.headings.3.title'] = { link = '@markup.heading.3' }
+    G['@neorg.headings.3.prefix'] = { link = '@markup.heading.3' }
+    G['@neorg.headings.4.title'] = { link = '@markup.heading.4' }
+    G['@neorg.headings.4.prefix'] = { link = '@markup.heading.4' }
+    G['@neorg.headings.5.title'] = { link = '@markup.heading.5' }
+    G['@neorg.headings.5.prefix'] = { link = '@markup.heading.5' }
+    G['@neorg.headings.6.title'] = { link = '@markup.heading.6' }
+    G['@neorg.headings.6.prefix'] = { link = '@markup.heading.6' }
 
     -- Trouble.
     G.TroubleNormal = { bg = C.bg_float }
