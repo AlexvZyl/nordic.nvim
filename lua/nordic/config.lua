@@ -57,15 +57,10 @@ M.options = defaults
 
 -- called automatically by load
 function M.setup(options)
-    if options.transparent_bg then
-        if not options.transparent then
-            options.transparent = {
-                bg = true,
-                float = true,
-            }
-        end
-    end
+    -- backwards compatibility
+    options = require('nordic.compatibility')(options)
 
+    -- set defaults
     M.options = vim.tbl_deep_extend('force', M.options or defaults, options or {})
 end
 
