@@ -11,12 +11,10 @@ local function compatability(options)
     -- transparent_bg
     if options.transparent_bg ~= nil then
         vim.notify_once('Nordic.nvim: config.transparent_bg is deprecated, use config.transparent instead', level, message_options)
-        if not options.transparent then
-            options.transparent = {
-                bg = options.transparent_bg,
-                float = options.transparent_bg,
-            }
-        end
+        options.transparent = {
+            bg = options.transparent_bg,
+            float = options.transparent_bg,
+        }
     end
 
     return options

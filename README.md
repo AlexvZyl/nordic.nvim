@@ -89,8 +89,7 @@ require 'nordic' .setup {
     -- Enable bold keywords.
     bold_keywords = false,
     -- Enable italic comments.
-    italic_comments = true,
-    -- Enable editor background transparency.
+    italic_comments = true,    -- Enable editor background transparency.
     transparent = {
         -- Enable transparent background.
         bg = false,
