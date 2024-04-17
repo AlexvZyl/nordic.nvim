@@ -23,10 +23,10 @@ function C.extend_palette()
     -- Some of the format is from @folke/tokyonight.nvim.
 
     -- Backgrounds
-    C.bg = (options.transparent_bg and C.none) or ((options.swap_backgrounds and C.black1) or C.gray0)
-    C.bg_dark = (options.transparent_bg and C.none) or C.black0
-    C.bg_sidebar = (options.transparent_bg and C.none) or C.bg
-    C.bg_popup = (options.transparent_bg and C.none) or C.bg
+    C.bg = (options.transparent.bg and C.none) or ((options.swap_backgrounds and C.black1) or C.gray0)
+    C.bg_dark = (options.transparent.bg and C.none) or C.black0
+    C.bg_sidebar = (options.transparent.bg and C.none) or C.bg
+    C.bg_popup = (options.transparent.float and C.none) or C.bg
     C.bg_statusline = C.black0
     C.bg_selected = U.blend(C.gray2, C.black0, 0.4)
     C.bg_fold = C.gray2
@@ -60,7 +60,7 @@ function C.extend_palette()
     C.fg_popup_border = C.border_fg
 
     -- Floating windows
-    C.bg_float = (options.transparent_bg and C.none) or ((options.swap_backgrounds and C.gray0) or C.black1)
+    C.bg_float = (options.transparent.float and C.none) or ((options.swap_backgrounds and C.gray0) or C.black1)
     C.fg_float = C.fg
     C.bg_float_border = C.bg_float
     C.fg_float_border = C.border_fg
