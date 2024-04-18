@@ -9,8 +9,13 @@ local defaults = {
     bold_keywords = false,
     -- Enable italic comments.
     italic_comments = true,
-    -- Enable general editor background transparency.
-    transparent_bg = false,
+    -- Enable editor background transparency.
+    transparent = {
+        -- Enable transparent background.
+        bg = false,
+        -- Enable transparent background for floating windows.
+        float = false,
+    },
     -- Enable brighter float border.
     bright_border = false,
     -- Adjusts some colors to make the theme a bit nicer (imo).
@@ -52,6 +57,10 @@ M.options = defaults
 
 -- called automatically by load
 function M.setup(options)
+    -- backwards compatibility
+    options = require('nordic.compatibility')(options)
+
+    -- set defaults
     M.options = vim.tbl_deep_extend('force', M.options or defaults, options or {})
 end
 

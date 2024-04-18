@@ -90,8 +90,13 @@ require 'nordic' .setup {
     bold_keywords = false,
     -- Enable italic comments.
     italic_comments = true,
-    -- Enable general editor background transparency.
-    transparent_bg = false,
+    -- Enable editor background transparency.
+    transparent = {
+        -- Enable transparent background.
+        bg = false,
+        -- Enable transparent background for floating windows.
+        float = false,
+    },
     -- Enable brighter float border.
     bright_border = false,
     -- Reduce the overall amount of blue in the theme (diverges from base Nord).
