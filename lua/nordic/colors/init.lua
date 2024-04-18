@@ -38,7 +38,7 @@ function C.extend_palette()
         options.cursorline.bg = C.black0
     end
 
-    C.bg_visual = ((options.transparent.bg or options.transparent.float) and options.cursorline.bg)
+    C.bg_visual = (options.transparent.bg and options.cursorline.bg)
         or U.blend(options.cursorline.bg, C.bg, options.cursorline.blend)
 
     -- Borders
