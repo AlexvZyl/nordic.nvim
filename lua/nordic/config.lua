@@ -58,7 +58,7 @@ M.options = defaults
 -- called automatically by load
 function M.setup(options)
     -- backwards compatibility
-    options = require('nordic.compatibility')(options)
+    options = require 'nordic.compatibility'(options)
 
     -- set defaults
     M.options = vim.tbl_deep_extend('force', M.options or defaults, options or {})
