@@ -7,9 +7,9 @@ local function build_palette()
     -- Make a new palette.
     -- Copy the original palette this overrides C.
     C = vim.deepcopy(P)
-    -- Because of the override we need to re-add the build_palette.
+    -- Because of the override we need to re-add the build_palette to the C table.
     C.build_palette = build_palette
-    -- That is also why it is not attached to C.
+    -- If we had attached build_palette to C we would lost it after the override.
 
     local options = require('nordic.config').options
 
