@@ -1,4 +1,4 @@
-*nordic.nvim.txt*          For NVIM v0.8.0          Last change: 2024 April 14
+*nordic.nvim.txt*          For NVIM v0.8.0          Last change: 2024 April 18
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -119,8 +119,13 @@ default configuration.
         bold_keywords = false,
         -- Enable italic comments.
         italic_comments = true,
-        -- Enable general editor background transparency.
-        transparent_bg = false,
+        -- Enable editor background transparency.
+        transparent = {
+            -- Enable transparent background.
+            bg = false,
+            -- Enable transparent background for floating windows.
+            float = false,
+        },
         -- Enable brighter float border.
         bright_border = false,
         -- Reduce the overall amount of blue in the theme (diverges from base Nord).
