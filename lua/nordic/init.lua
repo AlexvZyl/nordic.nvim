@@ -12,7 +12,7 @@ function M.load(opts)
     if opts then require('nordic.config').setup(opts) end
 
     -- Setup colors
-    require('nordic.colors').extend_palette()
+    require('nordic.colors').build_palette()
 
     -- Apply theme
     local G = require 'nordic.groups'
