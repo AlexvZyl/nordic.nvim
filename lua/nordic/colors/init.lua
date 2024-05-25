@@ -3,13 +3,17 @@ local P = require 'nordic.colors.nordic'
 
 local C = {}
 
-local function build_palette()
-    -- Make a new palette.
-    -- Copy the original palette this overrides C.
-    C = vim.deepcopy(P)
-    -- Because of the override we need to re-add the build_palette to the C table.
-    C.build_palette = build_palette
-    -- If we had attached build_palette to C we would lost it after the override.
+function C.build_palette()
+    -- clear all values except build_palette
+    for k, _ in pairs(C) do
+        if k ~= "build_palette" then
+            C[k] = nil
+        end
+    end
+    -- copy all values from the base palette
+    for k, v in pairs(vim.deepcopy(P)) do
+        C[k] = v
+    end
 
     local options = require('nordic.config').options
 
@@ -102,7 +106,6 @@ local function build_palette()
 end
 
 -- build the first palette
-build_palette()
--- after this we can call it with C.build_palette()
+C.build_palette()
 
 return C
