@@ -1,15 +1,23 @@
 local U = require 'nordic.utils'
 local P = require 'nordic.colors.nordic'
 
+local function merge_inplace(t1, t2)
+    for k, v in pairs(t2) do
+        t1[k] = v
+    end
+end
+
 local C = {}
 
-local function build_palette()
-    -- Make a new palette.
-    -- Copy the original palette this overrides C.
-    C = vim.deepcopy(P)
-    -- Because of the override we need to re-add the build_palette to the C table.
-    C.build_palette = build_palette
-    -- If we had attached build_palette to C we would lost it after the override.
+function C.build_palette()
+    -- clear all values except build_palette
+    for k, _ in pairs(C) do
+        if k ~= "build_palette" then
+            C[k] = nil
+        end
+    end
+    -- copy all values from the base palette
+    merge_inplace(C, vim.deepcopy(P))
 
     local options = require('nordic.config').options
 
@@ -113,7 +121,7 @@ local function build_palette()
 
     -- Set all values in the base palette back to their defaults.
     -- This means that on_palette will receive the same base palette as the first run & set the values again.
-    C = vim.tbl_deep_extend('force', C, P)
+    merge_inplace(C, vim.deepcopy(P))
 
     -- This time we already have extended the palette & any changes made will not be overwritten.
     -- So now on_palette will resetup the base palette & change individual colors in the extended one.
@@ -121,7 +129,6 @@ local function build_palette()
 end
 
 -- build the first palette
-build_palette()
--- after this we can call it with C.build_palette()
+C.build_palette()
 
 return C
