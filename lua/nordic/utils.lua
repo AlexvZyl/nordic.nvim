@@ -29,6 +29,12 @@ function M.merge(table1, table2)
     return vim.tbl_deep_extend('force', table1, table2)
 end
 
+function M.merge_inplace(t1, t2)
+    for k, v in pairs(t2) do
+        t1[k] = v
+    end
+end
+
 function M.hex_to_rgb(str)
     str = string.lower(str)
     return tonumber(str:sub(2, 3), 16), tonumber(str:sub(4, 5), 16), tonumber(str:sub(6, 7), 16)

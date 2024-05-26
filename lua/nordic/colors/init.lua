@@ -11,9 +11,7 @@ function C.build_palette()
         end
     end
     -- copy all values from the base palette
-    for k, v in pairs(vim.deepcopy(P)) do
-        C[k] = v
-    end
+    U.merge_inplace(C, vim.deepcopy(P))
 
     local options = require('nordic.config').options
 
