@@ -60,7 +60,6 @@ local function build_palette()
     C.fg_fold = C.fg
     C.fg_selected = C.fg_bright
 
-
     -- Floating windows
     C.bg_float = (options.transparent.float and C.none) or ((options.swap_backgrounds and C.gray0) or C.black1)
     C.fg_float = C.fg
