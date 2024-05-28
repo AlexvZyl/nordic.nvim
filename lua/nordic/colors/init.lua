@@ -37,14 +37,12 @@ function C.build_palette()
     C.bg = (options.transparent.bg and C.none) or ((options.swap_backgrounds and C.black1) or C.gray0)
     C.bg_dark = (options.transparent.bg and C.none) or C.black0
     C.bg_sidebar = (options.transparent.bg and C.none) or C.bg
-    C.bg_popup = (options.transparent.float and C.none) or C.bg
     C.bg_statusline = C.black0
-    C.bg_selected = U.blend(C.gray2, C.black0, 0.4)
     C.bg_fold = C.gray2
 
     -- Cursorline Background
     if options.cursorline.theme == 'light' then
-        options.cursorline.bg = C.gray1
+        options.cursorline.bg = C.gray2
     else
         options.cursorline.bg = C.black0
     end
@@ -64,17 +62,18 @@ function C.build_palette()
     C.fg_fold = C.fg
     C.fg_selected = C.fg_bright
 
-    -- Popups
-    C.bg_popup = C.bg
-    C.fg_popup = C.fg
-    C.bg_popup_border = C.bg
-    C.fg_popup_border = C.border_fg
-
     -- Floating windows
     C.bg_float = (options.transparent.float and C.none) or ((options.swap_backgrounds and C.gray0) or C.black1)
     C.fg_float = C.fg
     C.bg_float_border = C.bg_float
     C.fg_float_border = C.border_fg
+
+    -- Popups
+    C.bg_popup = C.bg_float
+    C.bg_selected = C.gray2
+    C.fg_popup = C.fg
+    C.bg_popup_border = C.bg
+    C.fg_popup_border = C.border_fg
 
     -- Diffs
     local diff_blend = 0.2
