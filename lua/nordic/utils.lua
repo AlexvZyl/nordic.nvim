@@ -29,9 +29,16 @@ function M.merge(table1, table2)
     return vim.tbl_deep_extend('force', table1, table2)
 end
 
-function M.merge_inplace(t1, t2)
-    for k, v in pairs(t2) do
-        t1[k] = v
+function M.merge_inplace(table1, table2)
+    for k, v in pairs(table2) do
+        if type(v) == "table" then
+            if type(table1[k]) ~= "table" then
+                table1[k] = {}
+            end
+            M.merge_inplace(table1[k], v)
+        else
+            table1[k] = v
+        end
     end
 end
 
