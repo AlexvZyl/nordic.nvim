@@ -20,7 +20,7 @@ function C.build_palette()
     C.white0 = (options.reduced_blue and C.white0_reduce_blue) or C.white0_normal
 
     -- Modify the palette before generating colors.
-    C = options.on_palette(C)
+    options.on_palette(C)
 
     -- Add these for international convenience :)
     C.grey0 = C.gray0
