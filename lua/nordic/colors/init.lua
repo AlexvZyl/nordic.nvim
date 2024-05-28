@@ -4,14 +4,8 @@ local P = require 'nordic.colors.nordic'
 local C = {}
 
 function C.build_palette()
-    -- clear all values except build_palette
-    for k, _ in pairs(C) do
-        if k ~= "build_palette" then
-            C[k] = nil
-        end
-    end
-    -- copy all values from the base palette
-    U.merge_inplace(C, vim.deepcopy(P))
+    -- override all values from the base palette
+    U.merge_inplace(C, P)
 
     local options = require('nordic.config').options
 
