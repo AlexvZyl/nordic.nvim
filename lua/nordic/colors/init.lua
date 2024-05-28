@@ -103,7 +103,4 @@ function C.build_palette()
     C.comment = C.gray4
 end
 
--- build the first palette
-C.build_palette()
-
 return C
