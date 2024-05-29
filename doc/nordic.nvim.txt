@@ -1,4 +1,4 @@
-*nordic.nvim.txt*           For NVIM v0.8.0           Last change: 2024 May 27
+*nordic.nvim.txt*           For NVIM v0.8.0           Last change: 2024 May 29
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -114,7 +114,7 @@ default configuration.
 >lua
     require 'nordic' .setup {
         -- This callback can be used to override the colors used in the palette.
-        on_palette = function(palette) return palette end,
+        on_palette = function(palette) end,
         -- Enable bold keywords.
         bold_keywords = false,
         -- Enable italic comments.

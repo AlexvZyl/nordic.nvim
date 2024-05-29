@@ -31,10 +31,8 @@ end
 
 function M.merge_inplace(table1, table2)
     for k, v in pairs(table2) do
-        if type(v) == "table" then
-            if type(table1[k]) ~= "table" then
-                table1[k] = {}
-            end
+        if type(v) == 'table' then
+            if type(table1[k]) ~= 'table' then table1[k] = {} end
             M.merge_inplace(table1[k], v)
         else
             table1[k] = v
