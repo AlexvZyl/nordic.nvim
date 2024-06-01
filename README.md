@@ -139,6 +139,7 @@ require('nordic').setup({
 
 <details>
     <summary><b><code>on_palette</code></b></summary>
+&nbsp;
 
 An example of overriding colors in the base palette:
 ```lua
@@ -155,6 +156,7 @@ require('nordic').setup({
 
 <details>
     <summary><b><code>on_highlight</code></b></summary>
+&nbsp;
 
 An example of overriding the `TelescopePromptTitle` colors:
 ```lua
