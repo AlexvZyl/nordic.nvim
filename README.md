@@ -83,7 +83,7 @@ local palette = require 'nordic.colors'
 Nordic will use the default values, unless `setup` is called. Below is the default configuration.
 
 ```lua
-require 'nordic' .setup {
+require('nordic').setup({
     -- This callback can be used to override the colors used in the palette.
     on_palette = function(palette) end,
     -- This callback can be used to override highlights before they are applied.
@@ -132,17 +132,33 @@ require 'nordic' .setup {
         -- Enables dark background for treesitter-context window
         dark_background = true,
     }
-}
+})
 ```
 
 **Examples:**
+
+<details>
+    <summary><b><code>on_palette</code></b></summary>
+
+An example of overriding colors in the base palette:
+```lua
+require('nordic').setup({
+    on_palette = function(palette)
+        palette.black0 = "#BF616A"
+        palette.green.base = palette.cyan.base
+    end,
+})
+```
+
+</details>
+
 
 <details>
     <summary><b><code>on_highlight</code></b></summary>
 
 An example of overriding the `TelescopePromptTitle` colors:
 ```lua
-require('nordic').setup {
+require('nordic').setup({
     on_highlight = function(highlights, palette)
         highlights.TelescopePromptTitle = {
             fg = palette.red.bright,
@@ -153,18 +169,18 @@ require('nordic').setup {
             undercurl = false
         }
     end,
-}
+})
 ```
 
 And an example of disabling all italics:
 ```lua
-require('nordic').setup {
+require('nordic').setup({
     on_highlight = function(highlights, _palette)
         for _, highlight in pairs(highlights) do
             highlight.italic = false
         end
     end
-}
+})
 ```
 
 </details>
