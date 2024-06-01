@@ -86,6 +86,8 @@ Nordic will use the default values, unless `setup` is called. Below is the defau
 require 'nordic' .setup {
     -- This callback can be used to override the colors used in the palette.
     on_palette = function(palette) end,
+    -- This callback can be used to override highlights before they are applied.
+    on_highlight = function(highlights, palette) end,
     -- Enable bold keywords.
     bold_keywords = false,
     -- Enable italic comments.
@@ -103,8 +105,6 @@ require 'nordic' .setup {
     reduced_blue = true,
     -- Swap the dark background with the normal one.
     swap_backgrounds = false,
-    -- Override the styling of any highlight group.
-    override = {},
     -- Cursorline options.  Also includes visual/selection.
     cursorline = {
         -- Bold font in cursorline.
@@ -135,13 +135,16 @@ require 'nordic' .setup {
 }
 ```
 
-An example of overriding the `TelescopePromptTitle` colors:
+**Examples:**
 
+<details>
+    <summary><b><code>on_highlight</code></b></summary>
+
+An example of overriding the `TelescopePromptTitle` colors:
 ```lua
-local palette = require 'nordic.colors'
-require 'nordic' .setup {
-    override = {
-        TelescopePromptTitle = {
+require('nordic').setup {
+    on_highlight = function(highlights, palette)
+        highlights.TelescopePromptTitle = {
             fg = palette.red.bright,
             bg = palette.green.base,
             italic = true,
@@ -149,9 +152,23 @@ require 'nordic' .setup {
             sp = palette.yellow.dim,
             undercurl = false
         }
-    }
+    end,
 }
 ```
+
+And an example of disabling all italics:
+```lua
+require('nordic').setup {
+    on_highlight = function(highlights, _palette)
+        for _, highlight in pairs(highlights) do
+            highlight.italic = false
+        end
+    end
+}
+```
+
+</details>
+
 
 # 🗒️ Supported Plugins and Platforms
 

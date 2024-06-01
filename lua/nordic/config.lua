@@ -3,6 +3,8 @@ local M = {}
 local defaults = {
     -- This callback can be used to override the colors used in the palette.
     on_palette = function(palette) end,
+    -- This callback can be used to override highlights before they are applied.
+    on_highlight = function(highlights, palette) end,
     -- Enable bold keywords.
     bold_keywords = false,
     -- Enable italic comments.
@@ -20,8 +22,6 @@ local defaults = {
     reduced_blue = true,
     -- Swap the dark background with the normal one.
     swap_backgrounds = false,
-    -- Override the styling of any highlight group.
-    override = {},
     -- Cursorline options.  Also includes visual/selection.
     cursorline = {
         -- Bold font in cursorline.

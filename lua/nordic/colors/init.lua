@@ -4,7 +4,7 @@ local P = require 'nordic.colors.nordic'
 local C = {}
 
 function C.build_palette()
-    -- override all values from the base palette
+    -- Override all values from the base palette.
     U.merge_inplace(C, P)
 
     local options = require('nordic.config').options
@@ -96,7 +96,7 @@ function C.build_palette()
     C.comment = C.gray4
 end
 
--- build the first palette
+-- Build the first palette.
 C.build_palette()
 
 return C

@@ -20,6 +20,18 @@ config.on_palette = function(palette)
     return palette
 end
 
+config.on_highlight = function(highlights, palette)
+    highlights.TelescopePromptTitle = {
+        fg = palette.red.bright,
+        bg = palette.green.base,
+        italic = true,
+        underline = true,
+        sp = palette.yellow.dim,
+        undercurl = false
+    }
+    return highlights
+end
+
 -- Flip all fields
 config.bold_keywords = not config.bold_keywords
 config.italic_comments = not config.italic_comments
