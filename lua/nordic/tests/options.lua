@@ -17,7 +17,6 @@ load(config)
 
 config.on_palette = function(palette)
     palette.black0 = '#000000'
-    return palette
 end
 
 config.on_highlight = function(highlights, palette)
@@ -29,7 +28,6 @@ config.on_highlight = function(highlights, palette)
         sp = palette.yellow.dim,
         undercurl = false
     }
-    return highlights
 end
 
 -- Flip all fields
