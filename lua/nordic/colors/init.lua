@@ -1,5 +1,5 @@
-local U = require 'nordic.utils'
-local P = require 'nordic.colors.nordic'
+local U = require('nordic.utils')
+local P = require('nordic.colors.nordic')
 
 local C = {}
 

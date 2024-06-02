@@ -8,7 +8,7 @@ function M.get_groups()
     local groups = merge(native, integrations)
 
     -- Apply on_highlight
-    local palette = require 'nordic.colors'
+    local palette = require('nordic.colors')
     local options = require('nordic.config').options
     options.on_highlight(groups, palette)
 
@@ -16,7 +16,7 @@ function M.get_groups()
 end
 
 function M.set_term_colors()
-    local colors = require 'nordic.groups.terminal'
+    local colors = require('nordic.groups.terminal')
     for term, col in pairs(colors) do
         vim.g[term] = col
     end
