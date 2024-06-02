@@ -17,7 +17,17 @@ load(config)
 
 config.on_palette = function(palette)
     palette.black0 = '#000000'
-    return palette
+end
+
+config.on_highlight = function(highlights, palette)
+    highlights.TelescopePromptTitle = {
+        fg = palette.red.bright,
+        bg = palette.green.base,
+        italic = true,
+        underline = true,
+        sp = palette.yellow.dim,
+        undercurl = false
+    }
 end
 
 -- Flip all fields
