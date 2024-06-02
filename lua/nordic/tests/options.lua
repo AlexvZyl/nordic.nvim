@@ -26,7 +26,7 @@ config.on_highlight = function(highlights, palette)
         italic = true,
         underline = true,
         sp = palette.yellow.dim,
-        undercurl = false
+        undercurl = false,
     }
 end
 

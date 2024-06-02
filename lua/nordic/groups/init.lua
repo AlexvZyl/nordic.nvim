@@ -8,8 +8,8 @@ function M.get_groups()
     local groups = merge(native, integrations)
 
     -- Apply on_highlight
-    local palette = require('nordic.colors')
-    local options = require("nordic.config").options
+    local palette = require 'nordic.colors'
+    local options = require('nordic.config').options
     options.on_highlight(groups, palette)
 
     return groups

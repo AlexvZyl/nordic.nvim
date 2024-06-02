@@ -1,4 +1,4 @@
-local U = require("nordic.utils");
+local U = require 'nordic.utils'
 
 local function compatability(options)
     -- All backwards compatibility
@@ -33,14 +33,12 @@ local function compatability(options)
             message_options
         )
 
-        local users_on_highlight = options.on_highlight;
+        local users_on_highlight = options.on_highlight
         -- Create a new on_highlight that will apply `override` and then the users `on_highlight`
         options.on_highlight = function(highlights, palette)
             U.merge_inplace(highlights, options.override)
             -- This nil check is required because we have not been given default values yet
-            if users_on_highlight ~= nil then
-                users_on_highlight(highlights, palette)
-            end
+            if users_on_highlight ~= nil then users_on_highlight(highlights, palette) end
         end
     end
 

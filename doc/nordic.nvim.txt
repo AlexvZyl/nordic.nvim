@@ -1,4 +1,4 @@
-*nordic.nvim.txt*           For NVIM v0.8.0           Last change: 2024 May 29
+*nordic.nvim.txt*           For NVIM v0.8.0          Last change: 2024 June 02
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -98,12 +98,6 @@ Using with lualine:
     }
 <
 
-To get the palette in lua:
-
->lua
-    local palette = require 'nordic.colors'
-<
-
 
 ==============================================================================
 6. ⚙️ Configuration                     *nordic.nvim-⚙️-configuration*
@@ -112,9 +106,11 @@ Nordic will use the default values, unless `setup` is called. Below is the
 default configuration.
 
 >lua
-    require 'nordic' .setup {
+    require('nordic').setup({
         -- This callback can be used to override the colors used in the palette.
         on_palette = function(palette) end,
+        -- This callback can be used to override highlights before they are applied.
+        on_highlight = function(highlights, palette) end,
         -- Enable bold keywords.
         bold_keywords = false,
         -- Enable italic comments.
@@ -132,8 +128,6 @@ default configuration.
         reduced_blue = true,
         -- Swap the dark background with the normal one.
         swap_backgrounds = false,
-        -- Override the styling of any highlight group.
-        override = {},
         -- Cursorline options.  Also includes visual/selection.
         cursorline = {
             -- Bold font in cursorline.
@@ -161,16 +155,36 @@ default configuration.
             -- Enables dark background for treesitter-context window
             dark_background = true,
         }
-    }
+    })
 <
+
+**Examples:**
+
+on_palette ~
+
+ 
+
+An example of overriding colors in the base palette:
+
+>lua
+    require('nordic').setup({
+        on_palette = function(palette)
+            palette.black0 = "#BF616A"
+            palette.green.base = palette.cyan.base
+        end,
+    })
+<
+
+on_highlight ~
+
+ 
 
 An example of overriding the `TelescopePromptTitle` colors:
 
 >lua
-    local palette = require 'nordic.colors'
-    require 'nordic' .setup {
-        override = {
-            TelescopePromptTitle = {
+    require('nordic').setup({
+        on_highlight = function(highlights, palette)
+            highlights.TelescopePromptTitle = {
                 fg = palette.red.bright,
                 bg = palette.green.base,
                 italic = true,
@@ -178,8 +192,20 @@ An example of overriding the `TelescopePromptTitle` colors:
                 sp = palette.yellow.dim,
                 undercurl = false
             }
-        }
-    }
+        end,
+    })
+<
+
+And an example of disabling all italics:
+
+>lua
+    require('nordic').setup({
+        on_highlight = function(highlights, _palette)
+            for _, highlight in pairs(highlights) do
+                highlight.italic = false
+            end
+        end
+    })
 <
 
 
