@@ -57,7 +57,7 @@ colorscheme nordic
 Using lua:
 
 ```lua
-vim.cmd.colorscheme 'nordic'
+vim.cmd.colorscheme('nordic')
 -- or
 require('nordic').load()
 ```
@@ -65,11 +65,11 @@ require('nordic').load()
 Using with lualine:
 
 ```lua
-require('lualine').setup {
+require('lualine').setup({
     options = {
         theme = 'nordic'
     }
-}
+})
 ```
 
 If you want to use the color palette somewhere else, you can access it with:
