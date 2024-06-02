@@ -72,12 +72,6 @@ require 'lualine' .setup {
 }
 ```
 
-To get the palette in lua:
-
-```lua
-local palette = require 'nordic.colors'
-```
-
 # ⚙️ Configuration
 
 Nordic will use the default values, unless `setup` is called. Below is the default configuration.
