@@ -78,7 +78,7 @@ If you want to use the color palette somewhere else, you can access it with:
 local palette = require 'nordic.colors'
 ```
 > [!WARNING]
-> Please make sure this is called *after* setup, otherwise the colors might be wrong for you config.
+> Please make sure that `require 'nordic.colors'` is called *after* setup, otherwise the colors might be wrong for your config.
 
 # ⚙️ Configuration
 
