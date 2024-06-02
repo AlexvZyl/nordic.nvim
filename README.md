@@ -72,6 +72,14 @@ require 'lualine' .setup {
 }
 ```
 
+If you want to use the color palette somewhere else, you can access it with:
+
+```lua
+local palette = require 'nordic.colors'
+```
+
+Please make sure this is called *after* setup, otherwise the colors might be wrong for you config.
+
 # ⚙️ Configuration
 
 Nordic will use the default values, unless `setup` is called. Below is the default configuration.
