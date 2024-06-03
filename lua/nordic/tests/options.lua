@@ -19,6 +19,11 @@ config.on_palette = function(palette)
     palette.black0 = '#000000'
 end
 
+config.after_palette = function(palette)
+    palette.bg_visual = require("nordic.utils").blend(palette.orange.base, palette.bg, 0.15)
+end
+
+
 config.on_highlight = function(highlights, palette)
     highlights.TelescopePromptTitle = {
         fg = palette.red.bright,
