@@ -166,7 +166,8 @@ An example of setting the visual selection color (for more values see [this file
 ```lua
 require('nordic').setup({
     after_palette = function(palette)
-        palette.bg_visual = require("nordic.utils").blend(palette.orange.base, palette.bg, 0.15)
+        local U = require("nordic.utils")
+        palette.bg_visual = U.blend(palette.orange.base, palette.bg, 0.15)
     end,
 })
 ```
