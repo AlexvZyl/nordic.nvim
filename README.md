@@ -86,8 +86,10 @@ Nordic will use the default values, unless `setup` is called. Below is the defau
 
 ```lua
 require('nordic').setup({
-    -- This callback can be used to override the colors used in the palette.
+    -- This callback can be used to override the colors used in the base palette.
     on_palette = function(palette) end,
+    -- This callback can be used to override the colors used in the extended palette.
+    after_palette = function(palette) end,
     -- This callback can be used to override highlights before they are applied.
     on_highlight = function(highlights, palette) end,
     -- Enable bold keywords.
@@ -149,6 +151,23 @@ require('nordic').setup({
     on_palette = function(palette)
         palette.black0 = "#BF616A"
         palette.green.base = palette.cyan.base
+    end,
+})
+```
+
+</details>
+
+
+<details>
+    <summary><b><code>after_palette</code></b></summary>
+&nbsp;
+
+An example of setting the visual selection color (for more values see [this file](https://github.com/AlexvZyl/nordic.nvim/blob/main/lua/nordic/colors/init.lua)):
+```lua
+require('nordic').setup({
+    after_palette = function(palette)
+        local U = require("nordic.utils")
+        palette.bg_visual = U.blend(palette.orange.base, palette.bg, 0.15)
     end,
 })
 ```

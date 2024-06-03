@@ -94,6 +94,9 @@ function C.build_palette()
 
     -- Misc
     C.comment = C.gray4
+
+    -- Modify the palette after generating colors.
+    options.after_palette(C)
 end
 
 -- Build the first palette.
