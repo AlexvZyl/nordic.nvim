@@ -20,10 +20,9 @@ config.on_palette = function(palette)
 end
 
 config.after_palette = function(palette)
-    local U = require("nordic.utils")
+    local U = require('nordic.utils')
     palette.bg_visual = U.blend(palette.orange.base, palette.bg, 0.15)
 end
-
 
 config.on_highlight = function(highlights, palette)
     highlights.TelescopePromptTitle = {
