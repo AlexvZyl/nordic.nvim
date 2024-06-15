@@ -19,6 +19,34 @@ assert_eq(U.merge({a = 1}, nil), {a = 1}, 'U.merge({a = 1}, nil) should return {
 
 assert_eq(U.merge({a = 1, b = 3}, {b = 2, c = 4}), {a = 1, b = 2, c = 4}, 'U.merge({a = 1, b = 3}, {b = 2, c = 4}) should return {a = 1, b = 2, c = 4}')
 
+-- merge_inplace
+local t1 = {a = 1}
+local t2 = {b = 2}
+U.merge_inplace(t1, t2)
+assert_eq(t1, {a = 1, b = 2}, 'U.merge_inplace(t1, t2) basic merge')
+
+local t1 = {a = 1, b = 3}
+local t2 = {b = 2, c = 4}
+U.merge_inplace(t1, t2)
+assert_eq(t1, {a = 1, b = 2, c = 4}, 'U.merge_inplace(t1, t2) overwriting values')
+
+local t1 = {a = 1, d = {x = 10}}
+local t2 = {d = {y = 20}, e = 5}
+U.merge_inplace(t1, t2)
+assert_eq(t1, {a = 1, d = {x = 10, y = 20}, e = 5}, 'U.merge_inplace(t1, t2) nested tables')
+
+local nested = { y = 20 }
+local t1 = {d = nested, e = 5}
+local t2 = {a = 1}
+U.merge_inplace(t1, t2)
+assert_eq(t1['d'] ~= nested, true, 'U.merge_inplace(t1, t2) copy t1 nested values')
+
+local nested = { y = 20 }
+local t1 = {a = 1}
+local t2 = {d = nested, e = 5}
+U.merge_inplace(t1, t2)
+assert_eq(t1['d'] ~= nested, true, 'U.merge_inplace(t1, t2) copy t2 nested values')
+
 -- hex_to_rgb
 assert_eq({ U.hex_to_rgb('#191D24') }, {25, 29, 36}, 'U.hex_to_rgb("#191D24") should return 25, 29, 36')
 
