@@ -47,3 +47,6 @@ assert_eq({ U.hex_to_rgb('#191D24') }, {25, 29, 36}, 'U.hex_to_rgb("#191D24") sh
 
 -- rgb_to_hex
 assert_eq(U.rgb_to_hex(25, 29, 36), '#191D24', 'U.rgb_to_hex(25, 29, 36) should return "#191D24"')
+
+-- blend
+assert_eq(U.blend('#FFFFFF', '#000000', 0.5), '#808080', 'U.blend("#FFFFFF", ""#000000", 0.5) should return "#808080"')
