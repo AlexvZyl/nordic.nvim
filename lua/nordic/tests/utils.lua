@@ -20,6 +20,10 @@ local t2 = {b = 2}
 U.merge_inplace(t1, t2)
 assert_eq(t1, {a = 1, b = 2}, 'U.merge_inplace(t1, t2) basic merge')
 
+local t1 = {a = 1}
+local t2 = {b = 2}
+assert_eq(U.merge_inplace(t1, t2) == t1, true, 'U.merge_inplace(t1, t2) should return t1')
+
 local t1 = {a = 1, b = 3}
 local t2 = {b = 2, c = 4}
 U.merge_inplace(t1, t2)
