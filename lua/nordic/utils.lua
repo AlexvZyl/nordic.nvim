@@ -23,34 +23,26 @@ function M.is_table(value)
     return type(value) == 'table'
 end
 
-function M.merge(table1, table2)
-    -- TODO what about replacing this with merge_inplace
-    if not table1 then
-        return table2 or {}
-    elseif not table2 then
-        return table1
-    end
-    return vim.tbl_deep_extend('force', table1, table2)
-end
-
-function M.merge_inplace(table1, table2)
+function M.merge_inplace(t1, t2)
     -- clone values
-    for k, v in pairs(table1) do
+    for k, v in pairs(t1) do
         if M.is_table(v) then
-            table1[k] = {}
-            M.merge_inplace(table1[k], v)
+            t1[k] = {}
+            M.merge_inplace(t1[k], v)
         end
     end
 
     -- merge
-    for k, v in pairs(table2) do
+    for k, v in pairs(t2) do
         if M.is_table(v) then
-            if not M.is_table(table1[k]) then table1[k] = {} end
-            M.merge_inplace(table1[k], v)
+            if not M.is_table(t1[k]) then t1[k] = {} end
+            M.merge_inplace(t1[k], v)
         else
-            table1[k] = v
+            t1[k] = v
         end
     end
+
+    return t1
 end
 
 function M.hex_to_rgb(str)

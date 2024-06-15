@@ -1,10 +1,6 @@
 local assert_eq = require('nordic.tests').assert_eq
 local U = require('nordic.utils')
 
-local function round(value, places)
-    return tonumber(string.format("%." .. (places or 0) .. "f", value))
-end
-
 -- none
 assert_eq(U.none(), 'NONE', 'utils.none() should return "NONE"')
 
@@ -17,16 +13,6 @@ assert_eq(U.is_none('nil'), false, 'U.is_none("nil") should return false')
 assert_eq(U.is_table('string'), false, 'U.is_table("string") should return false')
 assert_eq(U.is_table(4), false, 'U.is_table(4) should return false')
 assert_eq(U.is_table({}), true, 'U.is_table({}) should return true')
-
--- merge
-assert_eq(U.merge({}, {}), {}, 'U.merge({}, {}) should return an empty table')
-
-assert_eq(U.merge(nil, nil), {}, 'U.merge(nil, nil) should return an empty table')
-
-assert_eq(U.merge(nil, {a = 1}), {a = 1}, 'U.merge(nil, {a = 1}) should return {a = 1}')
-assert_eq(U.merge({a = 1}, nil), {a = 1}, 'U.merge({a = 1}, nil) should return {a = 1}')
-
-assert_eq(U.merge({a = 1, b = 3}, {b = 2, c = 4}), {a = 1, b = 2, c = 4}, 'U.merge({a = 1, b = 3}, {b = 2, c = 4}) should return {a = 1, b = 2, c = 4}')
 
 -- merge_inplace
 local t1 = {a = 1}
