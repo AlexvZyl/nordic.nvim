@@ -93,7 +93,7 @@ function M.rgb_to_hsv(r, g, b)
     return h, s, v
 end
 
-function M.hsv_to_rbg(h, s, v)
+function M.hsv_to_rgb(h, s, v)
     local r, g, b
 
     local i = math.floor(h * 6)
@@ -125,7 +125,7 @@ function M.darken(hex, amount)
     local r, g, b = M.hex_to_rgb(hex)
     local h, s, v = M.rgb_to_hsv(r, g, b)
     v = v * ((1 - amount) / 1)
-    r, g, b = M.hsv_to_rbg(h, s, v)
+    r, g, b = M.hsv_to_rgb(h, s, v)
     return M.rgb_to_hex(r, g, b)
 end
 
