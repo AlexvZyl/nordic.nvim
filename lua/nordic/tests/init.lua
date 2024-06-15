@@ -31,7 +31,6 @@ end
 function M.run_tests()
     require('nordic.tests.options')
     require('nordic.tests.utils')
-
 end
 
 return M
