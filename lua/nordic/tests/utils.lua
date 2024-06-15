@@ -9,6 +9,11 @@ assert_eq(U.is_none('NONE'), true, 'U.is_none("NONE") should return true')
 assert_eq(U.is_none('none'), true, 'U.is_none("none") should return true')
 assert_eq(U.is_none('nil'), false, 'U.is_none("nil") should return false')
 
+-- is_table
+assert_eq(U.is_table('string'), false, 'U.is_table("string") should return false')
+assert_eq(U.is_table(4), false, 'U.is_table(4) should return false')
+assert_eq(U.is_table({}), true, 'U.is_table({}) should return true')
+
 -- merge
 assert_eq(U.merge({}, {}), {}, 'U.merge({}, {}) should return an empty table')
 

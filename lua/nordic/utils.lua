@@ -19,6 +19,10 @@ function M.is_none(string)
     return string == 'NONE' or string == 'none'
 end
 
+function M.is_table(value)
+    return type(value) == 'table'
+end
+
 function M.merge(table1, table2)
     -- TODO what about replacing this with merge_inplace
     if not table1 then
@@ -32,7 +36,7 @@ end
 function M.merge_inplace(table1, table2)
     -- clone values
     for k, v in pairs(table1) do
-        if type(v) == 'table' then
+        if M.is_table(v) then
             table1[k] = {}
             M.merge_inplace(table1[k], v)
         end
@@ -40,8 +44,8 @@ function M.merge_inplace(table1, table2)
 
     -- merge
     for k, v in pairs(table2) do
-        if type(v) == 'table' then
-            if type(table1[k]) ~= 'table' then table1[k] = {} end
+        if M.is_table(v) then
+            if not M.is_table(table1[k]) then table1[k] = {} end
             M.merge_inplace(table1[k], v)
         else
             table1[k] = v
