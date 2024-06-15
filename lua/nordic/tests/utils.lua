@@ -1,6 +1,10 @@
 local assert_eq = require('nordic.tests').assert_eq
 local U = require('nordic.utils')
 
+local function round(value, places)
+    return tonumber(string.format("%." .. places .. "f", value))
+end
+
 -- none
 assert_eq(U.none(), 'NONE', 'utils.none() should return "NONE"')
 
@@ -58,3 +62,9 @@ assert_eq({ U.hex_to_rgb('#191D24') }, {25, 29, 36}, 'U.hex_to_rgb("#191D24") sh
 -- rgb_to_hex
 assert_eq(U.rgb_to_hex(25, 29, 36), '#191D24', 'U.rgb_to_hex(25, 29, 36) should return "#191D24"')
 
+-- rgb_to_hsv
+local h, s, v = U.rgb_to_hsv(25, 29, 36)
+local rh = round(h, 4)
+local rs = round(s, 4)
+local rv = round(v, 4)
+assert_eq({rh, rs, rv}, {0.6061, 0.3056, 0.1412}, 'U.rgb_to_hsv(25, 29, 36) should return approximately 0.6061, 0.3056, 0.1412')
