@@ -11,15 +11,16 @@ function M.highlight(table)
     end
 end
 
-function M.is_none(string)
-    return string == 'NONE' or string == 'none'
-end
-
 function M.none()
     return 'NONE'
 end
 
+function M.is_none(string)
+    return string == 'NONE' or string == 'none'
+end
+
 function M.merge(table1, table2)
+    -- TODO what about replacing this with merge_inplace
     if not table1 then
         return table2 or {}
     elseif not table2 then
@@ -29,6 +30,15 @@ function M.merge(table1, table2)
 end
 
 function M.merge_inplace(table1, table2)
+    -- clone values
+    for k, v in pairs(table1) do
+        if type(v) == 'table' then
+            table1[k] = {}
+            M.merge_inplace(table1[k], v)
+        end
+    end
+
+    -- merge
     for k, v in pairs(table2) do
         if type(v) == 'table' then
             if type(table1[k]) ~= 'table' then table1[k] = {} end
