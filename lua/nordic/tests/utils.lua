@@ -55,4 +55,6 @@ assert_eq(t1['d'] ~= nested, true, 'U.merge_inplace(t1, t2) copy t2 nested value
 -- hex_to_rgb
 assert_eq({ U.hex_to_rgb('#191D24') }, {25, 29, 36}, 'U.hex_to_rgb("#191D24") should return 25, 29, 36')
 
+-- rgb_to_hex
+assert_eq(U.rgb_to_hex(25, 29, 36), '#191D24', 'U.rgb_to_hex(25, 29, 36) should return "#191D24"')
 
