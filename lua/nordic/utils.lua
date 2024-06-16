@@ -23,6 +23,15 @@ function M.is_table(value)
     return type(value) == 'table'
 end
 
+function M.merge(t1, t2)
+    if not t1 then
+        return t2 or {}
+    elseif not t2 then
+        return t1
+    end
+    return vim.tbl_deep_extend('force', t1, t2)
+end
+
 function M.merge_inplace(t1, t2)
     -- clone values
     for k, v in pairs(t1) do
@@ -41,8 +50,6 @@ function M.merge_inplace(t1, t2)
             t1[k] = v
         end
     end
-
-    return t1
 end
 
 function M.hex_to_rgb(str)

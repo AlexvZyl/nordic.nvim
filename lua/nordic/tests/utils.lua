@@ -20,10 +20,6 @@ local t2 = {b = 2}
 U.merge_inplace(t1, t2)
 assert_eq(t1, {a = 1, b = 2}, 'U.merge_inplace(t1, t2) basic merge')
 
-local t1 = {a = 1}
-local t2 = {b = 2}
-assert_eq(U.merge_inplace(t1, t2) == t1, true, 'U.merge_inplace(t1, t2) should return t1')
-
 local t1 = {a = 1, b = 3}
 local t2 = {b = 2, c = 4}
 U.merge_inplace(t1, t2)
@@ -45,6 +41,16 @@ local t1 = {a = 1}
 local t2 = {d = nested, e = 5}
 U.merge_inplace(t1, t2)
 assert_eq(t1['d'] ~= nested, true, 'U.merge_inplace(t1, t2) copy t2 nested values')
+
+-- merge
+assert_eq(U.merge({}, {}), {}, 'U.merge({}, {}) should return an empty table')
+
+assert_eq(U.merge(nil, nil), {}, 'U.merge(nil, nil) should return an empty table')
+
+assert_eq(U.merge(nil, {a = 1}), {a = 1}, 'U.merge(nil, {a = 1}) should return {a = 1}')
+assert_eq(U.merge({a = 1}, nil), {a = 1}, 'U.merge({a = 1}, nil) should return {a = 1}')
+
+assert_eq(U.merge({a = 1, b = 3}, {b = 2, c = 4}), {a = 1, b = 2, c = 4}, 'U.merge({a = 1, b = 3}, {b = 2, c = 4}) should return {a = 1, b = 2, c = 4}')
 
 -- hex_to_rgb
 assert_eq({ U.hex_to_rgb('#191D24') }, {25, 29, 36}, 'U.hex_to_rgb("#191D24") should return 25, 29, 36')
