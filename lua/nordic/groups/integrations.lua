@@ -528,7 +528,7 @@ function M.get_groups()
     G.RainbowDelimiterYellow = { fg = C.yellow.bright }
     G.RainbowDelimiterBlue = { fg = C.blue2 }
     G.RainbowDelimiterRed = { fg = C.red.bright }
-    G.RainbowDelimiterGreen = { fg = C.green.bright}
+    G.RainbowDelimiterGreen = { fg = C.green.bright }
 
     return G
 end
