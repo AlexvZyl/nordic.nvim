@@ -17,13 +17,29 @@ load(config)
 
 config.on_palette = function(palette)
     palette.black0 = '#000000'
-    return palette
+end
+
+config.after_palette = function(palette)
+    local U = require('nordic.utils')
+    palette.bg_visual = U.blend(palette.orange.base, palette.bg, 0.15)
+end
+
+config.on_highlight = function(highlights, palette)
+    highlights.TelescopePromptTitle = {
+        fg = palette.red.bright,
+        bg = palette.green.base,
+        italic = true,
+        underline = true,
+        sp = palette.yellow.dim,
+        undercurl = false,
+    }
 end
 
 -- Flip all fields
 config.bold_keywords = not config.bold_keywords
 config.italic_comments = not config.italic_comments
-config.transparent_bg = not config.transparent_bg
+config.transparent.bg = not config.transparent.bg
+config.transparent.float = not config.transparent.float
 config.bright_border = not config.bright_border
 config.reduced_blue = not config.reduced_blue
 config.swap_backgrounds = not config.swap_backgrounds
