@@ -2,7 +2,7 @@ local assert_eq = require('nordic.tests').assert_eq
 local U = require('nordic.utils')
 
 -- none
-assert_eq(U.none(), 'NONE', 'utils.none() should return "NONE"')
+assert_eq(U.none(), 'NONE', 'U.none() should return "NONE"')
 
 -- is_none
 assert_eq(U.is_none('NONE'), true, 'U.is_none("NONE") should return true')
