@@ -290,7 +290,7 @@ function M.get_groups()
     --- Punctuation
     G['@punctuation.delimiter'] = { link = 'Delimiter' } -- For delimiters ie: `.`
     G['@punctuation.bracket'] = { link = '@operator' } -- For brackets and parens.
-    G['@punctuation.special'] = { link = 'Macro' } -- For special punctutation that does not fall in the catagories before.
+    G['@punctuation.special'] = { link = 'Macro' } -- For special punctuation that does not fall in the categories before.
     G['@punctuation.special.markdown'] = { fg = C.orange.base, bold = true }
     --- Literals
     G['@string'] = { link = 'String' }
@@ -310,7 +310,7 @@ function M.get_groups()
     G['@keyword.directive.define'] = { link = 'Define' }
     G['@keyword.exception'] = { link = 'Exception' }
     G['@keyword.export'] = { link = 'Keyword' }
-    G['@keyword.function'] = { link = 'Keyword' } -- For keywords used to define a fuction.
+    G['@keyword.function'] = { link = 'Keyword' } -- For keywords used to define a function.
     G['@keyword.import'] = { link = 'Include' }
     G['@keyword.operator'] = { link = 'Keyword' }
     G['@keyword.repeat'] = { link = 'Repeat' }
