@@ -15,7 +15,9 @@ local function pretty_string(value)
     end
 end
 
-function M.assert_eq(left, right, message)
+function M.assert_eq(left, right, message, stack_level)
+    stack_level = stack_level or 1
+
     local function recursive_eq(value1, value2)
         if not U.is_table(value1) or not U.is_table(value2) then
             return value1 == value2
@@ -32,7 +34,7 @@ function M.assert_eq(left, right, message)
     end
 
     if not recursive_eq(left, right) then
-        local info = debug.getinfo(2)
+        local info = debug.getinfo(stack_level + 1)
         local file_name = info.short_src
         local line_number = info.currentline
         print('\nassertion `left == right` failed' ..
