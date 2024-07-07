@@ -46,8 +46,11 @@ function M.assert_eq(left, right, message, stack_level)
 end
 
 function M.run_tests()
-    require('nordic.tests.options')
+    -- reset config (not needed for ci but I don't like commenting out my config every time)
+    require('nordic').setup({})
+
     require('nordic.tests.utils')
+    require('nordic.tests.options')
 end
 
 return M
