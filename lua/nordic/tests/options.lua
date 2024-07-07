@@ -20,11 +20,18 @@ load({})
 -- tests for changes in palette should check highlights (to make sure everything is applied)
 
 -- on_palette
-assert_eq(highlight('Normal').bg, '#242933', 'on_palette: all highlights that use gray0 should be `#242933` by default')
+assert_eq(highlight('Normal').bg, '#242933', 'on_palette: all highlights that use `gray0` should be `#242933` by default')
 load({ on_palette = function(palette) palette.gray0 = '#FFFFFF' end })
 assert_eq(highlight('Normal').bg, '#FFFFFF', 'on_platte: changing a color should cascade to all highlights that use it')
 load({ on_palette = function(palette) end })
 assert_eq(highlight('Normal').bg, '#242933', 'on_palette: reloading should revert the palette to its original state')
+
+-- after_palette
+assert_eq(highlight('Normal').bg, '#242933', 'after_palette: all highlights that use `bg` should be `#242933` by default')
+load({ after_palette = function(palette) palette.bg = '#FFFFFF' end })
+assert_eq(highlight('Normal').bg, '#FFFFFF', 'after_platte: changing a color should cascade to all highlights that use it')
+load({ after_palette = function(palette) end })
+assert_eq(highlight('Normal').bg, '#242933', 'after_palette: reloading should revert the palette to its original state')
 
 -- bold_keywords
 assert_eq(highlight('Keyword').bold, nil, 'highlight `Keyword` should not be bold by default')
