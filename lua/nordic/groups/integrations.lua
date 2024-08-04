@@ -3,6 +3,7 @@ local M = {}
 function M.get_groups()
     local C = require 'nordic.colors'
     local O = require('nordic.config').options
+    local U = require 'nordic.utils'
 
     local G = {}
 
@@ -348,17 +349,17 @@ function M.get_groups()
     G['@text.note'] = { link = 'Note' }
     --- Markup
     G['@markup'] = { link = '@none' }
-    G['@markup.emphasis'] = { italic = true }
+    G['@markup.emphasis'] = { fg = C.orange.base, italic = true }
     G['@markup.environment'] = { link = 'Macro' }
     G['@markup.environment.name'] = { link = 'Type' }
     G['@markup.heading'] = { link = 'Title' }
-    G['@markup.heading.1'] = { fg = C.yellow.base, bold = true }
-    G['@markup.heading.2'] = { fg = C.orange.base, bold = true }
-    G['@markup.heading.3'] = { fg = C.magenta.base, bold = true }
+    G['@markup.heading.1'] = { fg = C.yellow.base }
+    G['@markup.heading.2'] = { fg = C.orange.base }
+    G['@markup.heading.3'] = { fg = C.magenta.base }
     G['@markup.heading.4'] = { fg = C.green.base }
-    G['@markup.heading.5'] = { fg = C.blue2, italic = true }
-    G['@markup.heading.6'] = { fg = C.cyan.base, italic = true }
-    G['@markup.italic'] = { italic = true }
+    G['@markup.heading.5'] = { fg = C.blue2 }
+    G['@markup.heading.6'] = { fg = C.cyan.base }
+    G['@markup.italic'] = { fg = C.orange.base, italic = true }
     G['@markup.list'] = { link = '@operator' }
     G['@markup.list.checked'] = { link = 'Field' }
     G['@markup.list.markdown'] = { fg = C.yellow.base, bold = true }
@@ -370,7 +371,7 @@ function M.get_groups()
     G['@markup.math'] = { link = 'Special' }
     G['@markup.raw'] = { link = 'String' }
     G['@markup.raw.markdown_inline'] = { bg = C.black2, fg = C.fg }
-    G['@markup.strong'] = { bold = true }
+    G['@markup.strong'] = { fg = C.orange.base, bold = true }
     G['@markup.strikethrough'] = { strikethrough = true }
     G['@markup.underline'] = { underline = true }
     -- TSX
@@ -522,6 +523,24 @@ function M.get_groups()
     -- TODO: Unsure.
     G.WhichKeySeperator = {}
     G.WhichKeyValue = {}
+
+    -- Markdown.Nvim.
+    G.RenderMarkdownH1 = { link = '@markup.heading.1' }
+    G.RenderMarkdownH2 = { link = '@markup.heading.2' }
+    G.RenderMarkdownH3 = { link = '@markup.heading.3' }
+    G.RenderMarkdownH4 = { link = '@markup.heading.4' }
+    G.RenderMarkdownH5 = { link = '@markup.heading.5' }
+    G.RenderMarkdownH6 = { link = '@markup.heading.6' }
+    G.RenderMarkdownH1Bg = { bg = U.blend(C.yellow.base, C.grey0, 0.3) }
+    G.RenderMarkdownH2Bg = { bg = U.blend(C.orange.base, C.grey0, 0.3) }
+    G.RenderMarkdownH3Bg = { bg = U.blend(C.magenta.base, C.grey0, 0.3) }
+    G.RenderMarkdownH4Bg = { bg = U.blend(C.green.base, C.grey0, 0.3) }
+    G.RenderMarkdownH5Bg = { bg = U.blend(C.blue2, C.grey0, 0.3) }
+    G.RenderMarkdownH6Bg = { bg = U.blend(C.cyan.base, C.grey0, 0.3) }
+    G.RenderMarkdownCode = { bg = C.black2 }
+    G.RenderMarkdownCodeInline = { bg = C.gray1 }
+    G.RenderMarkdownTableHead = { fg = C.cyan.dim }
+    G.RenderMarkdownTableRow = { fg = C.cyan.base }
 
     return G
 end
