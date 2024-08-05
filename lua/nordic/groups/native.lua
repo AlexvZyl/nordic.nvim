@@ -74,8 +74,8 @@ function M.get_groups()
     G.markdownHeadingDelimiter = { link = 'mkdHeading' }
     G.markdownCode = { link = 'CodeBlock' }
     G.markdownCodeBlock = { link = 'CodeBlock' }
-    G.markdownH1 = { fg = C.yellow.base }
-    G.markdownH2 = { fg = C.orange.base }
+    G.markdownH1 = { link = 'htmlH1' }
+    G.markdownH2 = { link = 'htmlH2' }
     G.markdownLinkText = { link = 'Link' }
     G['@punctuation.special.markdown'] = { fg = C.orange.base, bold = true }
     G['@text.todo.unchecked'] = { fg = C.blue1 } -- For brackets and parens.

@@ -353,12 +353,12 @@ function M.get_groups()
     G['@markup.environment'] = { link = 'Macro' }
     G['@markup.environment.name'] = { link = 'Type' }
     G['@markup.heading'] = { link = 'Title' }
-    G['@markup.heading.1'] = { fg = C.yellow.base }
-    G['@markup.heading.2'] = { fg = C.orange.base }
-    G['@markup.heading.3'] = { fg = C.magenta.base }
-    G['@markup.heading.4'] = { fg = C.green.base }
-    G['@markup.heading.5'] = { fg = C.blue2 }
-    G['@markup.heading.6'] = { fg = C.cyan.base }
+    G['@markup.heading.1'] = { fg = C.yellow.base, bold = true }
+    G['@markup.heading.2'] = { fg = C.orange.base, bold = true }
+    G['@markup.heading.3'] = { fg = C.magenta.base, bold = true }
+    G['@markup.heading.4'] = { fg = C.green.base, bold = true }
+    G['@markup.heading.5'] = { fg = C.blue2, bold = true }
+    G['@markup.heading.6'] = { fg = C.cyan.base, bold = true }
     G['@markup.italic'] = { fg = C.orange.base, italic = true }
     G['@markup.list'] = { link = '@operator' }
     G['@markup.list.checked'] = { link = 'Field' }
@@ -531,12 +531,12 @@ function M.get_groups()
     G.RenderMarkdownH4 = { link = '@markup.heading.4' }
     G.RenderMarkdownH5 = { link = '@markup.heading.5' }
     G.RenderMarkdownH6 = { link = '@markup.heading.6' }
-    G.RenderMarkdownH1Bg = { bg = U.blend(C.yellow.base, C.grey0, 0.3) }
-    G.RenderMarkdownH2Bg = { bg = U.blend(C.orange.base, C.grey0, 0.3) }
-    G.RenderMarkdownH3Bg = { bg = U.blend(C.magenta.base, C.grey0, 0.3) }
-    G.RenderMarkdownH4Bg = { bg = U.blend(C.green.base, C.grey0, 0.3) }
-    G.RenderMarkdownH5Bg = { bg = U.blend(C.blue2, C.grey0, 0.3) }
-    G.RenderMarkdownH6Bg = { bg = U.blend(C.cyan.base, C.grey0, 0.3) }
+    G.RenderMarkdownH1Bg = { bg = U.blend(C.yellow.base, C.bg, 0.15) }
+    G.RenderMarkdownH2Bg = { bg = U.blend(C.orange.base, C.bg, 0.15) }
+    G.RenderMarkdownH3Bg = { bg = U.blend(C.magenta.base, C.bg, 0.15) }
+    G.RenderMarkdownH4Bg = { bg = U.blend(C.green.base, C.bg, 0.15) }
+    G.RenderMarkdownH5Bg = { bg = U.blend(C.blue2, C.bg, 0.15) }
+    G.RenderMarkdownH6Bg = { bg = U.blend(C.cyan.base, C.bg, 0.15) }
     G.RenderMarkdownCode = { bg = C.black2 }
     G.RenderMarkdownCodeInline = { bg = C.gray1 }
     G.RenderMarkdownTableHead = { fg = C.cyan.dim }
