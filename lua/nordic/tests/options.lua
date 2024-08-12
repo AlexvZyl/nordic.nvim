@@ -29,7 +29,8 @@ assert_eq(highlight('Normal').bg, '#242933', 'on_palette: reloading should rever
 -- after_palette
 assert_eq(highlight('Normal').bg, '#242933', 'after_palette: all highlights that use `bg` should be `#242933` by default')
 load({ after_palette = function(palette) palette.bg = '#FFFFFF' end })
-assert_eq(highlight('Normal').bg, '#FFFFFF', 'after_platte: changing a color should cascade to all highlights that use it')
+assert_eq(highlight('Normal').bg, '#FFFFFF',
+  'after_platte: changing a color should cascade to all highlights that use it')
 load({ after_palette = function(palette) end })
 assert_eq(highlight('Normal').bg, '#242933', 'after_palette: reloading should revert the palette to its original state')
 
@@ -44,3 +45,10 @@ assert_eq(highlight('Comment').italic, true, 'highlight `Comments` should be ita
 load({ italic_comments = false })
 assert_eq(highlight('Comment').italic, nil, 'highlight `Comments` should not be italic if `italic_comments` is false')
 load({ italic_comments = true })
+
+-- transparent
+-- bg
+assert_eq(highlight('Normal').bg ~= nil, true, 'highlight `Normal.bg` should not be `nil` by default')
+load({ transparent = { bg = true } })
+assert_eq(highlight('Normal').bg, nil, 'highlight `Normal.bg` should be `nil` if `transparent.bg` is true')
+load({ transparent = { bg = false } })
