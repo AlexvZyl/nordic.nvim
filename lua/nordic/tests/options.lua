@@ -52,3 +52,8 @@ assert_eq(highlight('Normal').bg ~= nil, true, 'highlight `Normal.bg` should not
 load({ transparent = { bg = true } })
 assert_eq(highlight('Normal').bg, nil, 'highlight `Normal.bg` should be `nil` if `transparent.bg` is true')
 load({ transparent = { bg = false } })
+-- float
+assert_eq(highlight('NormalFloat').bg ~= nil, true, 'highlight `NormalFloat.bg` should not be `nil` by default')
+load({ transparent = { float = true }})
+assert_eq(highlight('NormalFloat').bg, nil, 'highlight `NormalFloat.bg` should be `nil` if `transparent.float` is true')
+load({ transparent = { float = false }})
