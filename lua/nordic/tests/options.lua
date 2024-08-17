@@ -67,14 +67,31 @@ assert_eq(highlight('NormalFloat').bg, nil, 'highlight `NormalFloat.bg` should b
 load({ transparent = { float = false } })
 
 -- bright_border
-assert_eq(highlight('WinSeparator').fg, '#191D24', 'bright_border: all highlights that use `border_fg` should be `#191D24` by default')
+assert_eq(highlight('WinSeparator').fg, '#191D24',
+  'bright_border: all highlights that use `border_fg` should be `#191D24` by default')
 load({ bright_border = true })
 -- note: this could fail if the wrong white0 variant is used
-assert_eq(highlight('WinSeparator').fg, '#C0C8D8', 'bright_border: all highlights that use `border_fg` should be `#C0C8D8` if `bright_border` is true')
+assert_eq(highlight('WinSeparator').fg, '#C0C8D8',
+  'bright_border: all highlights that use `border_fg` should be `#C0C8D8` if `bright_border` is true')
 load({ bright_border = false })
 
 -- reduced_blue
-assert_eq(highlight('Normal').fg, '#C0C8D8', 'reduced_blue: all highlights that use `white0` should be `#C0C8D8` by default')
+assert_eq(highlight('Normal').fg, '#C0C8D8',
+  'reduced_blue: all highlights that use `white0` should be `#C0C8D8` by default')
 load({ reduced_blue = false })
-assert_eq(highlight('Normal').fg, '#BBC3D4', 'reduced_blue: all highlights that use `white0` should be `#BBC3D4` if `reduced_blue` is false')
+assert_eq(highlight('Normal').fg, '#BBC3D4',
+  'reduced_blue: all highlights that use `white0` should be `#BBC3D4` if `reduced_blue` is false')
 load({ reduced_blue = true })
+
+-- swap_backgrounds
+-- note: this could fail if any transparent settings are set
+assert_eq(highlight('Normal').bg, '#242933',
+  'swap_backgrounds: all highlights that use `bg` should be `#242933` by default')
+assert_eq(highlight('NormalFloat').bg, '#1E222A',
+  'swap_backgrounds: all highlights that use `bg_float` should be `#1E222A` by default')
+load({ swap_backgrounds = true })
+assert_eq(highlight('Normal').bg, '#1E222A',
+  'swap_backgrounds: all highlights that use `bg` should be `#1E222A` if `swap_backgrounds` is true')
+assert_eq(highlight('NormalFloat').bg, '#242933',
+  'swap_backgrounds: all highlights that use `bg_float` should be `#242933` if `swap_backgrounds` is true')
+load({ swap_backgrounds = false })
