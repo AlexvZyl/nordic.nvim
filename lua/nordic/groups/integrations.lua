@@ -120,7 +120,6 @@ function M.get_groups()
     G.NeoTreeCursorLine = { link = 'NvimTreeCursorLine' }
     G.NeoTreeDirectoryIcon = { link = 'NvimTreeFolderIcon' }
     G.NeoTreeRootName = { link = 'NvimTreeRootFolder' }
-    G.NeoTreeFileName = { link = 'NvimTreeNormal' }
     G.NeoTreeFileIcon = { fg = C.blue2 }
     G.NeoTreeFileNameOpened = { fg = C.fg }
     G.NeoTreeIndentMarker = { link = 'NvimTreeIndentMarker' }
