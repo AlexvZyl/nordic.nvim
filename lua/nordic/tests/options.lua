@@ -65,3 +65,10 @@ assert_eq(highlight('NormalFloat').bg ~= nil, true, 'highlight `NormalFloat.bg` 
 load({ transparent = { float = true } })
 assert_eq(highlight('NormalFloat').bg, nil, 'highlight `NormalFloat.bg` should be `nil` if `transparent.float` is true')
 load({ transparent = { float = false } })
+
+-- bright_border
+assert_eq(highlight('WinSeparator').fg, '#191D24', 'bright_border: all highlights that use `border_fg` should be `#191D24` by default')
+load({ bright_border = true })
+-- note: this could fail if the wrong white0 variant is used
+assert_eq(highlight('WinSeparator').fg, '#C0C8D8', 'bright_border: all highlights that use `border_fg` should be `#C0C8D8` if `bright_border` is true')
+load({ bright_border = false })
