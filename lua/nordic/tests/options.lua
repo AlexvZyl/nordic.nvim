@@ -43,27 +43,27 @@ assert_eq(highlight('Normal').bg, '#242933',
   'on_highlight: reloading should revert all highlights to their original state')
 
 -- bold_keywords
-assert_eq(highlight('Keyword').bold, nil, 'highlight `Keyword` should not be bold by default')
+assert_eq(highlight('Keyword').bold, nil, 'bold_keywords: highlight `Keyword` should not be bold by default')
 load({ bold_keywords = true })
-assert_eq(highlight('Keyword').bold, true, 'highlight `Keyword` should be bold if `bold_keywords` is true')
+assert_eq(highlight('Keyword').bold, true, 'bold_keywords: highlight `Keyword` should be bold if `bold_keywords` is true')
 load({ bold_keywords = false })
 
 -- italic_comments
-assert_eq(highlight('Comment').italic, true, 'highlight `Comments` should be italic by default')
+assert_eq(highlight('Comment').italic, true, 'italic_comments: highlight `Comments` should be italic by default')
 load({ italic_comments = false })
-assert_eq(highlight('Comment').italic, nil, 'highlight `Comments` should not be italic if `italic_comments` is false')
+assert_eq(highlight('Comment').italic, nil, 'italic_comments: highlight `Comments` should not be italic if `italic_comments` is false')
 load({ italic_comments = true })
 
 -- transparent
 -- bg
-assert_eq(highlight('Normal').bg ~= nil, true, 'highlight `Normal.bg` should not be `nil` by default')
+assert_eq(highlight('Normal').bg ~= nil, true, 'transparent: highlight `Normal.bg` should not be `nil` by default')
 load({ transparent = { bg = true } })
-assert_eq(highlight('Normal').bg, nil, 'highlight `Normal.bg` should be `nil` if `transparent.bg` is true')
+assert_eq(highlight('Normal').bg, nil, 'transparent: highlight `Normal.bg` should be `nil` if `transparent.bg` is true')
 load({ transparent = { bg = false } })
 -- float
-assert_eq(highlight('NormalFloat').bg ~= nil, true, 'highlight `NormalFloat.bg` should not be `nil` by default')
+assert_eq(highlight('NormalFloat').bg ~= nil, true, 'transparent: highlight `NormalFloat.bg` should not be `nil` by default')
 load({ transparent = { float = true } })
-assert_eq(highlight('NormalFloat').bg, nil, 'highlight `NormalFloat.bg` should be `nil` if `transparent.float` is true')
+assert_eq(highlight('NormalFloat').bg, nil, 'transparent: highlight `NormalFloat.bg` should be `nil` if `transparent.float` is true')
 load({ transparent = { float = false } })
 
 -- bright_border
