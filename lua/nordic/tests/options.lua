@@ -95,3 +95,37 @@ assert_eq(highlight('Normal').bg, '#1E222A',
 assert_eq(highlight('NormalFloat').bg, '#242933',
   'swap_backgrounds: all highlights that use `bg_float` should be `#242933` if `swap_backgrounds` is true')
 load({ swap_backgrounds = false })
+
+-- cursorline
+-- bold
+assert_eq(highlight('CursorLine').bold, nil, 'cursorline: highlight `CursorLine` should not be bold by default')
+load({ cursorline = { bold = true } })
+assert_eq(highlight('CursorLine').bold, true,
+  'cursorline: highlight `CursorLine` should be bold if `cursorline.bold` is true')
+load({ cursorline = { bold = false } })
+-- bold_number
+assert_eq(highlight('CursorLineNr').bold, true, 'cursorline: highlight `CursorLineNr` should be bold by default')
+load({ cursorline = { bold_number = false } })
+assert_eq(highlight('CursorLineNr').bold, nil,
+  'cursorline: highlight `CursorLineNr` should not be bold if `cursorline.bold_number` is false')
+load({ cursorline = { bold_number = true } })
+-- theme
+load({ cursorline = { blend = 1 } })
+assert_eq(highlight('CursorLine').bg, '#191D24',
+  'cursorline: highlight `CursorLine` should be `#191D24` with the default theme')
+load({ cursorline = { theme = 'light' } })
+assert_eq(highlight('CursorLine').bg, '#3B4252',
+  'cursorline: highlight `CursorLine` should be `#3B4252` if `cursorline.theme` is `light`')
+load({ cursorline = { theme = 'dark' } })
+assert_eq(highlight('CursorLine').bg, '#191D24',
+  'cursorline: highlight `CursorLine` should be `#191D24` if `cursorline.theme` is `dark`')
+-- blend
+load({ cursorline = { blend = 1 } })
+assert_eq(highlight('CursorLine').bg, '#191D24',
+  'cursorline: highlight `CursorLine` should be `#191D24` if `cursorline.blend` is 1')
+load({ cursorline = { blend = 0.5 } })
+assert_eq(highlight('CursorLine').bg, '#1F232C',
+  'cursorline: highlight `CursorLine` should be `#1F232C` if `cursorline.blend` is 0.5')
+load({ cursorline = { blend = 0 } })
+assert_eq(highlight('CursorLine').bg, '#242933',
+  'cursorline: highlight `CursorLine` should be `#242933` if `cursorline.blend` is 0')
