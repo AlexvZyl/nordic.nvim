@@ -138,3 +138,13 @@ assert_eq(highlight('NoiceCmdline').bg, '#191D24',
 load({ noice = { style = 'classic' } })
 assert_eq(highlight('NoiceCmdline').bg, '#242933',
   'noice: highlight `NoiceCmdline` should be `#242933` if `noice.style` is `classic`')
+
+-- telescope
+assert_eq(highlight('TelescopeNormal').bg, '#1E222A',
+  'telescope: highlight `TelescopeNormal` should be `#1E222A` by default')
+load({ telescope = { style = 'classic' } })
+assert_eq(highlight('TelescopeNormal').bg, '#242933',
+  'telescope: highlight `TelescopeNormal` should be `#242933` if `telescope.style` is `classic`')
+load({ telescope = { style = 'flat' } })
+assert_eq(highlight('TelescopeNormal').bg, '#1E222A',
+  'telescope: highlight `TelescopeNormal` should be `#1E222A` if `telescope.style` is `flat`')
