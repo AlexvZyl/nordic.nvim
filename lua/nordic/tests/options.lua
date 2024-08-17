@@ -148,3 +148,10 @@ assert_eq(highlight('TelescopeNormal').bg, '#242933',
 load({ telescope = { style = 'flat' } })
 assert_eq(highlight('TelescopeNormal').bg, '#1E222A',
   'telescope: highlight `TelescopeNormal` should be `#1E222A` if `telescope.style` is `flat`')
+
+-- leap
+assert_eq(highlight('LeapBackdrop'), {}, 'leap: highlight `LeapBackdrop` should be `{}` by default')
+load({ leap = { dim_backdrop = true } })
+assert_eq(highlight('LeapBackdrop').fg, '#4C566A',
+  'leap: highlight `LeapBackdrop` should be `#4C566A` if `leap.dim_backdrop` is true')
+load({ leap = { dim_backdrop = false } })
