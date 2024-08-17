@@ -72,3 +72,9 @@ load({ bright_border = true })
 -- note: this could fail if the wrong white0 variant is used
 assert_eq(highlight('WinSeparator').fg, '#C0C8D8', 'bright_border: all highlights that use `border_fg` should be `#C0C8D8` if `bright_border` is true')
 load({ bright_border = false })
+
+-- reduced_blue
+assert_eq(highlight('Normal').fg, '#C0C8D8', 'reduced_blue: all highlights that use `white0` should be `#C0C8D8` by default')
+load({ reduced_blue = false })
+assert_eq(highlight('Normal').fg, '#BBC3D4', 'reduced_blue: all highlights that use `white0` should be `#BBC3D4` if `reduced_blue` is false')
+load({ reduced_blue = true })
