@@ -129,3 +129,12 @@ assert_eq(highlight('CursorLine').bg, '#1F232C',
 load({ cursorline = { blend = 0 } })
 assert_eq(highlight('CursorLine').bg, '#242933',
   'cursorline: highlight `CursorLine` should be `#242933` if `cursorline.blend` is 0')
+
+-- noice
+assert_eq(highlight('NoiceCmdline').bg, '#242933', 'noice: highlight `NoiceCmdline` should be `#242933` by default')
+load({ noice = { style = 'flat' } })
+assert_eq(highlight('NoiceCmdline').bg, '#191D24',
+  'noice: highlight `NoiceCmdline` should be `#191D24` if `noice.style` is `flat`')
+load({ noice = { style = 'classic' } })
+assert_eq(highlight('NoiceCmdline').bg, '#242933',
+  'noice: highlight `NoiceCmdline` should be `#242933` if `noice.style` is `classic`')
