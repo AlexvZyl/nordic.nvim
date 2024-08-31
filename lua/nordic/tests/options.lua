@@ -158,3 +158,11 @@ load({ leap = { dim_backdrop = true } })
 assert_eq(highlight('LeapBackdrop').fg, '#4C566A',
   'leap: highlight `LeapBackdrop` should be `#4C566A` if `leap.dim_backdrop` is true')
 load({ leap = { dim_backdrop = false } })
+
+-- ts_context.dark_background
+assert_eq(highlight('TreesitterContext').bg, '#1E222A',
+  'ts_context: highlight `TreesitterContext` should be `#1E222A` by default')
+load({ ts_context = { dark_background = false } })
+assert_eq(highlight('TreesitterContext').bg, '#2E3440',
+  'ts_context: highlight `TreesitterContext` should be `#2E3440` if `ts_context.dark_background` is false')
+load({ ts_context = { dark_background = true } })

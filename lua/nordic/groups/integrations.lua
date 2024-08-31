@@ -456,7 +456,7 @@ function M.get_groups()
     local bg
     local fg
     if O.ts_context.dark_background then
-        bg = C.black
+        bg = C.black1
         fg = C.gray1
     else
         bg = C.gray1
