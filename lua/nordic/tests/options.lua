@@ -51,7 +51,8 @@ load({ bold_keywords = false })
 -- italic_comments
 assert_eq(highlight('Comment').italic, true, 'italic_comments: highlight `Comments` should be italic by default')
 load({ italic_comments = false })
-assert_eq(highlight('Comment').italic, nil, 'italic_comments: highlight `Comments` should not be italic if `italic_comments` is false')
+assert_eq(highlight('Comment').italic, nil,
+  'italic_comments: highlight `Comments` should not be italic if `italic_comments` is false')
 load({ italic_comments = true })
 
 -- transparent
@@ -61,9 +62,11 @@ load({ transparent = { bg = true } })
 assert_eq(highlight('Normal').bg, nil, 'transparent: highlight `Normal.bg` should be `nil` if `transparent.bg` is true')
 load({ transparent = { bg = false } })
 -- float
-assert_eq(highlight('NormalFloat').bg ~= nil, true, 'transparent: highlight `NormalFloat.bg` should not be `nil` by default')
+assert_eq(highlight('NormalFloat').bg ~= nil, true,
+  'transparent: highlight `NormalFloat.bg` should not be `nil` by default')
 load({ transparent = { float = true } })
-assert_eq(highlight('NormalFloat').bg, nil, 'transparent: highlight `NormalFloat.bg` should be `nil` if `transparent.float` is true')
+assert_eq(highlight('NormalFloat').bg, nil,
+  'transparent: highlight `NormalFloat.bg` should be `nil` if `transparent.float` is true')
 load({ transparent = { float = false } })
 
 -- bright_border
@@ -130,7 +133,7 @@ load({ cursorline = { blend = 0 } })
 assert_eq(highlight('CursorLine').bg, '#242933',
   'cursorline: highlight `CursorLine` should be `#242933` if `cursorline.blend` is 0')
 
--- noice
+-- noice.style
 assert_eq(highlight('NoiceCmdline').bg, '#242933', 'noice: highlight `NoiceCmdline` should be `#242933` by default')
 load({ noice = { style = 'flat' } })
 assert_eq(highlight('NoiceCmdline').bg, '#191D24',
@@ -139,7 +142,7 @@ load({ noice = { style = 'classic' } })
 assert_eq(highlight('NoiceCmdline').bg, '#242933',
   'noice: highlight `NoiceCmdline` should be `#242933` if `noice.style` is `classic`')
 
--- telescope
+-- telescope.style
 assert_eq(highlight('TelescopeNormal').bg, '#1E222A',
   'telescope: highlight `TelescopeNormal` should be `#1E222A` by default')
 load({ telescope = { style = 'classic' } })
@@ -149,7 +152,7 @@ load({ telescope = { style = 'flat' } })
 assert_eq(highlight('TelescopeNormal').bg, '#1E222A',
   'telescope: highlight `TelescopeNormal` should be `#1E222A` if `telescope.style` is `flat`')
 
--- leap
+-- leap.dim_backdrop
 assert_eq(highlight('LeapBackdrop'), {}, 'leap: highlight `LeapBackdrop` should be `{}` by default')
 load({ leap = { dim_backdrop = true } })
 assert_eq(highlight('LeapBackdrop').fg, '#4C566A',
