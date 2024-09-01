@@ -18,7 +18,7 @@ assert_eq(U.is_table({}), true, 'U.is_table({}) should return true')
 t1 = { a = 1 }
 t2 = { b = 2 }
 U.merge_inplace(t1, t2)
-assert_eq(t1, { a = 1, b = 3 }, 'U.merge_inplace(t1, t2) basic merge')
+assert_eq(t1, { a = 1, b = 2 }, 'U.merge_inplace(t1, t2) basic merge')
 
 t1 = { a = 1, b = 3 }
 t2 = { b = 2, c = 4 }
