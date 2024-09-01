@@ -7,11 +7,11 @@ function M.assert_eq(left, right, message)
         local info = debug.getinfo(2)
         local file_name = info.short_src
         local line_number = info.currentline
-        print('\nassertion `left == right` failed' ..
-            ((message and ': ' .. message) or '') ..
-            '\n  left: ' ..
-            vim.inspect(left) ..
-            '\n right: ' .. vim.inspect(right) .. '\nat ' .. tostring(file_name) .. ':' .. tostring(line_number))
+
+        print("Equal assertion failed at \"" .. file_name .. ":" .. line_number .. "\"")
+        print("Message: " .. message)
+        print("Left:\n" .. vim.inspect(left))
+        print("Right:\n" .. vim.inspect(right))
     end
 end
 
