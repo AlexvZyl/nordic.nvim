@@ -46,8 +46,11 @@ assert_eq(U.merge({}, {}), {}, 'U.merge({}, {}) should return an empty table')
 assert_eq(U.merge(nil, nil), {}, 'U.merge(nil, nil) should return an empty table')
 assert_eq(U.merge(nil, { a = 1 }), { a = 1 }, 'U.merge(nil, {a = 1}) should return {a = 1}')
 assert_eq(U.merge({ a = 1 }, nil), { a = 1 }, 'U.merge({a = 1}, nil) should return {a = 1}')
-assert_eq(U.merge({ a = 1, b = 3 }, { b = 2, c = 4 }), { a = 1, b = 2, c = 4 },
-    'U.merge({a = 1, b = 3}, {b = 2, c = 4}) should return {a = 1, b = 2, c = 4}')
+assert_eq(
+    U.merge({ a = 1, b = 3 }, { b = 2, c = 4 }),
+    { a = 1, b = 2, c = 4 },
+    'U.merge({a = 1, b = 3}, {b = 2, c = 4}) should return {a = 1, b = 2, c = 4}'
+)
 
 -- Colors.
 
