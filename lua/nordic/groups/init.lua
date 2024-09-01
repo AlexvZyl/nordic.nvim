@@ -1,11 +1,14 @@
-local merge = require('nordic.utils').merge
+local merge_inplace = require('nordic.utils').merge_inplace
 
 local M = {}
 
 function M.get_groups()
     local native = require('nordic.groups.native').get_groups()
     local integrations = require('nordic.groups.integrations').get_groups()
-    local groups = merge(native, integrations)
+
+    local groups = {}
+    merge_inplace(groups, native)
+    merge_inplace(groups, integrations)
 
     -- Apply on_highlight
     local palette = require('nordic.colors')
