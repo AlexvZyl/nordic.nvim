@@ -120,7 +120,6 @@ function M.get_groups()
     G.NeoTreeCursorLine = { link = 'NvimTreeCursorLine' }
     G.NeoTreeDirectoryIcon = { link = 'NvimTreeFolderIcon' }
     G.NeoTreeRootName = { link = 'NvimTreeRootFolder' }
-    G.NeoTreeFileName = { link = 'NvimTreeNormal' }
     G.NeoTreeFileIcon = { fg = C.blue2 }
     G.NeoTreeFileNameOpened = { fg = C.fg }
     G.NeoTreeIndentMarker = { link = 'NvimTreeIndentMarker' }
@@ -290,7 +289,7 @@ function M.get_groups()
     --- Punctuation
     G['@punctuation.delimiter'] = { link = 'Delimiter' } -- For delimiters ie: `.`
     G['@punctuation.bracket'] = { link = '@operator' } -- For brackets and parens.
-    G['@punctuation.special'] = { link = 'Macro' } -- For special punctutation that does not fall in the catagories before.
+    G['@punctuation.special'] = { link = 'Macro' } -- For special punctuation that does not fall in the categories before.
     G['@punctuation.special.markdown'] = { fg = C.orange.base, bold = true }
     --- Literals
     G['@string'] = { link = 'String' }
@@ -310,7 +309,7 @@ function M.get_groups()
     G['@keyword.directive.define'] = { link = 'Define' }
     G['@keyword.exception'] = { link = 'Exception' }
     G['@keyword.export'] = { link = 'Keyword' }
-    G['@keyword.function'] = { link = 'Keyword' } -- For keywords used to define a fuction.
+    G['@keyword.function'] = { link = 'Keyword' } -- For keywords used to define a function.
     G['@keyword.import'] = { link = 'Include' }
     G['@keyword.operator'] = { link = 'Keyword' }
     G['@keyword.repeat'] = { link = 'Repeat' }
@@ -522,6 +521,13 @@ function M.get_groups()
     -- TODO: Unsure.
     G.WhichKeySeperator = {}
     G.WhichKeyValue = {}
+
+    -- Rainbow delimiters
+    G.RainbowDelimiterOrange = { fg = C.orange.base }
+    G.RainbowDelimiterYellow = { fg = C.yellow.bright }
+    G.RainbowDelimiterBlue = { fg = C.blue2 }
+    G.RainbowDelimiterRed = { fg = C.red.bright }
+    G.RainbowDelimiterGreen = { fg = C.green.bright }
 
     return G
 end
