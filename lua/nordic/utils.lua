@@ -5,8 +5,8 @@ function M.loaded()
     return vim.g.colors_name == M.NAME
 end
 
-function M.highlight(table)
-    for group, config in pairs(table) do
+function M.apply_highlights(groups)
+    for group, config in pairs(groups) do
         vim.api.nvim_set_hl(0, group, config)
     end
 end
