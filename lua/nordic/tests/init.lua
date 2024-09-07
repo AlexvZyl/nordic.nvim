@@ -13,7 +13,7 @@ function M.assert_eq(left, right, message)
 end
 
 function M.run_tests()
-    -- reset config (not needed for ci but I don't like commenting out my config every time)
+    -- Ensures config resets
     require('nordic').setup({})
 
     require('nordic.tests.utils')

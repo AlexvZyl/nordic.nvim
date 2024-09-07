@@ -60,7 +60,7 @@ load({ transparent = { float = false } })
 assert_eq(get_highlight('WinSeparator').fg, '#191D24',
   'bright_border: all highlights that use `border_fg` should be `#191D24` by default')
 load({ bright_border = true })
--- note: this could fail if the wrong white0 variant is used
+-- note: this will fail if the wrong white0 variant is used
 assert_eq(get_highlight('WinSeparator').fg, '#C0C8D8',
   'bright_border: all highlights that use `border_fg` should be `#C0C8D8` if `bright_border` is true')
 load({ bright_border = false })
@@ -74,7 +74,7 @@ assert_eq(get_highlight('Normal').fg, '#BBC3D4',
 load({ reduced_blue = true })
 
 -- swap_backgrounds
--- note: this could fail if any transparent settings are set
+-- note: this will fail if any transparent settings are set
 assert_eq(get_highlight('Normal').bg, '#242933',
   'swap_backgrounds: all highlights that use `bg` should be `#242933` by default')
 assert_eq(get_highlight('NormalFloat').bg, '#1E222A',
