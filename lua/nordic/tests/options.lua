@@ -10,7 +10,7 @@ load({})
 assert_eq(get_highlight('Normal').bg, '#242933', 'on_palette: all highlights that use `gray0` should be `#242933` by default')
 load({ on_palette = function(palette) palette.gray0 = '#FFFFFF' end })
 assert_eq(get_highlight('Normal').bg, '#FFFFFF', 'on_platte: changing a color should cascade to all highlights that use it')
-load({ on_palette = function(_palette) end })
+load({ on_palette = function(_) end })
 assert_eq(get_highlight('Normal').bg, '#242933', 'on_palette: reloading should revert the palette to its original state')
 
 -- after_palette
@@ -18,14 +18,14 @@ assert_eq(get_highlight('Normal').bg, '#242933', 'after_palette: all highlights 
 load({ after_palette = function(palette) palette.bg = '#FFFFFF' end })
 assert_eq(get_highlight('Normal').bg, '#FFFFFF',
   'after_platte: changing a color should cascade to all highlights that use it')
-load({ after_palette = function(_palette) end })
+load({ after_palette = function(_) end })
 assert_eq(get_highlight('Normal').bg, '#242933', 'after_palette: reloading should revert the palette to its original state')
 
 -- on_highlight
 assert_eq(get_highlight('Normal').bg, '#242933', 'on_highlight: `Normal` should be `#242933` by default')
-load({ on_highlight = function(highlights, _palette) highlights['Normal'].bg = '#FFFFFF' end })
+load({ on_highlight = function(highlights, _) highlights['Normal'].bg = '#FFFFFF' end })
 assert_eq(get_highlight('Normal').bg, '#FFFFFF', 'on_highlight: changing a highlight should actually change the highlight')
-load({ on_highlight = function(_highlights, _palette) end })
+load({ on_highlight = function(_, _) end })
 assert_eq(get_highlight('Normal').bg, '#242933',
   'on_highlight: reloading should revert all highlights to their original state')
 
