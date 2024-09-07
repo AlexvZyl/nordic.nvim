@@ -1,6 +1,6 @@
 local assert_eq = require('nordic.tests').assert_eq
 local load = require('nordic').load
-local get_highlight = require('nordic.util').get_highlight
+local get_highlight = require('nordic.utils').get_highlight
 
 load({})
 
