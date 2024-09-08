@@ -6,7 +6,7 @@ local get_highlight = require('nordic.utils').get_highlight
 
 load({})
 
--- tests for changes in palette should check highlights (to make sure everything is applied)
+-- Tests for changes in palette should check highlights (to make sure everything is applied)
 
 -- on_palette
 assert_eq(get_highlight('Normal').bg, base_palette.gray0,
@@ -74,7 +74,7 @@ load({ transparent = { float = false } })
 assert_eq(get_highlight('WinSeparator').fg, base_palette.black0,
   'bright_border: all highlights that use `border_fg` should be `black0` by default')
 load({ bright_border = true })
--- note: this will fail if the wrong white0 variant is used
+-- NOTE: This will fail if the wrong white0 variant is used
 assert_eq(get_highlight('WinSeparator').fg, base_palette.white0_reduce_blue,
   'bright_border: all highlights that use `border_fg` should be `white0_reduce_blue` if `bright_border` is true')
 load({ bright_border = false })
@@ -88,7 +88,7 @@ assert_eq(get_highlight('Normal').fg, base_palette.white0_normal,
 load({ reduced_blue = true })
 
 -- swap_backgrounds
--- note: this will fail if any transparent settings are set
+-- NOTE: This will fail if any transparent settings are set
 assert_eq(get_highlight('Normal').bg, base_palette.gray0,
   'swap_backgrounds: all highlights that use `bg` should be `gray0` by default')
 assert_eq(get_highlight('NormalFloat').bg, base_palette.black1,
