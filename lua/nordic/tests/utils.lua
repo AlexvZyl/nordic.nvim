@@ -1,4 +1,4 @@
-local assert_eq = require('nordic.tests').assert_eq
+local assert_eq = require('nordic.utils').assert_eq
 local U = require('nordic.utils')
 
 local t1, t2, nested

@@ -1,6 +1,6 @@
 local base_palette = require('nordic.colors.nordic');
 
-local assert_eq = require('nordic.tests').assert_eq
+local assert_eq = require('nordic.utils').assert_eq
 local load = require('nordic').load
 local get_highlight = require('nordic.utils').get_highlight
 

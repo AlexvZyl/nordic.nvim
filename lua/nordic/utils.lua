@@ -90,4 +90,16 @@ function M.blend(foreground, background, alpha)
     return M.rgb_to_hex(blend_channel(fg[1], bg[1]), blend_channel(fg[2], bg[2]), blend_channel(fg[3], bg[3]))
 end
 
+function M.assert_eq(left, right, message)
+    if not vim.deep_equal(left, right) then
+        local info = debug.getinfo(2)
+        local file_name = info.short_src
+        local line_number = info.currentline
+        print('Equal assertion failed at "' .. file_name .. ':' .. line_number .. '"')
+        print('Message: ' .. message)
+        print('Left:\n' .. vim.inspect(left))
+        print('Right:\n' .. vim.inspect(right))
+    end
+end
+
 return M
