@@ -5,11 +5,25 @@ function M.loaded()
     return vim.g.colors_name == M.NAME
 end
 
-function M.highlight(table)
-    for group, config in pairs(table) do
+function M.apply_highlights(groups)
+    for group, config in pairs(groups) do
         vim.api.nvim_set_hl(0, group, config)
     end
 end
+
+function M.get_highlight(group)
+  local function hexify(value)
+    if type(value) == 'number' then
+      return string.format('#%X', value)
+    elseif type(value) == 'table' then
+      return vim.tbl_map(hexify, value)
+    end
+    return value
+  end
+
+  return hexify(vim.api.nvim_get_hl(0, { name = group, create = false }))
+end
+
 
 function M.none()
     return 'NONE'
@@ -74,6 +88,18 @@ function M.blend(foreground, background, alpha)
     end
 
     return M.rgb_to_hex(blend_channel(fg[1], bg[1]), blend_channel(fg[2], bg[2]), blend_channel(fg[3], bg[3]))
+end
+
+function M.assert_eq(left, right, message)
+    if not vim.deep_equal(left, right) then
+        local info = debug.getinfo(2)
+        local file_name = info.short_src
+        local line_number = info.currentline
+        print('Equal assertion failed at "' .. file_name .. ':' .. line_number .. '"')
+        print('Message: ' .. message)
+        print('Left:\n' .. vim.inspect(left))
+        print('Right:\n' .. vim.inspect(right))
+    end
 end
 
 return M

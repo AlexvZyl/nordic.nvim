@@ -16,7 +16,7 @@ function M.load(opts)
 
     -- Apply theme
     local G = require('nordic.groups')
-    U.highlight(G.get_groups())
+    U.apply_highlights(G.get_groups())
     G.set_term_colors()
 end
 

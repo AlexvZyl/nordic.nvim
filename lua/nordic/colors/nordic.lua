@@ -1,6 +1,7 @@
 -- The Nord palette: https://www.nordtheme.com/.
 -- This file has a bunch of added colors.
 
+-- NOTE: All hex codes must be uppercase (for testing)
 local palette = {
 
     none = 'NONE',
