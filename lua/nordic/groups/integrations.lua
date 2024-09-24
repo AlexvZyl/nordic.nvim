@@ -1,7 +1,7 @@
 local M = {}
 
 function M.get_groups()
-    local C = require 'nordic.colors'
+    local C = require('nordic.colors')
     local O = require('nordic.config').options
 
     local G = {}
@@ -85,7 +85,7 @@ function M.get_groups()
     G.DiagnosticBorder = { link = 'FloatBorder' }
 
     -- Mini Statusline.
-    local LC = require 'lualine.themes.nordic'
+    local LC = require('lualine.themes.nordic')
     G.MiniStatuslineModeNormal = { bg = LC.normal.a.bg, fg = LC.normal.a.fg, bold = LC.normal.a.gui == 'bold' }
     G.MiniStatuslineModeInsert = { bg = LC.insert.a.bg, fg = LC.insert.a.fg, bold = LC.insert.a.gui == 'bold' }
     G.MiniStatuslineModeVisual = { bg = LC.visual.a.bg, fg = LC.visual.a.fg, bold = LC.visual.a.gui == 'bold' }
@@ -120,7 +120,6 @@ function M.get_groups()
     G.NeoTreeCursorLine = { link = 'NvimTreeCursorLine' }
     G.NeoTreeDirectoryIcon = { link = 'NvimTreeFolderIcon' }
     G.NeoTreeRootName = { link = 'NvimTreeRootFolder' }
-    G.NeoTreeFileName = { link = 'NvimTreeNormal' }
     G.NeoTreeFileIcon = { fg = C.blue2 }
     G.NeoTreeFileNameOpened = { fg = C.fg }
     G.NeoTreeIndentMarker = { link = 'NvimTreeIndentMarker' }
@@ -290,7 +289,7 @@ function M.get_groups()
     --- Punctuation
     G['@punctuation.delimiter'] = { link = 'Delimiter' } -- For delimiters ie: `.`
     G['@punctuation.bracket'] = { link = '@operator' } -- For brackets and parens.
-    G['@punctuation.special'] = { link = 'Macro' } -- For special punctutation that does not fall in the catagories before.
+    G['@punctuation.special'] = { link = 'Macro' } -- For special punctuation that does not fall in the categories before.
     G['@punctuation.special.markdown'] = { fg = C.orange.base, bold = true }
     --- Literals
     G['@string'] = { link = 'String' }
@@ -310,7 +309,7 @@ function M.get_groups()
     G['@keyword.directive.define'] = { link = 'Define' }
     G['@keyword.exception'] = { link = 'Exception' }
     G['@keyword.export'] = { link = 'Keyword' }
-    G['@keyword.function'] = { link = 'Keyword' } -- For keywords used to define a fuction.
+    G['@keyword.function'] = { link = 'Keyword' } -- For keywords used to define a function.
     G['@keyword.import'] = { link = 'Include' }
     G['@keyword.operator'] = { link = 'Keyword' }
     G['@keyword.repeat'] = { link = 'Repeat' }
@@ -456,7 +455,7 @@ function M.get_groups()
     local bg
     local fg
     if O.ts_context.dark_background then
-        bg = C.black
+        bg = C.black1
         fg = C.gray1
     else
         bg = C.gray1
@@ -522,6 +521,13 @@ function M.get_groups()
     -- TODO: Unsure.
     G.WhichKeySeperator = {}
     G.WhichKeyValue = {}
+
+    -- Rainbow delimiters
+    G.RainbowDelimiterOrange = { fg = C.orange.base }
+    G.RainbowDelimiterYellow = { fg = C.yellow.bright }
+    G.RainbowDelimiterBlue = { fg = C.blue2 }
+    G.RainbowDelimiterRed = { fg = C.red.bright }
+    G.RainbowDelimiterGreen = { fg = C.green.bright }
 
     return G
 end

@@ -1,4 +1,4 @@
-local C = require 'nordic.colors'
+local C = require('nordic.colors')
 
 local nordic = {}
 

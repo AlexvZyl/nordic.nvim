@@ -35,7 +35,7 @@ With [lazy.nvim](https://github.com/folke/lazy.nvim):
     lazy = false,
     priority = 1000,
     config = function()
-        require 'nordic' .load()
+        require('nordic').load()
     end
 }
 ```
@@ -57,49 +57,58 @@ colorscheme nordic
 Using lua:
 
 ```lua
-vim.cmd.colorscheme 'nordic'
+vim.cmd.colorscheme('nordic')
 -- or
-require 'nordic' .load()
+require('nordic').load()
 ```
 
 Using with lualine:
 
 ```lua
-require 'lualine' .setup {
+require('lualine').setup({
     options = {
         theme = 'nordic'
     }
-}
+})
 ```
 
-To get the palette in lua:
+If you want to use the color palette somewhere else, you can access it with:
 
 ```lua
-local palette = require 'nordic.colors'
+local palette = require('nordic.colors')
 ```
+> [!WARNING]
+> Please make sure that `require('nordic.colors')` is called *after* setup, otherwise the colors might be wrong for your config.
 
 # ⚙️ Configuration
 
 Nordic will use the default values, unless `setup` is called. Below is the default configuration.
 
 ```lua
-require 'nordic' .setup {
-    -- This callback can be used to override the colors used in the palette.
-    on_palette = function(palette) return palette end,
+require('nordic').setup({
+    -- This callback can be used to override the colors used in the base palette.
+    on_palette = function(palette) end,
+    -- This callback can be used to override the colors used in the extended palette.
+    after_palette = function(palette) end,
+    -- This callback can be used to override highlights before they are applied.
+    on_highlight = function(highlights, palette) end,
     -- Enable bold keywords.
     bold_keywords = false,
     -- Enable italic comments.
     italic_comments = true,
-    -- Enable general editor background transparency.
-    transparent_bg = false,
+    -- Enable editor background transparency.
+    transparent = {
+        -- Enable transparent background.
+        bg = false,
+        -- Enable transparent background for floating windows.
+        float = false,
+    },
     -- Enable brighter float border.
     bright_border = false,
     -- Reduce the overall amount of blue in the theme (diverges from base Nord).
     reduced_blue = true,
     -- Swap the dark background with the normal one.
     swap_backgrounds = false,
-    -- Override the styling of any highlight group.
-    override = {},
     -- Cursorline options.  Also includes visual/selection.
     cursorline = {
         -- Bold font in cursorline.
@@ -127,16 +136,54 @@ require 'nordic' .setup {
         -- Enables dark background for treesitter-context window
         dark_background = true,
     }
-}
+})
 ```
 
-An example of overriding the `TelescopePromptTitle` colors:
+**Examples:**
 
+<details>
+    <summary><b><code>on_palette</code></b></summary>
+&nbsp;
+
+An example of overriding colors in the base palette:
 ```lua
-local palette = require 'nordic.colors'
-require 'nordic' .setup {
-    override = {
-        TelescopePromptTitle = {
+require('nordic').setup({
+    on_palette = function(palette)
+        palette.black0 = "#BF616A"
+        palette.green.base = palette.cyan.base
+    end,
+})
+```
+
+</details>
+
+
+<details>
+    <summary><b><code>after_palette</code></b></summary>
+&nbsp;
+
+An example of setting the visual selection color (for more values see [this file](https://github.com/AlexvZyl/nordic.nvim/blob/main/lua/nordic/colors/init.lua)):
+```lua
+require('nordic').setup({
+    after_palette = function(palette)
+        local U = require("nordic.utils")
+        palette.bg_visual = U.blend(palette.orange.base, palette.bg, 0.15)
+    end,
+})
+```
+
+</details>
+
+
+<details>
+    <summary><b><code>on_highlight</code></b></summary>
+&nbsp;
+
+An example of overriding the `TelescopePromptTitle` colors:
+```lua
+require('nordic').setup({
+    on_highlight = function(highlights, palette)
+        highlights.TelescopePromptTitle = {
             fg = palette.red.bright,
             bg = palette.green.base,
             italic = true,
@@ -144,9 +191,23 @@ require 'nordic' .setup {
             sp = palette.yellow.dim,
             undercurl = false
         }
-    }
-}
+    end,
+})
 ```
+
+And an example of disabling all italics:
+```lua
+require('nordic').setup({
+    on_highlight = function(highlights, _palette)
+        for _, highlight in pairs(highlights) do
+            highlight.italic = false
+        end
+    end
+})
+```
+
+</details>
+
 
 # 🗒️ Supported Plugins and Platforms
 
