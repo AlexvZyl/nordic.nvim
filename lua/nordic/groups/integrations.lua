@@ -119,18 +119,19 @@ function M.get_groups()
     -- Neo tree.
     G.NeoTreeCursorLine = { link = 'NvimTreeCursorLine' }
     G.NeoTreeDirectoryIcon = { link = 'NvimTreeFolderIcon' }
-    G.NeoTreeRootName = { fg = C.blue0 }
+    G.NeoTreeRootName = { fg = C.white2 }
     G.NeoTreeFileIcon = { fg = C.blue2 }
     G.NeoTreeFileNameOpened = { fg = C.fg }
     G.NeoTreeIndentMarker = { link = 'NvimTreeIndentMarker' }
     G.NeoTreeGitAdded = { fg = C.git.add }
     G.NeoTreeGitConflict = { fg = C.magenta.bright }
     G.NeoTreeGitModified = { fg = C.git.change }
-    G.NeoTreeGitUntracked = { fg = C.red_b }
+    G.NeoTreeGitUntracked = { fg = C.orange }
     G.NeoTreeNormal = { link = 'NvimTreeNormal' }
     G.NeoTreeNormalNC = { link = 'NvimTreeNormalNC' }
     G.NeoTreeSymbolicLinkTarget = { link = 'NvimTreeSymlink' }
-    G.NeoTreeTitleBar = { fg = C.orange_b }
+    G.NeoTreeTitleBar = { fg = C.gray2, bg = C.white3 }
+    G.NeoTreeFloatBorder = { fg = C.white3 }
 
     -- Noice Flat.
     G.NoiceLspProgressTitle = { fg = C.yellow.base, bg = C.bg, bold = true }
