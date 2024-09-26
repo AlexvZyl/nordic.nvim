@@ -3,9 +3,9 @@ local M = {}
 function M.get_groups()
     local C = require('nordic.colors')
     local O = require('nordic.config').options
-  
+
     local G = {}
-  
+
     -- Dashboard.lua
     G.DashboardHeader = { fg = C.yellow.base, bold = true }
     G.DashboardFooter = { fg = C.cyan.base }
@@ -20,26 +20,26 @@ function M.get_groups()
     G.DashboardDesc = { fg = C.green.base }
     G.DashboardKey = { fg = C.red.base, bold = true }
     G.DashboardIcon = { fg = C.green.base }
-  
+
     -- Diffview.
     G.DiffviewNormal = { bg = C.bg_dark, fg = C.fg }
     G.DiffviewStatusLine = { bg = C.black0 }
     G.DiffviewFilePanelTitle = { fg = C.orange.base, bold = true }
     G.DiffviewFolderSign = { fg = C.yellow.dim }
     G.DiffviewFolderName = { bg = C.bg_dark, fg = C.blue1 }
-  
+
     -- Gitsigns.
     G.GitSignsAdd = { fg = C.git.add, bg = C.bg_sidebar }
     G.GitSignsChange = { fg = C.git.change, bg = C.bg_sidebar }
     G.GitSignsDelete = { fg = C.git.delete, bg = C.bg_sidebar }
     G.GitSignsAddPreview = { link = 'GitSignsAdd' }
     G.GitSignsDeletePreview = { link = 'GitSignsDelete' }
-  
+
     -- Indent blankline.
     G.IndentBlanklineChar = { fg = C.gray1 }
     G.IndentBlanklineContextChar = { fg = C.gray2 }
     G.IndentBlanklineContextStart = { sp = C.white0, underline = true }
-  
+
     -- Lazy.
     G.LazyH1 = { fg = C.yellow.base, bold = true }
     G.LazyButtonActive = { link = 'LazyH1' }
@@ -48,14 +48,14 @@ function M.get_groups()
     G.LazyProgressDone = { fg = C.green.bright }
     G.LazyProgressTodo = { fg = C.gray4 }
     G.LazyCommitType = { fg = C.yellow.base }
-  
+
     -- Leap.
     G.LeapLabelPrimary = { bg = C.yellow.dim, fg = C.black0, bold = true }
     if O.leap.dim_backdrop then G.LeapBackdrop = { fg = C.gray4 } end
-  
+
     -- LSP Signature.
     G.LspSignatureActiveParameter = { bg = C.bg_float, underline = true, bold = true }
-  
+
     -- LSP Saga.
     G.SagaBorder = { bg = C.black2, fg = C.fg_float_border }
     G.SagaNormal = { bg = C.black2 }
@@ -83,7 +83,7 @@ function M.get_groups()
     G.DiagnosticShowNormal = { link = 'NormalFloat' }
     G.DiagnosticShowBorder = { link = 'FloatBorder' }
     G.DiagnosticBorder = { link = 'FloatBorder' }
-  
+
     -- Mini Statusline.
     local LC = require('lualine.themes.nordic')
     G.MiniStatuslineModeNormal = { bg = LC.normal.a.bg, fg = LC.normal.a.fg, bold = LC.normal.a.gui == 'bold' }
@@ -96,7 +96,7 @@ function M.get_groups()
     G.MiniStatuslineFilename = { bg = LC.normal.c.bg, fg = LC.normal.c.fg }
     G.MiniStatuslineFileinfo = { bg = LC.normal.b.bg, fg = LC.normal.b.fg }
     G.MiniStatuslineInactive = { bg = LC.inactive.a.bg, fg = LC.inactive.a.fg, bold = LC.inactive.a.gui == 'bold' }
-  
+
     -- Nvim tree.
     G.NvimTreeNormal = { fg = C.fg, bg = C.bg }
     G.NvimTreeNormalNC = { fg = C.fg, bg = C.bg }
@@ -115,7 +115,7 @@ function M.get_groups()
     G.NvimTreeCursorLine = { bg = C.gray1 }
     G.NvimTreeCursor = { bg = C.none, fg = C.none }
     G.NvimTreeSymlink = { fg = C.blue2 }
-  
+
     -- Neo tree.
     G.NeoTreeCursorLine = { link = 'NvimTreeCursorLine' }
     G.NeoTreeDirectoryIcon = { link = 'NvimTreeFolderIcon' }
@@ -131,7 +131,7 @@ function M.get_groups()
     G.NeoTreeNormalNC = { link = 'NvimTreeNormalNC' }
     G.NeoTreeSymbolicLinkTarget = { link = 'NvimTreeSymlink' }
     G.NeoTreeTitleBar = { fg = C.orange_b }
-  
+
     -- Noice Flat.
     G.NoiceLspProgressTitle = { fg = C.yellow.base, bg = C.bg, bold = true }
     G.NoiceLspProgressClient = { fg = C.gray4, bg = C.bg }
@@ -145,7 +145,7 @@ function M.get_groups()
     G.NoiceCmdlinePopupBorder = { link = 'NoicePopupBorder' }
     G.NoiceCmdlinePopupBorderSearch = { link = 'NoicePopupBorder' }
     G.NoiceCmdlinePopup = { bg = C.bg_float }
-  
+
     -- Noice Classic.
     if O.noice.style == 'classic' then
         G.NoiceCmdline = { bg = C.bg, fg = C.cyan.base }
@@ -153,7 +153,7 @@ function M.get_groups()
         G.NoicePopupBorder = { bg = C.bg, fg = C.cyan.base }
         G.NoiceCmdlineIcon = { bg = C.bg, fg = C.yellow.bright }
     end
-  
+
     -- Nvim cmp.
     G.CmpItemAbbrDeprecated = { fg = C.grey4 }
     G.CmpItemAbbrMatch = { fg = C.blue1, bold = true }
@@ -185,10 +185,10 @@ function M.get_groups()
     G.CmpItemKindTypeParameter = { link = 'Type' }
     G.CmpItemKindTabNine = { fg = C.red.base }
     G.CmpItemKindCopilot = { fg = C.red.base }
-  
+
     -- Nvim DAP.
     G.DapBreakPoint = { fg = C.red.bright }
-  
+
     -- Nvim DAP UI.
     G.DapUINormal = { bg = C.bg_float }
     G.DapUIStop = { fg = C.red.bright, bold = true }
@@ -204,7 +204,7 @@ function M.get_groups()
     G.DapUIFloatBorder = { fg = C.border_nb, bg = C.bg }
     G.DapUIFloatNormal = { bg = C.bg }
     G.DapUILineNumber = { fg = C.green.bright }
-  
+
     -- Notify.
     G.NotifyBackground = { bg = C.bg_float }
     G.NotifyERRORBorder = { fg = C.error }
@@ -227,7 +227,7 @@ function M.get_groups()
     G.NotifyTRACEIcon = { fg = C.gray5 }
     G.NotifyTRACETitle = { fg = C.gray5, bold = true }
     G.NotifyTRACEBody = { fg = C.fg }
-  
+
     -- Telescope Classic.
     G.TelescopeNormal = { bg = C.bg }
     G.TelescopePromptNormal = { bg = C.bg }
@@ -248,7 +248,7 @@ function M.get_groups()
     G.TelescopePromptPrefix = { bg = C.bg, fg = C.orange.bright }
     G.TelescopeMultiIcon = { fg = C.yellow.bright, bg = C.bg, bold = true }
     G.TelescopeMultiSelection = { bg = C.bg }
-  
+
     -- Telescope Flat.
     if O.telescope.style == 'flat' then
         G.TelescopeNormal = { bg = C.bg_float }
@@ -270,7 +270,7 @@ function M.get_groups()
         G.TelescopePromptPrefix = { bg = C.black2, fg = C.orange.bright }
         G.TelescopePreviewLine = { bg = C.gray1 }
     end
-  
+
     -- Treesitter.
     -- LSP Semantic Token Groups
     -- Types follow the pattern @lsp.type.<type>.<filetype>
@@ -286,60 +286,60 @@ function M.get_groups()
     G['@comment.info'] = { fg = C.info }
     G['@comment.warning'] = { fg = C.warning }
     G['@comment.todo'] = { fg = C.todo }
-    G['@operator'] = { fg = C.fg }                        -- For any operator: `+`, but also `->` and `*` in C.
+    G['@operator'] = { fg = C.fg } -- For any operator: `+`, but also `->` and `*` in C.
     --- Punctuation
-    G['@punctuation.delimiter'] = { link = 'Delimiter' }  -- For delimiters ie: `.`
-    G['@punctuation.bracket'] = { link = '@operator' }    -- For brackets and parens.
-    G['@punctuation.special'] = { link = 'Macro' }        -- For special punctuation that does not fall in the categories before.
+    G['@punctuation.delimiter'] = { link = 'Delimiter' } -- For delimiters ie: `.`
+    G['@punctuation.bracket'] = { link = '@operator' } -- For brackets and parens.
+    G['@punctuation.special'] = { link = 'Macro' } -- For special punctuation that does not fall in the categories before.
     G['@punctuation.special.markdown'] = { fg = C.orange.base, bold = true }
     --- Literals
     G['@string'] = { link = 'String' }
     G['@string.documentation'] = { link = 'String' }
-    G['@string.escape'] = { fg = C.magenta.bright }  -- For escape characters within a string.
-    G['@string.regex'] = { fg = C.magenta.bright }   -- For regexes.
+    G['@string.escape'] = { fg = C.magenta.bright } -- For escape characters within a string.
+    G['@string.regex'] = { fg = C.magenta.bright } -- For regexes.
     --- Functions
-    G['@constructor'] = { link = 'Function' }        -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    G['@parameter'] = { fg = C.fg, italic = true }   -- For parameters of a function.
-    G['@parameter.builtin'] = { link = 'Builtin' }   -- For builtin parameters of a function, e.g. "..." or Smali's pG[1-99]
+    G['@constructor'] = { link = 'Function' } -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    G['@parameter'] = { fg = C.fg, italic = true } -- For parameters of a function.
+    G['@parameter.builtin'] = { link = 'Builtin' } -- For builtin parameters of a function, e.g. "..." or Smali's pG[1-99]
     --- Keywords
-    G['@keyword'] = { link = 'Keyword' }             -- For keywords that don't fall in previous categories.
+    G['@keyword'] = { link = 'Keyword' } -- For keywords that don't fall in previous categories.
     G['@keyword.conditional'] = { link = 'Conditional' }
-    G['@keyword.coroutine'] = { link = 'Macro' }     -- For keywords related to coroutines.
+    G['@keyword.coroutine'] = { link = 'Macro' } -- For keywords related to coroutines.
     G['@keyword.debug'] = { link = 'Debug' }
     G['@keyword.directive'] = { link = 'PreProc' }
     G['@keyword.directive.define'] = { link = 'Define' }
     G['@keyword.exception'] = { link = 'Exception' }
     G['@keyword.export'] = { link = 'Keyword' }
-    G['@keyword.function'] = { link = 'Keyword' }  -- For keywords used to define a function.
+    G['@keyword.function'] = { link = 'Keyword' } -- For keywords used to define a function.
     G['@keyword.import'] = { link = 'Include' }
     G['@keyword.operator'] = { link = 'Keyword' }
     G['@keyword.repeat'] = { link = 'Repeat' }
     G['@keyword.return'] = { link = 'Keyword' }
     G['@keyword.storage'] = { link = 'StorageClass' }
-    G['@label'] = { link = 'Keyword' }  -- For labels: `label:` in C and `:label:` in Lua.
+    G['@label'] = { link = 'Keyword' } -- For labels: `label:` in C and `:label:` in Lua.
     --- Types
     G['@type.builtin'] = { link = 'Type' }
-    G['@field'] = { link = 'Field' }  -- For fields.
+    G['@field'] = { link = 'Field' } -- For fields.
     G['@property'] = { link = 'Field' }
     --- Identifiers
-    G['@variable'] = { link = 'Variable' }         -- Any variable name that does not have another highlight.
-    G['@variable.builtin'] = { link = 'Builtin' }  -- Variable names that are defined by the languages, like `this` or `self`.
+    G['@variable'] = { link = 'Variable' } -- Any variable name that does not have another highlight.
+    G['@variable.builtin'] = { link = 'Builtin' } -- Variable names that are defined by the languages, like `this` or `self`.
     G['@variable.member'] = { link = 'Field' }
     --- Text
     -- G['@spell'] = { link = 'Comment' } -- This seems to interfere with regular text
     -- G["@text.literal.markdown"] = { }
-    G['@text'] = { link = 'Normal' }              -- For strings considered text in a markup language.
+    G['@text'] = { link = 'Normal' } -- For strings considered text in a markup language.
     G['@text.strong'] = { bold = true }
-    G['@text.emphasis'] = { italic = true }       -- For text to be represented with emphasis.
-    G['@text.underline'] = { underline = true }   -- For text to be represented with an underline.
-    G['@text.strike'] = { strikethrough = true }  -- For strikethrough text.
-    G['@text.title'] = { link = 'Title' }         -- Text that is part of a title.
-    G['@text.uri'] = { underline = true }         -- Any URI like a link or email.
+    G['@text.emphasis'] = { italic = true } -- For text to be represented with emphasis.
+    G['@text.underline'] = { underline = true } -- For text to be represented with an underline.
+    G['@text.strike'] = { strikethrough = true } -- For strikethrough text.
+    G['@text.title'] = { link = 'Title' } -- Text that is part of a title.
+    G['@text.uri'] = { underline = true } -- Any URI like a link or email.
     G['@text.literal'] = { link = 'String' }
     G['@text.literal.markdown_inline'] = { bg = C.black2, fg = C.fg }
     G['@text.reference'] = { link = 'Link' }
-    G['@text.todo.unchecked'] = { fg = C.blue1 }       -- For brackets and parens.
-    G['@text.todo.checked'] = { fg = C.green.bright }  -- For brackets and parens.
+    G['@text.todo.unchecked'] = { fg = C.blue1 } -- For brackets and parens.
+    G['@text.todo.checked'] = { fg = C.green.bright } -- For brackets and parens.
     G['@text.warning'] = { fg = C.warning }
     G['@text.danger'] = { fg = C.error }
     G['@text.diff.add'] = { link = 'DiffAdd' }
@@ -396,7 +396,7 @@ function M.get_groups()
     G['@lsp.type.string.rust'] = { link = 'String' }
     G['@lsp.type.typeAlias'] = { link = 'Type' }
     G['@lsp.type.unresolvedReference'] = { undercurl = true, sp = C.error }
-    G['@lsp.type.variable'] = {}  -- use treesitter styles for regular variables
+    G['@lsp.type.variable'] = {} -- use treesitter styles for regular variables
     G['@lsp.typemod.class.defaultLibrary'] = { link = 'Type' }
     G['@lsp.typemod.enum.defaultLibrary'] = { link = 'Type' }
     G['@lsp.typemod.enumMember.defaultLibrary'] = { link = 'Constant' }
@@ -417,10 +417,10 @@ function M.get_groups()
     G['@diff.delta'] = { link = 'DiffChange' }
     G['@character'] = { link = 'Character' }
     G['@character.special'] = { link = 'SpecialChar' }
-    G['@string.special'] = { fg = C.yellow.base }  -- For escape characters within a string.
-    G['@tag'] = { fg = C.blue1 }                   -- Tags like html tag names.
-    G['@tag.delimiter'] = { fg = C.fg }            -- Tag delimiter like `<` `>` `/`
-    G['@tag.attribute'] = { fg = C.yellow.base }   -- Tag attribute like `id` `class`
+    G['@string.special'] = { fg = C.yellow.base } -- For escape characters within a string.
+    G['@tag'] = { fg = C.blue1 } -- Tags like html tag names.
+    G['@tag.delimiter'] = { fg = C.fg } -- Tag delimiter like `<` `>` `/`
+    G['@tag.attribute'] = { fg = C.yellow.base } -- Tag attribute like `id` `class`
     G['@constant'] = { link = 'Constant' }
     G['@number'] = { link = 'Constant' }
     G['@float'] = { link = 'Constant' }
@@ -451,7 +451,7 @@ function M.get_groups()
     G['@type.qualifier'] = { link = 'Keyword' }
     G['@storageclass'] = { link = 'Keyword' }
     G['@none'] = { link = 'None' }
-  
+
     -- Treesitter context.
     local bg
     local fg
@@ -464,7 +464,7 @@ function M.get_groups()
     end
     G.TreesitterContext = { bg = bg }
     G.TreesitterContextLineNumber = { fg = fg, bg = bg }
-  
+
     -- Neorg
     G['@neorg.headings.1.title'] = { link = '@markup.heading.1' }
     G['@neorg.headings.1.prefix'] = { link = '@markup.heading.1' }
@@ -478,7 +478,7 @@ function M.get_groups()
     G['@neorg.headings.5.prefix'] = { link = '@markup.heading.5' }
     G['@neorg.headings.6.title'] = { link = '@markup.heading.6' }
     G['@neorg.headings.6.prefix'] = { link = '@markup.heading.6' }
-  
+
     -- Trouble.
     G.TroubleNormal = { bg = C.bg_float }
     G.TroubleText = { fg = C.fg }
@@ -486,7 +486,7 @@ function M.get_groups()
     G.TroubleIndent = { fg = C.gray1 }
     G.TroubleFile = { fg = C.cyan.bright }
     G.TroubleFoldIcon = { fg = C.gray1 }
-  
+
     -- Vimtex.
     G.texGroup = { fg = C.fg }
     G.texEnvArgName = { fg = C.cyan.base }
@@ -512,7 +512,7 @@ function M.get_groups()
     G.texFileOpt = { fg = C.fg }
     G.texVerbZone = { link = 'String' }
     G.texLstZone = { link = 'String' }
-  
+
     -- Whichkey.
     G.WhichKey = { fg = C.yellow.base }
     G.WhichKeyFloat = { bg = C.bg_float }
@@ -522,14 +522,14 @@ function M.get_groups()
     -- TODO: Unsure.
     G.WhichKeySeperator = {}
     G.WhichKeyValue = {}
-  
+
     -- Rainbow delimiters
     G.RainbowDelimiterOrange = { fg = C.orange.base }
     G.RainbowDelimiterYellow = { fg = C.yellow.bright }
     G.RainbowDelimiterBlue = { fg = C.blue2 }
     G.RainbowDelimiterRed = { fg = C.red.bright }
     G.RainbowDelimiterGreen = { fg = C.green.bright }
-  
+
     return G
 end
 
