@@ -148,10 +148,10 @@ function M.get_groups()
   
     -- Noice Classic.
     if O.noice.style == 'classic' then
-      G.NoiceCmdline = { bg = C.bg, fg = C.cyan.base }
-      G.NoiceCmdlinePopup = { bg = C.bg }
-      G.NoicePopupBorder = { bg = C.bg, fg = C.cyan.base }
-      G.NoiceCmdlineIcon = { bg = C.bg, fg = C.yellow.bright }
+        G.NoiceCmdline = { bg = C.bg, fg = C.cyan.base }
+        G.NoiceCmdlinePopup = { bg = C.bg }
+        G.NoicePopupBorder = { bg = C.bg, fg = C.cyan.base }
+        G.NoiceCmdlineIcon = { bg = C.bg, fg = C.yellow.bright }
     end
   
     -- Nvim cmp.
@@ -251,24 +251,24 @@ function M.get_groups()
   
     -- Telescope Flat.
     if O.telescope.style == 'flat' then
-      G.TelescopeNormal = { bg = C.bg_float }
-      G.TelescopePromptNormal = { bg = C.black2 }
-      G.TelescopeResultsNormal = { bg = C.bg_float }
-      G.TelescopePreviewNormal = { bg = C.bg_float }
-      G.TelescopeSelection = { bg = C.bg_float, fg = C.yellow.bright }
-      G.TelescopeSelectionCaret = { fg = C.yellow.bright, bg = C.bg_float, bold = true }
-      G.TelescopePreviewTitle = { bg = C.blue2, fg = C.black0, bold = true }
-      G.TelescopeResultsTitle = { bg = C.orange.base, fg = C.black0, bold = true }
-      G.TelescopePromptTitle = { bg = C.orange.base, fg = C.black0, bold = true }
-      G.TelescopeTitle = { bg = C.orange.base, fg = C.black0, bold = true }
-      G.TelescopeBorder = { fg = C.black0, bg = C.black0 }
-      G.TelescopePromptBorder = { bg = C.black2, fg = C.black0 }
-      G.TelescopeResultsBorder = { bg = C.bg_float, fg = C.black0 }
-      G.TelescopePreviewBorder = { bg = C.bg_float, fg = C.black0 }
-      G.TelescopeMultiIcon = { fg = C.yellow.bright, bg = C.bg_float, bold = true }
-      G.TelescopeMultiSelection = { bg = C.bg_float }
-      G.TelescopePromptPrefix = { bg = C.black2, fg = C.orange.bright }
-      G.TelescopePreviewLine = { bg = C.gray1 }
+        G.TelescopeNormal = { bg = C.bg_float }
+        G.TelescopePromptNormal = { bg = C.black2 }
+        G.TelescopeResultsNormal = { bg = C.bg_float }
+        G.TelescopePreviewNormal = { bg = C.bg_float }
+        G.TelescopeSelection = { bg = C.bg_float, fg = C.yellow.bright }
+        G.TelescopeSelectionCaret = { fg = C.yellow.bright, bg = C.bg_float, bold = true }
+        G.TelescopePreviewTitle = { bg = C.blue2, fg = C.black0, bold = true }
+        G.TelescopeResultsTitle = { bg = C.orange.base, fg = C.black0, bold = true }
+        G.TelescopePromptTitle = { bg = C.orange.base, fg = C.black0, bold = true }
+        G.TelescopeTitle = { bg = C.orange.base, fg = C.black0, bold = true }
+        G.TelescopeBorder = { fg = C.black0, bg = C.black0 }
+        G.TelescopePromptBorder = { bg = C.black2, fg = C.black0 }
+        G.TelescopeResultsBorder = { bg = C.bg_float, fg = C.black0 }
+        G.TelescopePreviewBorder = { bg = C.bg_float, fg = C.black0 }
+        G.TelescopeMultiIcon = { fg = C.yellow.bright, bg = C.bg_float, bold = true }
+        G.TelescopeMultiSelection = { bg = C.bg_float }
+        G.TelescopePromptPrefix = { bg = C.black2, fg = C.orange.bright }
+        G.TelescopePreviewLine = { bg = C.gray1 }
     end
   
     -- Treesitter.
@@ -456,11 +456,11 @@ function M.get_groups()
     local bg
     local fg
     if O.ts_context.dark_background then
-      bg = C.black1
-      fg = C.gray1
+        bg = C.black1
+        fg = C.gray1
     else
-      bg = C.gray1
-      fg = C.gray4
+        bg = C.gray1
+        fg = C.gray4
     end
     G.TreesitterContext = { bg = bg }
     G.TreesitterContextLineNumber = { fg = fg, bg = bg }
