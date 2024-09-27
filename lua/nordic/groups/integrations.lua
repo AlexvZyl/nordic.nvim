@@ -126,12 +126,12 @@ function M.get_groups()
     G.NeoTreeGitAdded = { fg = C.git.add }
     G.NeoTreeGitConflict = { fg = C.magenta.bright }
     G.NeoTreeGitModified = { fg = C.git.change }
-    G.NeoTreeGitUntracked = { fg = C.orange }
+    G.NeoTreeGitUntracked = { fg = C.orange.base }
     G.NeoTreeNormal = { link = 'NvimTreeNormal' }
     G.NeoTreeNormalNC = { link = 'NvimTreeNormalNC' }
     G.NeoTreeSymbolicLinkTarget = { link = 'NvimTreeSymlink' }
     G.NeoTreeTitleBar = { fg = C.gray2, bg = C.white3 }
-    G.NeoTreeFloatBorder = { fg = C.white3 }
+    G.NeoTreeFloatBorder = { fg = C.white3, bg = C.gray0 }
 
     -- Noice Flat.
     G.NoiceLspProgressTitle = { fg = C.yellow.base, bg = C.bg, bold = true }
