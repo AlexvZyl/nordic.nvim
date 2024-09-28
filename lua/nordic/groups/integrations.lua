@@ -100,45 +100,75 @@ function M.get_groups()
     -- Tree Groups
     G.TreeNormal = { fg = C.fg, bg = C.bg }
     G.TreeNormalNC = { fg = C.fg, bg = C.bg }
+    G.TreeRootFolder = { fg = C.gray4 }
     G.TreeRootName = { fg = C.white2 }
+    G.TreeFileIcon = { fg = C.blue2 }
+    G.TreeFileNameOpened = { fg = C.fg }
+    G.TreeSpecialFile = { fg = C.magenta.bright }
+    G.TreeGitConflict = { fg = C.magenta.bright }
+    G.TreeGitModified = { fg = C.git.change }
+    G.TreeGitDirty = { fg = C.gray4 }
+    G.TreeGitAdded = { fg = C.git.add }
+    G.TreeGitNew = { fg = C.gray4 }
+    G.TreeGitDeleted = { fg = C.gray4 }
+    G.TreeGitStaged = { fg = C.gray4 }
     G.TreeGitUntracked = { fg = C.orange.base }
     G.TreeTitleBar = { fg = C.gray2, bg = C.white3 }
     G.TreeFloatBorder = { fg = C.white3, bg = C.gray0 }
     G.TreeCursorLine = { bg = C.gray1 }
+    G.TreeCursor = { bg = C.none, fg = C.none }
     G.TreeFolderIcon = { fg = C.yellow.dim }
     G.TreeIndentMarker = { fg = C.gray4 }
     G.TreeSymlink = { fg = C.blue2 }
+    G.TreeFolderName = { fg = C.blue1 }
+    G.TreeWinSeparator = { fg = C.bg_dark, bg = C.bg }
 
     -- Nvim tree.
     G.NvimTreeNormal = { link = 'TreeNormal' }
     G.NvimTreeNormalNC = { link = 'TreeNormalNC' }
-    G.NvimTreeFolderName = { fg = C.blue1 }
-    G.NvimTreeOpenedFolderName = { link = 'NvimTreeFolderName' }
-    G.NvimTreeEmptyFolderName = { link = 'NvimTreeFolderName' }
+    G.NvimTreeFolderName = { link = 'TreeFolderName'}
+    G.NvimTreeOpenedFolderName = { link = 'TreeFolderName' }
+    G.NvimTreeEmptyFolderName = { link = 'TreeFolderName' }
     G.NvimTreeFolderIcon = { link = 'TreeFolderIcon' }
-    G.NvimTreeSpecialFile = { fg = C.magenta.bright }
-    G.NvimTreeRootFolder = { fg = C.gray4 }
-    G.NvimTreeGitDirty = { fg = C.gray4 }
-    G.NvimTreeGitNew = { fg = C.gray4 }
-    G.NvimTreeGitDeleted = { fg = C.gray4 }
-    G.NvimTreeGitStaged = { fg = C.gray4 }
+    G.NvimTreeFileIcon = { link = 'TreeFileIcon' }
+    G.NvimTreeFileNameOpened = { link = 'TreeFileNameOpened' }
+    G.NvimTreeSpecialFile = { link = 'TreeSpecialFile' }
+    G.NvimTreeRootFolder = { link = 'TreeRootFolder' }
+    G.NvimTreeGitDirty = { link = 'TreeGitDirty' }
+    G.NvimTreeGitAdded = { link = 'TreeGitAdded' }
+    G.NvimTreeGitNew = { link = 'TreeGitNew' }
+    G.NvimTreeGitDeleted = { link = 'TreeGitDeleted' }
+    G.NvimTreeGitStaged = { link = 'TreeGitStaged' }
+    G.NvimTreeGitConflict = { link = 'TreeGitConflict' }
+    G.NvimTreeGitModified = { link = 'TreeGitModified' }
     G.NvimTreeIndentMarker = { link = 'TreeIndentMarker' }
-    G.NvimTreeWinSeparator = { fg = C.bg_dark, bg = C.bg }
+    G.NvimTreeWinSeparator = { link = 'TreeWinSeparator' }
     G.NvimTreeCursorLine = { link = 'TreeCursorLine' }
-    G.NvimTreeCursor = { bg = C.none, fg = C.none }
+    G.NvimTreeCursor = { link = 'TreeCursor' }
     G.NvimTreeSymlink = { link = 'TreeSymlink' }
 
     -- Neo tree.
     G.NeoTreeCursorLine = { link = 'TreeCursorLine' }
     G.NeoTreeDirectoryIcon = { link = 'TreeFolderIcon' }
     G.NeoTreeRootName = { link = 'TreeRootName' }
-    G.NeoTreeFileIcon = { fg = C.blue2 }
-    G.NeoTreeFileNameOpened = { fg = C.fg }
+    G.NeoTreeRootFolder = { link = 'TreeRootFolder' }
+    G.NeoTreeFileIcon = { link = 'TreeFileIcon' }
+    G.NeoTreeFileNameOpened = { link = 'TreeFileNameOpened'}
+    G.NeoTreeFolderName = { link = 'TreeFolderName' }
+    G.NeoTreeOpenedFolderName = { link = 'TreeFolderName' }
+    G.NeoTreeEmptyFolderName = { link = 'TreeFolderName' }
+    G.NeoTreeSpecialFile = { link = 'TreeSpecialFile' }
     G.NeoTreeIndentMarker = { link = 'TreeIndentMarker' }
-    G.NeoTreeGitAdded = { fg = C.git.add }
-    G.NeoTreeGitConflict = { fg = C.magenta.bright }
-    G.NeoTreeGitModified = { fg = C.git.change }
+    G.NeoTreeGitAdded = { link = 'TreeGitAdded' }
+    G.NeoTreeGitNew = { link = 'TreeGitNew' }
+    G.NeoTreeGitDirty = { link = 'TreeGitDirty' }
+    G.NeoTreeGitDeleted = { link = 'TreeGitDeleted' }
+    G.NeoTreeGitStaged = { link = 'TreeGitStaged' }
+    G.NeoTreeGitConflict = { link = 'TreeGitConflict'}
+    G.NeoTreeGitModified = { link = 'TreeGitModified' }
     G.NeoTreeGitUntracked = { link = 'TreeGitUntracked' }
+    G.NeoTreeWinSeparator = { link = 'TreeWinSeparator' }
+    G.NeoTreeCursor = { link = 'TreeCursor' }
     G.NeoTreeNormal = { link = 'TreeNormal' }
     G.NeoTreeNormalNC = { link = 'TreeNormalNC' }
     G.NeoTreeSymbolicLinkTarget = { link = 'TreeSymlink' }
