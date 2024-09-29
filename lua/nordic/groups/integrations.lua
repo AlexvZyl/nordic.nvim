@@ -101,7 +101,7 @@ function M.get_groups()
     G.TreeNormal = { fg = C.fg, bg = C.bg }
     G.TreeNormalNC = { fg = C.fg, bg = C.bg }
     G.TreeRootFolder = { fg = C.gray4 }
-    G.TreeRootName = { fg = C.white2 }
+    G.TreeRootName = G.TreeNormal
     G.TreeFileIcon = { fg = C.blue2 }
     G.TreeFileNameOpened = { fg = C.fg }
     G.TreeSpecialFile = { fg = C.magenta.bright }
@@ -113,8 +113,8 @@ function M.get_groups()
     G.TreeGitDeleted = { fg = C.gray4 }
     G.TreeGitStaged = { fg = C.gray4 }
     G.TreeGitUntracked = { fg = C.orange.base }
-    G.TreeTitleBar = { fg = C.gray2, bg = C.white3 }
-    G.TreeFloatBorder = { fg = C.white3, bg = C.gray0 }
+    G.TreeTitleBar = { fg = C.black0, bg = C.blue2, bold = true }
+    G.TreeFloatBorder = { fg = C.blue2, bg = C.gray0}
     G.TreeCursorLine = { bg = C.bg_selected }
     G.TreeCursor = { bg = C.none, fg = C.none }
     G.TreeFolderIcon = { fg = C.yellow.dim }
