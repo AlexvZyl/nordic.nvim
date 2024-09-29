@@ -101,7 +101,7 @@ function M.get_groups()
     G.TreeNormal = { fg = C.fg, bg = C.bg }
     G.TreeNormalNC = { fg = C.fg, bg = C.bg }
     G.TreeRootFolder = { fg = C.gray4 }
-    G.TreeRootName = G.TreeNormal
+    G.TreeRootName = { fg = C.fg }
     G.TreeFileIcon = { fg = C.blue2 }
     G.TreeFileNameOpened = { fg = C.fg }
     G.TreeSpecialFile = { fg = C.magenta.bright }
