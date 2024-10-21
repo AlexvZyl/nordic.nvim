@@ -100,12 +100,11 @@ function M.get_groups()
     -- Tree Groups
     G.TreeNormal = { fg = C.fg, bg = C.bg }
     G.TreeNormalNC = { fg = C.fg, bg = C.bg }
-    G.TreeRootFolder = { fg = C.gray4 }
     G.TreeRootName = { fg = C.fg, bold = true }
     G.TreeFileIcon = { fg = C.blue2 }
     G.TreeFileNameOpened = { fg = C.fg }
     G.TreeSpecialFile = { fg = C.magenta.bright }
-    G.TreeGitConflict = { fg = C.magenta.bright }
+    G.TreeGitConflict = { fg = C.red.base }
     G.TreeGitModified = { fg = C.git.change }
     G.TreeGitDirty = { fg = C.gray4 }
     G.TreeGitAdded = { fg = C.git.add }
@@ -113,15 +112,15 @@ function M.get_groups()
     G.TreeGitDeleted = { fg = C.gray4 }
     G.TreeGitStaged = { fg = C.gray4 }
     G.TreeGitUntracked = { fg = C.orange.base }
-    G.TreeTitleBar = { fg = C.black0, bg = C.blue2, bold = true }
-    G.TreeFloatBorder = { fg = C.blue2, bg = C.gray0}
+    G.TreeTitleBar = { link = "WinBar"}
+    G.TreeFloatBorder = { fg = C.border_fg, bg = C.bg_float }
     G.TreeCursorLine = { bg = C.bg_selected }
     G.TreeCursor = { bg = C.none, fg = C.none }
     G.TreeFolderIcon = { fg = C.yellow.dim }
     G.TreeIndentMarker = { fg = C.gray4 }
     G.TreeSymlink = { fg = C.blue2 }
     G.TreeFolderName = { fg = C.blue1 }
-    G.TreeWinSeparator = { fg = C.bg_dark, bg = C.bg }
+    G.TreeWinSeparator = { link = "WinSeparator" }
 
     -- Nvim tree.
     G.NvimTreeNormal = { link = 'TreeNormal' }
