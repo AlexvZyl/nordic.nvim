@@ -2,6 +2,8 @@
 -- This file has a bunch of added colors.
 
 -- NOTE: All hex codes must be uppercase (for testing)
+
+---@class NordicColors
 local palette = {
 
     none = 'NONE',
@@ -9,12 +11,11 @@ local palette = {
     -- Blacks. Not in base Nord.
     black0 = '#191D24',
     black1 = '#1E222A',
-    -- Slightly darker than bg.  Very useful for certain popups
-    black2 = '#222630',
+    black2 = '#222630', -- bg
 
     -- Grays
     -- This color is used on their website's dark theme.
-    gray0 = '#242933', -- bg
+    gray0 = '#242933',
     -- Polar Night.
     gray1 = '#2E3440',
     gray2 = '#3B4252',
