@@ -103,8 +103,10 @@ end
 
 ---Simple string interpolation.
 ---
----Example template: "${name} is ${value}"
+---Example template: "${name} is ${age}"
 ---
+--- This function is taken from tokyonight.
+--- For more information see `platforms/init.lua`
 ---@param str string template string
 ---@param table table key value pairs to replace in the string
 function M.template(str, table)
@@ -131,10 +133,10 @@ function M.removeHash(colors)
     return output_colors
 end
 
--- Write a file and its contents to disk
---
--- This function is taken from tokyonight.
--- For more information see `platforms/init.lua`
+---Write a file and its contents to disk
+---
+--- This function is taken from tokyonight.
+--- For more information see `platforms/init.lua`
 ---@param path string
 ---@param contents string
 function M.write(path, contents)
