@@ -101,4 +101,47 @@ function M.assert_eq(left, right, message)
     end
 end
 
+---Simple string interpolation.
+---
+---Example template: "${name} is ${value}"
+---
+---@param str string template string
+---@param table table key value pairs to replace in the string
+function M.template(str, table)
+    return (
+        str:gsub('($%b{})', function(w)
+            -- TODO: unpack is depreciated
+            return vim.tbl_get(table, unpack(vim.split(w:sub(3, -2), '.', { plain = true }))) or w
+        end)
+    )
+end
+
+-- Remove the hash (#) from the beginning of all color values in a table
+---@param colors table
+function M.removeHash(colors)
+    local output_colors = {}
+    for k, v in pairs(colors) do
+        if type(v) == 'string' then
+            output_colors[k] = v:gsub('^#', '')
+        elseif type(v) == 'table' then
+            output_colors[k] = M.removeHash(v)
+        end
+    end
+
+    return output_colors
+end
+
+-- Write a file and its contents to disk
+--
+-- This function is taken from tokyonight.
+-- For more information see `platforms/init.lua`
+---@param path string
+---@param contents string
+function M.write(path, contents)
+    vim.fn.mkdir(vim.fn.fnamemodify(path, ':h'), 'p')
+    local fd = assert(io.open(path, 'w+'))
+    fd:write(contents)
+    fd:close()
+end
+
 return M
