@@ -6,8 +6,12 @@
 ---@field style string?
 ---@field link string?
 
+---@alias OnpaletteOverrideFn fun(palette: Colors<string>)
+---@alias AfterPaletteOverrideFn fun(palette: Colors<string>)
 ---@alias HighlightOverrideFn fun(highlights: Highlight[], palette: Colors<string>)
 
 ---@class NordicOptions
+---@field on_palette OnpaletteOverrideFn?
+---@field after_palette AfterPaletteOverrideFn?
 ---@field on_highlight HighlightOverrideFn?
 
