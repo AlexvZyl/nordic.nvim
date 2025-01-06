@@ -56,6 +56,7 @@ local defaults = {
 M.options = defaults
 
 -- called automatically by load
+---@type fun(user_conf: NordicOptions)
 function M.setup(options)
     -- backwards compatibility
     options = require('nordic.compatibility')(options)
