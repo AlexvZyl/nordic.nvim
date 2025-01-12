@@ -1,6 +1,7 @@
 local U = require('nordic.utils')
 local P = require('nordic.colors.nordic')
 
+---@class NordicPalette: NordicColors
 local C = {}
 
 function C.build_palette()
