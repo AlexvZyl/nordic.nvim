@@ -9,6 +9,7 @@ function M.get_groups()
     local C = require('nordic.colors')
     local O = require('nordic.config').options
 
+    ---@class NativeHighlights
     local G = {}
 
     -- SYNTAX

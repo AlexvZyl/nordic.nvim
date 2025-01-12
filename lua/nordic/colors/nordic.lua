@@ -2,6 +2,7 @@
 -- This file has a bunch of added colors.
 
 -- NOTE: All hex codes must be uppercase (for testing)
+---@class BasePalette
 local palette = {
 
     none = 'NONE',
@@ -77,4 +78,5 @@ local palette = {
     },
 }
 
+---@type BasePalette
 return palette

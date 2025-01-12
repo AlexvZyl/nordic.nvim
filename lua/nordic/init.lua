@@ -2,6 +2,7 @@ local U = require('nordic.utils')
 
 local M = {}
 
+---@type fun(options: NordicOptions)
 function M.load(opts)
     if not U.loaded() then
         vim.api.nvim_command('hi clear')

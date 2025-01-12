@@ -1,5 +1,9 @@
 local M = {}
 
+---@class NordicOptions
+---@field on_palette fun(palette: BasePalette)
+---@field after_palette fun(palette: ExtendedPalette)
+---@field on_highlight fun(highlights: Highlights, palette: ExtendedPalette)
 local defaults = {
     -- This callback can be used to override the colors used in the base palette.
     on_palette = function(palette) end,
@@ -56,6 +60,7 @@ local defaults = {
 M.options = defaults
 
 -- called automatically by load
+---@type fun(options: NordicOptions)
 function M.setup(options)
     -- backwards compatibility
     options = require('nordic.compatibility')(options)

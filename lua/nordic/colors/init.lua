@@ -1,7 +1,7 @@
 local U = require('nordic.utils')
 local P = require('nordic.colors.nordic')
 
----@class NordicPalette: NordicColors
+---@class ExtendedPalette: BasePalette
 local C = {}
 
 function C.build_palette()
@@ -103,4 +103,5 @@ end
 -- Build the first palette.
 C.build_palette()
 
+---@return ExtendedPalette
 return C

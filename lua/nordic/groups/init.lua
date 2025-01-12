@@ -6,6 +6,7 @@ function M.get_groups()
     local native = require('nordic.groups.native').get_groups()
     local integrations = require('nordic.groups.integrations').get_groups()
 
+    ---@class Highlights: NativeHighlights, IntegrationHighlights
     local groups = {}
     merge_inplace(groups, native)
     merge_inplace(groups, integrations)
@@ -15,6 +16,7 @@ function M.get_groups()
     local options = require('nordic.config').options
     options.on_highlight(groups, palette)
 
+    ---@type Highlights
     return groups
 end
 
