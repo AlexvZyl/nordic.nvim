@@ -1,0 +1,27 @@
+# Nordic Colorscheme for Ghostty.
+# Based on https://github.com/AlexvZyl/nordic.nvim
+# Author: @jorgebef
+
+palette = 0=#191D24
+palette = 1=#BF616A
+palette = 2=#A3BE8C
+palette = 3=#EBCB8B
+palette = 4=#81A1C1
+palette = 5=#B48EAD
+palette = 6=#8FBCBB
+palette = 7=#D8DEE9
+
+palette = 8=#3B4252
+palette = 9=#D06F79
+palette = 10=#B1D196
+palette = 11=#F0D399
+palette = 12=#88C0D0
+palette = 13=#C895BF
+palette = 14=#93CCDC
+palette = 15=#E5E9F0
+
+background = #242933
+foreground = #D8DEE9
+cursor-color = #D8DEE9
+selection-background = #2E3440
+selection-foreground = #D8DEE9
