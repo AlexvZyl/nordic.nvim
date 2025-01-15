@@ -113,7 +113,7 @@ function M.get_groups()
     G.TreeGitStaged = { fg = C.gray4 }
     G.TreeGitUntracked = { fg = C.orange.base }
     G.TreeTitleBar = { link = "WinBar"}
-    G.TreeFloatBorder = { fg = C.border_fg, bg = C.bg_float }
+    G.TreeFloatBorder = { link = "FloatBorder" }
     G.TreeCursorLine = { bg = C.bg_selected }
     G.TreeCursor = { bg = C.none, fg = C.none }
     G.TreeFolderIcon = { fg = C.yellow.dim }
