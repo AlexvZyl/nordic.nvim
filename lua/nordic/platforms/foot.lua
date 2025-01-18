@@ -2,32 +2,46 @@ local U = require('nordic.utils')
 
 local M = {}
 
---- @param colors ColorScheme
 function M.generate(colors)
     local footColors = U.removeHash(colors)
 
     local foot = U.template(
         [[
 [colors]
-foreground=${white1}
+foreground=${fg}
 background=${bg}
 
-regular0=${gray2}
+# black
+regular0=${black0}
+bright0=${gray2}
+
+# red
 regular1=${red.base}
-regular2=${green.base}
-regular3=${yellow.base}
-regular4=${blue1}
-regular5=${magenta.base}
-regular6=${cyan.base}
-regular7=${white1}
-bright0=${gray3}
 bright1=${red.bright}
+
+# green
+regular2=${green.base}
 bright2=${green.bright}
+
+# yellow
+regular3=${yellow.base}
 bright3=${yellow.bright}
+
+# blue
+regular4=${blue0}
 bright4=${blue2}
+
+# magenta
+regular5=${magenta.base}
 bright5=${magenta.bright}
+
+# cyan
+regular6=${cyan.base}
 bright6=${cyan.bright}
-bright7=${white2}
+
+# white
+regular7=${white0}
+bright7=${white1}
 ]],
         footColors
     )

@@ -112,13 +112,12 @@ end
 function M.template(str, table)
     return (
         str:gsub('($%b{})', function(w)
-            -- TODO: unpack is depreciated
             return vim.tbl_get(table, unpack(vim.split(w:sub(3, -2), '.', { plain = true }))) or w
         end)
     )
 end
 
--- Remove the hash (#) from the beginning of all color values in a table
+---Remove the hash (#) from the beginning of all color values in a table
 ---@param colors table
 function M.removeHash(colors)
     local output_colors = {}

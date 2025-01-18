@@ -11,10 +11,18 @@ local U = require('nordic.utils')
 
 local M = {}
 
---- @type table<string, {ext?: string, url:string, subdir?: string}>
 -- stylua: ignore
+---@type table<string, {ext?: string, url:string, subdir?: string}>
 M.platforms = {
-  foot = { ext = "ini", url = "https://codeberg.org/dnkl/foot" },
+    -- fish    = { ext = "theme", url = "https://fishshell.com/docs/current/index.html" },
+    fish_themes = { ext = "theme", url = "https://fishshell.com/docs/current/interactive.html#syntax-highlighting" },
+    foot        = { ext = "ini", url = "https://codeberg.org/dnkl/foot" },
+    iTerm2       = { ext = "itermcolors", url = "https://iterm2.com/" },
+
+    kitty       = { ext = "conf", url = "https://sw.kovidgoyal.net/kitty/conf.html" },
+    konsole     = { ext = "colorscheme", url = "https://konsole.kde.org/" },
+    wezterm     = { ext = "toml", url = "https://wezfurlong.org/wezterm/config/files.html" },
+    ["windows-terminal"] = { ext = "json", url = "https://aka.ms/terminal-documentation" },
 }
 
 function M.setup()

@@ -1,0 +1,57 @@
+[General]
+Description=Nordic
+Opacity=1
+
+[Background]
+Color=36,41,51
+
+[Foreground]
+Color=192,200,216
+
+# black
+[Color0]
+Color=25,29,36
+[Color8]
+Color=59,66,82
+
+# red
+[Color1]
+Color=191,97,106
+[Color9]
+Color=197,114,122
+
+# green
+[Color2]
+Color=163,190,140
+[Color10]
+Color=177,200,157
+
+# yellow
+[Color3]
+Color=235,203,139
+[Color11]
+Color=239,212,159
+
+# blue
+[Color4]
+Color=94,129,172
+[Color12]
+Color=136,192,208
+
+# magenta
+[Color5]
+Color=180,142,173
+[Color13]
+Color=190,157,184
+
+# cyan
+[Color6]
+Color=143,188,187
+[Color14]
+Color=159,198,197
+
+# white
+[Color7]
+Color=192,200,216
+[Color15]
+Color=216,222,233
