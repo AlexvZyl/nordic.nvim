@@ -5,7 +5,7 @@ local M = {}
 function M.generate(colors)
     local footColors = U.removeHash(colors)
 
-    local foot = U.template(
+    return U.template(
         [[
 [colors]
 foreground=${fg}
@@ -45,8 +45,6 @@ bright7=${white1}
 ]],
         footColors
     )
-
-    return foot
 end
 
 return M

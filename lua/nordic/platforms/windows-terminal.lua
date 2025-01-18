@@ -3,7 +3,7 @@ local U = require('nordic.utils')
 local M = {}
 
 function M.generate(colors)
-    local foot = U.template(
+    return U.template(
         [[
 {
     "name": "Nordic",
@@ -40,8 +40,6 @@ function M.generate(colors)
 ]],
         colors
     )
-
-    return foot
 end
 
 return M

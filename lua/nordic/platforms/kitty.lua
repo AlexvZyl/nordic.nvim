@@ -3,7 +3,7 @@ local U = require('nordic.utils')
 local M = {}
 
 function M.generate(colors)
-    local foot = U.template(
+    return U.template(
         [[
 # Nordic Colorscheme for Kitty.
 # Based on https://github.com/AlexvZyl/nordic.nvim.
@@ -50,8 +50,6 @@ color15  ${white1}
 ]],
         colors
     )
-
-    return foot
 end
 
 return M

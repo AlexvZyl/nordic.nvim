@@ -27,7 +27,7 @@ end
 local M = {}
 
 function M.generate(colors)
-    local foot = template(
+    return template(
         [[
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -35,16 +35,16 @@ function M.generate(colors)
 <dict>
     <key>Ansi 0 Color</key>
     <dict>
-		<key>Alpha Component</key>
-		<real>1</real>
-		<key>Blue Component</key>
-		<real>${black0.b}</real>
-		<key>Color Space</key>
-		<string>sRGB</string>
-		<key>Green Component</key>
-		<real>${black0.g}</real>
-		<key>Red Component</key>
-		<real>${black0.r}</real>
+        <key>Alpha Component</key>
+        <real>1</real>
+        <key>Blue Component</key>
+        <real>${black0.b}</real>
+        <key>Color Space</key>
+        <string>sRGB</string>
+        <key>Green Component</key>
+        <real>${black0.g}</real>
+        <key>Red Component</key>
+        <real>${black0.r}</real>
     </dict>
     <key>Ansi 1 Color</key>
     <dict>
@@ -260,124 +260,135 @@ function M.generate(colors)
         <real>0.5</real>
         <key>Blue Component</key>
         <real>${blue1.b}</real>
-		<key>Color Space</key>
-		<string>sRGB</string>
-		<key>Green Component</key>
-		<real>${blue1.g}</real>
-		<key>Red Component</key>
-		<real>${blue1.r}</real>
-	</dict>
-	<key>Bold Color</key>
-	<dict>
-		<key>Alpha Component</key>
-		<real>1</real>
-		<key>Blue Component</key>
-		<real>${cyan.dim.b}</real>
-		<key>Color Space</key>
-		<string>sRGB</string>
-		<key>Green Component</key>
-		<real>${cyan.dim.g}</real>
-		<key>Red Component</key>
-		<real>${cyan.dim.r}</real>
-	</dict>
-	<key>Cursor Color</key>
-	<dict>
-		<key>Alpha Component</key>
-		<real>1</real>
-		<key>Blue Component</key>
-		<real>${fg.b}</real>
-		<key>Color Space</key>
-		<string>sRGB</string>
-		<key>Green Component</key>
-		<real>${fg.g}</real>
-		<key>Red Component</key>
-		<real>${fg.r}</real>
-	</dict>
-	<key>Cursor Guide Color</key>
-	<dict>
-		<key>Alpha Component</key>
-		<real>0.25</real>
-		<key>Blue Component</key>
-		<real>${fg.b}</real>
-		<key>Color Space</key>
-		<string>sRGB</string>
-		<key>Green Component</key>
-		<real>${fg.g}</real>
-		<key>Red Component</key>
-		<real>${fg.r}</real>
-	</dict>
-	<key>Cursor Text Color</key>
-	<dict>
-		<key>Alpha Component</key>
-		<real>1</real>
-		<key>Blue Component</key>
-		<real>${bg.b}</real>
-		<key>Color Space</key>
-		<string>sRGB</string>
-		<key>Green Component</key>
-		<real>${bg.g}</real>
-		<key>Red Component</key>
-		<real>${bg.r}</real>
-	</dict>
-	<key>Foreground Color</key>
-	<dict>
-		<key>Alpha Component</key>
-		<real>1</real>
-		<key>Blue Component</key>
-		<real>${fg.b}</real>
-		<key>Color Space</key>
-		<string>sRGB</string>
-		<key>Green Component</key>
-		<real>${fg.g}</real>
-		<key>Red Component</key>
-		<real>${fg.r}</real>
-	</dict>
-	<key>Link Color</key>
-	<dict>
-		<key>Alpha Component</key>
-		<real>1</real>
-		<key>Blue Component</key>
-		<real>${blue1.b}</real>
-		<key>Color Space</key>
-		<string>sRGB</string>
-		<key>Green Component</key>
-		<real>${blue1.g}</real>
-		<key>Red Component</key>
-		<real>${blue1.r}</real>
-	</dict>
-	<key>Selected Text Color</key>
-	<dict>
-		<key>Alpha Component</key>
-		<real>1</real>
-		<key>Blue Component</key>
-		<real>${fg.b}</real>
-		<key>Color Space</key>
-		<string>sRGB</string>
-		<key>Green Component</key>
-		<real>${fg.g}</real>
-		<key>Red Component</key>
-		<real>${fg.r}</real>
-	</dict>
-	<key>Selection Color</key>
-	<dict>
-		<key>Alpha Component</key>
-		<real>1</real>
-		<key>Blue Component</key>
-		<real>${bg_selected.b}</real>
-		<key>Color Space</key>
-		<string>sRGB</string>
-		<key>Green Component</key>
-		<real>${bg_selected.g}</real>
-		<key>Red Component</key>
-		<real>${bg_selected.r}</real>
-	</dict>
+        <key>Color Space</key>
+        <string>sRGB</string>
+        <key>Green Component</key>
+        <real>${blue1.g}</real>
+        <key>Red Component</key>
+        <real>${blue1.r}</real>
+    </dict>
+    <key>Bold Color</key>
+    <dict>
+        <key>Alpha Component</key>
+        <real>1</real>
+        <key>Blue Component</key>
+        <real>${cyan.dim.b}</real>
+        <key>Color Space</key>
+        <string>sRGB</string>
+        <key>Green Component</key>
+        <real>${cyan.dim.g}</real>
+        <key>Red Component</key>
+        <real>${cyan.dim.r}</real>
+    </dict>
+    <key>Cursor Color</key>
+    <dict>
+        <key>Alpha Component</key>
+        <real>1</real>
+        <key>Blue Component</key>
+        <real>${fg.b}</real>
+        <key>Color Space</key>
+        <string>sRGB</string>
+        <key>Green Component</key>
+        <real>${fg.g}</real>
+        <key>Red Component</key>
+        <real>${fg.r}</real>
+    </dict>
+    <key>Cursor Guide Color</key>
+    <dict>
+        <key>Alpha Component</key>
+        <real>0.25</real>
+        <key>Blue Component</key>
+        <real>${fg.b}</real>
+        <key>Color Space</key>
+        <string>sRGB</string>
+        <key>Green Component</key>
+        <real>${fg.g}</real>
+        <key>Red Component</key>
+        <real>${fg.r}</real>
+    </dict>
+    <key>Cursor Text Color</key>
+    <dict>
+        <key>Alpha Component</key>
+        <real>1</real>
+        <key>Blue Component</key>
+        <real>${bg.b}</real>
+        <key>Color Space</key>
+        <string>sRGB</string>
+        <key>Green Component</key>
+        <real>${bg.g}</real>
+        <key>Red Component</key>
+        <real>${bg.r}</real>
+    </dict>
+    <key>Foreground Color</key>
+    <dict>
+        <key>Alpha Component</key>
+        <real>1</real>
+        <key>Blue Component</key>
+        <real>${fg.b}</real>
+        <key>Color Space</key>
+        <string>sRGB</string>
+        <key>Green Component</key>
+        <real>${fg.g}</real>
+        <key>Red Component</key>
+        <real>${fg.r}</real>
+    </dict>
+    <key>Link Color</key>
+    <dict>
+        <key>Alpha Component</key>
+        <real>1</real>
+        <key>Blue Component</key>
+        <real>${blue1.b}</real>
+        <key>Color Space</key>
+        <string>sRGB</string>
+        <key>Green Component</key>
+        <real>${blue1.g}</real>
+        <key>Red Component</key>
+        <real>${blue1.r}</real>
+    </dict>
+    <key>Selected Text Color</key>
+    <dict>
+        <key>Alpha Component</key>
+        <real>1</real>
+        <key>Blue Component</key>
+        <real>${fg.b}</real>
+        <key>Color Space</key>
+        <string>sRGB</string>
+        <key>Green Component</key>
+        <real>${fg.g}</real>
+        <key>Red Component</key>
+        <real>${fg.r}</real>
+    </dict>
+    <key>Selection Color</key>
+    <dict>
+        <key>Alpha Component</key>
+        <real>1</real>
+        <key>Blue Component</key>
+        <real>${bg_selected.b}</real>
+        <key>Color Space</key>
+        <string>sRGB</string>
+        <key>Green Component</key>
+        <real>${bg_selected.g}</real>
+        <key>Red Component</key>
+        <real>${bg_selected.r}</real>
+    </dict>
+    <key>Tab Color</key>
+    <dict>
+        <key>Alpha Component</key>
+        <real>1</real>
+        <key>Blue Component</key>
+        <real>${gray0.b}</real>
+        <key>Color Space</key>
+        <string>sRGB</string>
+        <key>Green Component</key>
+        <real>${gray0.g}</real>
+        <key>Red Component</key>
+        <real>${gray0.r}</real>
+    </dict>
 </dict>
 </plist>
 ]],
         colors
     )
-
-    return foot
 end
 
 return M

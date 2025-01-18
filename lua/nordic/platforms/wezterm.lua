@@ -3,7 +3,7 @@ local U = require('nordic.utils')
 local M = {}
 
 function M.generate(colors)
-    local foot = U.template(
+    return U.template(
         [[
 # Nordic Colorscheme for Wezterm.
 # Based on https://github.com/AlexvZyl/nordic.nvim
@@ -42,8 +42,6 @@ brights = [
 ]],
         colors
     )
-
-    return foot
 end
 
 return M

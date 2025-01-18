@@ -5,7 +5,7 @@ local M = {}
 function M.generate(colors)
     local fishColors = U.removeHash(colors)
 
-    local foot = U.template(
+    return U.template(
         [[
 # Name: Nordic
 # Auother: XXiaoA
@@ -36,8 +36,6 @@ fish_pager_color_selected_background --background=${gray2}
 ]],
         fishColors
     )
-
-    return foot
 end
 
 return M

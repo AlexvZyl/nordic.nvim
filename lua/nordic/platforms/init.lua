@@ -17,8 +17,7 @@ M.platforms = {
     -- fish    = { ext = "theme", url = "https://fishshell.com/docs/current/index.html" },
     fish_themes = { ext = "theme", url = "https://fishshell.com/docs/current/interactive.html#syntax-highlighting" },
     foot        = { ext = "ini", url = "https://codeberg.org/dnkl/foot" },
-    iTerm2       = { ext = "itermcolors", url = "https://iterm2.com/" },
-
+    iTerm2      = { ext = "itermcolors", url = "https://iterm2.com/" },
     kitty       = { ext = "conf", url = "https://sw.kovidgoyal.net/kitty/conf.html" },
     konsole     = { ext = "colorscheme", url = "https://konsole.kde.org/" },
     wezterm     = { ext = "toml", url = "https://wezfurlong.org/wezterm/config/files.html" },
