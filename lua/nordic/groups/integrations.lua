@@ -98,39 +98,82 @@ function M.get_groups()
     G.MiniStatuslineFileinfo = { bg = LC.normal.b.bg, fg = LC.normal.b.fg }
     G.MiniStatuslineInactive = { bg = LC.inactive.a.bg, fg = LC.inactive.a.fg, bold = LC.inactive.a.gui == 'bold' }
 
+    -- Tree Groups
+    G.TreeNormal = { fg = C.fg, bg = C.bg }
+    G.TreeNormalNC = { fg = C.fg, bg = C.bg }
+    G.TreeRootName = { fg = C.fg, bold = true }
+    G.TreeFileIcon = { fg = C.blue2 }
+    G.TreeFileNameOpened = { fg = C.fg }
+    G.TreeSpecialFile = { fg = C.magenta.bright }
+    G.TreeGitConflict = { fg = C.red.base }
+    G.TreeGitModified = { fg = C.git.change }
+    G.TreeGitDirty = { fg = C.gray4 }
+    G.TreeGitAdded = { fg = C.git.add }
+    G.TreeGitNew = { fg = C.gray4 }
+    G.TreeGitDeleted = { fg = C.gray4 }
+    G.TreeGitStaged = { fg = C.gray4 }
+    G.TreeGitUntracked = { fg = C.orange.base }
+    G.TreeTitleBar = { link = "WinBar"}
+    G.TreeFloatBorder = { link = "FloatBorder" }
+    G.TreeCursorLine = { bg = C.bg_selected }
+    G.TreeCursor = { bg = C.none, fg = C.none }
+    G.TreeFolderIcon = { fg = C.yellow.dim }
+    G.TreeIndentMarker = { fg = C.gray4 }
+    G.TreeSymlink = { fg = C.blue2 }
+    G.TreeFolderName = { fg = C.blue1 }
+    G.TreeWinSeparator = { link = "WinSeparator" }
+
     -- Nvim tree.
-    G.NvimTreeNormal = { fg = C.fg, bg = C.bg }
-    G.NvimTreeNormalNC = { fg = C.fg, bg = C.bg }
-    G.NvimTreeFolderName = { fg = C.blue1 }
-    G.NvimTreeOpenedFolderName = { link = 'NvimTreeFolderName' }
-    G.NvimTreeEmptyFolderName = { link = 'NvimTreeFolderName' }
-    G.NvimTreeFolderIcon = { fg = C.yellow.dim }
-    G.NvimTreeSpecialFile = { fg = C.magenta.bright }
-    G.NvimTreeRootFolder = { fg = C.gray4 }
-    G.NvimTreeGitDirty = { fg = C.gray4 }
-    G.NvimTreeGitNew = { fg = C.gray4 }
-    G.NvimTreeGitDeleted = { fg = C.gray4 }
-    G.NvimTreeGitStaged = { fg = C.gray4 }
-    G.NvimTreeIndentMarker = { fg = C.gray4 }
-    G.NvimTreeWinSeparator = { fg = C.bg_dark, bg = C.bg }
-    G.NvimTreeCursorLine = { bg = C.gray1 }
-    G.NvimTreeCursor = { bg = C.none, fg = C.none }
-    G.NvimTreeSymlink = { fg = C.blue2 }
+    G.NvimTreeNormal = { link = 'TreeNormal' }
+    G.NvimTreeNormalNC = { link = 'TreeNormalNC' }
+    G.NvimTreeFolderName = { link = 'TreeFolderName'}
+    G.NvimTreeOpenedFolderName = { link = 'TreeFolderName' }
+    G.NvimTreeEmptyFolderName = { link = 'TreeFolderName' }
+    G.NvimTreeFolderIcon = { link = 'TreeFolderIcon' }
+    G.NvimTreeFileIcon = { link = 'TreeFileIcon' }
+    G.NvimTreeFileNameOpened = { link = 'TreeFileNameOpened' }
+    G.NvimTreeSpecialFile = { link = 'TreeSpecialFile' }
+    G.NvimTreeRootFolder = { link = 'TreeRootFolder' }
+    G.NvimTreeGitDirty = { link = 'TreeGitDirty' }
+    G.NvimTreeGitAdded = { link = 'TreeGitAdded' }
+    G.NvimTreeGitNew = { link = 'TreeGitNew' }
+    G.NvimTreeGitDeleted = { link = 'TreeGitDeleted' }
+    G.NvimTreeGitStaged = { link = 'TreeGitStaged' }
+    G.NvimTreeGitConflict = { link = 'TreeGitConflict' }
+    G.NvimTreeGitModified = { link = 'TreeGitModified' }
+    G.NvimTreeIndentMarker = { link = 'TreeIndentMarker' }
+    G.NvimTreeWinSeparator = { link = 'TreeWinSeparator' }
+    G.NvimTreeCursorLine = { link = 'TreeCursorLine' }
+    G.NvimTreeCursor = { link = 'TreeCursor' }
+    G.NvimTreeSymlink = { link = 'TreeSymlink' }
 
     -- Neo tree.
-    G.NeoTreeCursorLine = { link = 'NvimTreeCursorLine' }
-    G.NeoTreeDirectoryIcon = { link = 'NvimTreeFolderIcon' }
-    G.NeoTreeRootName = { link = 'NvimTreeRootFolder' }
-    G.NeoTreeFileIcon = { fg = C.blue2 }
-    G.NeoTreeFileNameOpened = { fg = C.fg }
-    G.NeoTreeIndentMarker = { link = 'NvimTreeIndentMarker' }
-    G.NeoTreeGitAdded = { fg = C.git.add }
-    G.NeoTreeGitConflict = { fg = C.magenta.bright }
-    G.NeoTreeGitModified = { fg = C.git.change }
-    G.NeoTreeGitUntracked = { fg = C.fg_sidebar }
-    G.NeoTreeNormal = { link = 'NvimTreeNormal' }
-    G.NeoTreeNormalNC = { link = 'NvimTreeNormalNC' }
-    G.NeoTreeSymbolicLinkTarget = { link = 'NvimTreeSymlink' }
+    G.NeoTreeCursorLine = { link = 'TreeCursorLine' }
+    G.NeoTreeDirectoryIcon = { link = 'TreeFolderIcon' }
+    G.NeoTreeRootName = { link = 'TreeRootName' }
+    G.NeoTreeRootFolder = { link = 'TreeRootFolder' }
+    G.NeoTreeFileIcon = { link = 'TreeFileIcon' }
+    G.NeoTreeFileNameOpened = { link = 'TreeFileNameOpened'}
+    G.NeoTreeFolderName = { link = 'TreeFolderName' }
+    G.NeoTreeOpenedFolderName = { link = 'TreeFolderName' }
+    G.NeoTreeEmptyFolderName = { link = 'TreeFolderName' }
+    G.NeoTreeSpecialFile = { link = 'TreeSpecialFile' }
+    G.NeoTreeIndentMarker = { link = 'TreeIndentMarker' }
+    G.NeoTreeGitAdded = { link = 'TreeGitAdded' }
+    G.NeoTreeGitNew = { link = 'TreeGitNew' }
+    G.NeoTreeGitDirty = { link = 'TreeGitDirty' }
+    G.NeoTreeGitDeleted = { link = 'TreeGitDeleted' }
+    G.NeoTreeGitStaged = { link = 'TreeGitStaged' }
+    G.NeoTreeGitConflict = { link = 'TreeGitConflict'}
+    G.NeoTreeGitModified = { link = 'TreeGitModified' }
+    G.NeoTreeGitUntracked = { link = 'TreeGitUntracked' }
+    G.NeoTreeWinSeparator = { link = 'TreeWinSeparator' }
+    G.NeoTreeCursor = { link = 'TreeCursor' }
+    G.NeoTreeNormal = { link = 'TreeNormal' }
+    G.NeoTreeNormalNC = { link = 'TreeNormalNC' }
+    G.NeoTreeSymbolicLinkTarget = { link = 'TreeSymlink' }
+    G.NeoTreeTitleBar = { link = 'TreeTitleBar' }
+    G.NeoTreeFloatBorder = { link = 'TreeFloatBorder' }
 
     -- Noice Flat.
     G.NoiceLspProgressTitle = { fg = C.yellow.base, bg = C.bg, bold = true }
