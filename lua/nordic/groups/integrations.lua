@@ -4,6 +4,7 @@ function M.get_groups()
     local C = require('nordic.colors')
     local O = require('nordic.config').options
 
+    ---@class IntegrationHighlights
     local G = {}
 
     -- Dashboard.lua

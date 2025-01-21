@@ -2,14 +2,15 @@ local U = require('nordic.utils')
 
 local M = {}
 
-function M.load(opts)
+---@type fun(options: NordicOptions)
+function M.load(options)
     if not U.loaded() then
         vim.api.nvim_command('hi clear')
         vim.o.termguicolors = true
         vim.g.colors_name = U.NAME
     end
 
-    if opts then require('nordic.config').setup(opts) end
+    if options then require('nordic.config').setup(options) end
 
     -- Setup colors
     require('nordic.colors').build_palette()
