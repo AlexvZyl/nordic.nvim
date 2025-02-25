@@ -113,20 +113,20 @@ function M.get_groups()
     G.TreeGitDeleted = { fg = C.gray4 }
     G.TreeGitStaged = { fg = C.gray4 }
     G.TreeGitUntracked = { fg = C.orange.base }
-    G.TreeTitleBar = { link = "WinBar"}
-    G.TreeFloatBorder = { link = "FloatBorder" }
+    G.TreeTitleBar = { link = 'WinBar' }
+    G.TreeFloatBorder = { link = 'FloatBorder' }
     G.TreeCursorLine = { bg = C.bg_selected }
     G.TreeCursor = { bg = C.none, fg = C.none }
     G.TreeFolderIcon = { fg = C.yellow.dim }
     G.TreeIndentMarker = { fg = C.gray4 }
     G.TreeSymlink = { fg = C.blue2 }
     G.TreeFolderName = { fg = C.blue1 }
-    G.TreeWinSeparator = { link = "WinSeparator" }
+    G.TreeWinSeparator = { link = 'WinSeparator' }
 
     -- Nvim tree.
     G.NvimTreeNormal = { link = 'TreeNormal' }
     G.NvimTreeNormalNC = { link = 'TreeNormalNC' }
-    G.NvimTreeFolderName = { link = 'TreeFolderName'}
+    G.NvimTreeFolderName = { link = 'TreeFolderName' }
     G.NvimTreeOpenedFolderName = { link = 'TreeFolderName' }
     G.NvimTreeEmptyFolderName = { link = 'TreeFolderName' }
     G.NvimTreeFolderIcon = { link = 'TreeFolderIcon' }
@@ -153,7 +153,7 @@ function M.get_groups()
     G.NeoTreeRootName = { link = 'TreeRootName' }
     G.NeoTreeRootFolder = { link = 'TreeRootFolder' }
     G.NeoTreeFileIcon = { link = 'TreeFileIcon' }
-    G.NeoTreeFileNameOpened = { link = 'TreeFileNameOpened'}
+    G.NeoTreeFileNameOpened = { link = 'TreeFileNameOpened' }
     G.NeoTreeFolderName = { link = 'TreeFolderName' }
     G.NeoTreeOpenedFolderName = { link = 'TreeFolderName' }
     G.NeoTreeEmptyFolderName = { link = 'TreeFolderName' }
@@ -164,7 +164,7 @@ function M.get_groups()
     G.NeoTreeGitDirty = { link = 'TreeGitDirty' }
     G.NeoTreeGitDeleted = { link = 'TreeGitDeleted' }
     G.NeoTreeGitStaged = { link = 'TreeGitStaged' }
-    G.NeoTreeGitConflict = { link = 'TreeGitConflict'}
+    G.NeoTreeGitConflict = { link = 'TreeGitConflict' }
     G.NeoTreeGitModified = { link = 'TreeGitModified' }
     G.NeoTreeGitUntracked = { link = 'TreeGitUntracked' }
     G.NeoTreeWinSeparator = { link = 'TreeWinSeparator' }
@@ -494,6 +494,38 @@ function M.get_groups()
     G['@type.qualifier'] = { link = 'Keyword' }
     G['@storageclass'] = { link = 'Keyword' }
     G['@none'] = { link = 'None' }
+
+    --- LSP semantic token highlights
+    G['@lsp.type.boolean'] = { link = '@boolean' }
+    G['@lsp.type.builtinType'] = { link = '@type.builtin' }
+    G['@lsp.type.comment'] = { link = '@comment' }
+    G['@lsp.type.enum'] = { link = '@type' }
+    G['@lsp.type.enumMember'] = { link = '@constant' }
+    G['@lsp.type.escapeSequence'] = { link = '@string.escape' }
+    G['@lsp.type.formatSpecifier'] = { link = '@punctuation.special' }
+    G['@lsp.type.interface'] = { link = '@type' }
+    G['@lsp.type.keyword'] = { link = '@keyword' }
+    G['@lsp.type.namespace'] = { link = '@module' }
+    G['@lsp.type.number'] = { link = '@number' }
+    G['@lsp.type.operator'] = { link = '@operator' }
+    G['@lsp.type.parameter'] = { link = '@parameter' }
+    G['@lsp.type.property'] = { link = '@property' }
+    G['@lsp.type.selfKeyword'] = { link = '@variable.builtin' }
+    G['@lsp.type.typeAlias'] = { link = '@type.definition' }
+    G['@lsp.type.unresolvedReference'] = { link = '@error' }
+    G['@lsp.type.variable'] = {} -- use treesitter styles for regular variable
+    G['@lsp.typemod.class.defaultLibrary'] = { link = '@type.builtin' }
+    G['@lsp.typemod.enum.defaultLibrary'] = { link = '@type.builtin' }
+    G['@lsp.typemod.enumMember.defaultLibrary'] = { link = '@constant.builtin' }
+    G['@lsp.typemod.function.defaultLibrary'] = { link = '@function.builtin' }
+    G['@lsp.typemod.keyword.async'] = { link = '@keyword.coroutine' }
+    G['@lsp.typemod.macro.defaultLibrary'] = { link = '@function.builtin' }
+    G['@lsp.typemod.method.defaultLibrary'] = { link = '@function.builtin' }
+    G['@lsp.typemod.operator.injected'] = { link = '@operator' }
+    G['@lsp.typemod.string.injected'] = { link = '@string' }
+    G['@lsp.typemod.type.defaultLibrary'] = { link = '@type.builtin' }
+    G['@lsp.typemod.variable.defaultLibrary'] = { link = '@variable.builtin' }
+    G['@lsp.typemod.variable.injected'] = { link = '@variable' }
 
     -- Treesitter context.
     local bg
