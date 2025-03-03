@@ -1,11 +1,8 @@
 local M = {}
 
 function M.get()
-    local C = require('nordic.colors')
-    local O = require('nordic.config').options
     local G = {}
 
-    -- Neo tree.
     G.NeoTreeCursorLine = { link = 'TreeCursorLine' }
     G.NeoTreeDirectoryIcon = { link = 'TreeFolderIcon' }
     G.NeoTreeRootName = { link = 'TreeRootName' }

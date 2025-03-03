@@ -6,7 +6,7 @@ function M.get()
 
     local G = {}
 
-    -- Telescope Classic.
+    -- Classic.
     G.TelescopeNormal = { bg = C.bg }
     G.TelescopePromptNormal = { bg = C.bg }
     G.TelescopeResultsNormal = { bg = C.bg }
@@ -27,7 +27,7 @@ function M.get()
     G.TelescopeMultiIcon = { fg = C.yellow.bright, bg = C.bg, bold = true }
     G.TelescopeMultiSelection = { bg = C.bg }
 
-    -- Telescope Flat.
+    -- Flat.
     if O.telescope.style == 'flat' then
         G.TelescopeNormal = { bg = C.bg_float }
         G.TelescopePromptNormal = { bg = C.black2 }

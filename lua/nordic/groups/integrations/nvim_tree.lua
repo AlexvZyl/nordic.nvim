@@ -1,11 +1,8 @@
 local M = {}
 
 function M.get()
-    local C = require('nordic.colors')
-    local O = require('nordic.config').options
     local G = {}
 
-    -- Nvim tree.
     G.NvimTreeNormal = { link = 'TreeNormal' }
     G.NvimTreeNormalNC = { link = 'TreeNormalNC' }
     G.NvimTreeFolderName = { link = 'TreeFolderName' }

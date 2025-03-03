@@ -2,10 +2,9 @@ local M = {}
 
 function M.get()
     local C = require('nordic.colors')
-    local O = require('nordic.config').options
+
     local G = {}
 
-    -- Notify.
     G.NotifyBackground = { bg = C.bg_float }
     G.NotifyERRORBorder = { fg = C.error }
     G.NotifyERRORIcon = { fg = C.error }

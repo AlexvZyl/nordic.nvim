@@ -1,12 +1,8 @@
 local M = {}
 
 function M.get()
-    local C = require('nordic.colors')
-    local O = require('nordic.config').options
-
     local G = {}
 
-    -- Neorg
     G['@neorg.headings.1.title'] = { link = '@markup.heading.1' }
     G['@neorg.headings.1.prefix'] = { link = '@markup.heading.1' }
     G['@neorg.headings.2.title'] = { link = '@markup.heading.2' }

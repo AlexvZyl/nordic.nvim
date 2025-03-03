@@ -5,7 +5,6 @@ local M = {}
 function M.get_groups()
     local native = require('nordic.groups.native').get_groups()
     local O = require('nordic.config').options
-    -- local integrations = require('nordic.groups.integrations').get_groups()
 
     ---@class Highlights: IntegrationHighlights, NativeHighlights
     local groups = {}
@@ -17,8 +16,6 @@ function M.get_groups()
             merge_inplace(groups, hl)
         end
     end
-
-    -- merge_inplace(groups, integrations)
 
     -- Apply on_highlight
     local palette = require('nordic.colors')

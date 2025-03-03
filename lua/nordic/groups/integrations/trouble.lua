@@ -2,11 +2,9 @@ local M = {}
 
 function M.get()
     local C = require('nordic.colors')
-    local O = require('nordic.config').options
 
     local G = {}
 
-    -- Trouble.
     G.TroubleNormal = { bg = C.bg_float }
     G.TroubleText = { fg = C.fg }
     G.TroubleCount = { fg = C.white1, bg = C.gray2 }

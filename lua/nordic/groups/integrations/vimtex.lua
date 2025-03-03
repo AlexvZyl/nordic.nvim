@@ -2,11 +2,9 @@ local M = {}
 
 function M.get()
     local C = require('nordic.colors')
-    local O = require('nordic.config').options
 
     local G = {}
 
-    -- Vimtex.
     G.texGroup = { fg = C.fg }
     G.texEnvArgName = { fg = C.cyan.base }
     G.texMathEnvArgName = { link = 'texEnvArgName' }

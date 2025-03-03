@@ -2,13 +2,12 @@ local M = {}
 
 function M.get()
     local C = require('nordic.colors')
-    local O = require('nordic.config').options
+
     local G = {}
 
-    -- Nvim DAP.
     G.DapBreakPoint = { fg = C.red.bright }
 
-    -- Nvim DAP UI.
+    -- UI.
     G.DapUINormal = { bg = C.bg_float }
     G.DapUIStop = { fg = C.red.bright, bold = true }
     G.DapUIRestart = { fg = C.green.bright, bold = true }
