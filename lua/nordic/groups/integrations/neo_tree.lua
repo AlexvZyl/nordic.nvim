@@ -1,6 +1,7 @@
 local M = {}
 
 function M.get()
+    local C = require('nordic.colors')
     local G = {}
 
     G.NeoTreeCursorLine = { link = 'TreeCursorLine' }

@@ -2,7 +2,6 @@ local M = {}
 
 function M.get()
     local C = require('nordic.colors')
-    local O = require('nordic.config').options
     local native = require('nordic.groups.native').get_groups()
     local G = {}
 
