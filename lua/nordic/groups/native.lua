@@ -109,7 +109,7 @@ function M.get_groups()
     G.DiagnosticUnderlineInfo = { undercurl = true, sp = C.info } -- Used to underline "Information" diagnostics
     G.DiagnosticUnderlineHint = { undercurl = true, sp = C.hint } -- Used to underline "Hint" diagnostics
     G.DiagnosticText = { bg = C.bg_float }
-    G.LspSignatureActiveParameter = { bg = C.gray3, bold = true }
+    G.LspSignatureActiveParameter = { bg = C.bg_float, underline = true, bold = true }
     G.LspCodeLens = { fg = C.comment }
     G.LspInfoBorder = { link = 'FloatBorder' }
     G.ALEErrorSign = { fg = C.error }
