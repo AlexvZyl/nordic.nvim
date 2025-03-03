@@ -40,6 +40,7 @@ local defaults = {
         blend = 0.85,
     },
     integrations = {
+        blink_cmp = true,
         dashboard = true,
         diff_view = true,
         gitsigns = true,

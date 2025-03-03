@@ -33,7 +33,7 @@ function M.get()
         G.TelescopePromptNormal = { bg = C.black2 }
         G.TelescopeResultsNormal = { bg = C.bg_float }
         G.TelescopePreviewNormal = { bg = C.bg_float }
-        G.TelescopeSelection = { bg = C.bg_float, fg = C.yellow.bright }
+        G.TelescopeSelection = { bg = C.bg_cursorline, fg = C.yellow.bright }
         G.TelescopeSelectionCaret = { fg = C.yellow.bright, bg = C.bg_float, bold = true }
         G.TelescopePreviewTitle = { bg = C.blue2, fg = C.black0, bold = true }
         G.TelescopeResultsTitle = { bg = C.orange.base, fg = C.black0, bold = true }

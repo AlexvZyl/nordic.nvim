@@ -18,12 +18,9 @@ function M.get_groups()
         end
     end
 
-    -- merge_inplace(groups, integrations)
-
     -- Apply on_highlight
     local palette = require('nordic.colors')
-    local options = require('nordic.config').options
-    options.on_highlight(groups, palette)
+    O.on_highlight(groups, palette)
 
     return groups
 end

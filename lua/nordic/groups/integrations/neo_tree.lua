@@ -32,6 +32,13 @@ function M.get()
     G.NeoTreeSymbolicLinkTarget = { link = 'TreeSymlink' }
     G.NeoTreeTitleBar = { link = 'TreeTitleBar' }
     G.NeoTreeFloatBorder = { link = 'TreeFloatBorder' }
+    G.NeoTreeFloatTitle = { fg = C.fg, bg = C.bg_float, bold = true }
+    G.NeoTreeTabInactive = { link = 'TabLine' }
+    G.NeoTreeTabActive = { link = 'TabLineSel' }
+    G.NeoTreeTabSeparatorInactive = { link = 'NeoTreeTabInactive' }
+    G.NeoTreeTabSeparatorActive = { link = 'NeoTreeTabActive' }
+    G.NeoTreeModified = { link = 'String' }
+    G.NeoTreeGitUnstaged = { link = 'NeoTreeGitModified', default = true }
 
     return G
 end
