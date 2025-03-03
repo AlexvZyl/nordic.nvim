@@ -2,10 +2,9 @@ local M = {}
 
 function M.get()
     local C = require('nordic.colors')
-    local O = require('nordic.config').options
+
     local G = {}
 
-    -- LSP Saga.
     G.SagaBorder = { bg = C.black2, fg = C.fg_float_border }
     G.SagaNormal = { bg = C.black2 }
     G.HoverBorder = { link = 'FloatBorder' }

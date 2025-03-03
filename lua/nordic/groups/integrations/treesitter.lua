@@ -2,11 +2,9 @@ local M = {}
 
 function M.get()
     local C = require('nordic.colors')
-    local O = require('nordic.config').options
 
     local G = {}
 
-    -- Treesitter.
     -- LSP Semantic Token Groups
     -- Types follow the pattern @lsp.type.<type>.<filetype>
     -- These groups are for the Neovim tree-sitter highlights.

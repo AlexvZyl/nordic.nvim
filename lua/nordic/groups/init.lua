@@ -5,7 +5,6 @@ local M = {}
 function M.get_groups()
     local native = require('nordic.groups.native').get_groups()
     local O = require('nordic.config').options
-    -- local integrations = require('nordic.groups.integrations').get_groups()
 
     ---@class Highlights: IntegrationHighlights, NativeHighlights
     local groups = {}

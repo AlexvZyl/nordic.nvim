@@ -1,8 +1,6 @@
 local M = {}
 
 function M.get()
-    local C = require('nordic.colors')
-    local O = require('nordic.config').options
     local LC = require('lualine.themes.nordic')
 
     local G = {}

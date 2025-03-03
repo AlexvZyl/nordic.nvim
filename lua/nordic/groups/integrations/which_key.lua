@@ -2,11 +2,9 @@ local M = {}
 
 function M.get()
     local C = require('nordic.colors')
-    local O = require('nordic.config').options
 
     local G = {}
 
-    -- Whichkey.
     G.WhichKey = { fg = C.yellow.base }
     G.WhichKeyFloat = { bg = C.bg_float }
     G.WhichKeyDesc = { fg = C.white0 }

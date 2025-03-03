@@ -2,7 +2,7 @@ local M = {}
 
 function M.get()
     local C = require('nordic.colors')
-    local O = require('nordic.config').options
+
     local G = {}
 
     G.GitSignsAdd = { fg = C.git.add, bg = C.bg_sidebar }

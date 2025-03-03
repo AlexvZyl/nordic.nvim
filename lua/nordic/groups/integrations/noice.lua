@@ -3,6 +3,7 @@ local M = {}
 function M.get()
     local C = require('nordic.colors')
     local O = require('nordic.config').options
+
     local G = {}
 
     G.NoiceLspProgressTitle = { fg = C.yellow.base, bg = C.bg, bold = true }
@@ -18,7 +19,6 @@ function M.get()
     G.NoiceCmdlinePopupBorderSearch = { link = 'NoicePopupBorder' }
     G.NoiceCmdlinePopup = { bg = C.bg_float }
 
-    -- Noice Classic.
     if O.noice.style == 'classic' then
         G.NoiceCmdline = { bg = C.bg, fg = C.cyan.base }
         G.NoiceCmdlinePopup = { bg = C.bg }

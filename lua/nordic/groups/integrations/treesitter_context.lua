@@ -6,7 +6,6 @@ function M.get()
 
     local G = {}
 
-    -- Treesitter context.
     local bg
     local fg
     if O.ts_context.dark_background then
