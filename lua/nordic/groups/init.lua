@@ -11,7 +11,7 @@ function M.get_groups()
     merge_inplace(groups, native)
 
     for integration in pairs(O.integrations) do
-        if O.integrations[integration] == true then
+        if O.integrations[integration] then
             local hl = require('nordic.groups.integrations.' .. integration).get()
             merge_inplace(groups, hl)
         end
