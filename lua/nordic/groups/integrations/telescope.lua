@@ -22,7 +22,7 @@ function M.get()
     G.TelescopePromptBorder = { fg = C.white0, bg = C.bg }
     G.TelescopeResultsBorder = { fg = C.white0, bg = C.bg }
     G.TelescopePreviewBorder = { fg = C.white0, bg = C.bg }
-    G.TelescopeMatching = { bold = true }
+    G.TelescopeMatching = { fg = C.orange.base, bold = true }
     G.TelescopePromptPrefix = { bg = C.bg, fg = C.orange.bright }
     G.TelescopeMultiIcon = { fg = C.yellow.bright, bg = C.bg, bold = true }
     G.TelescopeMultiSelection = { bg = C.bg }
