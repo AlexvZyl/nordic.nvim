@@ -117,20 +117,26 @@ assert_eq(
 )
 load({ transparent = { float = false } })
 
--- bright_border
+-- border_style
 assert_eq(
     get_highlight('WinSeparator').fg,
     base_palette.black0,
-    'bright_border: all highlights that use `border_fg` should be `black0` by default'
+    'border_style: all highlights that use `border_fg` should be `black0` if `border_style` is `default`'
 )
-load({ bright_border = true })
+load({ border_style = 'flat' })
+assert_eq(
+    get_highlight('WinSeparator').fg,
+    base_palette.gray0,
+    'border_style: all highlights that use `border_fg` should be `gray0` if `border_style` is `flat`'
+)
+load({ border_style = 'bright' })
 -- NOTE: This will fail if the wrong white0 variant is used
 assert_eq(
     get_highlight('WinSeparator').fg,
     base_palette.white0_reduce_blue,
-    'bright_border: all highlights that use `border_fg` should be `white0_reduce_blue` if `bright_border` is true'
+    'border_style: all highlights that use `border_fg` should be `white0_reduce_blue` if `border_style` is `bright`'
 )
-load({ bright_border = false })
+load({ border_style = 'default' })
 
 -- reduced_blue
 assert_eq(
