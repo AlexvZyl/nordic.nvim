@@ -1,23 +1,32 @@
 {
-    "background": "#242933",
-    "black": "#191D24",
-    "blue": "#81A1C1",
-    "brightBlack": "#191D24",
-    "brightBlue": "#8CAFD2",
-    "brightCyan": "#93CCDC",
-    "brightGreen": "#B1D196",
-    "brightPurple": "#C895BF",
-    "brightRed": "#D06F79",
-    "brightWhite": "#D8DEE9",
-    "brightYellow": "#F0D399",
-    "cursorColor": "#B48EAD",
-    "cyan": "#8FBCBB",
-    "foreground": "#BBC3D4",
-    "green": "#A3BE8C",
     "name": "Nordic",
-    "purple": "#B48EAD",
-    "red": "#BF616A",
+    "cursorColor": "#C0C8D8",
     "selectionBackground": "#2E3440",
-    "white": "#BBC3D4",
-    "yellow": "#EBCB8B"
+
+    "background": "#242933",
+    "foreground": "#C0C8D8",
+
+    "black": "#191D24",
+    "brightBlack": "#3B4252",
+
+    "red": "#BF616A",
+    "brightRed": "#C5727A",
+
+    "green": "#A3BE8C",
+    "brightGreen": "#B1C89D",
+
+    "yellow": "#EBCB8B",
+    "brightYellow": "#EFD49F",
+
+    "blue": "#5E81AC",
+    "brightBlue": "#88C0D0",
+
+    "purple": "#B48EAD",
+    "brightPurple": "#BE9DB8",
+
+    "cyan": "#8FBCBB",
+    "brightCyan": "#9FC6C5",
+
+    "white": "#C0C8D8",
+    "brightWhite": "#D8DEE9",
 }
