@@ -125,7 +125,7 @@ assert_eq(
 )
 load({ border_style = 'flat' })
 assert_eq(
-    get_highlight('WinSeparator').fg,
+    get_highlight('VertSplit').fg,
     base_palette.gray0,
     'border_style: all highlights that use `border_fg` should be `gray0` if `border_style` is `flat`'
 )
