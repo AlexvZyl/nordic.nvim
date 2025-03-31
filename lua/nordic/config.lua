@@ -61,6 +61,7 @@ local defaults = {
         treesitter_context = true,
         trouble = true,
         vimtex = true,
+        visual_whitespace = true,
         which_key = true,
     },
     noice = {
