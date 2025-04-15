@@ -116,7 +116,7 @@ function M.get_groups()
     G.ALEWarningSign = { fg = C.warning }
 
     -- Tree Groups
-    G.TreeNormal = { fg = C.fg, bg = C.bg_float }
+    G.TreeNormal = { fg = C.fg, bg = C.bg }
     G.TreeNormalNC = { fg = C.fg, bg = C.bg }
     G.TreeRootName = { fg = C.fg, bold = true }
     G.TreeFileIcon = { fg = C.blue2 }
