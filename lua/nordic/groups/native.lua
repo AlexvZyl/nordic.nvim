@@ -109,13 +109,36 @@ function M.get_groups()
     G.DiagnosticUnderlineInfo = { undercurl = true, sp = C.info } -- Used to underline "Information" diagnostics
     G.DiagnosticUnderlineHint = { undercurl = true, sp = C.hint } -- Used to underline "Hint" diagnostics
     G.DiagnosticText = { bg = C.bg_float }
-    G.LspSignatureActiveParameter = { bg = C.gray3, bold = true }
+    G.LspSignatureActiveParameter = { bg = C.bg_float, underline = true, bold = true }
     G.LspCodeLens = { fg = C.comment }
     G.LspInfoBorder = { link = 'FloatBorder' }
     G.ALEErrorSign = { fg = C.error }
     G.ALEWarningSign = { fg = C.warning }
 
-    -- EDITOR
+    -- Tree Groups
+    G.TreeNormal = { fg = C.fg, bg = C.bg }
+    G.TreeNormalNC = { fg = C.fg, bg = C.bg }
+    G.TreeRootName = { fg = C.fg, bold = true }
+    G.TreeFileIcon = { fg = C.blue2 }
+    G.TreeFileNameOpened = { fg = C.fg }
+    G.TreeSpecialFile = { fg = C.magenta.bright }
+    G.TreeGitConflict = { fg = C.red.base }
+    G.TreeGitModified = { fg = C.git.change }
+    G.TreeGitDirty = { fg = C.gray4 }
+    G.TreeGitAdded = { fg = C.git.add }
+    G.TreeGitNew = { fg = C.gray4 }
+    G.TreeGitDeleted = { fg = C.gray4 }
+    G.TreeGitStaged = { fg = C.gray4 }
+    G.TreeGitUntracked = { fg = C.orange.base }
+    G.TreeTitleBar = { link = 'WinBar' }
+    G.TreeFloatBorder = { link = 'FloatBorder' }
+    G.TreeCursorLine = { bg = C.bg_selected }
+    G.TreeCursor = { bg = C.none, fg = C.none }
+    G.TreeFolderIcon = { fg = C.yellow.dim }
+    G.TreeIndentMarker = { fg = C.gray4 }
+    G.TreeSymlink = { fg = C.blue2 }
+    G.TreeFolderName = { fg = C.blue1 }
+    G.TreeWinSeparator = { link = 'WinSeparator' }
 
     G.Comment = { fg = C.comment, italic = O.italic_comments } -- any comment
     G.ColorColumn = { bg = C.bg_visual } -- used for the columns set with 'colorcolumn'
@@ -132,7 +155,7 @@ function M.get_groups()
     -- TermCursor  = { } -- cursor in a focused terminal
     -- TermCursorNC= { } -- cursor in an unfocused terminal
     G.ErrorMsg = { fg = C.error } -- error messages on the command line
-    G.VertSplit = { fg = C.border } -- the column separating vertically split windows
+    G.VertSplit = { fg = C.border_fg } -- the column separating vertically split windows
     G.WinSeparator = { fg = C.border_fg, bg = C.border_bg } -- the column separating vertically split windows
     G.Folded = { fg = C.fg_fold, bg = C.bg_fold } -- line used for closed folds
     G.FoldColumn = { bg = C.bg_fold, fg = C.fg_fold } -- 'foldcolumn'
