@@ -5,36 +5,37 @@ function M.get()
 
     local G = {}
 
-    G.CmpItemAbbrDeprecated = { fg = C.grey4 }
+    G.CmpItemAbbrDeprecated = { fg = C.grey4, strikethrough = true }
     G.CmpItemAbbrMatch = { fg = C.blue1, bold = true }
     G.CmpItemAbbrMatchFuzzy = { link = 'CmpItemAbbrMatch' }
-    G.CmpItemKindField = { link = '@field' }
-    G.CmpItemKindProperty = { link = '@property' }
-    G.CmpItemKindEvent = { link = 'Type' }
-    G.CmpItemKindText = { fg = C.grey4 }
-    G.CmpItemKindEnum = { link = 'Type' }
-    G.CmpItemKindKeyword = { link = 'Keyword' }
-    G.CmpItemKindConstant = { link = 'Constant' }
-    G.CmpItemKindConstructor = { link = 'Function' }
-    G.CmpItemKindReference = { fg = C.cyan.base }
-    G.CmpItemKindFunction = { link = 'Function' }
-    G.CmpItemKindStruct = { link = 'Type' }
-    G.CmpItemKindClass = { link = 'Type' }
-    G.CmpItemKindModule = { fg = C.yellow.dim }
-    G.CmpItemKindOperator = { link = 'Operator' }
-    G.CmpItemKindVariable = { fg = C.cyan.base }
-    G.CmpItemKindFile = { fg = C.blue1 }
-    G.CmpItemKindUnit = { link = 'Constant' }
-    G.CmpItemKindSnippet = { fg = C.blue1 }
-    G.CmpItemKindFolder = { fg = C.yellow.dark }
-    G.CmpItemKindMethod = { link = 'Function' }
-    G.CmpItemKindValue = { link = 'Constant' }
-    G.CmpItemKindEnumMember = { link = 'Type' }
-    G.CmpItemKindInterface = { link = 'Type' }
-    G.CmpItemKindColor = { link = 'Constant' }
-    G.CmpItemKindTypeParameter = { link = 'Type' }
-    G.CmpItemKindTabNine = { fg = C.red.base }
-    G.CmpItemKindCopilot = { fg = C.red.base }
+
+    G.CmpItemKindClass = { link = 'CmpKindClass' }
+    G.CmpItemKindColor = { link = 'CmpKindColor' }
+    G.CmpItemKindConstant = { link = 'CmpKindConstant' }
+    G.CmpItemKindConstructor = { link = 'CmpKindConstructor' }
+    G.CmpItemKindCopilot = { link = 'CmpKindCopilot' }
+    G.CmpItemKindEnum = { link = 'CmpKindEnum' }
+    G.CmpItemKindEnumMember = { link = 'CmpKindEnumMember' }
+    G.CmpItemKindEvent = { link = 'CmpKindEvent' }
+    G.CmpItemKindField = { link = 'CmpKindField' }
+    G.CmpItemKindFile = { link = 'CmpKindFile' }
+    G.CmpItemKindFolder = { link = 'CmpKindFolder' }
+    G.CmpItemKindFunction = { link = 'CmpKindFunction' }
+    G.CmpItemKindInterface = { link = 'CmpKindInterface' }
+    G.CmpItemKindKeyword = { link = 'CmpKindKeyword' }
+    G.CmpItemKindMethod = { link = 'CmpKindMethod' }
+    G.CmpItemKindModule = { link = 'CmpKindModule' }
+    G.CmpItemKindOperator = { link = 'CmpKindOperator' }
+    G.CmpItemKindProperty = { link = 'CmpKindProperty' }
+    G.CmpItemKindReference = { link = 'CmpKindReference' }
+    G.CmpItemKindSnippet = { link = 'CmpKindSnippet' }
+    G.CmpItemKindStruct = { link = 'CmpKindStruct' }
+    G.CmpItemKindTabNine = { link = 'CmpKindTabNine' }
+    G.CmpItemKindText = { link = 'CmpKindText' }
+    G.CmpItemKindTypeParameter = { link = 'CmpKindTypeParameter' }
+    G.CmpItemKindUnit = { link = 'CmpKindUnit' }
+    G.CmpItemKindValue = { link = 'CmpKindValue' }
+    G.CmpItemKindVariable = { link = 'CmpKindVariable' }
 
     return G
 end
