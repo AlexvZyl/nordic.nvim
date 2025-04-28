@@ -7,30 +7,28 @@ function M.get()
     local G = {}
 
     -- Classic.
-    G.SnacksPicker = { bg = C.bg }
-    G.SnacksPickerInput = { bg = C.bg }
-    G.SnacksPickerPreview = { bg = C.bg }
-    G.SnacksPickerCursorLine = { bg = C.gray2 }
-    G.SnacksPickerTitle = { fg = C.white0, bg = C.bg, bold = true }
-    G.SnacksPickerBorder = { fg = C.white0, bg = C.bg }
-    G.SnacksPickerMatch = { bg = C.gray1, fg = C.orange.bright }
+    G.SnacksPicker = { link = 'TelescopeResultsNormal' }
+    G.SnacksPickerTitle = { link = 'TelescopeTitle' }
+    G.SnacksPickerBorder = { link = 'TelescopeBorder' }
+    G.SnacksPickerMatch = { link = 'TelescopeMatching' }
+    G.SnacksPickerPrompt = { link = 'TelescopePromptNormal' }
+    G.SnacksPickerCursorLine = { link = 'TelescopeSelection' }
+    G.SnacksPickerSelected = { link = 'TelescopeMultiIcon' }
 
     -- -- Flat.
     if O.snacks.picker.style == 'flat' then
-        G.SnacksPicker = { bg = C.bg_float }
-        G.SnacksPickerInput = { bg = C.black0 }
-        G.SnacksPickerPreview = { bg = C.bg_float }
+        G.SnacksPicker = { link = 'TelescopeResultsNormal' }
+        G.SnacksPickerInput = { link = 'TelescopePromptNormal' }
 
-        G.SnacksPickerTitle = { bg = C.orange.base, fg = C.black0, bold = true }
-        G.SnacksPreviewTitle = { bg = C.blue2, fg = C.black0, bold = true }
+        G.SnacksPickerTitle = { link = 'TelescopeTitle' }
+        G.SnacksPreviewTitle = { link = 'TelescopePreviewTitle' }
 
-        G.SnacksPickerBorder = { fg = C.black0, bg = C.black0 }
-        G.SnacksPickerInputBorder = { fg = C.black0, bg = C.black0 }
-        G.SnacksPickerPreviewBorder = { bg = C.black0, fg = C.black0 }
+        G.SnacksPickerBorder = { link = 'TelescopeResultsBorder' }
 
-        G.SnacksPickerCursorLine = { bg = C.gray3, bold = true }
-        G.SnacksPickerListCursorLine = { link = 'SnacksPickerCursorLine' }
-        G.SnacksPickerPreviewCursorLine = { link = 'SnacksPickerCursorLine' }
+        G.SnacksPickerPrompt = { fg = C.yellow.bright, bg = C.bg_float, bold = true }
+
+        G.SnacksPickerCursorLine = { bg = C.bg_visual, fg = C.yellow.bright }
+        G.SnacksPickerSelected = { link = 'TelescopeMultiIcon' }
     end
 
     return G
