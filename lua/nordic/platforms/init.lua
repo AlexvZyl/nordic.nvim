@@ -14,8 +14,7 @@ local M = {}
 -- stylua: ignore
 ---@type table<string, {ext: string, url:string, subdir?: string}>
 M.platforms = {
-    -- fish    = { ext = "theme", url = "https://fishshell.com/docs/current/index.html" },
-    fish_themes = { ext = "theme", url = "https://fishshell.com/docs/current/interactive.html#syntax-highlighting" },
+    fish        = { ext = "theme", url = "https://fishshell.com/docs/current/interactive.html#syntax-highlighting" },
     foot        = { ext = "ini", url = "https://codeberg.org/dnkl/foot" },
     ghostty     = { ext = "", url = "https://github.com/ghostty-org/ghostty" },
     iTerm2      = { ext = "itermcolors", url = "https://iterm2.com/" },
