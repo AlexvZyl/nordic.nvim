@@ -1,11 +1,10 @@
-name: Generate docs and format
+name: Generate docs, format and platforms
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
-
   docs-and-fmt:
     if: github.event != 'pull_request'
     name: Generate docs and format
@@ -44,3 +43,6 @@ jobs:
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
           commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
           branch: ${{ github.head_ref }}
+
+      - name: Generate platform files
+        run: "./platforms.sh"
