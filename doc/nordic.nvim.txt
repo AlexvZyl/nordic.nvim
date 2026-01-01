@@ -1,4 +1,4 @@
-*nordic.nvim.txt*         For NVIM v0.8.0        Last change: 2025 December 22
+*nordic.nvim.txt*         For NVIM v0.8.0         Last change: 2026 January 01
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -10,6 +10,7 @@ Table of Contents                              *nordic.nvim-table-of-contents*
 5. 🚀 Usage                                         |nordic.nvim-🚀-usage|
 6. ⚙️ Configuration                     |nordic.nvim-⚙️-configuration|
 7. 🗒️ Supported Plugins and Platforms|nordic.nvim-🗒️-supported-plugins-and-platforms|
+  - Contributing a new Platform|nordic.nvim-🗒️-supported-plugins-and-platforms-contributing-a-new-platform|
 8. 🎙️ Acknowledgements             |nordic.nvim-🎙️-acknowledgements|
 9. Links                                                   |nordic.nvim-links|
 
@@ -244,9 +245,17 @@ For the list of supported plugins, please take a look at this file
 For the list of supported platforms, please take a look at this directory
 <https://github.com/AlexvZyl/nordic.nvim/tree/main/platforms>.
 
-I do not personally use all of the platforms and plugins in the list, so if
-something is not right, or you have a suggestion, please open a PR!
 
+CONTRIBUTING A NEW PLATFORM*nordic.nvim-🗒️-supported-plugins-and-platforms-contributing-a-new-platform*
+
+All of the platform files are generated using a template system. Have a look at
+this directory
+<https://github.com/AlexvZyl/nordic.nvim/tree/main/lua/nordic/platforms> to see
+how it works.
+
+
+  [!NOTE] I don’t personally use all of the platforms and plugins in the list,
+  so if something is not right, or you have a suggestion, please open a PR!
 
 ==============================================================================
 8. 🎙️ Acknowledgements             *nordic.nvim-🎙️-acknowledgements*
