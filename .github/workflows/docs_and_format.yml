@@ -44,5 +44,10 @@ jobs:
           commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
           branch: ${{ github.head_ref }}
 
+      - name: Install Neovim
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y neovim
+
       - name: Generate platform files
         run: "./platforms.sh"
