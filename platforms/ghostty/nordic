@@ -2,26 +2,37 @@
 # Based on https://github.com/AlexvZyl/nordic.nvim
 # Author: @jorgebef
 
+# To use this theme you have 2 options to install it:
+#
+# - Clone the theme file and set the theme option in your config to the absolute path of the theme file.
+# Example:
+#
+# ```ini
+# theme = "/home/jbef/.config/ghostty/nordic"
+# ```
+#
+# - Copy the code directly inside your `ghostty` configuration file, usually located at `$HOME/.config/ghostty/config`
+
+background = #242933
+foreground = #C0C8D8
+cursor-color = #C0C8D8
+selection-background = #2E3440
+selection-foreground = #C0C8D8
+
 palette = 0=#191D24
 palette = 1=#BF616A
 palette = 2=#A3BE8C
 palette = 3=#EBCB8B
-palette = 4=#81A1C1
-palette = 5=#B48EAD
-palette = 6=#8FBCBB
-palette = 7=#D8DEE9
+palette = 4=#5E81AC
+palette = 5=#88C0D0
+palette = 6=#B48EAD
+palette = 7=#C0C8D8
 
 palette = 8=#3B4252
-palette = 9=#D06F79
-palette = 10=#B1D196
-palette = 11=#F0D399
+palette = 9=#C5727A
+palette = 10=#B1C89D
+palette = 11=#EFD49F
 palette = 12=#88C0D0
-palette = 13=#C895BF
-palette = 14=#93CCDC
-palette = 15=#E5E9F0
-
-background = #242933
-foreground = #D8DEE9
-cursor-color = #D8DEE9
-selection-background = #2E3440
-selection-foreground = #D8DEE9
+palette = 13=#BE9DB8
+palette = 14=#9FC6C5
+palette = 15=#D8DEE9
