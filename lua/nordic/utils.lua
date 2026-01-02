@@ -71,7 +71,7 @@ function M.hex_to_rgb(str)
 end
 
 function M.rgb_to_hex(r, g, b)
-    return '#' .. string.format('%X', r) .. string.format('%X', g) .. string.format('%X', b)
+    return '#' .. string.format('%02X', r) .. string.format('%02X', g) .. string.format('%02X', b)
 end
 
 -- Adapted from @folke/tokyonight.nvim.
