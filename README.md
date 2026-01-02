@@ -211,7 +211,9 @@ require('nordic').setup({
 
 # 🗒️ Supported Plugins and Platforms
 
-For the list of supported plugins, please take a look at [this file](https://github.com/AlexvZyl/nordic.nvim/blob/main/lua/nordic/groups/integrations.lua). For the list of supported platforms, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/platforms).
+For the list of supported plugins, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/lua/nordic/groups/integrations). 
+
+For the list of supported platforms, please take a look at [this directory](https://github.com/AlexvZyl/nordic.nvim/tree/main/platforms).
 
 ## Contributing a new Platform
 
