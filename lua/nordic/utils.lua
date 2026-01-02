@@ -11,17 +11,17 @@ function M.apply_highlights(groups)
     end
 end
 
-function M.get_highlight(group)
-    local function hexify(value)
-        if type(value) == 'number' then
-            return string.format('#%X', value)
-        elseif type(value) == 'table' then
-            return vim.tbl_map(hexify, value)
-        end
-        return value
+function M.hexify(value)
+    if type(value) == 'number' then
+        return string.format('#%06X', value)
+    elseif type(value) == 'table' then
+        return vim.tbl_map(M.hexify, value)
     end
+    return value
+end
 
-    return hexify(vim.api.nvim_get_hl(0, { name = group, create = false }))
+function M.get_highlight(group)
+    return M.hexify(vim.api.nvim_get_hl(0, { name = group, create = false }))
 end
 
 function M.none()

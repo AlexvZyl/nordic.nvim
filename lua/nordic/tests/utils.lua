@@ -58,6 +58,8 @@ assert_eq({ U.hex_to_rgb('#191D24') }, { 25, 29, 36 }, 'U.hex_to_rgb("#191D24") 
 assert_eq(U.rgb_to_hex(25, 29, 36), '#191D24', 'U.rgb_to_hex(25, 29, 36) should return "#191D24"')
 assert_eq(U.rgb_to_hex(5, 6, 9), '#050609', 'U.rgb_to_hex(5, 6, 9) should return "#050609"')
 assert_eq(U.blend('#FFFFFF', '#000000', 0.5), '#808080', 'U.blend("#FFFFFF", "#000000", 0.5) should return "#808080"')
+assert_eq(U.hexify(0), '#000000', 'U.hexify(0) should return "#000000"')
+assert_eq(U.hexify(12542314), '#BF616A', 'U.hexify(12542314) should return "#BF616A"')
 
 assert_eq(
     U.removeHash({ red = '#ff0000', green = '#00ff00', blue = { base = '#0000ff', other = '0000fb' } }),
