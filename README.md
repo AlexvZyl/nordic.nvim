@@ -103,8 +103,8 @@ require('nordic').setup({
         -- Enable transparent background for floating windows.
         float = false,
     },
-    -- Enable brighter float border.
-    bright_border = false,
+    -- Options: "flat", "bright", "default"
+    border_style = 'default',
     -- Reduce the overall amount of blue in the theme (diverges from base Nord).
     reduced_blue = true,
     -- Swap the dark background with the normal one.
