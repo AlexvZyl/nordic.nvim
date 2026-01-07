@@ -53,6 +53,7 @@ local defaults = {
         noice = true,
         notify = true,
         nvim_cmp = true,
+        blink_cmp = true,
         nvim_dap = true,
         nvim_tree = true,
         rainbow_delimiters = true,
