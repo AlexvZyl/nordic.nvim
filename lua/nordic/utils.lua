@@ -11,17 +11,17 @@ function M.apply_highlights(groups)
     end
 end
 
-function M.get_highlight(group)
-    local function hexify(value)
-        if type(value) == 'number' then
-            return string.format('#%X', value)
-        elseif type(value) == 'table' then
-            return vim.tbl_map(hexify, value)
-        end
-        return value
+function M.hexify(value)
+    if type(value) == 'number' then
+        return string.format('#%06X', value)
+    elseif type(value) == 'table' then
+        return vim.tbl_map(M.hexify, value)
     end
+    return value
+end
 
-    return hexify(vim.api.nvim_get_hl(0, { name = group, create = false }))
+function M.get_highlight(group)
+    return M.hexify(vim.api.nvim_get_hl(0, { name = group, create = false }))
 end
 
 function M.none()
@@ -71,7 +71,7 @@ function M.hex_to_rgb(str)
 end
 
 function M.rgb_to_hex(r, g, b)
-    return '#' .. string.format('%X', r) .. string.format('%X', g) .. string.format('%X', b)
+    return '#' .. string.format('%02X', r) .. string.format('%02X', g) .. string.format('%02X', b)
 end
 
 -- Adapted from @folke/tokyonight.nvim.
@@ -99,6 +99,50 @@ function M.assert_eq(left, right, message)
         print('Left:\n' .. vim.inspect(left))
         print('Right:\n' .. vim.inspect(right))
     end
+end
+
+---Simple string interpolation.
+---
+---Example template: "${name} is ${age}"
+---
+--- This function is taken from tokyonight.
+--- For more information see `platforms/init.lua`
+---@param str string template string
+---@param table table key value pairs to replace in the string
+function M.template(str, table)
+    return (
+        str:gsub('($%b{})', function(w)
+            return vim.tbl_get(table, unpack(vim.split(w:sub(3, -2), '.', { plain = true }))) or w
+        end)
+    )
+end
+
+---Remove the hash (#) from the beginning of all color values in a table
+---@param colors table
+function M.removeHash(colors)
+    local output_colors = {}
+    for k, v in pairs(colors) do
+        if type(v) == 'string' then
+            output_colors[k] = v:gsub('^#', '')
+        elseif type(v) == 'table' then
+            output_colors[k] = M.removeHash(v)
+        end
+    end
+
+    return output_colors
+end
+
+---Write a file and its contents to disk
+---
+--- This function is taken from tokyonight.
+--- For more information see `platforms/init.lua`
+---@param path string
+---@param contents string
+function M.write(path, contents)
+    vim.fn.mkdir(vim.fn.fnamemodify(path, ':h'), 'p')
+    local fd = assert(io.open(path, 'w+'))
+    fd:write(contents)
+    fd:close()
 end
 
 return M

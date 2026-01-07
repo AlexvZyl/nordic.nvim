@@ -8,14 +8,14 @@ fish_color_command EBCB8B
 fish_color_keyword B48EAD
 fish_color_quote A3BE8C
 fish_color_redirection D8DEE9
-fish_color_end BBC4D4
-fish_color_error BF616A
-fish_color_param 69A7BA
+fish_color_end BBC3D4
+fish_color_error C5727A
+fish_color_param 88C0D0
 fish_color_comment 4C566A
 fish_color_selection --background=3B4252
-fish_color_search_match --background=1c2029
+fish_color_search_match --background=1E222A
 fish_color_operator D08770
-fish_color_escape 93CCDC
+fish_color_escape 81A1C1
 fish_color_autosuggestion 60728A
 
 # Completion Pager Colors
