@@ -140,6 +140,35 @@ function M.get_groups()
     G.TreeFolderName = { fg = C.blue1 }
     G.TreeWinSeparator = { link = 'WinSeparator' }
 
+    -- Cmp Groups
+    G.CmpKindClass = { link = 'Type' }
+    G.CmpKindColor = { link = 'Constant' }
+    G.CmpKindConstant = { link = 'Constant' }
+    G.CmpKindConstructor = { link = 'Function' }
+    G.CmpKindCopilot = { fg = C.red.base }
+    G.CmpKindEnum = { link = 'Type' }
+    G.CmpKindEnumMember = { link = 'Type' }
+    G.CmpKindEvent = { link = 'Type' }
+    G.CmpKindField = { link = '@field' }
+    G.CmpKindFile = { fg = C.blue1 }
+    G.CmpKindFolder = { fg = C.yellow.dark }
+    G.CmpKindFunction = { link = 'Function' }
+    G.CmpKindInterface = { link = 'Type' }
+    G.CmpKindKeyword = { link = 'Keyword' }
+    G.CmpKindMethod = { link = 'Function' }
+    G.CmpKindModule = { fg = C.yellow.dim }
+    G.CmpKindOperator = { link = 'Operator' }
+    G.CmpKindProperty = { link = '@property' }
+    G.CmpKindReference = { fg = C.cyan.base }
+    G.CmpKindSnippet = { fg = C.blue1 }
+    G.CmpKindStruct = { link = 'Type' }
+    G.CmpKindTabNine = { fg = C.red.base }
+    G.CmpKindText = { fg = C.grey4 }
+    G.CmpKindTypeParameter = { link = 'Type' }
+    G.CmpKindUnit = { link = 'Constant' }
+    G.CmpKindValue = { link = 'Constant' }
+    G.CmpKindVariable = { fg = C.cyan.base }
+
     G.Comment = { fg = C.comment, italic = O.italic_comments } -- any comment
     G.ColorColumn = { bg = C.bg_visual } -- used for the columns set with 'colorcolumn'
     G.Conceal = { fg = C.gray3 } -- placeholder characters substituted for concealed text (see 'conceallevel')
