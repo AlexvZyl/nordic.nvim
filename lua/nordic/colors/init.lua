@@ -46,7 +46,9 @@ function C.build_palette()
         or U.blend(options.cursorline.bg, C.bg, options.cursorline.blend)
 
     -- Borders
-    C.border_fg = (options.bright_border and C.white0) or C.black0
+    C.border_fg = (options.border_style == 'bright' and C.white0)
+        or options.border_style == 'default' and C.black0
+        or options.border_style == 'flat' and C.border_bg
     C.border_bg = (options.transparent.bg and C.none) or C.bg
 
     -- Foregrounds
@@ -61,7 +63,9 @@ function C.build_palette()
     C.bg_float = (options.transparent.float and C.none) or ((options.swap_backgrounds and C.gray0) or C.black1)
     C.fg_float = C.fg
     C.bg_float_border = C.bg_float
-    C.fg_float_border = C.border_fg
+    C.fg_float_border = options.border_style == 'bright' and C.white0
+        or options.border_style == 'default' and C.black0
+        or options.border_style == 'flat' and C.bg_float_border
 
     -- Popups
     C.bg_popup = C.bg_float
