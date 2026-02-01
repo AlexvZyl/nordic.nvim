@@ -22,7 +22,7 @@ load({
 assert_eq(
     get_highlight('Normal').bg,
     '#FFFFFF',
-    'on_platte: changing a color should cascade to all highlights that use it'
+    'on_palette: changing a color should cascade to all highlights that use it'
 )
 load({ on_palette = function(_) end })
 assert_eq(
