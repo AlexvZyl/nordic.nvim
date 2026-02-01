@@ -170,13 +170,13 @@ function M.get_groups()
     G.CmpKindVariable = { fg = C.cyan.base }
 
     G.Comment = { fg = C.comment, italic = O.italic_comments } -- any comment
-    G.ColorColumn = { bg = C.bg_visual } -- used for the columns set with 'colorcolumn'
+    G.ColorColumn = { bg = C.bg_cursorline } -- used for the columns set with 'colorcolumn'
     G.Conceal = { fg = C.gray3 } -- placeholder characters substituted for concealed text (see 'conceallevel')
     G.Cursor = { fg = C.black0, bg = C.fg } -- character under the cursor
     G.lCursor = { fg = C.black0 } -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     G.CursorIM = { fg = C.black0 } -- like Cursor, but used when in IME mode |CursorIM|
-    G.CursorColumn = { bg = C.bg_visual, bold = O.cursorline.bold } -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    G.CursorLine = { bg = C.bg_visual, bold = O.cursorline.bold } -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+    G.CursorColumn = { bg = C.bg_cursorline, bold = O.cursorline.bold } -- Screen-column at the cursor, when 'cursorcolumn' is set.
+    G.CursorLine = { bg = C.bg_cursorline, bold = O.cursorline.bold } -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     G.CursorLineNr = { fg = C.gray5, bold = O.cursorline.bold_number } -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     G.CursorLineSign = {}
     G.Directory = { fg = C.blue1 } -- directory names (and other special names in listings)
