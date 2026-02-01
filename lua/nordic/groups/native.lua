@@ -175,8 +175,8 @@ function M.get_groups()
     G.Cursor = { fg = C.black0, bg = C.fg } -- character under the cursor
     G.lCursor = { fg = C.black0 } -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     G.CursorIM = { fg = C.black0 } -- like Cursor, but used when in IME mode |CursorIM|
-    G.CursorColumn = { bg = C.bg_visual, bold = O.cursorline.bold } -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    G.CursorLine = { bg = C.bg_visual, bold = O.cursorline.bold } -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+    G.CursorColumn = { bg = C.cursorline, bold = O.cursorline.bold } -- Screen-column at the cursor, when 'cursorcolumn' is set.
+    G.CursorLine = { bg = C.cursorline, bold = O.cursorline.bold } -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     G.CursorLineNr = { fg = C.gray5, bold = O.cursorline.bold_number } -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     G.CursorLineSign = {}
     G.Directory = { fg = C.blue1 } -- directory names (and other special names in listings)
