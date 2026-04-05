@@ -1,4 +1,4 @@
-*nordic.nvim.txt*         For NVIM v0.8.0        Last change: 2026 February 07
+*nordic.nvim.txt*          For NVIM v0.8.0          Last change: 2026 April 05
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
