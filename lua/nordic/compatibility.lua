@@ -42,6 +42,16 @@ local function compatability(options)
         end
     end
 
+    -- telescope.style -> picker.style
+    if options.telescope ~= nil and options.telescope.style ~= nil then
+        if options.picker == nil then
+            options.picker = {}
+        end
+        if options.picker.style == nil then
+            options.picker.style = options.telescope.style
+        end
+    end
+
     return options
 end
 

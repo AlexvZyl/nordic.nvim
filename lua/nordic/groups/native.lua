@@ -169,6 +169,48 @@ function M.get_groups()
     G.CmpKindValue = { link = 'Constant' }
     G.CmpKindVariable = { fg = C.cyan.base }
 
+    -- Picker Groups (shared by Telescope and Snacks picker integrations)
+    G.PickerNormal = { bg = C.bg }
+    G.PickerPromptNormal = { bg = C.bg }
+    G.PickerResultsNormal = { bg = C.bg }
+    G.PickerPreviewNormal = { bg = C.bg }
+    G.PickerPreviewLine = { bg = C.gray2 }
+    G.PickerSelection = { bg = C.bg, fg = C.yellow.bright, bold = false }
+    G.PickerSelectionCaret = { fg = C.yellow.bright, bg = C.bg, bold = true }
+    G.PickerPreviewTitle = { fg = C.white0, bg = C.bg, bold = true }
+    G.PickerResultsTitle = { fg = C.white0, bg = C.bg, bold = true }
+    G.PickerPromptTitle = { fg = C.white0, bg = C.bg, bold = true }
+    G.PickerTitle = { fg = C.white0, bg = C.bg, bold = true }
+    G.PickerBorder = { fg = C.white0, bg = C.bg }
+    G.PickerPromptBorder = { fg = C.white0, bg = C.bg }
+    G.PickerResultsBorder = { fg = C.white0, bg = C.bg }
+    G.PickerPreviewBorder = { fg = C.white0, bg = C.bg }
+    G.PickerMatching = { fg = C.orange.base, bold = true }
+    G.PickerPromptPrefix = { bg = C.bg, fg = C.orange.bright }
+    G.PickerMultiIcon = { fg = C.yellow.bright, bg = C.bg, bold = true }
+    G.PickerMultiSelection = { bg = C.bg }
+
+    if O.picker.style == 'flat' then
+        G.PickerNormal = { bg = C.bg_float }
+        G.PickerPromptNormal = { bg = C.black2 }
+        G.PickerResultsNormal = { bg = C.bg_float }
+        G.PickerPreviewNormal = { bg = C.bg_float }
+        G.PickerSelection = { bg = C.bg_visual, fg = C.yellow.bright }
+        G.PickerSelectionCaret = { fg = C.yellow.bright, bg = C.bg_float, bold = true }
+        G.PickerPreviewTitle = { bg = C.blue2, fg = C.black0, bold = true }
+        G.PickerResultsTitle = { bg = C.orange.base, fg = C.black0, bold = true }
+        G.PickerPromptTitle = { bg = C.orange.base, fg = C.black0, bold = true }
+        G.PickerTitle = { bg = C.orange.base, fg = C.black0, bold = true }
+        G.PickerBorder = { fg = C.black0, bg = C.black0 }
+        G.PickerPromptBorder = { bg = C.black2, fg = C.black0 }
+        G.PickerResultsBorder = { bg = C.bg_float, fg = C.black0 }
+        G.PickerPreviewBorder = { bg = C.bg_float, fg = C.black0 }
+        G.PickerMultiIcon = { fg = C.yellow.bright, bg = C.bg_float, bold = true }
+        G.PickerMultiSelection = { bg = C.bg_float }
+        G.PickerPromptPrefix = { bg = C.black2, fg = C.orange.bright }
+        G.PickerPreviewLine = { bg = C.gray1 }
+    end
+
     G.Comment = { fg = C.comment, italic = O.italic_comments } -- any comment
     G.ColorColumn = { bg = C.bg_cursorline } -- used for the columns set with 'colorcolumn'
     G.Conceal = { fg = C.gray3 } -- placeholder characters substituted for concealed text (see 'conceallevel')

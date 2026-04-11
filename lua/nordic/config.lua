@@ -67,6 +67,7 @@ local defaults = {
         nvim_dap = true,
         nvim_tree = true,
         rainbow_delimiters = true,
+        snacks_picker = true,
         telescope = true,
         treesitter = true,
         treesitter_context = true,
@@ -78,6 +79,11 @@ local defaults = {
     noice = {
         -- Available styles: `classic`, `flat`.
         style = 'classic',
+    },
+    picker = {
+        -- Available styles: `classic`, `flat`.
+        -- Applies to both Telescope and Snacks picker.
+        style = 'flat',
     },
     telescope = {
         -- Available styles: `classic`, `flat`.
