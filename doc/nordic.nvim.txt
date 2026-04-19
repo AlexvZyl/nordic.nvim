@@ -1,4 +1,5 @@
-*nordic.nvim.txt*          For NVIM v0.8.0          Last change: 2026 April 05
+*nordic.nvim.txt*
+                                 For NVIM v0.8.0    Last change: 2026 April 19
 
 ==============================================================================
 Table of Contents                              *nordic.nvim-table-of-contents*
@@ -185,7 +186,7 @@ default configuration.
 
 on_palette ~
 
- 
+
 
 An example of overriding colors in the base palette:
 
@@ -200,7 +201,7 @@ An example of overriding colors in the base palette:
 
 after_palette ~
 
- 
+
 
 An example of setting the visual selection color (for more values see this file
 <https://github.com/AlexvZyl/nordic.nvim/blob/main/lua/nordic/colors/init.lua>):
@@ -216,7 +217,7 @@ An example of setting the visual selection color (for more values see this file
 
 on_highlight ~
 
- 
+
 
 An example of overriding the `TelescopePromptTitle` colors:
 
