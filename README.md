@@ -109,7 +109,7 @@ require('nordic').setup({
     reduced_blue = true,
     -- Swap the dark background with the normal one.
     swap_backgrounds = false,
-    -- Cursorline options.  Also includes visual/selection.
+    -- Cursorline options.
     cursorline = {
         -- Bold font in cursorline.
         bold = false,
@@ -118,6 +118,17 @@ require('nordic').setup({
         -- Available styles: 'dark', 'light'.
         theme = 'dark',
         -- Blending the cursorline bg with the buffer bg.
+        blend = 0.85,
+    },
+    -- Visual selection options.
+    visual = {
+        -- Bold font in visual selection.
+        bold = false,
+        -- Bold visual selection number.
+        bold_number = true,
+        -- Available styles: 'dark', 'light'.
+        theme = 'dark',
+        -- Blending the visual selection bg with the buffer bg.
         blend = 0.85,
     },
     noice = {

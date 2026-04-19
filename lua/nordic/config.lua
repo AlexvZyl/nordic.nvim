@@ -39,6 +39,16 @@ local defaults = {
         -- Blending the cursorline bg with the buffer bg.
         blend = 0.85,
     },
+    visual = {
+        -- Bold font in cursorline.
+        bold = false,
+        -- Bold cursorline number.
+        bold_number = true,
+        -- Available styles: 'dark', 'light'.
+        theme = 'dark',
+        -- Blending the cursorline bg with the buffer bg.
+        blend = 0.85,
+    },
     integrations = {
         dashboard = true,
         diff_view = true,
