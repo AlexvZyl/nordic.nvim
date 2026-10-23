@@ -31,8 +31,8 @@ palette = 1=${red.base}
 palette = 2=${green.base}
 palette = 3=${yellow.base}
 palette = 4=${blue0}
-palette = 5=${blue2}
-palette = 6=${magenta.base}
+palette = 5=${magenta.base}
+palette = 6=${cyan.base}
 palette = 7=${white0}
 
 palette = 8=${gray2}

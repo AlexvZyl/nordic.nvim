@@ -18,7 +18,7 @@ function M.get()
     G['@comment.hint'] = { fg = C.hint }
     G['@comment.info'] = { fg = C.info }
     G['@comment.warning'] = { fg = C.warning }
-    G['@comment.todo'] = { fg = C.todo }
+    G['@comment.todo'] = { link = 'Todo' }
     G['@operator'] = { link = 'Operator' } -- For any operator: `+`, but also `->` and `*` in C.
     --- Punctuation
     G['@punctuation.delimiter'] = { link = 'Delimiter' } -- For delimiters ie: `.`

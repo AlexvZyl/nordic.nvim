@@ -6,6 +6,7 @@ function M.run_tests()
 
     require('nordic.tests.utils')
     require('nordic.tests.options')
+    require('nordic.tests.regressions')
 end
 
 return M
